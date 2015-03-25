@@ -20,7 +20,6 @@
                 {
                     "clazz": "com.pilrhealth.data.ConcordiaSchema",
                     "name": "Version 1",
-                    "code": "ex_location:location_fix",
                     "schemaVersion": 1,
                     "specification": {                                // Concordia schema starts here
                         "type": "object",
