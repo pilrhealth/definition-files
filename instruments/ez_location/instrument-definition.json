@@ -1,7 +1,17 @@
 {
   "name": "EZ Location App",
   "description": "Simple mobile app to track a participant's location. Coordinator can set a polling rate.",
-  "settings": [],
+  "settings": [
+        {
+          "clazz": "com.pilrhealth.settings.IntegerSetting",
+          "code": "pilrhealth:ez_location:polling_rate",
+          "name": "Polling Rate of GPS",
+          "description": "Time between successive readings of latitude and longitude data.",
+          "value": 10,
+          "min": 0,
+          "required": true
+        }
+    ],
   "datasets": [
         {
             "name": "Location",
