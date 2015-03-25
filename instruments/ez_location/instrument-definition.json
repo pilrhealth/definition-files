@@ -15,14 +15,14 @@
   "datasets": [
         {
             "name": "Location",
-            "code": "pilrhealth:ez_location:gps",
+            "code": "ez_location:location",
             "schemas": [
                 {
                     "clazz": "com.pilrhealth.data.ConcordiaSchema",
                     "name": "Version 1",
                     "code": "pilrhealth:ez_location:gps",
                     "schemaVersion": 1,
-                    "specification": {
+                    "specification": {                                // Concordia schema starts here
                         "type": "object",
                         "fields": [
                             {
