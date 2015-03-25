@@ -21,7 +21,7 @@
                     "clazz": "com.pilrhealth.data.ConcordiaSchema",
                     "name": "Version 1",
                     "schemaVersion": 1,
-                    "specification": {                                // Concordia schema starts here
+                    "specification": {  
                         "type": "object",
                         "fields": [
                             {
