@@ -1,0 +1,6 @@
+{
+  "name": "EZ Location App",
+  "description": "Simple mobile app to track a participant's location. Coordinator can set a polling rate.",
+  "settings": [],
+  "datasets": []
+}
