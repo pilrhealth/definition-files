@@ -15,18 +15,18 @@
   "datasets": [
         {
             "name": "Location",
-            "code": "ez_location:location",
+            "code": "ez_location:location_fix",
             "schemas": [
                 {
                     "clazz": "com.pilrhealth.data.ConcordiaSchema",
                     "name": "Version 1",
-                    "code": "pilrhealth:ez_location:gps",
+                    "code": "ex_location:location_fix",
                     "schemaVersion": 1,
                     "specification": {                                // Concordia schema starts here
                         "type": "object",
                         "fields": [
                             {
-                               "name": "timestamp",
+                               "name": "fix_time",
                                "type": "string",
                                "category": "date"
                             },
