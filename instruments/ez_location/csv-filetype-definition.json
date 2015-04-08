@@ -14,7 +14,7 @@
     "data_mappings": [
 	  { 
 	    "from_name": "fix_time",
-		"to_name": "fix_time"
+	    "to_name": "fix_time"
 	  },
       {
         "from_name": "lat",
