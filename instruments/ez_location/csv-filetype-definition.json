@@ -12,10 +12,10 @@
     "null_expressions": ["NaN", "Inf", ""],
     "date_format": "yyyy-MM-dd HH:mm:ss",
     "data_mappings": [
-	  { 
-	    "from_name": "fix_time",
-	    "to_name": "fix_time"
-	  },
+      { 
+	"from_name": "fix_time",
+	"to_name": "fix_time"
+      },
       {
         "from_name": "lat",
         "to_name": "lat"
