@@ -1,0 +1,6 @@
+{
+  "name": "EZ Location Report",
+  "code": "ez_location:report",
+  "version": 1,
+  "description": "A PDF report with summaries from EZ Location data."
+}

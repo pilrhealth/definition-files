@@ -1,0 +1,16 @@
+{
+  "code": "ezlocationdash",
+  "version": 1,
+  "name" : "Lat Lon Scatterplot",
+  "description" : "A simple scatter plot of latitude and longitude.",
+  "dataset" : "ez_location:scatterplot",
+  "schema" : "1",
+  "type" : "r:vega",
+  "package_url": "http://www.github.com/tdschenk/dashtest",
+  "package_function": "scattervis",
+  "filter_params" : [
+    "participant",
+    "group",
+    "date_range"
+  ]
+}
