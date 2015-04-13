@@ -1,0 +1,30 @@
+{
+    "code": "geneactiv",
+    "name": "GENEActiv Monitor",
+    "description": "GENEActiv is a wrist-worn monitor with a tri-axial accelerometer.",
+    "settings": [],
+    "datasets": [
+        {
+            "name": "File",
+            "code": "pilrhealth:geneactiv:bin_file",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "Version 1",
+                    "code": "pilrhealth:geneactiv:bin_file",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type": "string",
+								"category": "filename",
+                                "name": "file"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

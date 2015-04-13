@@ -1,0 +1,6 @@
+{
+    "name": "GENEActiv Monitor",
+    "code": "pilrhealth:geneactiv:bin_file",
+	"version": 1,
+    "description": "GENEActiv binary (.bin) files containing raw data."
+}

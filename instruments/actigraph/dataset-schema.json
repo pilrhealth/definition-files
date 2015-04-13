@@ -1,0 +1,408 @@
+"code": "pilrhealth:actigraph:60sec_analysis"
+
+{
+    "type": "object",
+    "fields": [
+        {
+            "name": "day",
+            "type": "number"
+        },
+        {
+            "name": "valid_day",
+            "type": "number"
+        },
+        {
+            "name": "valid_min",
+            "type": "number"
+        },
+        {
+            "name": "counts_vert",
+            "type": "number"
+        },
+        {
+            "name": "counts_ap",
+            "type": "number"
+        },
+        {
+            "name": "counts_ml",
+            "type": "number"
+        },
+        {
+            "name": "counts_sum",
+            "type": "number"
+        },
+        {
+            "name": "counts_mag",
+            "type": "number"
+        },
+        {
+            "name": "cpm_vert",
+            "type": "number"
+        },
+        {
+            "name": "cpm_ap",
+            "type": "number"
+        },
+        {
+            "name": "cpm_ml",
+            "type": "number"
+        },
+        {
+            "name": "cpm_sum",
+            "type": "number"
+        },
+        {
+            "name": "cpm_mag",
+            "type": "number"
+        },
+        {
+            "name": "steps",
+            "type": "number"
+        },
+        {
+            "name": "sed_min",
+            "type": "number"
+        },
+        {
+            "name": "light_min",
+            "type": "number"
+        },
+        {
+            "name": "life_min",
+            "type": "number"
+        },
+        {
+            "name": "mod_min",
+            "type": "number"
+        },
+        {
+            "name": "vig_min",
+            "type": "number"
+        },
+        {
+            "name": "lightlife_min",
+            "type": "number"
+        },
+        {
+            "name": "mvpa_min",
+            "type": "number"
+        },
+        {
+            "name": "active_min",
+            "type": "number"
+        },
+        {
+            "name": "sed_percent",
+            "type": "number"
+        },
+        {
+            "name": "light_percent",
+            "type": "number"
+        },
+        {
+            "name": "life_percent",
+            "type": "number"
+        },
+        {
+            "name": "mod_percent",
+            "type": "number"
+        },
+        {
+            "name": "vig_percent",
+            "type": "number"
+        },
+        {
+            "name": "lightlife_percent",
+            "type": "number"
+        },
+        {
+            "name": "mvpa_percent",
+            "type": "number"
+        },
+        {
+            "name": "active_percent",
+            "type": "number"
+        },
+        {
+            "name": "sed_counts_vert",
+            "type": "number"
+        },
+        {
+            "name": "sed_counts_ap",
+            "type": "number"
+        },
+        {
+            "name": "sed_counts_ml",
+            "type": "number"
+        },
+        {
+            "name": "sed_counts_sum",
+            "type": "number"
+        },
+        {
+            "name": "sed_counts_mag",
+            "type": "number"
+        },
+        {
+            "name": "light_counts_vert",
+            "type": "number"
+        },
+        {
+            "name": "light_counts_ap",
+            "type": "number"
+        },
+        {
+            "name": "light_counts_ml",
+            "type": "number"
+        },
+        {
+            "name": "light_counts_sum",
+            "type": "number"
+        },
+        {
+            "name": "light_counts_mag",
+            "type": "number"
+        },
+        {
+            "name": "life_counts_vert",
+            "type": "number"
+        },
+        {
+            "name": "life_counts_ap",
+            "type": "number"
+        },
+        {
+            "name": "life_counts_ml",
+            "type": "number"
+        },
+        {
+            "name": "life_counts_sum",
+            "type": "number"
+        },
+        {
+            "name": "life_counts_mag",
+            "type": "number"
+        },
+        {
+            "name": "mod_counts_vert",
+            "type": "number"
+        },
+        {
+            "name": "mod_counts_ap",
+            "type": "number"
+        },
+        {
+            "name": "mod_counts_ml",
+            "type": "number"
+        },
+        {
+            "name": "mod_counts_sum",
+            "type": "number"
+        },
+        {
+            "name": "mod_counts_mag",
+            "type": "number"
+        },
+        {
+            "name": "vig_counts_vert",
+            "type": "number"
+        },
+        {
+            "name": "vig_counts_ap",
+            "type": "number"
+        },
+        {
+            "name": "vig_counts_ml",
+            "type": "number"
+        },
+        {
+            "name": "vig_counts_sum",
+            "type": "number"
+        },
+        {
+            "name": "vig_counts_mag",
+            "type": "number"
+        },
+        {
+            "name": "lightlife_counts_vert",
+            "type": "number"
+        },
+        {
+            "name": "lightlife_counts_ap",
+            "type": "number"
+        },
+        {
+            "name": "lightlife_counts_ml",
+            "type": "number"
+        },
+        {
+            "name": "lightlife_counts_sum",
+            "type": "number"
+        },
+        {
+            "name": "lightlife_counts_mag",
+            "type": "number"
+        },
+        {
+            "name": "mvpa_counts_vert",
+            "type": "number"
+        },
+        {
+            "name": "mvpa_counts_ap",
+            "type": "number"
+        },
+        {
+            "name": "mvpa_counts_ml",
+            "type": "number"
+        },
+        {
+            "name": "mvpa_counts_sum",
+            "type": "number"
+        },
+        {
+            "name": "mvpa_counts_mag",
+            "type": "number"
+        },
+        {
+            "name": "active_counts_vert",
+            "type": "number"
+        },
+        {
+            "name": "active_counts_ap",
+            "type": "number"
+        },
+        {
+            "name": "active_counts_ml",
+            "type": "number"
+        },
+        {
+            "name": "active_counts_sum",
+            "type": "number"
+        },
+        {
+            "name": "active_counts_mag",
+            "type": "number"
+        },
+        {
+            "name": "sed_bouted_10min",
+            "type": "number"
+        },
+        {
+            "name": "sed_bouted_30min",
+            "type": "number"
+        },
+        {
+            "name": "sed_bouted_60min",
+            "type": "number"
+        },
+        {
+            "name": "sed_breaks",
+            "type": "number"
+        },
+        {
+            "name": "max_1min_vert",
+            "type": "number"
+        },
+        {
+            "name": "max_1min_ap",
+            "type": "number"
+        },
+        {
+            "name": "max_1min_ml",
+            "type": "number"
+        },
+        {
+            "name": "max_1min_sum",
+            "type": "number"
+        },
+        {
+            "name": "max_1min_mag",
+            "type": "number"
+        },
+        {
+            "name": "max_5min_vert",
+            "type": "number"
+        },
+        {
+            "name": "max_5min_ap",
+            "type": "number"
+        },
+        {
+            "name": "max_5min_ml",
+            "type": "number"
+        },
+        {
+            "name": "max_5min_sum",
+            "type": "number"
+        },
+        {
+            "name": "max_5min_mag",
+            "type": "number"
+        },
+        {
+            "name": "max_10min_vert",
+            "type": "number"
+        },
+        {
+            "name": "max_10min_ap",
+            "type": "number"
+        },
+        {
+            "name": "max_10min_ml",
+            "type": "number"
+        },
+        {
+            "name": "max_10min_sum",
+            "type": "number"
+        },
+        {
+            "name": "max_10min_mag",
+            "type": "number"
+        },
+        {
+            "name": "max_30min_vert",
+            "type": "number"
+        },
+        {
+            "name": "max_30min_ap",
+            "type": "number"
+        },
+        {
+            "name": "max_30min_ml",
+            "type": "number"
+        },
+        {
+            "name": "max_30min_sum",
+            "type": "number"
+        },
+        {
+            "name": "max_30min_mag",
+            "type": "number"
+        },
+        {
+            "name": "num_mvpa_bouts",
+            "type": "number"
+        },
+        {
+            "name": "num_vig_bouts",
+            "type": "number"
+        },
+        {
+            "name": "mvpa_bouted",
+            "type": "number"
+        },
+        {
+            "name": "vig_bouted",
+            "type": "number"
+        },
+        {
+            "name": "guideline_min",
+            "type": "number"
+        },
+        {
+            "name": "Date",
+            "type": "string",
+			"category": "date"
+        }
+    ]
+}

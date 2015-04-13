@@ -1,0 +1,58 @@
+{
+    "code": "hfi",
+    "name": "Home Food Inventory",
+    "description": "The Home Food Inventory is a tablet application that collects data about the availability of different types of foods in the home of low-income families.",
+    "datasets": [
+        {
+            "name": "HFI",
+            "code": "pilrhealth:hfi_app:hfi",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "HFI Data Schema",
+                    "schemaVersion": 1,
+                    "specification": 
+{
+	"type" : "object",
+	"fields" : [
+		{
+			"name" : "Session",
+			"type" : "string",
+		},
+		{
+			"name" : "Grocery_Date",
+			"type" : "string"
+		},
+		{
+			"name" : "Language",
+			"type" : "string"
+		},
+		{
+			"name" : "Category",
+			"type" : "string"
+		},
+		{
+			"name" : "Food_Name",
+			"type" : "string"
+		},
+		{
+			"name" : "Availability",
+			"type" : "string"
+		},
+		{
+			"name" : "Image_Clicked",
+			"type" : "string"
+		},
+		{
+			"name" : "Sound_Clicked",
+			"type" : "string"
+		},
+		
+	]
+}, 
+
+                }
+            ]
+        }
+    ]
+}

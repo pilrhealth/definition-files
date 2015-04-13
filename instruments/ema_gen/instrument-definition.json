@@ -1,0 +1,24 @@
+{
+    "code": "ema_gen",
+    "name": "EMA General",
+    "description": "The EMA General instrument is a smartphone app that sends participants surveys and messages based on self-report events.",
+    "settings": [
+        {
+            "clazz": "com.pilrhealth.settings.InstrumentConfigSetting",
+            "code": "ema_gen:ema_config",
+            "name": "EMA Configuration"
+        }
+    ],
+    "datasets": [
+    ],
+    "customizations": {
+        "package": "com.pilrhealth.instruments.ema_gen",
+        "classnamePrefix": "EmaGen",
+        "apix": true,
+        "controllers": {
+            "configure": "EmaGenConfig",
+            "coordinate": "EmaGen",
+            "portal": "EmaGen"
+        }
+    }
+}

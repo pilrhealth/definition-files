@@ -1,0 +1,87 @@
+{
+    "code": "ez_sensors",
+    "name": "EZ-Sensors",
+    "description": "The \"EZ-Seonsors\" instrument is...",
+    "settings": [
+    ],
+    "datasets": [
+        {
+            "name": "EZ-Sensors Detected Activity",
+            "code": "pilrhealth:ezsensors:detectedactivity",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "EZ-Sensors Detected Activity Schema",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type": "number",
+                                "name": "confidence"
+                            },
+                            {
+                                "type": "number",
+                                "name": "activity"
+                            },
+                            {
+                                "type": "string",
+                                "category": "date",
+                                "name": "time"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "EZ-Sensors Location",
+            "code": "pilrhealth:ezsensors:location",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "EZ-Sensors Location Schema",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type": "number",
+                                "name": "lat"
+                            },
+                            {
+                                "type": "number",
+                                "name": "lon"
+                            },
+                            {
+                                "type": "string",
+                                "name": "provider"
+                            },
+                            {
+                                "type": "number",
+                                "name": "speed"
+                            },
+                            {
+                                "type": "string",
+                                "category": "date",
+                                "name": "time"
+                            },
+                            {
+                                "type": "number",
+                                "name": "alt"
+                            },
+                            {
+                                "type": "number",
+                                "name": "acc"
+                            },
+                            {
+                                "type": "number",
+                                "name": "bearing"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

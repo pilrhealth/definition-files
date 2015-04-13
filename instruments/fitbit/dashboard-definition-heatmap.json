@@ -1,0 +1,14 @@
+{
+    "code": "fitbitheatmap",
+    "name" : "Fitbit Heatmap",
+    "description" : "A calendar heatmap displaying the number of steps taken each day.",
+    "dataset" : "pilrhealth:fitbit:steps",
+    "schema" : "1",
+    "type" : "r:vega",
+    "package_url": "http://www.github.com/tdschenk/dashtest",
+    "package_function": "fitbit.heatmap",
+    "filter_params" : [
+        "participant",
+		"date_range"
+    ]
+}

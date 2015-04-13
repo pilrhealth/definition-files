@@ -1,0 +1,14 @@
+{
+    "code": "actigraphsteps",
+    "name" : "Actigraph Steps Per Day",
+    "description" : "Displays number of steps in the dataset for each day.",
+    "dataset" : "pilrhealth:actigraph:60sec_analysis",
+    "schema" : "1",
+    "type" : "r:vega",
+    "package_url": "http://www.github.com/MeiResearchLtd/mei.geneactiv.r",
+    "package_function": "actigraph.steps",
+    "filter_params" : [
+        "participant",
+		"date_range"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "code": "actigraphintensities3",
+	"version": 1,
+    "name" : "Actigraph PA Intensities",
+    "description" : "Displays number of minutes spent in five PA intensity levels for each day.",
+    "dataset" : "pilrhealth:actigraph:60sec_analysis",
+    "schema" : "1",
+    "type" : "r:vega",
+    "package_url": "http://www.github.com/MeiResearchLtd/mei.geneactiv.r",
+    "package_function": "actigraph.intensities",
+    "filter_params" : [
+        "participant",
+		"date_range"
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "name": "GENEActiv Summary Report",
+    "code": "pilrhealth:geneactiv:summary_report",
+    "version" : 1,
+    "description" : "A report with summaries from multi-day GENEActiv activity monitor data."
+}

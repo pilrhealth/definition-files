@@ -1,0 +1,238 @@
+{
+    "code": "app_plus",
+    "version": 1,
+    "name": "APP+ App",
+    "description": "The APP+ App is a mobile application to monitor and intervene on medication adherence.  It is developed in collaboration with the University of Minnesota.",
+    "settings": [
+        {
+            "clazz": "com.pilrhealth.settings.InstrumentConfigSetting",
+            "code": "ema_ots:ema_config",
+            "name": "App Configuration",
+            "description": "The configuration of the app content to be delivered to the participant."
+        }
+    ],
+    "datasets": [
+        {
+            "name": "Survey Data",
+            "code": "pilrhealth:mobile:survey_data",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "schemaVersion": 1,
+                    "name": "1.0",
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "event_type",
+                                "type": "string",
+                                "label": "Event Type"
+                            },
+                            {
+                                "name": "survey_code",
+                                "type": "string",
+                                "label": "Survey Code",
+                                "optional": true
+                            },
+                            {
+                                "name": "session",
+                                "type": "string",
+                                "label": "Session"
+                            },
+                            {
+                                "name": "question_type",
+                                "type": "string",
+                                "label": "Question Type",
+                                "optional": true
+                            },
+                            {
+                                "name": "question_code",
+                                "type": "string",
+                                "label": "Question Code",
+                                "optional": true
+                            },
+                            {
+                                "name": "response",
+                                "type": "string",
+                                "label": "Response",
+                                "optional": true
+                            },
+                            {
+                                "name": "response_value",
+                                "type": "string",
+                                "label": "Response Value",
+                                "optional": true
+                            },
+                            {
+                                "label": "Additional Data",
+                                "optional": true,
+                                "type": "object",
+                                "name": "more_data",
+                                "fields": [
+                                    {
+                                        "name": "text",
+                                        "type": "string",
+                                        "label": "Text",
+                                        "optional": true
+                                    },
+                                    {
+                                        "name": "value",
+                                        "type": "string",
+                                        "label": "Value",
+                                        "optional": true
+                                    },
+                                    {
+                                        "name": "selected",
+                                        "type": "boolean",
+                                        "label": "Selected",
+                                        "optional": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "App Log",
+            "code": "pilrhealth:mobile:app_log",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "schemaVersion": 1,
+                    "name": "1.0",
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type": "string",
+                                "doc": "One of: error, warning, debug, or info.",
+                                "optional": false,
+                                "name": "level",
+                                "label": "Log level"
+                            },
+                            {
+                                "type": "string",
+                                "doc": "A searchable string for event analytics.",
+                                "optional": true,
+                                "name": "tag",
+                                "label": "Tag"
+                            },
+                            {
+                                "type": "string",
+                                "doc": "Human readable message.",
+                                "optional": false,
+                                "name": "msg",
+                                "label": "Message"
+                            },
+                            {
+                                "type": "string",
+                                "doc": "An optional argument for analytics.",
+                                "optional": true,
+                                "name": "arg0",
+                                "label": "Argument 0"
+                            },
+                            {
+                                "type": "string",
+                                "doc": "An second optional argument for analytics.",
+                                "optional": true,
+                                "name": "arg1",
+                                "label": "Argument 1"
+                            },
+                            {
+                                "type": "string",
+                                "doc": "An optional stack trace for debugging.",
+                                "optional": true,
+                                "name": "stack_trace",
+                                "label": "Stack Trace"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Medication dosage schedule",
+            "code": "pilrhealth:app_plus:dosage_schedule",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "schemaVersion": 1,
+                    "name": "1.0",
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "dosage_id",
+                                "type": "string",
+                                "label": "Dosage ID"
+                            },
+                            {
+                                "name": "dosage_time",
+                                "type": "string",
+                                "category": "date",
+                                "label": "Dosage Time"
+                            },
+                            {
+                                "name": "has_reminder",
+                                "type": "boolean",
+                                "label": "Has reminder",
+                                "optional": true
+                            },
+                            {
+                                "name": "action",
+                                "type": "string",
+                                "label": "Action"
+                            },
+                            {
+                                "name": "notif_title",
+                                "type": "string",
+                                "label": "Notification title",
+                                "optional": true
+                            },
+                            {
+                                "name": "notif_text",
+                                "type": "string",
+                                "label": "Notification text",
+                                "optional": true
+                            },
+                            {
+                                "label": "Drugs included",
+                                "optional": true,
+                                "type": "array",
+                                "name": "drug_names",
+                                "constType": {
+                                    "type": "object",
+                                    "fields": [
+                                        {
+                                            "name": "name",
+                                            "type": "string",
+                                            "label": "Name",
+                                            "optional": true
+                                        },
+                                        {
+                                            "name": "generic_name",
+                                            "type": "string",
+                                            "label": "Generic Name",
+                                            "optional": true
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "customizations": {
+        "package": "com.pilrhealth.instruments.app_plus",
+        "classnamePrefix": "AppPlus",
+        "apix": true,
+        "controllers": {
+            "configure": "EmaOtsConfig",
+            "coordinate": "AppPlus"
+        }
+    }
+}

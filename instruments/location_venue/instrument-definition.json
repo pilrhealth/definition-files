@@ -1,0 +1,55 @@
+{
+    "code": "location_venue",
+    "name": "Location Venue",
+    "description": "Venue location",
+    "datasets": [
+        {
+            "name": "Venue",
+            "code": "pilrhealth:location_venue:venue",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "Venue Location Data Schema",
+                    "schemaVersion": 1,
+                    "specification": 
+{
+	"type" : "object",
+	"fields" : [
+							{
+                                "type": "string",
+                                "name": "Name"
+                            },
+							 {
+                                "type": "string",
+                                "category": "date",
+                                "name": "Date"
+                            },
+                            {
+                                "type": "number",
+                                "name": "Lat"
+                            },
+                            {
+                                "type": "number",
+                                "name": "Lon"
+                            },
+                            {
+                                "type": "number",
+                                "name": "Alt"
+                            },
+                            {
+                                "type": "string",
+                                "name": "Provider"
+                            },
+                            {
+                                "type": "number",
+                                "name": "Accuracy"
+                            },
+		
+	]
+}, 
+
+                }
+            ]
+        }
+    ]
+}

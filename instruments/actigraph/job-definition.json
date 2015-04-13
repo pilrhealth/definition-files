@@ -1,0 +1,38 @@
+{
+    "code": "pilrhealth:actigraph:csv_60sec_analyze",
+    "name": "Actigraph 60sec CSV Analysis",
+    "version": 1,
+    "description": "Analyze minute-by-minute Actigraph data and output a set of daily summary statistics.",
+    "runner": {
+        "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+        "save_request": 1,
+        "save_response": 1,
+        "delete_if_successful": 0,
+        "package_url": "http://www.github.com/MeiResearchLtd/mei.geneactiv.r",
+        "package_function": "actigraph_csv_analyze",
+        "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
+        "input_datasets": [],
+        "input_file_types": [
+			{
+				"code": "pilrhealth:actigraph:csv_60sec",
+				"version": 1,
+				"mapping": "60sec_csv"
+			}
+		],
+        "input_settings": [],
+        "filter_params": [
+            "participant",
+            "date_range",
+            "period"
+        ],
+        "input_params": [],
+        "output_datasets": [      
+		    {
+                "code": "pilrhealth:actigraph:60sec_analysis",
+                "version": 1,
+                "mapping" : "60sec_analysis"
+            }
+		],
+        "output_file_types": []
+    }
+}

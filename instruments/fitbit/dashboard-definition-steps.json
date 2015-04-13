@@ -1,0 +1,14 @@
+{
+    "code": "fitbitstepsrange4",
+    "name" : "Fitbit Steps per Day 4",
+    "description" : "Displays number of steps in the dataset for each day (with period filter).",
+    "dataset" : "pilrhealth:fitbit:steps",
+    "schema" : "1",
+    "type" : "r:vega",
+    "package_url": "http://www.github.com/tdschenk/dashtest",
+    "package_function": "fitbit.steps",
+    "filter_params" : [
+        "participant",
+	    "period"
+    ]
+}

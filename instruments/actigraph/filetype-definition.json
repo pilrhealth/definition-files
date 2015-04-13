@@ -1,0 +1,33 @@
+{
+  "name": "Actigraph 60sec CSV",
+  "code": "pilrhealth:actigraph:60sec_csv",
+  "version" : 1,
+  "description": "Minute by minute counts and steps data.",
+  "dataset": "pilrhealth:actigraph:60sec_csv_data",
+  "dataset_version": 2,
+  "parser": {
+    "parse_by": "column_name",
+    "col_name_row": 11,
+    "skip_rows": 11,
+    "date_format": "yyyy-MM-dd HH:mm:ss",
+    "data_mappings": [
+	  {
+        "from_name": "Axis1",
+        "to_name": "Axis1"
+      },
+      {
+        "from_name": "Axis2",
+        "to_name": "Axis2"
+      },
+	  {
+	    "from_name": "Axis3",
+		"to_name": "Axis3"
+	  },
+	  {
+		"from_name": "Steps",
+		"to_name": "Steps"
+	  }
+    ],
+    "metadata_mappings": []
+  }
+}
