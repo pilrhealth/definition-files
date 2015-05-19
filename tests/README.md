@@ -1,4 +1,4 @@
-This folder contains one example, "definition" file of each type of component that can be imported to a PiLR project directly.  Each folder contains a README file that describes the specifics of what should be configured on the project after you import the definition.
+This folder contains one example "component definition" file of each type of component that can be imported to a PiLR project directly.  Each folder contains a README file that describes the specifics of what should be configured on the project after you import the definition.
 
 ## Overview of definitions
 For any individual project, there are a several project "components" that you can add and configure simply by importing a component "definition".  This definition is just a JSON object.  At the top most level, you can directly and individually import definitions of the following types:
