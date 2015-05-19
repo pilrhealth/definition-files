@@ -1,1 +1,52 @@
-
+{
+    "code": "ez_pa",
+    "name": "EZ Physical Activity Tracker App",
+    "description": "A mobile app for Android and iOS that tracks the user's physical activity level throughout the day.",
+    "definition_type": "instrument",
+    "settings": [
+	{
+			"clazz" : "com.pilrhealth.settings.IntegerSetting",
+			"code" : "min_time",
+			"name" : "Minimum time between records (seconds)",      
+            "description" : "Minimum time between consecutive activity records, in seconds.",
+            "value" : 30,
+            "min" : 1,
+            "required" : true    
+        },
+	{
+            "clazz" : "com.pilrhealth.settings.IntegerSetting",
+			"code" : "confidence",
+			"name" : "Confidence level (%)",               
+            "description" : "Probability that this is the current activity, in percent.",            
+            "value" : 50,
+            "min" : 1,
+            "required" : true
+        }
+    ],
+    "datasets": [
+        {
+            "name": "Activity",
+            "code": "ez_pa:activity",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "Version 1",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type" : "string",
+                                "name" : "activity"
+                            },
+                            {
+                                "type": "number",
+                                "name" : "confidence"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
