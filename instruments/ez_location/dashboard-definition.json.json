@@ -1,4 +1,5 @@
 {
+  "definition_type" : "dashboard",
   "code": "ezlocationdash",
   "version": 1,
   "name" : "Lat Lon Scatterplot",
