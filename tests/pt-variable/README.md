@@ -1,1 +1,1 @@
-This file adds a single participant variable to the project, for which diet they were on over the effective time period.  The type of the variable is multiple choice, select one.
+This file adds a single participant variable to the project, for what their characteristic nitrogen level was over the effective time period.  The type of the variable is numeric (Double).  For other types of variables, see the developer documentation.
