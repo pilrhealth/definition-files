@@ -1,5 +1,6 @@
 
 {
+            "definition_type" : "dataset",
             "name": "Heart rate",
             "code": "pilr:heart_rate",
             "schemas": [
