@@ -1,0 +1,1 @@
+This folder contains one example, "definition" file of each type of component that can be imported to a PiLR project directly.  Each folder contains a README file that describes the specifics of what should be configured on the project after you import the definition.
