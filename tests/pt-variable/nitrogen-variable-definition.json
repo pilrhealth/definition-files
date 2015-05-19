@@ -1,0 +1,11 @@
+ {
+            "definition_type" : "pt-variable",
+            "clazz": "com.pilrhealth.settings.DoubleSetting",
+            "code": "calrq:urine_nitrogen",
+            "name": "Urine Nitrogen Excretion Rate",
+            "description": "Urine Nitrogen Excretion Rate",
+            "units" : "",
+            "value": 0,
+            "min": 0,
+            "max": 10
+        }
