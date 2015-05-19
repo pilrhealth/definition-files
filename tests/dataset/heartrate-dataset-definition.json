@@ -1,1 +1,27 @@
 
+{
+            "name": "Heart rate",
+            "code": "pilr:heart_rate",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "Version 1",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type" : "string",
+                                "name" : "notes",
+                                "label" : "Notes related to the participant the data is collected on, commonly related to this and surrounding time interval."
+                            },
+                            {
+                                "type": "number",
+                                "name" : "beats",
+                                "label" : "Number of heart beats over the previous 60 seconds."
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
