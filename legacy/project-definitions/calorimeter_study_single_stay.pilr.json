@@ -51,6 +51,11 @@
       "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/instrument-definitions/calrq.pilr.json"
     }
   ],
+  "tools": [
+    {
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/tool-definitions/r-processing-tool.pilr.json"
+    }
+  ],
   "periods": [
     {
       "code": "active_period",
