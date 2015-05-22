@@ -1,0 +1,109 @@
+{
+  "definition_type": "project",
+  "metadata": {
+    "timestamp": "2015-01-29T13:57:00UTC",
+    "environment": "development",
+    "appVersion": "0.1"
+  },
+  "projectdata": {
+    "code": "ema_ots_import1",
+    "version": 1,
+    "name": "EMA Demo",
+    "periodTemplateOnly": true
+  },
+  "groupCategories": [
+    {
+      "code": "ema_ots_participant_status",
+      "name": "Participant Status",
+      "membershipRequired": true,
+      "configCategory": false,
+      "statusCategory": true,
+      "groups": [
+        {
+          "code": "template_assignments_enrolled",
+          "name": "Enrolled",
+          "defaultGroup": true
+        },
+        {
+          "code": "template_assignments_removed",
+          "name": "Removed",
+          "defaultGroup": false
+        }
+      ]
+    },
+    {
+      "code": "template_assignments",
+      "name": "Template Assignments",
+      "membershipRequired": true,
+      "configCategory": true,
+      "statusCategory": false,
+      "groups": [
+        {
+          "code": "default_assignments",
+          "name": "Default Assignments",
+          "defaultGroup": true
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "code": "ema_ots",
+      "version": 1,
+      "configurations": [
+      ]
+    },
+    {
+      "code": "pilrhealth:test:test_instrument",
+      "version": 1,
+      "configurations": [
+      ]
+    }
+  ],
+  "periods": [
+    {
+      "code": "active_period",
+      "name": "Participant Active Period",
+      "epochs": [
+        {
+          "code": "epoch_1",
+          "name": "Epoch 1"
+        }
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "code": "ema_ots_default_template",
+      "name": "Default Template",
+      "activeInstruments": [
+        {
+          "instrument": "ema_ots",
+          "configVersion": null,
+          "settings": [
+          ]
+        }
+      ],
+      "periodSchedules": [
+        {
+          "period": "active_period",
+          "epochSchedules": [
+            {
+              "period": "active_period",
+              "epoch": "epoch_1",
+              "startDay": 1,
+              "endDay": 14,
+              "setByParticipant": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fileTypes": [
+  ],
+  "variables": [
+  ],
+  "jobs": [
+  ]
+}

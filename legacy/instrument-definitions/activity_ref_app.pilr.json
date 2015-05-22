@@ -1,0 +1,53 @@
+{
+  "code": "activity_ref_app",
+  "version": 1,
+  "name": "Activity Reference App",
+  "description": "The Activity Recognition Reference App is a very basic smartphone application that demonstrates how to log activities values, store them in a database, and use the pilrcorelib mobile code library to manage settings and upload data.",
+  "definition_type": "instrument",
+  "settings": [
+    {
+      "clazz" : "com.pilrhealth.settings.IntegerSetting",
+      "code" : "pilrhealth:activity_ref_app:min_time",
+      "name" : "Minimum time between records (seconds)",
+      "description" : "Minimum time between consecutive activity records, in seconds.",
+      "value" : 30,
+      "min" : 1,
+      "required" : true
+    },
+    {
+      "clazz" : "com.pilrhealth.settings.IntegerSetting",
+      "code" : "pilrhealth:activity_ref_app:confidence",
+      "name" : "Confidence level (%)",
+      "description" : "Probability that this is the current activity, in percent.",
+      "value" : 50,
+      "min" : 1,
+      "required" : true
+    }
+  ],
+  "datasets": [
+    {
+      "name": "Activity",
+      "code": "pilrhealth:activity_ref_app:activity",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "name": "Version 1",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "type" : "string",
+                "name" : "activity"
+              },
+              {
+                "type": "number",
+                "name" : "confidence"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

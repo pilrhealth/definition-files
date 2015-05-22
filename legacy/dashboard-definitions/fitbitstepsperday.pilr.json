@@ -1,0 +1,17 @@
+{
+  "code": "dash00001",
+  "version": 1,
+  "name" : "Fitbit Steps per Day",
+  "description" : "Displays number of steps in the dataset for each day",
+  "definition_type": "dashboard",
+  "dataset" : "pilrhealth:fitbit:steps",
+  "schema" : "1",
+  "type" : "r:vega",
+  "package_url": "http://www.github.com/tdschenk/dashtest",
+  "package_function": "steps.per.day",
+  "filter_params" : [
+    "participant",
+    "group",
+    "date"
+  ]
+}

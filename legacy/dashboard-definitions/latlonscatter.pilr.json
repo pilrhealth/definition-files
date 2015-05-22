@@ -1,0 +1,17 @@
+{
+  "code": "dash20849",
+  "version": 1,
+  "name" : "Lat~Lon Scatterplot",
+  "description" : "A simple scatter plot of latitude and longitude.",
+  "definition_type": "dashboard",
+  "dataset" : "pilrhealth:location_ref_app:location",
+  "schema" : "1",
+  "type" : "r:vega",
+  "package_url": "http://www.github.com/tdschenk/dashtest",
+  "package_function": "scattervis",
+  "filter_params" : [
+    "participant",
+    "group",
+    "date"
+  ]
+}

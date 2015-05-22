@@ -1,0 +1,346 @@
+{
+  "definition_type": "project",
+  "metadata": {
+    "timestamp": "2014-07-15T14:00:48UTC",
+    "environment": "qa",
+    "appVersion": "0.1"
+  },
+  "projectdata": {
+    "code": "location-prj-sample-1",
+    "version": 1,
+    "name": "Location Tracking - Example 1",
+    "periodTemplateOnly": true
+  },
+  "groupCategories": [
+    {
+      "code": "participant_status",
+      "name": "Participant Status",
+      "membershipRequired": true,
+      "configCategory": false,
+      "statusCategory": true,
+      "groups": [
+        {
+          "code": "template_scheduling_enrolled",
+          "name": "Enrolled",
+          "defaultGroup": true
+        },
+        {
+          "code": "template_scheduling_removed",
+          "name": "Removed",
+          "defaultGroup": false
+        }
+      ]
+    },
+    {
+      "code": "template_scheduling",
+      "name": "Template Scheduling",
+      "membershipRequired": true,
+      "configCategory": true,
+      "statusCategory": false,
+      "groups": [
+        {
+          "code": "assigned_the_default_template",
+          "name": "Assigned the default template",
+          "defaultGroup": true
+        },
+        {
+          "code": "assigned_the_secondary_template",
+          "name": "Assigned the secondary template",
+          "defaultGroup": false
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "code": "location_ref_app",
+      "version": 1,
+      "configurations": [
+      ]
+    }
+  ],
+  "periods": [
+    {
+      "code": "assessment_period",
+      "name": "Assessment Period",
+      "epochs": [
+        {
+          "code": "epoch_1",
+          "name": "Epoch 1"
+        },
+        {
+          "code": "epoch_2",
+          "name": "Epoch 2"
+        },
+        {
+          "code": "epoch_3",
+          "name": "Epoch 3"
+        }
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "code": "3_day_assessment",
+      "name": "3 day assessment",
+      "activeInstruments": [
+        {
+          "instrument": "location_ref_app",
+          "configVersion": null,
+          "settings": [
+            {
+              "clazz": "com.pilrhealth.settings.BooleanSetting",
+              "code": "pilrhealth:location_ref_app:gps_provider",
+              "value": true,
+              "trueLabel": "true",
+              "falseLabel": "false"
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_dist",
+              "value": 10,
+              "min": 0,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_dist",
+              "value": 10,
+              "period": "assessment_period",
+              "epoch": "epoch_1",
+              "min": 0,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_dist",
+              "value": 100,
+              "period": "assessment_period",
+              "epoch": "epoch_2",
+              "min": 0,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_dist",
+              "value": 1000,
+              "period": "assessment_period",
+              "epoch": "epoch_3",
+              "min": 0,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_time",
+              "value": 30,
+              "min": 1,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_time",
+              "value": 60,
+              "period": "assessment_period",
+              "epoch": "epoch_1",
+              "min": 1,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_time",
+              "value": 600,
+              "period": "assessment_period",
+              "epoch": "epoch_2",
+              "min": 1,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_time",
+              "value": 1800,
+              "period": "assessment_period",
+              "epoch": "epoch_3",
+              "min": 1,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.BooleanSetting",
+              "code": "pilrhealth:location_ref_app:network_provider",
+              "value": true,
+              "trueLabel": "true",
+              "falseLabel": "false"
+            }
+          ]
+        }
+      ],
+      "periodSchedules": [
+        {
+          "period": "assessment_period",
+          "epochSchedules": [
+            {
+              "period": "assessment_period",
+              "epoch": "epoch_1",
+              "startDay": 1,
+              "endDay": 1,
+              "setByParticipant": false
+            },
+            {
+              "period": "assessment_period",
+              "epoch": "epoch_2",
+              "startDay": 2,
+              "endDay": 2,
+              "setByParticipant": false
+            },
+            {
+              "period": "assessment_period",
+              "epoch": "epoch_3",
+              "startDay": 3,
+              "endDay": 3,
+              "setByParticipant": false
+            }
+          ]
+        }
+      ],
+      "description": "Collects location data over 3 days, with different settings each day."
+    },
+    {
+      "code": "6_day_assessment",
+      "name": "6 day assessment",
+      "activeInstruments": [
+        {
+          "instrument": "location_ref_app",
+          "configVersion": null,
+          "settings": [
+            {
+              "clazz": "com.pilrhealth.settings.BooleanSetting",
+              "code": "pilrhealth:location_ref_app:gps_provider",
+              "value": true,
+              "trueLabel": "true",
+              "falseLabel": "false"
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_dist",
+              "value": 10,
+              "min": 0,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_dist",
+              "value": 1000,
+              "period": "assessment_period",
+              "epoch": "epoch_1",
+              "min": 0,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_dist",
+              "value": 100,
+              "period": "assessment_period",
+              "epoch": "epoch_2",
+              "min": 0,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_dist",
+              "value": 10,
+              "period": "assessment_period",
+              "epoch": "epoch_3",
+              "min": 0,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_time",
+              "value": 30,
+              "min": 1,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_time",
+              "value": 1800,
+              "period": "assessment_period",
+              "epoch": "epoch_1",
+              "min": 1,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_time",
+              "value": 600,
+              "period": "assessment_period",
+              "epoch": "epoch_2",
+              "min": 1,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:location_ref_app:min_time",
+              "value": 60,
+              "period": "assessment_period",
+              "epoch": "epoch_3",
+              "min": 1,
+              "max": null,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.BooleanSetting",
+              "code": "pilrhealth:location_ref_app:network_provider",
+              "value": true,
+              "trueLabel": "true",
+              "falseLabel": "false"
+            }
+          ]
+        }
+      ],
+      "periodSchedules": [
+        {
+          "period": "assessment_period",
+          "epochSchedules": [
+            {
+              "period": "assessment_period",
+              "epoch": "epoch_1",
+              "startDay": 1,
+              "endDay": 2,
+              "setByParticipant": false
+            },
+            {
+              "period": "assessment_period",
+              "epoch": "epoch_2",
+              "startDay": 3,
+              "endDay": 4,
+              "setByParticipant": false
+            },
+            {
+              "period": "assessment_period",
+              "epoch": "epoch_3",
+              "startDay": 5,
+              "endDay": 6,
+              "setByParticipant": false
+            }
+          ]
+        }
+      ],
+      "description": "Collects location data over 6 days, with three different sets of settings."
+    }
+  ]
+}

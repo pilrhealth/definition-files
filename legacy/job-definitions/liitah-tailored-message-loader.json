@@ -1,0 +1,30 @@
+{
+  "code":"pilrhealth:liitah:tailored_message_loader",
+  "name": "Liitah Tailored Message Loader",
+  "version": 1,
+  "description": "Loads meal tailored messages for Liitah participants.",
+  "definition_type": "job",
+  "runner": {
+    "clazz": "com.pilrhealth.instruments.liitah_tailored_messages.LiitahTailoredMessageLoaderJobRunner",
+    "save_request": 1,
+    "save_response": 1,
+    "delete_if_successful": 0,
+    "resource_path": "https://liitah.umms.med.umich.edu/test",
+    "input_datasets": [
+        {
+            "code": "pilrhealth:mobile:survey_data",
+            "version": 1,
+            "mapping" : "survey_data"
+        }
+    ],
+    "input_settings": [
+    ],
+    "output_datasets": [
+      {
+        "code": "pilrhealth:liitah:tailored_messages",
+        "version": 1,
+        "mapping" : "tailored_messages"
+      }
+    ]
+  }
+}

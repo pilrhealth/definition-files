@@ -1,0 +1,32 @@
+{
+  "name": "FitBit CSV File",
+  "code": "pilrhealth:fitbit:steps",
+  "version": 1,
+  "description": "FitBit CSV data file",
+  "definition_type": "filetype",
+  "dataset": "pilrhealth:fitbit:steps",
+  "dataset_version": 1,
+  "parser": {
+    "parse_by": "column_name",
+    "col_name_row": 1,
+    "skip_rows": 1,
+    "null_expressions": [""],
+    "date_format": "yyyy-MM-dd",
+    "data_mappings": [
+      {
+        "from_name": "dateTime",
+        "to_name": "dateTime"
+      },
+      {
+        "from_name": "value",
+        "to_name": "value"
+      }
+    ],
+    "metadata_mappings": [
+      {
+        "from_name": "dateTime",
+        "to_name": "timestamp"
+      }
+    ]
+  }
+}

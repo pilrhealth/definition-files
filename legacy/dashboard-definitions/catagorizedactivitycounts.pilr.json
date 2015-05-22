@@ -1,0 +1,17 @@
+{
+  "code": "dash27593",
+  "version": 1,
+  "name" : "Catagorized Activity Counts",
+  "description" : "Number of records per activity",
+  "definition_type": "dashboard",
+  "dataset" : "pilrhealth:activity_ref_app:activity",
+  "schema" : "1",
+  "type" : "r:vega",
+  "package_url": "http://www.github.com/tdschenk/activitypanels",
+  "package_function": "activity.counts",
+  "filter_params" : [
+    "participant",
+    "group",
+    "date"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "code":"pilrhealth:test:test_job",
+  "name": "PiLR Test Job",
+  "version": 1,
+  "description": "Compute summaries and generate report for CalRQ burn studies.",
+  "definition_type": "job",
+  "runner": {
+    "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+    "save_request": 1,
+    "save_response": 1,
+    "delete_if_successful": 0,
+    "package_url": "http://www.github.com/erikriverson/pilr.testjob.r",
+    "package_function": "test_job",
+    "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
+    "input_datasets": [],
+    "input_file_types": [],
+    "input_settings": [],
+    "filter_params": [
+      "participant",
+      "date_range",
+      "period"
+    ],
+    "input_params": [],
+    "output_datasets": [
+      {
+        "code": "pilrhealth:test:test_dataset",
+        "version": 1,
+        "mapping" : "test_dataset"
+      }
+    ],
+    "output_file_types": [
+      {
+        "code" : "pilrhealth:test:test_report",
+        "version" : 1,
+        "mapping" : "test_report",
+        "extension": "pdf",
+        "filename_prefix": "test_job"
+      }
+    ]
+  }
+}
