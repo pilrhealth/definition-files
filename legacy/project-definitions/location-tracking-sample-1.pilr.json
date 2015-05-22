@@ -53,10 +53,7 @@
   ],
   "instruments": [
     {
-      "code": "location_ref_app",
-      "version": 1,
-      "configurations": [
-      ]
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/instrument-definitions/location_ref_app.pilr.json"
     }
   ],
   "periods": [

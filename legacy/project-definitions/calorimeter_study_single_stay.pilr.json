@@ -48,10 +48,7 @@
   ],
   "instruments": [
     {
-      "code": "calrq",
-      "version": 1,
-      "configurations": [
-      ]
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/instrument-definitions/calrq.pilr.json"
     }
   ],
   "periods": [

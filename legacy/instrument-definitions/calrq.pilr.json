@@ -308,7 +308,7 @@
             "type" : "string",
                 "optional" : true,
                 "label" : "Notes",
-                "doc" : "Misc notes regarding the chamber or participant",
+                "doc" : "Misc notes regarding the chamber or participant"
           },
           {
             "name" : "PurgeH2O",

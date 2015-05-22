@@ -9,7 +9,7 @@
       "clazz": "com.pilrhealth.settings.InstrumentConfigSetting",
       "code": "ema_ots:ema_config",
       "name": "EMA Configuration",
-      "description": "The configuration of the EMA content to deliver to the participant.",
+      "description": "The configuration of the EMA content to deliver to the participant."
     }
   ],
   "datasets": [
