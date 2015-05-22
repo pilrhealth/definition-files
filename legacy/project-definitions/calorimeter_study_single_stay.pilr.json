@@ -178,20 +178,16 @@
   ],
   "fileTypes": [
     {
-      "code": "pilrhealth:calrq:burn_file",
-      "version": 1
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calorimeter-burn.pilr.json"
     },
     {
-      "code": "pilrhealth:calrq:human_file",
-      "version": 1
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calorimeter-human.pilr.json"
     },
     {
-      "code": "pilrhealth:calrq:infusion_file",
-      "version": 1
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calorimeter-infusion.pilr.json"
     },
     {
-      "code": "pilrhealth:calorimeter:calrq_csv",
-      "version": 1
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calrq.pilr.json"
     }
   ],
   "variables": [
@@ -200,6 +196,7 @@
       "code": "pilrhealth:calrq:energy_intake_measured",
       "name": "Energy Intake Measured",
       "description": "Energy Intake Measured",
+      "definition_type": "variable",
       "units" : "",
       "value": 0,
       "min": 0,
@@ -210,6 +207,7 @@
       "code": "pilrhealth:calrq:urine_nitrogen",
       "name": "Urine Nitrogen Excretion Rate",
       "description": "Urine Nitrogen Excretion Rate",
+      "definition_type": "variable",
       "units" : "",
       "value": 0,
       "min": 0,
@@ -222,6 +220,7 @@
       "name": "Burn CalRQ Summary RC1",
       "version": 1,
       "description": "Compute summaries and generate report for CalRQ burn studies.",
+      "definition_type": "job",
       "runner": {
         "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
         "save_request": 0,
@@ -311,6 +310,7 @@
       "name": "Human CalRQ Summary RC1",
       "version": 1,
       "description": "Compute summaries and generate report for CalRQ human studies.",
+      "definition_type": "job",
       "runner": {
         "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
         "save_request": 0,
@@ -396,6 +396,7 @@
       "name": "Infusion CalRQ Summary RC1",
       "version": 1,
       "description": "Compute summaries and generate report for CalRQ infusion studies.",
+      "definition_type": "job",
       "runner": {
         "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
         "save_request": 0,
@@ -481,6 +482,7 @@
       "name": "Haldane Transform - Pre Event Tag",
       "version": 1,
       "description": "Compute summaries and generate report for CalRQ human studies.",
+      "definition_type": "job",
       "runner": {
         "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
         "save_request": 0,
