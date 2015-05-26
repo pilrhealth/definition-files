@@ -1,0 +1,11 @@
+{
+  "min": 0,
+  "max": 99,
+  "description": "Quantity of beer bottles on the wall",
+  "definition_type": "variable",
+  "name": "Beer Bottle Count",
+  "value": 99,
+  "code": "pilrhealth:sample_variable:beer_bottle_count",
+  "clazz": "com.pilrhealth.settings.IntegerSetting",
+  "units": ""
+}

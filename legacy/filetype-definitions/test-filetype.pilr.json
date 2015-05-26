@@ -1,0 +1,7 @@
+{
+  "name": "Test Report",
+  "code": "pilrhealth:test:test_report",
+  "version" : 1,
+  "description": "PiLR Test report",
+  "definition_type": "filetype"
+}

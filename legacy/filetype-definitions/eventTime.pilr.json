@@ -1,0 +1,59 @@
+{
+  "name": "Event time tagging app CSV data file",
+  "code": "pilrhealth:time_analysis:tagged_event_csv",
+  "version": 1,
+  "description": "A CSV data file output from the event time tagging reference application",
+  "definition_type": "filetype",
+  "dataset": "pilrhealth:time_analysis:tagged_event",
+  "dataset_version": 1,
+  "parser": {
+    "parse_by": "column_name",
+    "col_name_row": 1,
+    "skip_rows": 1,
+    "date_format": "yyyy-MM-dd hh:mm:ss aa",
+    "data_mappings": [
+      {
+        "from_name": "tags",
+        "to_name": "tags"
+      },
+      {
+        "from_name": "number",
+        "to_name": "number"
+      },
+      {
+        "from_name": "tagtype",
+        "to_name": "tag-type"
+      },
+      {
+        "from_name": "timetype",
+        "to_name": "time_type"
+      },
+      {
+        "from_name": "profileversion",
+        "to_name": "profile_version"
+      },
+      {
+        "from_name": "starttime",
+        "to_name": "start_time"
+      },
+      {
+        "from_name": "endtime",
+        "to_name": "end_time"
+      }
+    ],
+    "metadata_mappings": [
+      {
+        "from_name": "metadata: id",
+        "to_name": "id"
+      },
+      {
+        "from_name": "metadata: pt",
+        "to_name": "pt"
+      },
+      {
+        "from_name": "metadata: timestamp",
+        "to_name": "timestamp"
+      }
+    ]
+  }
+}

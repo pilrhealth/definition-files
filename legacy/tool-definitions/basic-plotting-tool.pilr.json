@@ -1,0 +1,9 @@
+{
+  "code": "basic_plotting",
+  "version": 1,
+  "name": "Basic Plotting",
+  "description": "The \"Basic Plotting\" tools tool allows you to select a dataset and date range for a participant's data, and will plot it on a line or bar graph.",
+  "definition_type": "tool",
+  "datasets": [
+  ]
+}

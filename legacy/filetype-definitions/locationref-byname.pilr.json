@@ -1,0 +1,63 @@
+{
+  "name": "Location reference app CSV data file",
+  "code": "pilrhealth:location_ref_app:location_csv",
+  "version": 1,
+  "description": "A CSV data file output from the location reference application",
+  "definition_type": "filetype",
+  "dataset": "pilrhealth:location_ref_app:location",
+  "dataset_version": 1,
+  "parser": {
+    "parse_by": "column_name",
+    "col_name_row": 1,
+    "skip_rows": 1,
+    "date_format": "yyyy-MM-dd hh:mm:ss aa",
+    "data_mappings": [
+      {
+        "from_name": "lat",
+        "to_name": "lat"
+      },
+      {
+        "from_name": "lon",
+        "to_name": "lon"
+      },
+      {
+        "from_name": "provider",
+        "to_name": "provider"
+      },
+      {
+        "from_name": "speed",
+        "to_name": "speed"
+      },
+      {
+        "from_name": "time",
+        "to_name": "time"
+      },
+      {
+        "from_name": "alt",
+        "to_name": "alt"
+      },
+      {
+        "from_name": "acc",
+        "to_name": "acc"
+      },
+      {
+        "from_name": "bearing",
+        "to_name": "bearing"
+      }
+    ],
+    "metadata_mappings": [
+      {
+        "from_name": "metadata: id",
+        "to_name": "id"
+      },
+      {
+        "from_name": "metadata: pt",
+        "to_name": "pt"
+      },
+      {
+        "from_name": "metadata: timestamp",
+        "to_name": "timestamp"
+      }
+    ]
+  }
+}

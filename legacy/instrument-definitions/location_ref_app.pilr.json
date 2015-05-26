@@ -1,0 +1,94 @@
+{
+  "code": "location_ref_app",
+  "version": 1,
+  "name": "Location Reference App",
+  "description": "The Location Reference App is a very basic smartphone application that demonstrates how to log location values, store them in a database, and use the pilrcorelib mobile code library to manage settings and upload data.",
+  "definition_type": "instrument",
+  "settings": [
+    {
+      "clazz": "com.pilrhealth.settings.IntegerSetting",
+      "code": "pilrhealth:location_ref_app:min_dist",
+      "name": "Minimum location change distance (meters)",
+      "description": "Minimum distance between consecutive location records, in meters.",
+      "value": 10,
+      "min": 0,
+      "required": true
+    },
+    {
+      "clazz": "com.pilrhealth.settings.IntegerSetting",
+      "code": "pilrhealth:location_ref_app:min_time",
+      "name": "Minimum time between records (seconds)",
+      "description": "Minimum time between consecutive location records, in seconds.",
+      "value": 30,
+      "min": 1,
+      "required": true
+    },
+    {
+      "clazz": "com.pilrhealth.settings.BooleanSetting",
+      "code": "pilrhealth:location_ref_app:gps_provider",
+      "name": "Use GPS location provider",
+      "description": "Set to true is you want to collect GPS location data.",
+      "value": true,
+      "required": true
+    },
+    {
+      "clazz": "com.pilrhealth.settings.BooleanSetting",
+      "code": "pilrhealth:location_ref_app:network_provider",
+      "name": "Use mobile network location provider",
+      "description": "Set to true is you want to collect network location data.",
+      "value": true,
+      "required": true
+    }
+  ],
+  "datasets": [
+    {
+      "name": "Location",
+      "code": "pilrhealth:location_ref_app:location",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "name": "Location Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "type": "number",
+                "name": "lat"
+              },
+              {
+                "type": "number",
+                "name": "lon"
+              },
+              {
+                "type": "string",
+                "name": "provider"
+              },
+              {
+                "type": "number",
+                "name": "speed"
+              },
+              {
+                "type": "string",
+                "category": "date",
+                "name": "time"
+              },
+              {
+                "type": "number",
+                "name": "alt"
+              },
+              {
+                "type": "number",
+                "name": "acc"
+              },
+              {
+                "type": "number",
+                "name": "bearing"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

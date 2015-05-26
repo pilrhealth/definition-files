@@ -1,0 +1,36 @@
+{
+    "code": "fitbit",
+    "name": "Fitbit Activity Monitor",
+    "description": "Fitbit is a wrist-worn monitor for tracking and analysing activity, sleep, calories, and more.",
+    "definition_type": "instrument",
+    "settings": [
+    ],
+    "datasets": [
+        {
+            "name": "Steps",
+            "code": "pilrhealth:fitbit:steps",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "Version 1",
+                    "code": "pilrhealth:fitbit:steps",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type": "string",
+								"category": "date",
+                                "name": "dateTime"
+                            },
+                            {
+                                "type": "number",
+                                "name": "value"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

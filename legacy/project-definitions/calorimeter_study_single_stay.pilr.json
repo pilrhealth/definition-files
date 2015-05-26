@@ -1,0 +1,546 @@
+{
+  "definition_type": "project",
+  "metadata": {
+    "timestamp": "2014-11-05T17:40:14UTC",
+    "environment": "development",
+    "appVersion": "0.1"
+  },
+  "projectdata": {
+    "code": "cal_project_import4",
+    "version": 1,
+    "name": "cal project import",
+    "periodTemplateOnly": true
+  },
+  "groupCategories": [
+    {
+      "code": "cal_project_import_participant_status",
+      "name": "Participant Status",
+      "membershipRequired": true,
+      "configCategory": false,
+      "statusCategory": true,
+      "groups": [
+        {
+          "code": "template_assignments_enrolled",
+          "name": "Enrolled",
+          "defaultGroup": true
+        },
+        {
+          "code": "template_assignments_removed",
+          "name": "Removed",
+          "defaultGroup": false
+        }
+      ]
+    },
+    {
+      "code": "template_assignments",
+      "name": "Template Assignments",
+      "membershipRequired": true,
+      "configCategory": true,
+      "statusCategory": false,
+      "groups": [
+        {
+          "code": "default_assignments",
+          "name": "Default Assignments",
+          "defaultGroup": true
+        }
+      ]
+    }
+  ],
+  "instruments": [
+    {
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/instrument-definitions/calrq.pilr.json"
+    }
+  ],
+  "tools": [
+    {
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/tool-definitions/r-processing-tool.pilr.json"
+    }
+  ],
+  "periods": [
+    {
+      "code": "active_period",
+      "name": "Participant Active Period",
+      "epochs": [
+        {
+          "code": "epoch_1",
+          "name": "Epoch 1"
+        }
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "code": "cal_project_import_default_template",
+      "name": "Default Template",
+      "activeInstruments": [
+        {
+          "instrument": "calrq",
+          "configVersion": null,
+          "settings": [
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:calrq:chamber_volume",
+              "value": 30000,
+              "min": 1,
+              "max": 99999,
+              "required": true
+            },
+            {
+              "clazz": "com.pilrhealth.settings.EnumSetting",
+              "code": "pilrhealth:calrq:co2_mfc",
+              "value": null,
+              "choices": [
+                "MFC 1",
+                "MFC 2",
+                "MFC 3",
+                "MFC 4",
+                "MFC 5"
+              ],
+              "required": false,
+              "multipleChoice": false
+            },
+            {
+              "clazz": "com.pilrhealth.settings.EnumSetting",
+              "code": "pilrhealth:calrq:configuration",
+              "value": null,
+              "choices": [
+                "Push - Differential",
+                "Pull - Differential",
+                "Push - Absolute",
+                "Pull - Absolute"
+              ],
+              "required": true,
+              "multipleChoice": false
+            },
+            {
+              "clazz": "com.pilrhealth.settings.EnumSetting",
+              "code": "pilrhealth:calrq:gas_type",
+              "value": null,
+              "choices": [
+                "Propane",
+                "Ethanol",
+                "Methanol"
+              ],
+              "required": false,
+              "multipleChoice": false
+            },
+            {
+              "clazz": "com.pilrhealth.settings.DoubleSetting",
+              "code": "pilrhealth:calrq:in_co2",
+              "value": 1.0,
+              "min": 0.0,
+              "max": 1000.0,
+              "required": false
+            },
+            {
+              "clazz": "com.pilrhealth.settings.DoubleSetting",
+              "code": "pilrhealth:calrq:in_o2",
+              "value": 10.0,
+              "min": 0.0,
+              "max": 1000.0,
+              "required": false
+            },
+            {
+              "clazz": "com.pilrhealth.settings.EnumSetting",
+              "code": "pilrhealth:calrq:n2_mfc",
+              "value": null,
+              "choices": [
+                "MFC 1",
+                "MFC 2",
+                "MFC 3",
+                "MFC 4",
+                "MFC 5"
+              ],
+              "required": false,
+              "multipleChoice": false
+            },
+            {
+              "clazz": "com.pilrhealth.settings.IntegerSetting",
+              "code": "pilrhealth:calrq:read_interval",
+              "value": 60,
+              "min": 1,
+              "max": 60,
+              "required": true
+            }
+          ]
+        }
+      ],
+      "periodSchedules": [
+        {
+          "period": "active_period",
+          "epochSchedules": [
+            {
+              "period": "active_period",
+              "epoch": "epoch_1",
+              "startDay": 1,
+              "endDay": 14,
+              "setByParticipant": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fileTypes": [
+    {
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calorimeter-burn.pilr.json"
+    },
+    {
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calorimeter-human.pilr.json"
+    },
+    {
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calorimeter-infusion.pilr.json"
+    },
+    {
+      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calrq.pilr.json"
+    }
+  ],
+  "variables": [
+    {
+      "clazz": "com.pilrhealth.settings.IntegerSetting",
+      "code": "pilrhealth:calrq:energy_intake_measured",
+      "name": "Energy Intake Measured",
+      "description": "Energy Intake Measured",
+      "definition_type": "variable",
+      "units" : "",
+      "value": 0,
+      "min": 0,
+      "max": 100000
+    },
+    {
+      "clazz": "com.pilrhealth.settings.DoubleSetting",
+      "code": "pilrhealth:calrq:urine_nitrogen",
+      "name": "Urine Nitrogen Excretion Rate",
+      "description": "Urine Nitrogen Excretion Rate",
+      "definition_type": "variable",
+      "units" : "",
+      "value": 0,
+      "min": 0,
+      "max": 10
+    }
+  ],
+  "jobs": [
+    {
+      "code":"pilrhealth:calrq:burn_summary_job_rc1",
+      "name": "Burn CalRQ Summary RC1",
+      "version": 1,
+      "description": "Compute summaries and generate report for CalRQ burn studies.",
+      "definition_type": "job",
+      "runner": {
+        "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+        "save_request": 0,
+        "save_response": 0,
+        "delete_if_successful": 0,
+        "package_url": "https://www.github.com/MeiResearchLtd/mei.calorimeter.r",
+        "package_function": "process_cal_burn",
+        "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
+        "input_datasets": [
+          {
+            "code": "pilrhealth:calrq:calrq_data",
+            "version": 1,
+            "mapping" : "calrq"
+          },
+          {
+            "code": "pilrhealth:time_analysis:tagged_event",
+            "version": 1,
+            "mapping" : "event_tags"
+          }
+        ],
+        "input_file_types": [],
+        "input_settings": [
+          {
+            "code": "pilrhealth:calrq:read_interval",
+            "mapping": "read_interval"
+          },
+          {
+            "code": "pilrhealth:calrq:configuration",
+            "mapping":"configuration"
+          },
+          {
+            "code": "pilrhealth:calrq:gas_type",
+            "mapping":"gas"
+          },
+          {
+            "code": "pilrhealth:calrq:chamber_volume",
+            "mapping":"volume"
+          },
+          {
+            "code": "pilrhealth:calrq:co2_mfc",
+            "mapping":"CO2_MFC"
+          },
+          {
+            "code": "pilrhealth:calrq:n2_mfc",
+            "mapping":"N2_MFC"
+          },
+          {
+            "code": "pilrhealth:calrq:in_o2",
+            "mapping": "in_o2"
+          },
+          {
+            "code": "pilrhealth:calrq:in_co2",
+            "mapping": "in_co2"
+          }
+        ],
+        "filter_params": [
+          "participant",
+          "date_range",
+          "period"
+        ],
+        "input_params": [],
+        "output_datasets": [
+          {
+            "code": "pilrhealth:calrq:burn_summary",
+            "version": 1,
+            "mapping" : "burn"
+          },
+          {
+            "code": "pilrhealth:calrq:haldane",
+            "version": 1,
+            "mapping" : "haldane"
+          }
+        ],
+        "output_file_types":[
+          { 
+            "code" : "pilrhealth:calrq:burn_file",
+            "version" : 1, 
+            "mapping" : "burn",
+            "extension": "pdf",
+            "filename_prefix": "burn_summary"
+          }
+        ]
+      }
+    },
+    {
+      "code":"pilrhealth:calrq:human_summary_job_rc1",
+      "name": "Human CalRQ Summary RC1",
+      "version": 1,
+      "description": "Compute summaries and generate report for CalRQ human studies.",
+      "definition_type": "job",
+      "runner": {
+        "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+        "save_request": 0,
+        "save_response": 0,
+        "delete_if_successful": 0,
+        "package_url": "https://github.com/MeiResearchLtd/mei.calorimeter.r",
+        "package_function": "process_cal_human",
+        "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
+        "input_datasets": [
+          {
+            "code": "pilrhealth:calrq:calrq_data",
+            "version": 1,
+            "mapping": "calrq"
+          },
+          {
+            "code": "pilrhealth:time_analysis:tagged_event",
+            "version": 1,
+            "mapping" : "event_tags"
+          }
+        ],
+        "input_file_types": [],
+        "input_settings": [
+          {
+            "code": "pilrhealth:calrq:urine_nitrogen",
+            "mapping" : "nitrogen"
+          },
+          {
+            "code": "pilrhealth:calrq:energy_intake_measured",
+            "mapping" : "energy_intake_measured"
+          },
+          {
+            "code": "pilrhealth:calrq:read_interval",
+            "mapping": "read_interval"
+          },
+          {
+            "code": "pilrhealth:calrq:configuration",
+            "mapping":"configuration"
+          },
+          {
+            "code": "pilrhealth:calrq:chamber_volume",
+            "mapping":"volume"
+          },
+          {
+            "code": "pilrhealth:calrq:in_o2",
+            "mapping": "in_o2"
+          },
+          {
+            "code": "pilrhealth:calrq:in_co2",
+            "mapping": "in_co2"
+          }
+        ],
+        "filter_params": [
+          "participant",
+          "date_range",
+          "period"
+        ],
+        "input_params": [],
+        "output_datasets": [
+          {
+            "code": "pilrhealth:calrq:haldane",
+            "version": 1,
+            "mapping": "haldane"
+          },
+          {
+            "code": "pilrhealth:calrq:human_summary",
+            "version": 1,
+            "mapping": "human"
+          }
+        ],
+        "output_file_types":[
+          { 
+            "code" : "pilrhealth:calrq:human_file",
+            "version" : 1, 
+            "mapping" : "human",
+            "extension": "pdf",
+            "filename_prefix": "human_summary"
+          }
+        ]
+      }
+    },
+    {
+      "code":"pilrhealth:calrq:infusion_summary_job_rc1",
+      "name": "Infusion CalRQ Summary RC1",
+      "version": 1,
+      "description": "Compute summaries and generate report for CalRQ infusion studies.",
+      "definition_type": "job",
+      "runner": {
+        "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+        "save_request": 0,
+        "save_response": 0,
+        "delete_if_successful": 0,
+        "package_url": "https://www.github.com/MeiResearchLtd/mei.calorimeter.r",
+        "package_function": "process_cal_infusion",
+        "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
+        "input_datasets": [
+          {
+            "code": "pilrhealth:calrq:calrq_data",
+            "version": 1,
+            "mapping" : "calrq"
+          },
+          {
+            "code": "pilrhealth:time_analysis:tagged_event",
+            "version": 1,
+            "mapping" : "event_tags"
+          }
+        ],
+        "input_file_types": [],
+        "input_settings": [
+          {
+            "code": "pilrhealth:calrq:read_interval",
+            "mapping": "read_interval"
+          },
+          {
+            "code": "pilrhealth:calrq:configuration",
+            "mapping":"configuration"
+          },
+          {
+            "code": "pilrhealth:calrq:chamber_volume",
+            "mapping":"volume"
+          },
+          {
+            "code": "pilrhealth:calrq:co2_mfc",
+            "mapping":"CO2_MFC"
+          },
+          {
+            "code": "pilrhealth:calrq:n2_mfc",
+            "mapping":"N2_MFC"
+          },
+          {
+            "code": "pilrhealth:calrq:in_o2",
+            "mapping": "in_o2"
+          },
+          {
+            "code": "pilrhealth:calrq:in_co2",
+            "mapping": "in_co2"
+          }
+        ],
+        "filter_params": [
+          "participant",
+          "date_range",
+          "period"
+        ],
+        "input_params": [],
+        "output_datasets": [
+          {
+            "code": "pilrhealth:calrq:infusion_summary",
+            "version": 1,
+            "mapping" : "infusion"
+          },
+          {
+            "code": "pilrhealth:calrq:haldane",
+            "version": 1,
+            "mapping" : "haldane"
+          }
+        ],
+        "output_file_types":[
+          { 
+            "code" : "pilrhealth:calrq:infusion_file",
+            "version" : 1, 
+            "mapping" : "infusion",
+            "extension": "pdf",
+            "filename_prefix": "infusion_summary"
+          }
+        ]
+      }
+    },
+    {
+      "code":"pilrhealth:calrq:haldane_timetag_job",
+      "name": "Haldane Transform - Pre Event Tag",
+      "version": 1,
+      "description": "Compute summaries and generate report for CalRQ human studies.",
+      "definition_type": "job",
+      "runner": {
+        "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+        "save_request": 0,
+        "save_response": 0,
+        "delete_if_successful": 0,
+        "package_url": "https://github.com/MeiResearchLtd/mei.calorimeter.r",
+        "package_function": "apply_haldane",
+        "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
+        "input_datasets": [
+          {
+            "code": "pilrhealth:calrq:calrq_data",
+            "version": 1,
+            "mapping": "calrq"
+          }
+        ],
+        "input_file_types": [],
+        "input_settings": [
+          {
+            "code": "pilrhealth:calrq:read_interval",
+            "mapping": "read_interval"
+          },
+          {
+            "code": "pilrhealth:calrq:configuration",
+            "mapping":"configuration"
+          },
+          {
+            "code": "pilrhealth:calrq:chamber_volume",
+            "mapping":"volume"
+          },
+          {
+            "code": "pilrhealth:calrq:in_o2",
+            "mapping": "in_o2"
+          },
+          {
+            "code": "pilrhealth:calrq:in_co2",
+            "mapping": "in_co2"
+          }
+        ],
+        "filter_params": [
+          "participant",
+          "date_range",
+          "period"
+        ],
+        "input_params": [],
+        "output_datasets": [
+          {
+            "code": "pilrhealth:calrq:haldane_pet",
+            "version": 1,
+            "mapping": "haldane"
+          }
+        ],
+        "output_file_types":[]
+      }
+    }
+  ]
+}

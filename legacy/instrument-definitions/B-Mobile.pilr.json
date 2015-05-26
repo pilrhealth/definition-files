@@ -1,0 +1,188 @@
+{
+  "code": "b-mobile",
+  "version": 1,
+  "name": "B-Mobile",
+  "description": "The \"B-Mobile\" instrument is primarily a smartphone application that tracks a participants physical activity on a minute by minute basis.",
+  "definition_type": "instrument",
+  "settings": [
+    {
+      "clazz": "com.pilrhealth.settings.IntegerSetting",
+      "code": "pilrhealth:bmobile:max_sedentary_time",
+      "name": "Maximum sedentary time before prompted (minutes)",
+      "description": "",
+      "value": 30,
+      "min": 0,
+      "required": true
+    },
+    {
+      "clazz": "com.pilrhealth.settings.IntegerSetting",
+      "code": "pilrhealth:bmobile:min_active_time",
+      "name": "Minimum active time before gauge resets (minutes)",
+      "description": "",
+      "value": 3,
+      "min": 0,
+      "required": true
+    },
+    {
+      "clazz": "com.pilrhealth.settings.TimeSetting",
+      "code": "pilrhealth:bmobile:sleep_start",
+      "name": "App sleep-mode start time",
+      "description": "",
+      "value": "20:00",
+      "required": true
+    },
+    {
+      "clazz": "com.pilrhealth.settings.TimeSetting",
+      "code": "pilrhealth:bmobile:sleep_end",
+      "name": "App sleep-mode end time",
+      "description": "",
+      "value": "07:00",
+      "required": true
+    },
+    {
+      "clazz": "com.pilrhealth.settings.DoubleSetting",
+      "code": "pilrhealth:bmobile:energy_threshold",
+      "name": "Energy threshold for active vs sedentary activity",
+      "description": "",
+      "value": 0.8,
+      "min": 0.0,
+      "max": 100.0,
+      "required": true
+    }
+  ],
+  "datasets": [
+    {
+      "name": "B-Mobile Activity By Minute",
+      "code": "pilrhealth:bmobile:activity",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "name": "B-Mobile Activity By Minute Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "count",
+                "type": "number",
+                "doc": "The count."
+              },
+              {
+                "name": "start_time",
+                "type": "string",
+                "category": "date",
+                "doc": "The data start date."
+              },
+              {
+                "name": "end_time",
+                "type": "string",
+                "category": "date",
+                "doc": "The data end date."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "B-Mobile Status By Minute",
+      "code": "pilrhealth:bmobile:status",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "name": "B-Mobile Status By Minute Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "count",
+                "type": "number",
+                "doc": "The count."
+              },
+              {
+                "name": "start_time",
+                "type": "string",
+                "category": "date",
+                "doc": "The data start date."
+              },
+              {
+                "name": "end_time",
+                "type": "string",
+                "category": "date",
+                "doc": "The data end date."
+              }
+            ]
+          }
+
+        }
+      ]
+    },
+    {
+      "name": "B-Mobile Event Log",
+      "code": "pilrhealth:bmobile:events",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "name": "B-Mobile Event Log Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "count",
+                "type": "number",
+                "doc": "The count."
+              },
+              {
+                "name": "start_time",
+                "type": "string",
+                "category": "date",
+                "doc": "The data start date."
+              },
+              {
+                "name": "end_time",
+                "type": "string",
+                "category": "date",
+                "doc": "The data end date."
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "B-Mobile Application Log",
+      "code": "pilrhealth:bmobile:log",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "name": "B-Mobile Application Log Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "count",
+                "type": "number",
+                "doc": "The count."
+              },
+              {
+                "name": "start_time",
+                "type": "string",
+                "category": "date",
+                "doc": "The data start date."
+              },
+              {
+                "name": "end_time",
+                "type": "string",
+                "category": "date",
+                "doc": "The data end date."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

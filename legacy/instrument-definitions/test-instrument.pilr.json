@@ -1,0 +1,54 @@
+{
+  "code": "pilrhealth:test:test_instrument",
+  "version": 1,
+  "name": "Test Instrument",
+  "description": "Instrument and datasets for PiLR Test Job",
+  "definition_type": "instrument",
+  "settings": [],
+  "datasets": [
+    {
+      "name": "Test Dataset",
+      "code": "pilrhealth:test:test_dataset",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "name": "Test Data Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type" : "object",
+            "fields" : [
+              {
+                "name" : "Var1",
+                "type" : "number",
+                "label" : "Test Variable 1",
+                "doc"  : "This is the first variable in this dataset."
+              },
+              {
+                "name" : "Var2",
+                "type" : "string",
+                "label" : "Var2",
+                "doc" : "Test Variable 2",
+                "units" : "This aspires to be the first variable in this dataset."
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "fileTypes": [
+    {
+      "name": "Test Report",
+      "code": "pilrhealth:test:test_report",
+      "version" : 1,
+      "description": "PiLR Test report",
+      "definition_type": "filetype"
+    }
+  ],
+  "dashboards": [
+    {
+      "code": "dash20849",
+      "version": 1
+    }
+  ]
+}

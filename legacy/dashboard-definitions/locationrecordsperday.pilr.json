@@ -1,0 +1,17 @@
+{
+  "code": "dash82936",
+  "version": 1,
+  "name" : "Location Records per Day",
+  "description" : "Displays number of records in the dataset for each day.",
+  "definition_type": "dashboard",
+  "dataset" : "pilrhealth:location_ref_app:location",
+  "schema" : "1",
+  "type" : "r:vega",
+  "package_url": "http://www.github.com/tdschenk/dashtest",
+  "package_function": "records.per.day",
+  "filter_params" : [
+    "participant",
+    "group",
+    "date"
+  ]
+}

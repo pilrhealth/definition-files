@@ -1,0 +1,16 @@
+{
+  "code": "processing_with_r",
+  "version": 1,
+  "name": "Processing with R",
+  "description": "The \"Processing with R\" tools tool allows you to view and run workflows that have been setup to process dataset thru R scripts.",
+  "definition_type": "tool",
+  "customizations": {
+    "package": "com.pilrhealth.tools.processing_with_r",
+    "classnamePrefix": "RProc",
+    "apix": true,
+    "controllers": {
+      "coordinate": "RProcEditor",
+      "portal": "RProcView"
+    }
+  }
+}

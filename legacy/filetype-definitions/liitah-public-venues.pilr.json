@@ -1,0 +1,47 @@
+{
+  "name": "Liitah Public Venues CSV data file",
+  "code": "pilrhealth:liitah:public_venues_csv",
+  "version": 1,
+  "description": "A CSV data file containing Public Venues",
+  "definition_type": "filetype",
+  "parser": {
+    "parse_by": "column_name",
+    "col_name_row": 1,
+    "skip_rows": 1,
+    "date_format": "yyyy-MM-dd hh:mm:ss aa",
+    "data_mappings": [
+      {
+        "from_name": "Venue ID",
+        "to_name": "localVenueId"
+      },
+      {
+        "from_name": "Chain ID",
+        "to_name": "venueChainId"
+      },
+      {
+        "from_name": "Name",
+        "to_name": "name"
+      },
+      {
+        "from_name": "Address",
+        "to_name": "address"
+      },
+      {
+        "from_name": "Latitude",
+        "to_name": "lat"
+      },
+      {
+        "from_name": "Longitude",
+        "to_name": "lon"
+      },
+      {
+        "from_name": "Beacon ID",
+        "to_name": "beaconId"
+      },
+      {
+        "from_name": "Radius (m)",
+        "to_name": "radius"
+      }
+    ]
+  }
+}
