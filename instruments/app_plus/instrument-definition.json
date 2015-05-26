@@ -187,12 +187,6 @@
                                 "label": "Action"
                             },
                             {
-                                "name": "notif_title",
-                                "type": "string",
-                                "label": "Notification title",
-                                "optional": true
-                            },
-                            {
                                 "name": "notif_text",
                                 "type": "string",
                                 "label": "Notification text",
