@@ -48,12 +48,12 @@
   ],
   "instruments": [
     {
-      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/instrument-definitions/calrq.pilr.json"
+      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/instrument-definitions/calrq.pilr.json"
     }
   ],
   "tools": [
     {
-      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/tool-definitions/r-processing-tool.pilr.json"
+      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/tool-definitions/r-processing-tool.pilr.json"
     }
   ],
   "periods": [
@@ -183,16 +183,16 @@
   ],
   "fileTypes": [
     {
-      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calorimeter-burn.pilr.json"
+      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/filetype-definitions/calorimeter-burn.pilr.json"
     },
     {
-      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calorimeter-human.pilr.json"
+      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/filetype-definitions/calorimeter-human.pilr.json"
     },
     {
-      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calorimeter-infusion.pilr.json"
+      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/filetype-definitions/calorimeter-infusion.pilr.json"
     },
     {
-      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/filetype-definitions/calrq.pilr.json"
+      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/filetype-definitions/calrq.pilr.json"
     }
   ],
   "variables": [

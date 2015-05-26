@@ -53,7 +53,7 @@
   ],
   "instruments": [
     {
-      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/instrument-definitions/location_ref_app.pilr.json"
+      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/instrument-definitions/location_ref_app.pilr.json"
     }
   ],
   "periods": [

@@ -48,10 +48,10 @@
   ],
   "instruments": [
     {
-      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/instrument-definitions/ema_ots.pilr.json"
+      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/instrument-definitions/ema_ots.pilr.json"
     },
     {
-      "definition_source": "https://raw.githubusercontent.com/jamespshields/definition-files/master/legacy/instrument-definitions/test-instrument.pilr.json"
+      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/instrument-definitions/test-instrument.pilr.json"
     }
   ],
   "periods": [
