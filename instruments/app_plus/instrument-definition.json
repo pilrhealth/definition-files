@@ -10,6 +10,15 @@
             "code": "ema_ots:ema_config",
             "name": "App Configuration",
             "description": "The configuration of the app content to be delivered to the participant."
+        },
+        {
+            "clazz": "com.pilrhealth.settings.IntegerSetting",
+            "code": "pilrhealth:app_plus:min_cyoa_interval",
+            "name": "CYOA Interval",
+            "description": "Minimun CYOA card interval ",
+            "value": 1,
+            "min": 0,
+            "required": true
         }
     ],
     "datasets": [
