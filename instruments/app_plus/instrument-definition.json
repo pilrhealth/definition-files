@@ -13,9 +13,9 @@
         },
         {
             "clazz": "com.pilrhealth.settings.IntegerSetting",
-            "code": "pilrhealth:app_plus:min_cyoa_interval",
-            "name": "CYOA Interval",
-            "description": "Minimun CYOA card interval ",
+            "code": "min_cyoa_interval",
+            "name": "CYOA Delivery Interval (hours)",
+            "description": "Specifies the number of hours to wait between delivery of consecutive cards for the Choose Your Own Adventure story.",
             "value": 1,
             "min": 0,
             "required": true
