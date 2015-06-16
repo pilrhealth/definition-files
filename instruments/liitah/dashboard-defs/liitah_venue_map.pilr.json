@@ -1,0 +1,36 @@
+{
+  "code": "liitah-venue-map",
+  "version": 2,
+  "name" : "Liitah Venue Map",
+  "description" : "A leaflet map showing a participant's registered venues",
+  "definition_type": "dashboard",
+  "dashboard_type" : "r:leaflet",
+  "runner": {
+    "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+    "save_request": 1,
+    "save_response": 1,
+    "delete_if_successful": 1,
+    "package_url": "http://www.github.com/tdschenk/dashtest",
+    "package_function": "liitah_venue_map",
+    "resource_path": "/github/MeiResearchLtd/pilr.dash.r/R/pilr_dashboard_panel",
+    "input_datasets": [
+      {
+        "code": "pilrhealth:liitah:personal_venue",
+        "version": 1,
+        "mapping": "venue"
+      }
+    ],
+    "input_file_types": [],
+    "input_settings": [],
+    "filter_params": [
+      "participant",
+      "group",
+      "date"
+    ],
+    "input_params": [],
+    "output_datasets": [
+    ],
+    "output_file_types": [
+    ]
+  }
+}
