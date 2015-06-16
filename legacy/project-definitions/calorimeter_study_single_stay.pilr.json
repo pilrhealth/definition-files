@@ -1,15 +1,13 @@
 {
+  "code": "cal_project_import4",
+  "version": 1,
+  "name": "cal project import",
+  "periodTemplateOnly": true,
   "definition_type": "project",
   "metadata": {
     "timestamp": "2014-11-05T17:40:14UTC",
     "environment": "development",
     "appVersion": "0.1"
-  },
-  "projectdata": {
-    "code": "cal_project_import4",
-    "version": 1,
-    "name": "cal project import",
-    "periodTemplateOnly": true
   },
   "groupCategories": [
     {

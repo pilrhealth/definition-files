@@ -1,15 +1,13 @@
 {
+  "code": "location-prj-sample-1",
+  "version": 1,
+  "name": "Location Tracking - Example 1",
+  "periodTemplateOnly": true,
   "definition_type": "project",
   "metadata": {
     "timestamp": "2014-07-15T14:00:48UTC",
     "environment": "qa",
     "appVersion": "0.1"
-  },
-  "projectdata": {
-    "code": "location-prj-sample-1",
-    "version": 1,
-    "name": "Location Tracking - Example 1",
-    "periodTemplateOnly": true
   },
   "groupCategories": [
     {
