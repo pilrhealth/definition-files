@@ -1,17 +1,36 @@
 {
   "code": "dash20936",
-  "version": 1,
+  "version": 2,
   "name" : "Location Records per Hour",
   "description" : "Displays number of records in the dataset for each hour of the day.",
   "definition_type": "dashboard",
-  "dataset" : "pilrhealth:location_ref_app:location",
-  "schema" : "1",
-  "type" : "r:vega",
-  "package_url": "http://www.github.com/tdschenk/dashtest",
-  "package_function": "records.per.hour",
-  "filter_params" : [
-    "participant",
-    "group",
-    "date"
-  ]
+  "dashboard_type" : "r:vega",
+  "runner": {
+    "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+    "save_request": 1,
+    "save_response": 1,
+    "delete_if_successful": 1,
+    "package_url": "http://www.github.com/tdschenk/dashtest",
+    "package_function": "records.per.hour",
+    "resource_path": "/github/MeiResearchLtd/pilr.dash.r/R/pilr_dashboard_panel",
+    "input_datasets": [
+      {
+        "code": "pilrhealth:location_ref_app:location",
+        "version": 1,
+        "mapping": "location"
+      }
+    ],
+    "input_file_types": [],
+    "input_settings": [],
+    "filter_params": [
+      "participant",
+      "group",
+      "date"
+    ],
+    "input_params": [],
+    "output_datasets": [
+    ],
+    "output_file_types": [
+    ]
+  }
 }
