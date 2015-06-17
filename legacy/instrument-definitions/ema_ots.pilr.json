@@ -181,5 +181,11 @@
       "coordinate": "EmaOts",
       "content": "EmaOtsContentHandler"
     }
-  }
+  },
+  "contents": [
+    {
+      "arbitrary-instrument-specific-tag-1": "test",
+      "arbitrary-instrument-specific-tag-2": "hooray"
+    }
+  ]
 }
