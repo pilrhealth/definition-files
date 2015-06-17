@@ -46,8 +46,7 @@
   ],
   "dashboards": [
     {
-      "code": "dash20849",
-      "version": 1
+      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/dashboard-definitions/latlonscatter.pilr.json"
     }
   ]
 }
