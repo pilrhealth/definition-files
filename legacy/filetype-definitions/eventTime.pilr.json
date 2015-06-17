@@ -3,7 +3,7 @@
   "code": "pilrhealth:time_analysis:tagged_event_csv",
   "version": 1,
   "description": "A CSV data file output from the event time tagging reference application",
-  "definition_type": "filetype",
+  "definition_type": "fileType",
   "dataset": "pilrhealth:time_analysis:tagged_event",
   "dataset_version": 1,
   "parser": {

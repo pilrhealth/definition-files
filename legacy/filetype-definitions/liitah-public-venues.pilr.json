@@ -3,7 +3,7 @@
   "code": "pilrhealth:liitah:public_venues_csv",
   "version": 1,
   "description": "A CSV data file containing Public Venues",
-  "definition_type": "filetype",
+  "definition_type": "fileType",
   "parser": {
     "parse_by": "column_name",
     "col_name_row": 1,

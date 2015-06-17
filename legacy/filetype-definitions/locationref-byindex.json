@@ -3,7 +3,7 @@
   "code": "pilrhealth:location_ref_app:location_csv",
   "version": 1,
   "description": "A CSV data file output from the location reference application",
-  "definition_type": "filetype",
+  "definition_type": "fileType",
   "dataset": "pilrhealth:location_ref_app:location",
   "dataset_version": 1,
   "parser": {
