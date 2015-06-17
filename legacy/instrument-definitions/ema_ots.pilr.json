@@ -186,8 +186,12 @@
   ],
   "contents": [
     {
-      "arbitrary-instrument-specific-tag-1": "test",
-      "arbitrary-instrument-specific-tag-2": "hooray"
+      "configurations": [
+        {
+          "name": "Default Configuration",
+          "code": "default_configuration"
+        }
+      ]
     }
   ]
 }
