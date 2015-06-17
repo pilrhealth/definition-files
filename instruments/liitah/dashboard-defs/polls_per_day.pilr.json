@@ -1,15 +1,15 @@
 {
   "code": "liitah-polls-per-day",
   "version": 2,
-  "name" : "Liitah Polls Per Day",
-  "description" : "Stacked bar chart of categorized polls per day",
+  "name" : "Polls Per Day (Stacked Bars)",
+  "description" : "Stacked bar chart of categorized polls per day for the Liitah app",
   "definition_type": "dashboard",
   "dashboard_type" : "r:vega",
   "runner": {
     "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
     "save_request": 1,
     "save_response": 1,
-    "delete_if_successful": 1,
+    "delete_if_successful": 0,
     "package_url": "http://www.github.com/tdschenk/pilr.liitah.r",
     "package_function": "polls_per_day",
     "resource_path": "/github/MeiResearchLtd/pilr.dash.r/R/pilr_dashboard_panel",
