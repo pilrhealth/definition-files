@@ -4,6 +4,18 @@
   "name": "PiLR EMA App",
   "description": "The PiLR EMA App allows you to setup surveys and messages to deliver to participants through their mobile phone (Android or iOS).  It also allows you to set a delivery schedule and triggering events to initiate them.",
   "definition_type": "instrument",
+  "customizations": {
+    "package": "com.pilrhealth.instruments.ema_ots",
+    "classnamePrefix": "EmaOts",
+    "apix": true,
+    "controllers": {
+      "configure": "EmaOtsConfig",
+      "coordinate": "EmaOts"
+    },
+    "services": {
+      "handleContent": "EmaOtsConfig"
+    }
+  },
   "settings": [
     {
       "clazz": "com.pilrhealth.settings.InstrumentConfigSetting",
@@ -172,14 +184,14 @@
       ]
     }
   ],
-  "customizations": {
-    "package": "com.pilrhealth.instruments.ema_ots",
-    "classnamePrefix": "EmaOts",
-    "apix": true,
-    "controllers": {
-      "configure": "EmaOtsConfig",
-      "coordinate": "EmaOts",
-      "content": "EmaOtsContentHandler"
+  "contents": [
+    {
+      "configurations": [
+        {
+          "name": "Default Configuration",
+          "code": "default_configuration"
+        }
+      ]
     }
-  }
+  ]
 }
