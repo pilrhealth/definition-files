@@ -12,8 +12,8 @@
       "configure": "EmaOtsConfig",
       "coordinate": "EmaOts"
     },
-    "handlers": {
-      "content": "EmaOtsContentHandler"
+    "services": {
+      "handleContent": "EmaOtsConfig"
     }
   },
   "settings": [

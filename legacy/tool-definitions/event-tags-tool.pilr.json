@@ -13,8 +13,8 @@
       "coordinate": "EvTagEditor",
       "portal": "EvTagView"
     },
-    "handlers": {
-      "content": "EvTagContentHandler"
+    "services": {
+      "handleContent": "EvTag"
     }
   },
   "datasets": [
