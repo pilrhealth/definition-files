@@ -10,7 +10,8 @@
     "controllers": {
       "configure": "EvTagConfig",
       "coordinate": "EvTagEditor",
-      "portal": "EvTagView"
+      "portal": "EvTagView",
+      "content": "EvTagContentHandler"
     },
     "package": "com.pilrhealth.tools.evtagger"
   },

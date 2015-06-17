@@ -178,7 +178,8 @@
     "apix": true,
     "controllers": {
       "configure": "EmaOtsConfig",
-      "coordinate": "EmaOts"
+      "coordinate": "EmaOts",
+      "content": "EmaOtsContentHandler"
     }
   }
 }
