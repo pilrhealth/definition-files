@@ -210,7 +210,7 @@
                   "repeatInterval": "1",
                   "repeatWeekdays": ["Sunday","Monday","Wednesday"],
                   "startTime": "08:00:00",
-                  "endTime": "20:00:00",
+                  "endTime": "20:00:00"
                 }
               ],
               "actions": [],
