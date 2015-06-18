@@ -196,6 +196,13 @@
               "description": "This is a sample survey.",
               "code": "sample_survey"
             }
+          ],
+          "triggerCriterias": [
+            {
+              "name": "Sample Trigger Criteria",
+              "description": "This is a sample trigger criteria.",
+              "code": "sample_trigger_criteria"
+            }
           ]
         }
       ]
