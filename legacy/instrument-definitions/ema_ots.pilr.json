@@ -213,7 +213,14 @@
                   "endTime": "20:00:00"
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": "survey_notification",
+                  "code": "sample_action",
+                  "survey": "sample_survey",
+                  "timeAvailable": "01:00:00"
+                }
+              ],
               "conditions": []
             }
           ]
