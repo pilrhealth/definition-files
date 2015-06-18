@@ -190,8 +190,9 @@
         {
           "name": "Default Configuration",
           "code": "default_configuration",
-          "surveys": [
+          "cardstacks": [
             {
+              "type": "survey",
               "name": "Sample Survey",
               "description": "This is a sample survey.",
               "code": "sample_survey",
