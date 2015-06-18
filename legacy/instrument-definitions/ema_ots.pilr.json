@@ -201,7 +201,20 @@
             {
               "name": "Sample Trigger Criteria",
               "description": "This is a sample trigger criteria.",
-              "code": "sample_trigger_criteria"
+              "code": "sample_trigger_criteria",
+              "triggers": [
+                {
+                  "type": "time_window",
+                  "code": "sample_trigger",
+                  "repeatType": "Weekly",
+                  "repeatInterval": "1",
+                  "repeatWeekdays": ["Sunday","Monday","Wednesday"],
+                  "startTime": "08:00:00",
+                  "endTime": "20:00:00",
+                }
+              ],
+              "actions": [],
+              "conditions": []
             }
           ]
         }
