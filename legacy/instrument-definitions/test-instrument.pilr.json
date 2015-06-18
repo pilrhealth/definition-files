@@ -46,7 +46,7 @@
   ],
   "dashboards": [
     {
-      "definition_source": "https://raw.githubusercontent.com/pilrhealth/definition-files/master/legacy/dashboard-definitions/latlonscatter.pilr.json"
+      "definition_source_rel": "../dashboard-definitions/latlonscatter.pilr.json"
     }
   ]
 }

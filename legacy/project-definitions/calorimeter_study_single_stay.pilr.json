@@ -46,12 +46,12 @@
   ],
   "instruments": [
     {
-      "definition_source": "../instrument-definitions/calrq.pilr.json"
+      "definition_source_rel": "../instrument-definitions/calrq.pilr.json"
     }
   ],
   "tools": [
     {
-      "definition_source": "../tool-definitions/r-processing-tool.pilr.json"
+      "definition_source_rel": "../tool-definitions/r-processing-tool.pilr.json"
     }
   ],
   "periods": [
@@ -181,16 +181,16 @@
   ],
   "fileTypes": [
     {
-      "definition_source": "../filetype-definitions/calorimeter-burn.pilr.json"
+      "definition_source_rel": "../filetype-definitions/calorimeter-burn.pilr.json"
     },
     {
-      "definition_source": "../filetype-definitions/calorimeter-human.pilr.json"
+      "definition_source_rel": "../filetype-definitions/calorimeter-human.pilr.json"
     },
     {
-      "definition_source": "../filetype-definitions/calorimeter-infusion.pilr.json"
+      "definition_source_rel": "../filetype-definitions/calorimeter-infusion.pilr.json"
     },
     {
-      "definition_source": "../filetype-definitions/calrq.pilr.json"
+      "definition_source_rel": "../filetype-definitions/calrq.pilr.json"
     }
   ],
   "variables": [

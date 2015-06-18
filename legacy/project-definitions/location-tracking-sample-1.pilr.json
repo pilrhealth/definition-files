@@ -51,7 +51,7 @@
   ],
   "instruments": [
     {
-      "definition_source": "../instrument-definitions/location_ref_app.pilr.json"
+      "definition_source_rel": "../instrument-definitions/location_ref_app.pilr.json"
     }
   ],
   "periods": [

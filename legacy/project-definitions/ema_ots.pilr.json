@@ -46,10 +46,10 @@
   ],
   "instruments": [
     {
-      "definition_source": "../instrument-definitions/ema_ots.pilr.json"
+      "definition_source_rel": "../instrument-definitions/ema_ots.pilr.json"
     },
     {
-      "definition_source": "../instrument-definitions/test-instrument.pilr.json"
+      "definition_source_rel": "../instrument-definitions/test-instrument.pilr.json"
     }
   ],
   "periods": [
