@@ -194,7 +194,30 @@
             {
               "name": "Sample Survey",
               "description": "This is a sample survey.",
-              "code": "sample_survey"
+              "code": "sample_survey",
+              "totalSections": 2,
+              "cards": [
+                {
+                  "type": "instruction",
+                  "code": "sample_instruction_card",
+                  "title": "Sample Instruction Card",
+                  "text": "This is a sample card.",
+                  "section": "1",
+                  "sectionOrder": "1",
+                  "icon": "alarm",
+                  "color": "87b87f"
+                },
+                {
+                  "type": "q_photo",
+                  "code": "sample_photo_card",
+                  "title": "Sample Photo Card",
+                  "text": "Please take a photo.",
+                  "section": "2",
+                  "sectionOrder": "1",
+                  "icon": "camera",
+                  "color": "ffb752"
+                }
+              ]
             }
           ],
           "triggerCriterias": [
