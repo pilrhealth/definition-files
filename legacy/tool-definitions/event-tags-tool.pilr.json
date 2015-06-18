@@ -94,7 +94,13 @@
   ],
   "contents": [
     {
-      "foo": "bar"
+      "labels": [
+        {
+          "name": "SampleTag",}
+          "description": "This is a sample tag."
+        }
+      ],
+      "bundles": []
     }
   ]
 }
