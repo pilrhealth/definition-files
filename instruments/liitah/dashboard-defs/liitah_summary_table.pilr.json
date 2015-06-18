@@ -1,0 +1,41 @@
+{
+  "code": "liitah-summary-table",
+  "version": 2,
+  "name" : "Liitah Summary Table",
+  "description" : "Table of summary statistics showing participant activity/usage",
+  "definition_type": "dashboard",
+  "dashboard_type" : "r:html",
+  "runner": {
+    "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+    "save_request": 1,
+    "save_response": 1,
+    "delete_if_successful": 0,
+    "package_url": "http://www.github.com/tdschenk/pilr.liitah.r",
+    "package_function": "full_table",
+    "resource_path": "/github/MeiResearchLtd/pilr.dash.r/R/pilr_dashboard_panel",
+    "input_datasets": [
+      {
+        "code": "pilrhealth:liitah:personal_venue",
+        "version": 1,
+        "mapping": "venue"
+      },
+	  {
+		"code": "pilrhealth:mobile:app_log",
+		"version": 1,
+		"mapping": "log"
+	  }
+    ],
+    "input_file_types": [],
+    "input_settings": [],
+    "filter_params": [
+      "participant",
+      "group",
+      "date"
+    ],
+    "input_params": [],
+    "output_datasets": [
+    ],
+    "output_file_types": [
+    ]
+  }
+}

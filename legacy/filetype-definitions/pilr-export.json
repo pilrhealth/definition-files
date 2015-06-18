@@ -3,7 +3,7 @@
   "code": "pilrhealth:calorimeter:pilr_calrq_csv",
   "version" : 1,
   "description": "A CSV data file output from PiLR, for CalRQ",
-  "definition_type": "filetype",
+  "definition_type": "fileType",
   "dataset": "pilrhealth:calrq:calrq_data",
   "dataset_version": 1,
   "parser": {

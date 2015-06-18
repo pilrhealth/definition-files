@@ -5,14 +5,17 @@
   "description": "The \"Event Tag Editor\" tool allows you to plot data from a dataset, and \"tag\" event time intervals through a visual click and drag feature.  This makes it easy to view and update event times and tags quickly for many participants.",
   "definition_type": "tool",
   "customizations": {
-    "apix": true,
+    "package": "com.pilrhealth.tools.evtagger",
     "classnamePrefix": "EvTag",
+    "apix": true,
     "controllers": {
       "configure": "EvTagConfig",
       "coordinate": "EvTagEditor",
       "portal": "EvTagView"
     },
-    "package": "com.pilrhealth.tools.evtagger"
+    "services": {
+      "handleContent": "EvTag"
+    }
   },
   "datasets": [
     {
@@ -85,6 +88,35 @@
             ],
             "type": "object"
           }
+        }
+      ]
+    }
+  ],
+  "contents": [
+    {
+      "labels": [
+        {
+          "name": "SampleTag",
+          "description": "This is a sample tag."
+        }
+      ],
+      "bundles": [
+        {
+          "name": "SampleBundle",
+          "description": "This is a sample tag bundle.",
+          "events": [
+            {
+              "name": "SampleEvent",
+              "note": "SampleNote",
+              "verified": 1,
+              "offset": 176490000,
+              "duration": 7200000,
+              "startTime": "01:01:30",
+              "durationTime": "02:00:00",
+              "startDays": 3,
+              "tags": ["SampleTag"]
+            }
+          ]
         }
       ]
     }

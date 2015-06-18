@@ -1,15 +1,13 @@
 {
+  "code": "cal_project_import4",
+  "version": 1,
+  "name": "cal project import",
+  "periodTemplateOnly": true,
   "definition_type": "project",
   "metadata": {
     "timestamp": "2014-11-05T17:40:14UTC",
     "environment": "development",
     "appVersion": "0.1"
-  },
-  "projectdata": {
-    "code": "cal_project_import4",
-    "version": 1,
-    "name": "cal project import",
-    "periodTemplateOnly": true
   },
   "groupCategories": [
     {
@@ -201,7 +199,6 @@
       "code": "pilrhealth:calrq:energy_intake_measured",
       "name": "Energy Intake Measured",
       "description": "Energy Intake Measured",
-      "definition_type": "variable",
       "units" : "",
       "value": 0,
       "min": 0,
@@ -212,7 +209,6 @@
       "code": "pilrhealth:calrq:urine_nitrogen",
       "name": "Urine Nitrogen Excretion Rate",
       "description": "Urine Nitrogen Excretion Rate",
-      "definition_type": "variable",
       "units" : "",
       "value": 0,
       "min": 0,
@@ -225,7 +221,6 @@
       "name": "Burn CalRQ Summary RC1",
       "version": 1,
       "description": "Compute summaries and generate report for CalRQ burn studies.",
-      "definition_type": "job",
       "runner": {
         "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
         "save_request": 0,
@@ -315,7 +310,6 @@
       "name": "Human CalRQ Summary RC1",
       "version": 1,
       "description": "Compute summaries and generate report for CalRQ human studies.",
-      "definition_type": "job",
       "runner": {
         "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
         "save_request": 0,
@@ -401,7 +395,6 @@
       "name": "Infusion CalRQ Summary RC1",
       "version": 1,
       "description": "Compute summaries and generate report for CalRQ infusion studies.",
-      "definition_type": "job",
       "runner": {
         "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
         "save_request": 0,
@@ -487,7 +480,6 @@
       "name": "Haldane Transform - Pre Event Tag",
       "version": 1,
       "description": "Compute summaries and generate report for CalRQ human studies.",
-      "definition_type": "job",
       "runner": {
         "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
         "save_request": 0,

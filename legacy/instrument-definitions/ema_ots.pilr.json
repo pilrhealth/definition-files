@@ -4,6 +4,18 @@
   "name": "PiLR EMA App",
   "description": "The PiLR EMA App allows you to setup surveys and messages to deliver to participants through their mobile phone (Android or iOS).  It also allows you to set a delivery schedule and triggering events to initiate them.",
   "definition_type": "instrument",
+  "customizations": {
+    "package": "com.pilrhealth.instruments.ema_ots",
+    "classnamePrefix": "EmaOts",
+    "apix": true,
+    "controllers": {
+      "configure": "EmaOtsConfig",
+      "coordinate": "EmaOts"
+    },
+    "services": {
+      "handleContent": "EmaOtsConfig"
+    }
+  },
   "settings": [
     {
       "clazz": "com.pilrhealth.settings.InstrumentConfigSetting",
@@ -70,15 +82,174 @@
           }
         }
       ]
+    },
+    {
+      "name": "Survey Data",
+      "code": "pilrhealth:mobile:survey_data",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "schemaVersion": 1,
+          "name": "1.0",
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "event_type",
+                "type": "string",
+                "label": "Event Type"
+              },
+              {
+                "name": "survey_code",
+                "type": "string",
+                "label": "Survey Code",
+                "optional": true
+              },
+              {
+                "name": "session",
+                "type": "string",
+                "label": "Session"
+              },
+              {
+                "name": "question_type",
+                "type": "string",
+                "label": "Question Type",
+                "optional": true
+              },
+              {
+                "name": "question_code",
+                "type": "string",
+                "label": "Question Code",
+                "optional": true
+              },
+              {
+                "name": "response",
+                "type": "string",
+                "label": "Response",
+                "optional": true
+              },
+              {
+                "name": "response_value",
+                "type": "string",
+                "label": "Response Value",
+                "optional": true
+              },
+              {
+                "name": "responses",
+                "type": "array",
+                "constType": {
+                  "type": "string"
+                },
+                "label": "Responses",
+                "optional": true
+              },
+              {
+                "name": "response_values",
+                "type": "array",
+                "constType": {
+                  "type": "string"
+                },
+                "label": "Response Values",
+                "optional": true
+              },
+              {
+                "label": "Additional Data",
+                "optional": true,
+                "type": "object",
+                "name": "more_data",
+                "fields": [
+                  {
+                    "name": "text",
+                    "type": "string",
+                    "label": "Text",
+                    "optional": true
+                  },
+                  {
+                    "name": "value",
+                    "type": "string",
+                    "label": "Value",
+                    "optional": true
+                  },
+                  {
+                    "name": "selected",
+                    "type": "boolean",
+                    "label": "Selected",
+                    "optional": true
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
     }
   ],
-  "customizations": {
-    "package": "com.pilrhealth.instruments.ema_ots",
-    "classnamePrefix": "EmaOts",
-    "apix": true,
-    "controllers": {
-      "configure": "EmaOtsConfig",
-      "coordinate": "EmaOts"
+  "contents": [
+    {
+      "configurations": [
+        {
+          "name": "Default Configuration",
+          "code": "default_configuration",
+          "cardstacks": [
+            {
+              "type": "survey",
+              "name": "Sample Survey",
+              "description": "This is a sample survey.",
+              "code": "sample_survey",
+              "totalSections": 2,
+              "cards": [
+                {
+                  "type": "instruction",
+                  "code": "sample_instruction_card",
+                  "title": "Sample Instruction Card",
+                  "text": "This is a sample card.",
+                  "section": "1",
+                  "sectionOrder": "1",
+                  "icon": "alarm",
+                  "color": "87b87f"
+                },
+                {
+                  "type": "q_photo",
+                  "code": "sample_photo_card",
+                  "title": "Sample Photo Card",
+                  "text": "Please take a photo.",
+                  "section": "2",
+                  "sectionOrder": "1",
+                  "icon": "camera",
+                  "color": "ffb752"
+                }
+              ]
+            }
+          ],
+          "triggerCriterias": [
+            {
+              "name": "Sample Trigger Criteria",
+              "description": "This is a sample trigger criteria.",
+              "code": "sample_trigger_criteria",
+              "triggers": [
+                {
+                  "type": "time_window",
+                  "code": "sample_trigger",
+                  "repeatType": "Weekly",
+                  "repeatInterval": "1",
+                  "repeatWeekdays": ["Sunday","Monday","Wednesday"],
+                  "startTime": "08:00:00",
+                  "endTime": "20:00:00"
+                }
+              ],
+              "actions": [
+                {
+                  "type": "survey_notification",
+                  "code": "sample_action",
+                  "survey": "sample_survey",
+                  "timeAvailable": "01:00:00"
+                }
+              ],
+              "conditions": []
+            }
+          ]
+        }
+      ]
     }
-  }
+  ]
 }

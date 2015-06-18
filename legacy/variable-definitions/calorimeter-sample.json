@@ -1,0 +1,22 @@
+{"variables": [
+    {
+      "clazz": "com.pilrhealth.settings.IntegerSetting",
+      "code": "pilrhealth:calrq:energy_intake_measured",
+      "name": "Energy Intake Measured",
+      "description": "Energy Intake Measured",
+      "units" : "",
+      "value": 0,
+      "min": 0,
+      "max": 100000
+    },
+    {
+      "clazz": "com.pilrhealth.settings.DoubleSetting",
+      "code": "pilrhealth:calrq:urine_nitrogen",
+      "name": "Urine Nitrogen Excretion Rate",
+      "description": "Urine Nitrogen Excretion Rate",
+      "units" : "",
+      "value": 0,
+      "min": 0,
+      "max": 10
+    }
+  ]}

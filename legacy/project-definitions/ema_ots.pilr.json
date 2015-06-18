@@ -1,15 +1,13 @@
 {
+  "code": "ema_ots_import1",
+  "version": 1,
+  "name": "EMA Demo",
+  "periodTemplateOnly": true,
   "definition_type": "project",
   "metadata": {
     "timestamp": "2015-01-29T13:57:00UTC",
     "environment": "development",
     "appVersion": "0.1"
-  },
-  "projectdata": {
-    "code": "ema_ots_import1",
-    "version": 1,
-    "name": "EMA Demo",
-    "periodTemplateOnly": true
   },
   "groupCategories": [
     {

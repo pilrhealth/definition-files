@@ -1,17 +1,36 @@
 {
   "code": "dash27593",
-  "version": 1,
-  "name" : "Catagorized Activity Counts",
+  "version": 2,
+  "name" : "Categorized Activity Counts",
   "description" : "Number of records per activity",
   "definition_type": "dashboard",
-  "dataset" : "pilrhealth:activity_ref_app:activity",
-  "schema" : "1",
-  "type" : "r:vega",
-  "package_url": "http://www.github.com/tdschenk/activitypanels",
-  "package_function": "activity.counts",
-  "filter_params" : [
-    "participant",
-    "group",
-    "date"
-  ]
+  "dashboard_type" : "r:vega",
+  "runner": {
+    "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+    "save_request": 1,
+    "save_response": 1,
+    "delete_if_successful": 0,
+    "package_url": "http://www.github.com/tdschenk/activitypanels",
+    "package_function": "activity.counts",
+    "resource_path": "/github/MeiResearchLtd/pilr.dash.r/R/pilr_dashboard_panel",
+    "input_datasets": [
+      {
+        "code": "pilrhealth:activity_ref_app:activity",
+        "version": 1,
+        "mapping": "activity"
+      }
+    ],
+    "input_file_types": [],
+    "input_settings": [],
+    "filter_params": [
+      "participant",
+      "group",
+      "date"
+    ],
+    "input_params": [],
+    "output_datasets": [
+    ],
+    "output_file_types": [
+    ]
+  }
 }
