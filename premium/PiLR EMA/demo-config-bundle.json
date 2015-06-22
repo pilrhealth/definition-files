@@ -1,0 +1,12 @@
+{
+  "definition_type": "bundle",
+  "code": "ema_bundle_001",
+  "version": 1,
+  "name": "Sample configuration for PiLR EMA app demo",
+  "description": "This bundle adds the PiLR EMA app instrument to your project, as well as a sample EMA Configuration and dashboard panels."
+  "instruments": [
+    {
+      "definition_source_rel": "./sample-config-bundle.json"
+    }
+  ]
+}
