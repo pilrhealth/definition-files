@@ -1,16 +1,20 @@
 {
-  "definition_type": "instrument_contents",
-  "instrument_code": "ema_ots",
-  "code": "ema_config_293",
+  "definition_type": "bundle",
+  "code": "mei_ema_bundle_001",
   "version": 1,
-  "name": "Two EMA protocols",
-  "description": "Sample content for two EMA protocols.",
-  "contents": [
+  "name": "Sample configuration for PiLR EMA app demo",
+  "description": "This bundle adds the PiLR EMA app instrument to your project, as well as a sample EMA Configuration and dashboard panels.",
+  "instruments": [
+    {
+      "definition_source_rel": "./base-instrument.json"
+    }
+  ],
+  "instrument_contents": [
     {
       "configurations": [
         {
-          "name": "Protocol 1 Config",
-          "code": "protocol_1",
+          "name": "Sample App Config 1",
+          "code": "config1",
           "cardstacks": [
             {
               "type": "survey",
@@ -71,8 +75,8 @@
           ]
         },
         {
-          "name": "Protocol 2 Config",
-          "code": "protocol_2",
+          "name": "Sample App Config 2",
+          "code": "config2",
           "cardstacks": [
             {
               "type": "survey",
