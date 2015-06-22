@@ -250,8 +250,6 @@
           ]
         },
         {
-      "configurations": [
-        {
           "name": "Protocol 2 Config",
           "code": "protocol_2",
           "cardstacks": [
@@ -313,8 +311,6 @@
             }
           ]
         }
-      ]
-    }
       ]
     }
   ]
