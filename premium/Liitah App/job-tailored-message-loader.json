@@ -1,0 +1,82 @@
+{
+	"definition_type": "job",
+	"code" : "pilrhealth:liitah:tailored_message_loader",
+	"name" : "Liitah Tailored Message Loader",
+	"version" : 1,
+	"description" : "Loads meal tailored messages for Liitah participants.",
+	"runner" : {
+		"clazz" : "com.pilrhealth.instruments.liitah_tailored_messages.LiitahTailoredMessageLoaderJobRunner",
+		"save_request" : 1,
+		"save_response" : 1,
+		"delete_if_successful" : 0,
+		"resource_path" : "https://liitah.umms.med.umich.edu/test",
+		"input_settings" : [{
+				"code" : "pilrhealth:liitah:param_breakfast",
+				"mapping" : "Breakfast"
+			}, {
+				"code" : "pilrhealth:liitah:param_gym",
+				"mapping" : "Gym"
+			}, {
+				"code" : "pilrhealth:liitah:param_fastfood",
+				"mapping" : "FastFood"
+			}, {
+				"code" : "pilrhealth:liitah:param_menthealth",
+				"mapping" : "MentHealth"
+			}, {
+				"code" : "pilrhealth:liitah:param_energy",
+				"mapping" : "Energy"
+			}, {
+				"code" : "pilrhealth:liitah:param_selowfat",
+				"mapping" : "SELowFat"
+			}, {
+				"code" : "pilrhealth:liitah:param_readychange",
+				"mapping" : "ReadyChange"
+			}, {
+				"code" : "pilrhealth:liitah:param_tv",
+				"mapping" : "TV"
+			}, {
+				"code" : "pilrhealth:liitah:param_emotionaleat",
+				"mapping" : "EmotionalEat"
+			}, {
+				"code" : "pilrhealth:liitah:param_easiestchange",
+				"mapping" : "EasiestChange"
+			}, {
+				"code" : "pilrhealth:liitah:param_hardestchange",
+				"mapping" : "HardestChange"
+			}, {
+				"code" : "pilrhealth:liitah:param_famrltnshp",
+				"mapping" : "FamRltnshp"
+			}, {
+				"code" : "pilrhealth:liitah:param_mainsupport",
+				"mapping" : "MainSupport"
+			}, {
+				"code" : "pilrhealth:liitah:param_exmuscles",
+				"mapping" : "ExMuscles"
+			}, {
+				"code" : "pilrhealth:liitah:param_comparelastyr",
+				"mapping" : "CompareLastYr"
+			}, {
+				"code" : "pilrhealth:liitah:param_diagnoses",
+				"mapping" : "Diagnoses"
+			}, {
+				"code" : "pilrhealth:liitah:param_value",
+				"mapping" : "Value"
+			}, {
+				"code" : "pilrhealth:liitah:param_causes",
+				"mapping" : "Causes"
+			}, {
+				"code" : "pilrhealth:liitah:param_motivation",
+				"mapping" : "Motivation"
+			}, {
+				"code" : "pilrhealth:liitah:param_snacktype",
+				"mapping" : "SnackType"
+			},
+		],
+		"output_datasets" : [{
+				"code" : "pilrhealth:liitah:tailored_messages",
+				"version" : 1,
+				"mapping" : "tailored_messages"
+			}
+		]
+	}
+}

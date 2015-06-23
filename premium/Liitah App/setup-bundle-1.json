@@ -1,0 +1,20 @@
+{
+	"definition_type" : "bundle",
+	"code" : "liitah_bundle_001",
+	"version" : 1,
+	"name" : "Liitah Project Setup Bundle",
+	"description" : "A component bundle containing the Liitah instrument, tailored messages loader, and relevant dashboards.",
+	"instruments" : [{
+			"definition_source_rel" : "./base-instrument.json"
+		}
+	],
+	"jobs" : [{
+			"definition_source_rel" : "./job-tailored-message-loader.json"
+		}
+	],
+	"dashboards" : [{
+			"definition_source_rel" : "./dashboard-polls-per-day.json",
+			"definition_source_rel" : "./dashboard-triggers-per-day.json"
+		}
+	]
+}
