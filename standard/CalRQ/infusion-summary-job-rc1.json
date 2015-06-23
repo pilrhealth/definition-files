@@ -1,0 +1,174 @@
+{
+      "definition_type": "job",
+      "code":"calorimeter_infusion_summary_job_rc1",
+      "name": "Infusion CalRQ Summary RC1",
+      "version": 1,
+      "description": "Compute summaries and generate report for CalRQ infusion studies.",
+      "datasets": [
+{
+      "name": "CalRQ Infusion Summary",
+      "code": "pilrhealth:calrq:infusion_summary",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "name": "CalRQ Infusion Summary",
+          "schemaVersion": 1,
+          "specification": {
+            "type":"object",
+            "fields": [
+              {
+                "name":"start_time",
+                "type":"string",
+                "category":"date"
+              },
+              {
+                "name":"end_time",
+                "type":"string",
+                "category": "date"
+              },
+              {
+                "name":"vco2_meas",
+                "type":"number"
+              },
+              {
+                "name":"vo2_meas",
+                "type":"number"
+              },
+              {
+                "name":"ee_meas",
+                "type":"number"
+              },
+              {
+                "name":"rq_meas",
+                "type":"number"
+              },
+              {
+                "name":"vco2_exp",
+                "type":"number"
+              },
+              {
+                "name":"vo2_exp",
+                "type":"number"
+              },
+              {
+                "name":"ee_exp",
+                "type":"number"
+              },
+              {
+                "name":"rq_exp",
+                "type":"number"
+              },
+              {
+                "name":"vco2_err",
+                "type":"number"
+              },
+              {
+                "name":"vo2_err",
+                "type":"number"
+              },
+              {
+                "name":"ee_err",
+                "type":"number"
+              },
+              {
+                "name":"rq_err",
+                "type":"number"
+              },
+              {
+                "name":"null_offset_o2",
+                "type":"number"
+              },
+              {
+                "name":"null_offset_co2",
+                "type":"number"
+              },
+              {
+                "name":"tag_label",
+                "type":"string"
+              }
+            ]
+          }
+        }
+      ]
+    }
+      ],
+      "runner": {
+        "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+        "save_request": 0,
+        "save_response": 0,
+        "delete_if_successful": 0,
+        "package_url": "https://www.github.com/MeiResearchLtd/mei.calorimeter.r",
+        "package_function": "process_cal_infusion",
+        "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
+        "input_datasets": [
+          {
+            "code": "pilrhealth:calrq:calrq_data",
+            "version": 1,
+            "mapping" : "calrq"
+          },
+          {
+            "code": "pilrhealth:time_analysis:tagged_event",
+            "version": 1,
+            "mapping" : "event_tags"
+          }
+        ],
+        "input_file_types": [],
+        "input_settings": [
+          {
+            "code": "pilrhealth:calrq:read_interval",
+            "mapping": "read_interval"
+          },
+          {
+            "code": "pilrhealth:calrq:configuration",
+            "mapping":"configuration"
+          },
+          {
+            "code": "pilrhealth:calrq:chamber_volume",
+            "mapping":"volume"
+          },
+          {
+            "code": "pilrhealth:calrq:co2_mfc",
+            "mapping":"CO2_MFC"
+          },
+          {
+            "code": "pilrhealth:calrq:n2_mfc",
+            "mapping":"N2_MFC"
+          },
+          {
+            "code": "pilrhealth:calrq:in_o2",
+            "mapping": "in_o2"
+          },
+          {
+            "code": "pilrhealth:calrq:in_co2",
+            "mapping": "in_co2"
+          }
+        ],
+        "filter_params": [
+          "participant",
+          "date_range",
+          "period"
+        ],
+        "input_params": [],
+        "output_datasets": [
+          {
+            "code": "pilrhealth:calrq:infusion_summary",
+            "version": 1,
+            "mapping" : "infusion"
+          },
+          {
+            "code": "pilrhealth:calrq:haldane",
+            "version": 1,
+            "mapping" : "haldane"
+          }
+        ],
+        "output_file_types":[
+          { 
+            "code" : "pilrhealth:calrq:infusion_file",
+            "version" : 1, 
+            "mapping" : "infusion",
+            "extension": "pdf",
+            "filename_prefix": "infusion_summary"
+          }
+        ]
+      }
+    }

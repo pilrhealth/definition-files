@@ -1,0 +1,85 @@
+{
+  "definition_type": "bundle",
+  "code": "calorimeter_bundle_001",
+  "version": 1,
+  "name": "Calorimeter Project Setup Bundle",
+  "description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, and tools used in a calorimeter study.",
+  "instruments": [
+    {
+      "definition_source_rel": "./base-instrument.json"
+    }
+  ],
+  "variables": [
+    {
+      "type": "integer_setting",
+      "code": "pilrhealth:calrq:energy_intake_measured",
+      "name": "Energy Intake Measured",
+      "description": "Energy Intake Measured",
+      "units" : "",
+      "value": 0,
+      "min": 0,
+      "max": 100000
+    },
+    {
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:urine_nitrogen",
+      "name": "Urine Nitrogen Excretion Rate",
+      "description": "Urine Nitrogen Excretion Rate",
+      "units" : "",
+      "value": 0,
+      "min": 0,
+      "max": 10
+    }
+  ],
+  "tools": [
+    {
+      "definition_source_rel": "../tools/r-processing-tool.json"
+    },
+    {
+      "definition_source_rel": "../tools/event-tagger-tool.json"
+    }
+  ],
+  "jobs": [
+    {
+      "definition_source_rel": "./burn-summary-job-rc1.json"
+    },
+    {
+      "definition_source_rel": "./human-summary-job-rc1.json"
+    },
+    {
+      "definition_source_rel": "./infusion-summary-job-rc1.json"
+    },
+    {
+      "definition_source_rel": "./haldane-transform-job.json"
+    }
+  ],
+  "tools_contents": [
+    {
+      "labels": [
+        {
+          "name": "SampleTag",
+          "description": "This is a sample tag."
+        }
+      ],
+      "bundles": [
+        {
+          "name": "SampleBundle",
+          "description": "This is a sample tag bundle.",
+          "events": [
+            {
+              "name": "SampleEvent",
+              "note": "SampleNote",
+              "verified": 1,
+              "offset": 176490000,
+              "duration": 7200000,
+              "startTime": "01:01:30",
+              "durationTime": "02:00:00",
+              "startDays": 3,
+              "tags": ["SampleTag"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
