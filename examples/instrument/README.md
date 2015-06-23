@@ -10,3 +10,17 @@ Instrument Settings:
 Dataset:
   Activity data
 ```
+
+## Instrument Settings
+When defining an instrument setting that coordinators can set for the instrument through the website, you can use the following types:
+
+```
+boolean_setting
+date_setting
+double_setting
+enum_setting
+configuration_setting
+integer_setting
+string_setting
+time_setting
+```
