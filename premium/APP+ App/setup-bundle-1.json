@@ -1,0 +1,17 @@
+{
+  "definition_type": "bundle",
+  "code": "umn_app_plus_bundle_001",
+  "version": 1,
+  "name": "APP+ Project Setup Bundle",
+  "description": "This component bundle adds the APP+ instrument to a project, and the dashboard panels used to summarize the dosage information for project coordinators.",
+  "instruments": [
+    {
+      "definition_source_rel": "./base-instrument.json"
+    }
+  ],
+  "dashboards": [
+    {
+      "definition_source_rel": "./dosages-taken-reported-dashboard.json"
+    }
+  ]
+}
