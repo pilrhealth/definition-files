@@ -18,7 +18,7 @@
   },
   "settings": [
     {
-      "clazz": "com.pilrhealth.settings.InstrumentConfigSetting",
+      "type": "configuration_setting",
       "code": "ema_ots:ema_config",
       "name": "EMA Configuration",
       "description": "The configuration of the EMA content to deliver to the participant."
