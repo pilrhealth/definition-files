@@ -18,9 +18,9 @@ When defining an instrument setting that coordinators can set for the instrument
 boolean_setting
 date_setting
 double_setting
-enum_setting
+list_setting
 configuration_setting
 integer_setting
-string_setting
+text_setting
 time_setting
 ```
