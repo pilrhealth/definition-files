@@ -1,0 +1,51 @@
+{
+    "definition_type": "instrument",
+    "code": "drexel_nutritional_info_app",
+    "name": "Drexel Nutritional Information App",
+    "version": 1,
+    "description": "The app allows users to keep a list of the current food items they have around them and determine the energy density of those items.  Users provide a regular or ad hoc report of the current nutritional profile within their environment",
+    "settings": [
+	{
+		"type": "text_setting",
+		"code" : "pilrhealth:drexel_nutritional_info_app:report_notification_frequency",
+		"name" : "Report Notification Frequency",      
+        "description" : "The frequency with which the user is reminded to check their current nutritional profile and submit a report. Values can be 'Daily' or 'Weekly'",
+        "value" : "Daily",
+        "required" : true    
+    }
+    ],
+    "datasets": [
+        {
+            "name": "Nutritional Data",
+            "code": "pilrhealth:drexel_nutritional_info_app:nutritional_data",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "Version 2",
+                    "schemaVersion": 2,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type" : "number",
+                                "name" : "food_energy_density",
+								"label": "Food Energy Density"
+                            },
+                            {
+                                "type" : "number",
+                                "name" : "drink_energy_density",
+								"label": "Drink Energy Density"
+                            },
+							{
+								"type": "string",
+                                "category": "date",
+								"label": "Report Submission Date",
+								"name": "report_submission_date"
+							}
+						]
+                    }
+                }
+            ]
+        }
+    ]
+}
