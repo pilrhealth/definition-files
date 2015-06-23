@@ -1,0 +1,282 @@
+{
+	"definition_type" : "instrument",
+	"code" : "liitah",
+	"name" : "LIITA3H App",
+	"description" : "The LIITA3H App is a mobile application to aid adolescence in making healthy diet choices.  It is developed under an STTR grant in collaboration with the University of Michigan.",
+	"version" : 1,
+	"settings" : [{
+			"type" : "list_setting",
+			"code" : "pilrhealth:liitah:app_mode",
+			"name" : "Mobile App Mode",
+			"description" : "The mode the mobile app is in for collecting data and delivering content.",
+			"choices" : [
+				"Stage 1 Mode",
+				"Stage 2 Mode",
+				"Stage 3 Mode",
+				"Stage 4 Mode"
+			],
+			"required" : true,
+			"multipleChoice" : false
+		}
+	],
+	"datasets" : [{
+			"name" : "Personal Venues",
+			"code" : "pilrhealth:liitah:personal_venue",
+			"schemas" : [{
+					"clazz" : "com.pilrhealth.data.ConcordiaSchema",
+					"schemaVersion" : 1,
+					"name" : "1.0",
+					"specification" : {
+						"fields" : [{
+								"doc" : "Name assigned to venue by participant.",
+								"label" : "Venue Name",
+								"name" : "name",
+								"type" : "string"
+							}, {
+								"label" : "Trigger Type",
+								"name" : "trig_type",
+								"type" : "string",
+								"optional" : true,
+								"doc" : "The method used to detect arrival at the venue."
+							}, {
+								"optional" : true,
+								"doc" : "The ID of the a matched public venue, used for food recommendations.",
+								"type" : "string",
+								"label" : "Matched Public Venue ID",
+								"name" : "public_venue_id"
+							}, {
+								"doc" : "Information used to trigger on arrival at venue",
+								"label" : "Trigger Info",
+								"name" : "trig_info",
+								"optional" : true,
+								"type" : "object",
+								"fields" : [{
+										"optional" : true,
+										"type" : "number",
+										"label" : "Centroid Latitude",
+										"name" : "lat"
+									}, {
+										"optional" : true,
+										"type" : "number",
+										"label" : "Centroid Longitude",
+										"name" : "lon"
+									}, {
+										"optional" : true,
+										"type" : "number",
+										"label" : "Radius from Centroid",
+										"name" : "radius"
+									}
+								]
+							}
+						],
+						"type" : "object"
+					}
+
+				}
+			]
+		}, {
+			"name" : "Personal Venue Training Records",
+			"code" : "pilrhealth:liitah:personal_venue_training_record",
+			"schemas" : [{
+					"clazz" : "com.pilrhealth.data.ConcordiaSchema",
+					"schemaVersion" : 1,
+					"name" : "1.0",
+					"specification" : {
+						"fields" : [{
+								"doc" : "ID of the personal venue the record is for.",
+								"label" : "Personal Venue ID",
+								"name" : "venue_id",
+								"optional" : false,
+								"type" : "string"
+							}, {
+								"doc" : "The type of training record this is.",
+								"label" : "Type of Record",
+								"name" : "record_type",
+								"optional" : false,
+								"type" : "string"
+							}, {
+								"doc" : "The information for this record used to update the trigger info.",
+								"label" : "Info",
+								"name" : "info",
+								"optional" : false,
+								"type" : "object",
+								"fields" : [{
+										"optional" : true,
+										"type" : "string",
+										"doc" : "The type of device capturing the info.  If a Smartphone, then the OS platform.",
+										"label" : "Device Type",
+										"name" : "device_type"
+									}, {
+										"optional" : true,
+										"type" : "number",
+										"doc" : "Latitude in degrees.",
+										"unit" : "Degrees",
+										"label" : "Latitude",
+										"name" : "lat"
+									}, {
+										"optional" : true,
+										"type" : "number",
+										"doc" : "Longitude in degrees.",
+										"unit" : "Degrees",
+										"label" : "Longitude",
+										"name" : "lon"
+									}, {
+										"optional" : true,
+										"type" : "number",
+										"doc" : "Estimated accuracy of location, in meters",
+										"unit" : "Meters",
+										"label" : "Accuracy",
+										"name" : "acc"
+									}, {
+										"optional" : true,
+										"type" : "number",
+										"doc" : "Altitude if available, in meters above the WGS 84 reference ellipsoid.",
+										"unit" : "Meters",
+										"label" : "Altitude",
+										"name" : "alt"
+									}, {
+										"optional" : true,
+										"type" : "number",
+										"doc" : "The horizontal direction of travel of this device (not related to device orientation). If location does not have a bearing, then 0.0 is returned.",
+										"unit" : "Degrees",
+										"label" : "Bearing",
+										"name" : "bearing"
+									}, {
+										"optional" : true,
+										"type" : "number",
+										"doc" : "Speed the device is traveling over ground. If location doesn't have a speed then 0.0 is returned.",
+										"unit" : "Meters per second",
+										"label" : "Speed",
+										"name" : "speed"
+									}, {
+										"optional" : true,
+										"type" : "string",
+										"doc" : "The name or type of the location system that provided the record.",
+										"label" : "Provider",
+										"name" : "provider"
+									}, {
+										"optional" : true,
+										"type" : "string",
+										"doc" : "The time of the location record. Depending on device, this time could be different from when the record was logged.",
+										"category" : "date",
+										"label" : "Location Time",
+										"name" : "time"
+									}
+								]
+							}
+						],
+						"type" : "object"
+					}
+
+				}
+			]
+		}, {
+			"name" : "Location Log",
+			"code" : "pilrhealth:liitah:location",
+			"schemas" : [{
+					"clazz" : "com.pilrhealth.data.ConcordiaSchema",
+					"schemaVersion" : 1,
+					"name" : "1.0",
+					"specification" : {
+						"type" : "object",
+						"fields" : [{
+								"type" : "string",
+								"category" : "date",
+								"name" : "time",
+								"label" : "Time"
+							}, {
+								"type" : "number",
+								"name" : "lat",
+								"label" : "Latitude"
+							}, {
+								"type" : "number",
+								"name" : "lon",
+								"label" : "Longitude"
+							}, {
+								"type" : "string",
+								"name" : "provider",
+								"label" : "Location Service Used"
+							}, {
+								"type" : "number",
+								"name" : "speed",
+								"label" : "Speed"
+							}, {
+								"type" : "number",
+								"name" : "alt",
+								"label" : "Altitude"
+							}, {
+								"type" : "number",
+								"name" : "acc",
+								"label" : "Accuracy"
+							}, {
+								"type" : "number",
+								"name" : "bearing",
+								"label" : "Bearing"
+							}
+						]
+					}
+				}
+			]
+		}, {
+			"name" : "App Log",
+			"code" : "pilrhealth:mobile:app_log",
+			"schemas" : [{
+					"clazz" : "com.pilrhealth.data.ConcordiaSchema",
+					"schemaVersion" : 1,
+					"name" : "1.0",
+					"specification" : {
+						"type" : "object",
+						"fields" : [{
+								"type" : "string",
+								"doc" : "One of: error, warning, debug, or info.",
+								"optional" : false,
+								"name" : "level",
+								"label" : "Log level"
+							}, {
+								"type" : "string",
+								"doc" : "A searchable string for event analytics.",
+								"optional" : true,
+								"name" : "tag",
+								"label" : "Tag"
+							}, {
+								"type" : "string",
+								"doc" : "Human readable message.",
+								"optional" : false,
+								"name" : "msg",
+								"label" : "Message"
+							}, {
+								"type" : "string",
+								"doc" : "An optional argument for analytics.",
+								"optional" : true,
+								"name" : "arg0",
+								"label" : "Argument 0"
+							}, {
+								"type" : "string",
+								"doc" : "An second optional argument for analytics.",
+								"optional" : true,
+								"name" : "arg1",
+								"label" : "Argument 1"
+							}, {
+								"type" : "string",
+								"doc" : "An optional stack trace for debugging.",
+								"optional" : true,
+								"name" : "stack_trace",
+								"label" : "Stack Trace"
+							}
+						]
+					}
+
+				}
+			]
+		}
+	],
+	"customizations" : {
+		"package" : "com.pilrhealth.instruments.liitah",
+		"classnamePrefix" : "Liitah",
+		"apix" : true,
+		"controllers" : {
+			"configure" : "LiitahConfig",
+			"coordinate" : "Liitah"
+		}
+	}
+}
