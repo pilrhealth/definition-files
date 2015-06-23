@@ -5,7 +5,7 @@
 	"description" : "The LIITA3H App is a mobile application to aid adolescence in making healthy diet choices.  It is developed under an STTR grant in collaboration with the University of Michigan.",
 	"version" : 1,
 	"settings" : [{
-			"type" : "enum_setting",
+			"type" : "list_setting",
 			"code" : "pilrhealth:liitah:app_mode",
 			"name" : "Mobile App Mode",
 			"description" : "The mode the mobile app is in for collecting data and delivering content.",
