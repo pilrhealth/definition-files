@@ -225,46 +225,40 @@
 					"schemaVersion" : 1,
 					"name" : "1.0",
 					"specification" : {
-						"type" : "object",
-						"fields" : [{
-								"type" : "string",
-								"doc" : "One of: error, warning, debug, or info.",
-								"optional" : false,
-								"name" : "level",
-								"label" : "Log level"
-							}, {
-								"type" : "string",
-								"doc" : "A searchable string for event analytics.",
-								"optional" : true,
-								"name" : "tag",
-								"label" : "Tag"
-							}, {
-								"type" : "string",
-								"doc" : "Human readable message.",
-								"optional" : false,
-								"name" : "msg",
-								"label" : "Message"
-							}, {
-								"type" : "string",
-								"doc" : "An optional argument for analytics.",
-								"optional" : true,
-								"name" : "arg0",
-								"label" : "Argument 0"
-							}, {
-								"type" : "string",
-								"doc" : "An second optional argument for analytics.",
-								"optional" : true,
-								"name" : "arg1",
-								"label" : "Argument 1"
-							}, {
-								"type" : "string",
-								"doc" : "An optional stack trace for debugging.",
-								"optional" : true,
-								"name" : "stack_trace",
-								"label" : "Stack Trace"
-							}
-						]
-					}
+  "type": "object",
+  "fields": [
+    {
+      "name": "level",
+      "optional": false,
+      "doc": "One of: error, warning, debug, or info.",
+      "label": "Log level",
+      "type": "string"
+    },
+    {
+      "name": "tag",
+      "optional": true,
+      "doc": "A searchable string for event analytics.",
+      "label": "Tag",
+      "type": "string"
+    },
+    {
+      "name": "msg",
+      "optional": false,
+      "doc": "Human readable message.",
+      "label": "Message",
+      "type": "string"
+    },
+    {
+      "label": "Additional Data",
+      "optional": true,
+      "type": "object",
+      "name": "args",
+      "fields": [
+        
+      ]
+    }
+  ]
+}
 
 				}
 			]
