@@ -10,7 +10,7 @@
           "code": "pilrhealth:calrq:human_summary",
           "schemas": [
             {
-              "clazz": "com.pilrhealth.data.ConcordiaSchema",
+              "type": "concordia",
               "name": "CalRQ Human Summary",
               "schemaVersion": 1,
               "specification": {

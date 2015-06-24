@@ -20,7 +20,7 @@
             "code": "pilrhealth:drexel_nutritional_info_app:nutritional_data",
             "schemas": [
                 {
-                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "type": "concordia",
                     "name": "Version 2",
                     "schemaVersion": 2,
                     "specification": {

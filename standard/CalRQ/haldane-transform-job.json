@@ -10,7 +10,7 @@
       "code": "pilrhealth:calrq:haldane",
       "schemas": [
         {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "type": "concordia",
           "name": "Location Schema",
           "schemaVersion": 1,
           "specification": {
@@ -83,7 +83,7 @@
       "code": "pilrhealth:calrq:haldane_pet",
       "schemas": [
         {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "type": "concordia",
           "name": "Location Schema",
           "schemaVersion": 1,
           "specification": {

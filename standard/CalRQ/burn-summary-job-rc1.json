@@ -10,7 +10,7 @@
           "code": "pilrhealth:calrq:burn_summary",
           "schemas": [
             {
-              "clazz": "com.pilrhealth.data.ConcordiaSchema",
+              "type": "concordia",
               "name": "CalRQ Burn Summary",
               "schemaVersion": 1,
               "specification": {

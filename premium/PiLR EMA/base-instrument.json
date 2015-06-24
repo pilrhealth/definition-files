@@ -30,7 +30,7 @@
       "code": "pilrhealth:mobile:app_log",
       "schemas": [
         {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "type": "concordia",
           "schemaVersion": 1,
           "name": "1.0",
           "specification": {
@@ -76,7 +76,7 @@
       "code": "pilrhealth:mobile:survey_data",
       "schemas": [
         {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "type": "concordia",
           "schemaVersion": 1,
           "name": "1.0",
           "specification": {

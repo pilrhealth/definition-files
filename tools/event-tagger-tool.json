@@ -23,7 +23,7 @@
       "name": "Tagged Events",
       "schemas": [
         {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "type": "concordia",
           "code": "remove",
           "name": "remove",
           "schemaVersion": 1,

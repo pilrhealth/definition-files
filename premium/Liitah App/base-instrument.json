@@ -23,7 +23,7 @@
 			"name" : "Personal Venues",
 			"code" : "pilrhealth:liitah:personal_venue",
 			"schemas" : [{
-					"clazz" : "com.pilrhealth.data.ConcordiaSchema",
+					"type": "concordia",
 					"schemaVersion" : 1,
 					"name" : "1.0",
 					"specification" : {
@@ -78,7 +78,7 @@
 			"name" : "Personal Venue Training Records",
 			"code" : "pilrhealth:liitah:personal_venue_training_record",
 			"schemas" : [{
-					"clazz" : "com.pilrhealth.data.ConcordiaSchema",
+					"type": "concordia",
 					"schemaVersion" : 1,
 					"name" : "1.0",
 					"specification" : {
@@ -174,7 +174,7 @@
 			"name" : "Location Log",
 			"code" : "pilrhealth:liitah:location",
 			"schemas" : [{
-					"clazz" : "com.pilrhealth.data.ConcordiaSchema",
+					"type": "concordia",
 					"schemaVersion" : 1,
 					"name" : "1.0",
 					"specification" : {
@@ -221,7 +221,7 @@
 			"name" : "App Log",
 			"code" : "pilrhealth:mobile:app_log",
 			"schemas" : [{
-					"clazz" : "com.pilrhealth.data.ConcordiaSchema",
+					"type": "concordia",
 					"schemaVersion" : 1,
 					"name" : "1.0",
 					"specification" : {

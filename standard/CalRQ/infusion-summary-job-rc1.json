@@ -10,7 +10,7 @@
       "code": "pilrhealth:calrq:infusion_summary",
       "schemas": [
         {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "type": "concordia",
           "name": "CalRQ Infusion Summary",
           "schemaVersion": 1,
           "specification": {

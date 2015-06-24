@@ -109,7 +109,7 @@
       "code": "pilrhealth:calrq:calrq_data",
       "schemas": [
         {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "type": "concordia",
           "name": "CalRQ Data Schema",
           "schemaVersion": 1,
           "specification":
