@@ -55,7 +55,7 @@
   ],
   "tool_contents": [
     {
-      "definition_source_rel": "./evtagger-sample-config-tool-content.json"
+      "definition_source_rel": "./evtagger-sample-config-tool-content-1.json"
     }
   ]
 }
