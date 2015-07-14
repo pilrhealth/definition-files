@@ -1,0 +1,175 @@
+{
+  "definition_type": "instrument",
+  "name": "PiLR EMA App",
+  "description": "The PiLR EMA App allows you to setup surveys and messages to deliver to participants through their mobile phone (Android or iOS).  It also allows you to set a delivery schedule and triggering events to initiate them.",
+  "code": "ema_ots",
+  "version": 1,
+  "customizations": {
+    "package": "com.pilrhealth.instruments.ema_ots",
+    "classnamePrefix": "EmaOts",
+    "apix": true,
+    "controllers": {
+      "configure": "EmaOtsConfig",
+      "coordinate": "EmaOts"
+    },
+    "services": {
+      "handleContent": "EmaOtsConfig"
+    }
+  },
+  "settings": [
+    {
+      "type": "configuration_setting",
+      "code": "ema_ots:ema_config",
+      "name": "EMA Configuration",
+      "description": "The configuration of the EMA content to deliver to the participant."
+    }
+  ],
+  "datasets": [
+    {
+      "name": "App Log",
+      "code": "pilrhealth:mobile:app_log",
+      "schemas": [
+        {
+          "type": "concordia",
+          "schemaVersion": 1,
+          "name": "1.0",
+          "specification": {
+  "type": "object",
+  "fields": [
+    {
+      "name": "level",
+      "optional": false,
+      "doc": "One of: error, warning, debug, or info.",
+      "label": "Log level",
+      "type": "string"
+    },
+    {
+      "name": "tag",
+      "optional": true,
+      "doc": "A searchable string for event analytics.",
+      "label": "Tag",
+      "type": "string"
+    },
+    {
+      "name": "msg",
+      "optional": false,
+      "doc": "Human readable message.",
+      "label": "Message",
+      "type": "string"
+    },
+    {
+      "label": "Additional Data",
+      "optional": true,
+      "type": "object",
+      "name": "args",
+      "fields": [
+        
+      ]
+    }
+  ]
+}
+        }
+      ]
+    },
+    {
+      "name": "Survey Data",
+      "code": "pilrhealth:mobile:survey_data",
+      "schemas": [
+        {
+          "type": "concordia",
+          "schemaVersion": 1,
+          "name": "1.0",
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "event_type",
+                "type": "string",
+                "label": "Event Type"
+              },
+              {
+                "name": "survey_code",
+                "type": "string",
+                "label": "Survey Code",
+                "optional": true
+              },
+              {
+                "name": "session",
+                "type": "string",
+                "label": "Session"
+              },
+              {
+                "name": "question_type",
+                "type": "string",
+                "label": "Question Type",
+                "optional": true
+              },
+              {
+                "name": "question_code",
+                "type": "string",
+                "label": "Question Code",
+                "optional": true
+              },
+              {
+                "name": "response",
+                "type": "string",
+                "label": "Response",
+                "optional": true
+              },
+              {
+                "name": "response_value",
+                "type": "string",
+                "label": "Response Value",
+                "optional": true
+              },
+              {
+                "name": "responses",
+                "type": "array",
+                "constType": {
+                  "type": "string"
+                },
+                "label": "Responses",
+                "optional": true
+              },
+              {
+                "name": "response_values",
+                "type": "array",
+                "constType": {
+                  "type": "string"
+                },
+                "label": "Response Values",
+                "optional": true
+              },
+              {
+                "label": "Additional Data",
+                "optional": true,
+                "type": "object",
+                "name": "more_data",
+                "fields": [
+                  {
+                    "name": "text",
+                    "type": "string",
+                    "label": "Text",
+                    "optional": true
+                  },
+                  {
+                    "name": "value",
+                    "type": "string",
+                    "label": "Value",
+                    "optional": true
+                  },
+                  {
+                    "name": "selected",
+                    "type": "boolean",
+                    "label": "Selected",
+                    "optional": true
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+}
