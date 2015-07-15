@@ -59,7 +59,7 @@
     },
     {
       "name": "Miles Moved",
-      "code": "mmm:miles_moved",
+      "code": "pdnihl:mmm:miles_moved",
       "schemas": [
         {
           "type": "concordia",
