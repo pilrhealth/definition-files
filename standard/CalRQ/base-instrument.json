@@ -101,6 +101,16 @@
       "min" : 0,
       "max" : 1000,
       "required": false
+    },
+    {
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:predicted_energy_balance",
+      "name": "Predicted Energy Balance",
+      "description": "Predicted Energy Balance",
+      "value" : 0,
+      "min" : -30000,
+      "max" : 30000,
+      "required": false
     }
   ],
   "datasets": [
