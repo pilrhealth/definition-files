@@ -270,12 +270,6 @@
                 "type": "string"
               },
               {
-                "category": "date",
-                "name": "date",
-                "label": "Date",
-                "type": "string"
-              },
-              {
                 "name": "accumulated_reward",
                 "label": "Accumulated Reward",
                 "type": "string"
