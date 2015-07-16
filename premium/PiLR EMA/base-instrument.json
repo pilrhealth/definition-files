@@ -24,11 +24,18 @@
       "description": "The configuration of the EMA content to deliver to the participant."
     },
     {
-      "type": "text_setting",
-      "code": "provider",
-      "name": "Provider",
-      "description": "Provider used to collect location (GPS or Network).",
-      "value": "Network"
+      "type": "boolean_setting",
+      "code": "provider_gps",
+      "name": "GPS Provider",
+      "description": "Provider used to collect location - GPS.",
+      "value": true
+    },
+    {
+      "type": "boolean_setting",
+      "code": "provider_network",
+      "name": "Network Provider",
+      "description": "Provider used to collect location - Network).",
+      "value": false
     },
     {
       "type": "integer_setting",
