@@ -11,24 +11,72 @@
   ],
   "variables": [
     {
-      "type": "integer_setting",
-      "code": "pilrhealth:calrq:energy_intake_measured",
-      "name": "Energy Intake Measured",
-      "description": "Energy Intake Measured",
-      "units" : "",
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:weight_in",
+      "name": "Weight In (Kg)",
+      "description": "Weight In (Kg)",
+      "units" : "Kg",
       "value": 0,
       "min": 0,
-      "max": 100000
+      "max": 1000
+    },
+	{
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:weight_out",
+      "name": "Weight Out (Kg)",
+      "description": "Weight Out (Kg)",
+      "units" : "Kg",
+      "value": 0,
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "type": "integer_setting",
+      "code": "pilrhealth:calrq:energy_intake_measured",
+      "name": "Energy Intake Measured (kCal)",
+      "description": "Energy Intake Measured (kCal)",
+      "units" : "kCal",
+      "value": 0,
+      "min": 0,
+      "max": 30000
+    },
+    {
+      "type": "integer_setting",
+      "code": "pilrhealth:calrq:energy_intake_predicted",
+      "name": "Energy Intake Predicted (kCal)",
+      "description": "Energy Intake Predicted (kCal)",
+      "units" : "kCal",
+      "value": 0,
+      "min": 0,
+      "max": 30000
+    },
+    {
+      "type": "text_setting",
+      "code": "pilrhealth:calrq:diet",
+      "name": "Diet",
+      "description": "Diet"
+    },
+    {
+      "type": "text_setting",
+      "code": "pilrhealth:calrq:exercise_level",
+      "name": "Exercise Level",
+      "description": "Exercise Level"
     },
     {
       "type": "double_setting",
       "code": "pilrhealth:calrq:urine_nitrogen",
-      "name": "Urine Nitrogen Excretion Rate",
-      "description": "Urine Nitrogen Excretion Rate",
-      "units" : "",
+      "name": "Urine Nitrogen Excretion Rate (g/24hr)",
+      "description": "Urine Nitrogen Excretion Rate (g/24hr)",
+      "units" : "g/24hr",
       "value": 0,
       "min": 0,
-      "max": 10
+      "max": 100
+    },
+    {
+      "type": "text_setting",
+      "code": "pilrhealth:calrq:treatment",
+      "name": "Treatment",
+      "description": "Treatment"
     }
   ],
   "tools": [
