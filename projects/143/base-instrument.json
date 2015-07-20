@@ -77,7 +77,7 @@
               },
               {
                 "label": "Miles moved this date",
-                "name": "miles",
+                "name": "daily_miles",
                 "type": "number",
                 "optional": false,
                 "doc": "Miles moved on this date."
