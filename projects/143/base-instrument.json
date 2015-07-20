@@ -84,7 +84,7 @@
               },
               {
                 "label": "Total miles moved for campaign",
-                "name": "miles_total",
+                "name": "total_miles",
                 "type": "number",
                 "optional": false,
                 "doc": "Cumulative miles moved under this campaign."
