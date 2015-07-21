@@ -2,7 +2,7 @@
 {
             "definition_type" : "dataset",
             "name": "Heart rate",
-            "code": "pilr:heart_rate",
+            "code": "pilrhealth:example:heart_rate",
             "schemas": [
                 {
                     "clazz": "com.pilrhealth.data.ConcordiaSchema",
