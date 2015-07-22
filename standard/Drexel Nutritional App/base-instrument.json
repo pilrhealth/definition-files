@@ -10,7 +10,7 @@
 		"name" : "Report Notification Frequency",      
         "description" : "The frequency with which the user is reminded to check their current nutritional profile and submit a report. Values can be 'Daily' or 'Weekly'",
         "value" : "Daily",
-        "required" : true    
+        "required" : true ,  
 		"type": "text_setting"
     }
     ],
