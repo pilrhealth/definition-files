@@ -90,6 +90,13 @@
                 "doc": "Cumulative miles moved under this campaign."
               },
               {
+                "label": "Number of daily miles data points included in total",
+                "name": "total_days",
+                "type": "number",
+                "optional": false,
+                "doc": "Total days with data under this campaign that are included in the total miles value.  Days without data are not included."
+              },
+              {
                 "label": "Assessment type",
                 "name": "assessment_type",
                 "type": "string",
