@@ -72,7 +72,7 @@
                 "name": "date",
                 "type": "string",
                 "optional": false,
-                "doc": "The date of the entry or calculation.",
+                "doc": "The effective date of the data record.",
                 "category": "date"
               },
               {
@@ -97,11 +97,39 @@
                 "doc": "Total days with data under this campaign that are included in the total miles value.  Days without data are not included."
               },
               {
-                "label": "Assessment type",
-                "name": "assessment_type",
-                "type": "string",
+                "name": "entries",
+                "type": "array",
+                "label": "Individual data entries",
+                "doc": "Individual activity entries made, contributing to the daily total.",
                 "optional": true,
-                "doc": "A tag to identify how the miles data was assessed (such as by device or manual assessment)."
+                "constType": {
+                  "type": "object",
+                  "doc": "Break each email address down into its individual components.",
+                  "fields": [
+                    {
+                      "label": "Assessment type",
+                      "name": "assessment_type",
+                      "type": "string",
+                      "optional": true,
+                      "doc": "A tag to identify how the miles data was assessed (such as by device or manual assessment)."
+                    },
+                    {
+                      "label": "Entry time",
+                      "name": "entry_time",
+                      "type": "string",
+                      "optional": false,
+                      "doc": "The time of the entry.",
+                      "category": "date"
+                    },
+                    {
+                      "label": "Miles moved under this entry",
+                      "name": "entry_miles",
+                      "type": "number",
+                      "optional": false,
+                      "doc": "Miles moved for this entry."
+                    }
+                  ]
+                }
               }
             ],
             "type": "object"
