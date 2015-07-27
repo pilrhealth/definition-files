@@ -127,6 +127,13 @@
                       "type": "number",
                       "optional": false,
                       "doc": "Miles moved for this entry."
+                    },
+                    {
+                      "label": "Motion type",
+                      "name": "motion_type",
+                      "type": "string",
+                      "optional": true,
+                      "doc": "A tag to identify what type of motion the activity was (e.g. walking, running, biking, mixed)."
                     }
                   ]
                 }
