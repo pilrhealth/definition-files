@@ -144,5 +144,31 @@
         }
       ]
     }
-  ]
+  ],
+  "group_categories": [
+    {
+      "code": "mmmcg_primary",
+      "name": "MMM Challenge Groups",
+      "membershipRequired": false,
+      "configCategory": false,
+      "statusCategory": false,
+      "groups": [
+        {
+          "code": "team_a",
+          "name": "Team A",
+          "defaultGroup": true
+        },
+        {
+          "code": "team_b",
+          "name": "Team B",
+          "defaultGroup": false
+        },
+        {
+          "code": "team_c",
+          "name": "Team C",
+          "defaultGroup": false
+        }
+      ]
+    }
+  ],
 }
