@@ -33,8 +33,8 @@
                             },
                             {
                                 "type" : "number",
-                                "name" : "drink_energy_density",
-								"label": "Drink Energy Density"
+                                "name" : "number_of_caloric_beverages",
+								"label": "Number of Caloric Beverages"
                             },
 							{
 								"type": "string",
