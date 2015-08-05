@@ -35,7 +35,7 @@
       "code": "provider_network",
       "name": "Network Provider",
       "description": "Provider used to collect location - Network).",
-      "value": false
+      "value": true
     },
     {
       "type": "integer_setting",
