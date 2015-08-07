@@ -21,8 +21,8 @@
       "schemas": [
         {
           "type": "concordia",
-          "name": "Version 2",
-          "schemaVersion": 2,
+          "name": "Version 1",
+          "schemaVersion": 1,
           "specification": {
             "type": "object",
             "fields": [
