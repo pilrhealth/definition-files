@@ -36,6 +36,11 @@
                 "name": "number_of_caloric_beverages",
                 "label": "Number of Caloric Beverages"
               },
+               {
+                "type": "number",
+                "name": "number_of_non_caloric_beverages",
+                "label": "Number of Non Caloric Beverages"
+              },
               {
                 "type": "string",
                 "category": "date",
