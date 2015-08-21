@@ -1,5 +1,5 @@
 {
-	"code" : "ema-cohort-heatmap",
+	"code" : "ema-cohort-heatmap2",
 	"version" : 1,
 	"name" : "PiLR EMA Cohort Heatmap",
 	"description" : "A heatmap of each participant's activity per day.",
