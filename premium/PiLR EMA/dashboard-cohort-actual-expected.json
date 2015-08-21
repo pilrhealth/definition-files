@@ -1,5 +1,5 @@
 {
-	"code" : "ema-cohort-heatmap",
+	"code" : "ema-cohort-actual-expected",
 	"version" : 1,
 	"name" : "PiLR EMA Cohort Actual/Expected",
 	"description" : "A bar graph of a group's actual and expected surveys per day.",
