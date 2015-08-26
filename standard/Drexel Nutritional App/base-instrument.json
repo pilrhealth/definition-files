@@ -138,6 +138,11 @@
                 "type": "number"
               },
               {
+                "name": "nf_total_fat",
+                "label": "Total Fat",
+                "type": "number"
+              },
+              {
                 "name": "nf_total_carbohydrate",
                 "label": "Carbohydrates",
                 "type": "number"
