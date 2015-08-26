@@ -8,7 +8,7 @@
     {
       "code": "pilrhealth:drexel_nutritional_info_app:report_notification_frequency",
       "name": "Report Notification Frequency",
-      "description": "The frequency with which the user is reminded to check their current nutritional profile and submit a report. Values can be 'Daily' or 'Weekly'",
+      "description": "The frequency with which the user is reminded to check their current nutritional profile and submit a report. Values can be 'Daily', 'Weekly' or 'Monthly",
       "value": "Daily",
       "required": true,
       "type": "text_setting"
