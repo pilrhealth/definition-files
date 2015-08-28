@@ -4,16 +4,6 @@
   "name": "Drexel Nutritional Information App",
   "description": "The app allows users to keep a list of the current food items they have around them and determine the energy density of those items.  Users provide a regular or ad hoc report of the current nutritional profile within their environment",
   "version": 1,
-  "settings": [
-    {
-      "code": "pilrhealth:drexel_nutritional_info_app:report_notification_frequency",
-      "name": "Report Notification Frequency",
-      "description": "The frequency with which the user is reminded to check their current nutritional profile and submit a report. Values can be 'Daily', 'Weekly' or 'Monthly",
-      "value": "Daily",
-      "required": true,
-      "type": "text_setting"
-    }
-  ],
   "datasets": [
     {
       "name": "Nutritional Data",
