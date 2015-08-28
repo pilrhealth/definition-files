@@ -4,7 +4,14 @@
   "name": "Drexel Nutritional Information App",
   "description": "The app allows users to keep a list of the current food items they have around them and determine the energy density of those items.  Users provide a regular or ad hoc report of the current nutritional profile within their environment",
   "version": 1,
-  "settings":[],
+  "settings":[
+    {
+      "type": "configuration_setting",
+      "code": "ema_ots:ema_config",
+      "name": "Configuration",
+      "description": "The configuration of the content to deliver to the participant."
+    }
+  ],
   "datasets": [
     {
       "name": "Nutritional Data",
