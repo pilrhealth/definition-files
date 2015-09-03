@@ -1,0 +1,124 @@
+        {
+            "name": "Carotenoid CSV File",
+            "code": "pilrhealth:carotenoid:carotenoid_csv",
+            "version": 1,
+            "description": "A CSV data file output from Carotenoid",
+            "definition_type": "file_handler",
+            "dataset": "pilrhealth:carotenoid:carotenoid_data",
+            "dataset_version": 1,
+            "parser": {
+                "parse_by": "column_name",
+                "col_name_row": 1,
+                "skip_rows": 1,
+                "null_expressions": ["NaN", "Inf", ""],
+                "date_format": "MM/dd/yyyy HH:mm",
+                "data_mappings": [
+                    {
+                        "from_name": "Date/Time",
+                        "to_name": "Date/Time"
+                    },
+                    {
+                        "from_name": "Age",
+                        "to_name": "Age"
+                    },
+                    {
+                        "from_name": "Sex",
+                        "to_name": "Sex"
+                    },
+                    {
+                        "from_name": "Height",
+                        "to_name": "Height"
+                    },
+                    {
+                        "from_name": "Weight",
+                        "to_name": "Weight"
+                    },
+                    {
+                        "from_name": "Melanin Index",
+                        "to_name": "Melanin_Index"
+                    },
+                    {
+                        "from_name": "RamanScore",
+                        "to_name": "RamanScore"
+                    },
+                    {
+                        "from_name": "Score",
+                        "to_name": "Score"
+                    },
+                    {
+                        "from_name": "Amber Result",
+                        "to_name": "Amber_Result"
+                    },
+                    {
+                        "from_name": "redCal(dark)",
+                        "to_name": "redCal(dark)"
+                    },
+                    {
+                        "from_name": "redCal(light)",
+                        "to_name": "redCal(light)"
+                    },
+                    {
+                        "from_name": "blueCal(dark)",
+                        "to_name": "blueCal(dark)"
+                    },
+                    {
+                        "from_name": "blueCal(light)",
+                        "to_name": "blueCal(light)"
+                    },
+                    {
+                        "from_name": "amberCal(dark)",
+                        "to_name": "amberCal(dark)"
+                    },
+                    {
+                        "from_name": "amberCal(white)",
+                        "to_name": "amberCal(white)"
+                    },
+                    {
+                        "from_name": "redResult",
+                        "to_name": "redResult"
+                    },
+                    {
+                        "from_name": "blueResult",
+                        "to_name": "blueResult"
+                    },
+                    {
+                        "from_name": "amberResult",
+                        "to_name": "amberResult"
+                    },
+                    {
+                        "from_name": "O.D. Red",
+                        "to_name": "od_red"
+                    },
+                    {
+                        "from_name": "O.D. Blue",
+                        "to_name": "od_blue"
+                    },
+                    {
+                        "from_name": "O.D. Result",
+                        "to_name": "od_result"
+                    },
+                    {
+                        "from_name": "Session Dark Red",
+                        "to_name": " Session_Dark_Red"
+                    },
+                    {
+                        "from_name": "Session Dark Blue",
+                        "to_name": " Session_Dark_Blue"
+                    },
+                    {
+                        "from_name": "Session White Red",
+                        "to_name": "Session_White_Red"
+                    },
+                    {
+                        "from_name": "Session White Blue",
+                        "to_name": " Session_White_Blue"
+                    }
+                ],
+                "metadata_mappings": [
+                    {
+                        "from_name": "Date/Time",
+                        "to_name": "timestamp"
+                    }
+                ]
+            }
+        }
