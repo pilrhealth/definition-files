@@ -11,7 +11,7 @@
                 "col_name_row": 1,
                 "skip_rows": 1,
                 "null_expressions": ["NaN", "Inf", ""],
-                "date_format": "MM/dd/yyyy HH:mm",
+                "date_format": "yyyy-MM-dd HH:mm:ss",
                 "data_mappings": [
                     {
                         "from_name": "Date/Time",
@@ -99,11 +99,11 @@
                     },
                     {
                         "from_name": "Session Dark Red",
-                        "to_name": " Session_Dark_Red"
+                        "to_name": "Session_Dark_Red"
                     },
                     {
                         "from_name": "Session Dark Blue",
-                        "to_name": " Session_Dark_Blue"
+                        "to_name": "Session_Dark_Blue"
                     },
                     {
                         "from_name": "Session White Red",
@@ -111,13 +111,17 @@
                     },
                     {
                         "from_name": "Session White Blue",
-                        "to_name": " Session_White_Blue"
+                        "to_name": "Session_White_Blue"
                     }
                 ],
                 "metadata_mappings": [
                     {
                         "from_name": "Date/Time",
                         "to_name": "timestamp"
+                    },
+                    {
+                        "from_name": "Subject ID",
+                        "to_name": "pt"
                     }
                 ]
             }
