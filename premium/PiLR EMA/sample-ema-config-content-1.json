@@ -20,7 +20,7 @@
               "totalSections": 2,
               "cards": [
                 {
-                  "type": "instruction",
+                  "card_type": "instruction",
                   "code": "sample_instruction_card",
                   "title": "Sample Instruction Card",
                   "text": "This is a sample card.",
@@ -30,7 +30,7 @@
                   "color": "87b87f"
                 },
                 {
-                  "type": "q_photo",
+                  "card_type": "q_photo",
                   "code": "sample_photo_card",
                   "title": "Sample Photo Card",
                   "text": "Please take a photo.",
@@ -82,7 +82,7 @@
               "totalSections": 2,
               "cards": [
                 {
-                  "type": "instruction",
+                  "card_type": "instruction",
                   "code": "sample_instruction_card",
                   "title": "Sample Instruction Card",
                   "text": "This is a sample card.",
@@ -92,7 +92,7 @@
                   "color": "87b87f"
                 },
                 {
-                  "type": "q_photo",
+                  "card_type": "q_photo",
                   "code": "sample_photo_card",
                   "title": "Sample Photo Card",
                   "text": "Please take a photo.",
