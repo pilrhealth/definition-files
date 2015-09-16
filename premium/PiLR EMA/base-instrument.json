@@ -43,6 +43,29 @@
       "name": "Interval for data collection(minutes)",
       "description": "Interval for data collection.",
       "value": 60
+    },
+    {
+      "type": "boolean_setting",
+      "code": "do_not_disturb_enabled",
+      "name": "Do Not Disturb",
+      "description": "Do not disturb enabled or disabled.",
+      "value": false
+    },
+    {
+      "type": "time_setting",
+      "code": "do_not_disturb_start",
+      "name": "App Do not disturb start time",
+      "description": "Start time window for do not disturb",
+      "value": "20:00",
+      "required": true
+    },
+    {
+      "type": "time_setting",
+      "code": "do_not_disturb_end",
+      "name": "App Do not disturb end time",
+      "description": "End time window for do not disturb",
+      "value": "08:00",
+      "required": true
     }
   ],
   "datasets": [
@@ -91,8 +114,8 @@
       ]
     },
     {
-      "name": "Personal Venues",
-      "code": "pilrhealth:liitah:personal_venue",
+      "name": "Participant Venues",
+      "code": "pilrhealth:mobile:personal_venue",
       "schemas": [
         {
           "type": "concordia",
@@ -107,45 +130,31 @@
                 "type": "string"
               },
               {
-                "label": "Trigger Type",
-                "name": "trig_type",
+                "label": "Venue Type",
+                "name": "venue_type",
                 "type": "string",
                 "optional": true,
-                "doc": "The method used to detect arrival at the venue."
+                "doc": "Optional description to specify the type of venue."
               },
               {
-                "optional": true,
-                "doc": "The ID of the a matched public venue, used for food recommendations.",
-                "type": "string",
-                "label": "Matched Public Venue ID",
-                "name": "public_venue_id"
+                "name": "enabled",
+                "type": "boolean",
+                "label": "Personal Venue Enabled"
               },
               {
-                "doc": "Information used to trigger on arrival at venue",
-                "label": "Trigger Info",
-                "name": "trig_info",
-                "optional": true,
-                "type": "object",
-                "fields": [
-                  {
-                    "optional": true,
-                    "type": "number",
-                    "label": "Centroid Latitude",
-                    "name": "lat"
-                  },
-                  {
-                    "optional": true,
-                    "type": "number",
-                    "label": "Centroid Longitude",
-                    "name": "lon"
-                  },
-                  {
-                    "optional": true,
-                    "type": "number",
-                    "label": "Radius from Centroid",
-                    "name": "radius"
-                  }
-                ]
+                "label": "Centroid Latitude",
+                "name": "lat",
+                "type": "number"
+              },
+              {
+                "label": "Centroid Longitude",
+                "name": "lon",
+                "type": "number"
+              },
+              {
+                "label": "Radius from Centroid",
+                "name": "radius",
+                "type": "number"
               }
             ],
             "type": "object"
