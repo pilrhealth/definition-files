@@ -114,7 +114,7 @@
       ]
     },
     {
-      "name": "Participant Venues",
+      "name": "Personal Venues",
       "code": "pilrhealth:mobile:personal_venue",
       "schemas": [
         {
