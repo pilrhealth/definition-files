@@ -1,134 +1,253 @@
 {
   "definition_type": "instrument_content",
   "instrument_code": "ema_ots",
-  "code": "sample_ema_config_001",
   "version": 1,
-  "name": "Two EMA protocols",
-  "description": "Sample content for two EMA protocols.",
-  "contents": [
+  "code": "ema-configs-branching_example",
+  "name": "EMA Configurations (Branching Example)",
+  "contents": 
+  [
     {
-      "configurations": [
+      "configurations": 
+      [
         {
-          "name": "Protocol 1 Config",
-          "code": "protocol_1",
-          "cardstacks": [
+          "name": "Branching Example",
+          "code": "19139",
+          "cardstacks": 
+          [
             {
-              "type": "survey",
-              "name": "Sample Survey",
-              "description": "This is a sample survey.",
-              "code": "sample_survey",
-              "totalSections": 2,
-              "cards": [
+              "id": "55ef31a6e4b0859d1a03e16c",
+              "name": "Tasks",
+              "code": "tab2",
+              "type": "tab",
+              "icon": "887-notepad",
+              "cards": 
+              [
                 {
                   "card_type": "instruction",
-                  "code": "sample_instruction_card",
-                  "title": "Sample Instruction Card",
-                  "text": "This is a sample card.",
-                  "section": "1",
-                  "sectionOrder": "1",
-                  "icon": "alarm",
-                  "color": "87b87f"
+                  "section": 1,
+                  "order": 1,
+                  "data": {
+                    "title": "A second tab",
+                    "text": "The app is designed to have two tabs on the main page.  By default, their labels are 'Home' and 'Tasks', but you can edit the tab names and icons (for iOS only) to fit your needs.",
+                    "icon": "icon-comment-alt",
+                    "code": "tab2_sample",
+                    "color": "d15b47"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "55ef31b8e4b0859d1a03e16d",
+              "name": "Branching Example",
+              "code": "48486",
+              "type": "survey",
+              "cards": 
+              [
+                {
+                  "card_type": "q_yesno",
+                  "section": 1,
+                  "order": 1,
+                  "data": {
+                    "title": "Gym Exercise",
+                    "text": "Do you exercise at a health club?",
+                    "code": "09224"
+                  }
                 },
                 {
-                  "card_type": "q_photo",
-                  "code": "sample_photo_card",
-                  "title": "Sample Photo Card",
-                  "text": "Please take a photo.",
-                  "section": "2",
-                  "sectionOrder": "1",
-                  "icon": "camera",
-                  "color": "ffb752"
+                  "card_type": "q_select",
+                  "section": 2,
+                  "order": 1,
+                  "data": {
+                    "title": "Gym Frequency",
+                    "text": "How many times a week do you go exercise at the Health Club?",
+                    "code": "86659",
+                    "options": 
+                    [
+                      {
+                        "value": "1",
+                        "text": "One",
+                        "order": 1
+                      },
+                      {
+                        "value": "2",
+                        "text": "Two",
+                        "order": 2
+                      },
+                      {
+                        "value": "3",
+                        "text": "Three",
+                        "order": 3
+                      },
+                      {
+                        "value": "4",
+                        "text": "Four",
+                        "order": 4
+                      },
+                      {
+                        "value": "5",
+                        "text": "Five or more",
+                        "order": 5
+                      }
+                    ],
+                    "options_string": "1|One\r\n2|Two\r\n3|Three\r\n4|Four\r\n5|Five or more"
+                  }
+                },
+                {
+                  "card_type": "q_select_multiple",
+                  "section": 2,
+                  "order": 2,
+                  "data": {
+                    "title": "Gym Activities",
+                    "text": "What exercises do you do at the Health Club?",
+                    "code": "91016",
+                    "options": 
+                    [
+                      {
+                        "value": "1",
+                        "text": "Weights",
+                        "order": 1
+                      },
+                      {
+                        "value": "2",
+                        "text": "Running",
+                        "order": 2
+                      },
+                      {
+                        "value": "3",
+                        "text": "Swimming",
+                        "order": 3
+                      },
+                      {
+                        "value": "4",
+                        "text": "Group Class",
+                        "order": 4
+                      },
+                      {
+                        "value": "5",
+                        "text": "Other",
+                        "order": 5
+                      }
+                    ],
+                    "options_string": "1|Weights\r\n2|Running\r\n3|Swimming\r\n4|Group Class\r\n5|Other"
+                  }
+                },
+                {
+                  "card_type": "q_yesno",
+                  "section": 3,
+                  "order": 1,
+                  "data": {
+                    "title": "Enjoyable",
+                    "text": "Do you enjoy doing [[91016:no answer]]?",
+                    "code": "88522"
+                  }
+                }
+              ],
+              "rules": 
+              [
+                {
+                  "hide_sections": 
+                  [
+                    "2",
+                    "3"
+                  ],
+                  "expr": {
+                    "response_value": "No",
+                    "question_code": "09224"
+                  }
+                }
+              ],
+              "rules_string": "[\r\n{ \"expr\": { \"question_code\": \"09224\", \"response_value\": \"No\" }, \"hide_sections\": [ \"2\",\"3\"]}\r\n]"
+            },
+            {
+              "id": "55ef31a6e4b0859d1a03e16b",
+              "name": "Home",
+              "code": "tab1",
+              "type": "tab",
+              "icon": "750-home",
+              "cards": 
+              [
+                {
+                  "card_type": "instruction",
+                  "section": 1,
+                  "order": 1,
+                  "data": {
+                    "title": "Welcome!",
+                    "text": "This is an example of a simple card to be shown on a tab, when the app is opened.  You can edit the cards that show on this tab, add more, and rearrange the order.",
+                    "icon": "icon-smile",
+                    "code": "tab1_sample",
+                    "color": "428bca"
+                  }
+                },
+                {
+                  "card_type": "deliver_survey",
+                  "section": 1,
+                  "order": 2,
+                  "data": {
+                    "icon": "icon-pencil",
+                    "title": "Branching Piping Survey",
+                    "text": "Example of survey using branching and piping.",
+                    "code": "71657",
+                    "button_text": "Go to Survey",
+                    "cardstack_code": "48486",
+                    "color": "87b87f"
+                  }
+                },
+                {
+                  "card_type": "survey_queue",
+                  "section": 1,
+                  "order": 3,
+                  "data": {
+                    "title": "Test",
+                    "text": "Test",
+                    "code": "32846"
+                  }
                 }
               ]
             }
           ],
-          "triggerCriterias": [
+          "trigger_criteria": 
+          [
             {
-              "name": "Sample Trigger Criteria",
-              "description": "This is a sample trigger criteria.",
-              "code": "sample_trigger_criteria",
-              "triggers": [
+              "name": "Test",
+              "code": "78477",
+              "triggers": 
+              [
                 {
+                  "code": "35400",
                   "type": "time_window",
-                  "code": "sample_trigger",
-                  "repeatType": "Weekly",
-                  "repeatInterval": "1",
-                  "repeatWeekdays": ["Sunday","Monday","Wednesday"],
-                  "startTime": "08:00:00",
-                  "endTime": "20:00:00"
+                  "data": {
+                    "repeat_type": "Weekly",
+                    "repeat_interval": "1",
+                    "repeat_weekdays": 
+                    [
+                      "Saturday",
+                      "Thursday",
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Friday",
+                      "Sunday"
+                    ],
+                    "start_time": "14:17:00",
+                    "end_time": "14:18:00"
+                  }
                 }
               ],
-              "actions": [
+              "actions": 
+              [
                 {
+                  "code": "33350",
                   "type": "survey_notification",
-                  "code": "sample_action",
-                  "survey": "sample_survey",
-                  "timeAvailable": "01:00:00"
+                  "data": {
+                    "survey": "48486",
+                    "survey_name": "Branching Example",
+                    "time_available": "01:00:00"
+                  }
                 }
               ],
-              "conditions": []
-            }
-          ]
-        },
-        {
-          "name": "Protocol 2 Config",
-          "code": "protocol_2",
-          "cardstacks": [
-            {
-              "type": "survey",
-              "name": "Sample Survey",
-              "description": "This is a sample survey.",
-              "code": "sample_survey",
-              "totalSections": 2,
-              "cards": [
-                {
-                  "card_type": "instruction",
-                  "code": "sample_instruction_card",
-                  "title": "Sample Instruction Card",
-                  "text": "This is a sample card.",
-                  "section": "1",
-                  "sectionOrder": "1",
-                  "icon": "alarm",
-                  "color": "87b87f"
-                },
-                {
-                  "card_type": "q_photo",
-                  "code": "sample_photo_card",
-                  "title": "Sample Photo Card",
-                  "text": "Please take a photo.",
-                  "section": "2",
-                  "sectionOrder": "1",
-                  "icon": "camera",
-                  "color": "ffb752"
-                }
+              "conditions": 
+              [
               ]
-            }
-          ],
-          "triggerCriterias": [
-            {
-              "name": "Sample Trigger Criteria",
-              "description": "This is a sample trigger criteria.",
-              "code": "sample_trigger_criteria",
-              "triggers": [
-                {
-                  "type": "time_window",
-                  "code": "sample_trigger",
-                  "repeatType": "Weekly",
-                  "repeatInterval": "1",
-                  "repeatWeekdays": ["Sunday","Monday","Wednesday"],
-                  "startTime": "08:00:00",
-                  "endTime": "20:00:00"
-                }
-              ],
-              "actions": [
-                {
-                  "type": "survey_notification",
-                  "code": "sample_action",
-                  "survey": "sample_survey",
-                  "timeAvailable": "01:00:00"
-                }
-              ],
-              "conditions": []
             }
           ]
         }
