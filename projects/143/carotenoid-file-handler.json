@@ -6,6 +6,177 @@
             "definition_type": "file_handler",
             "dataset": "pilrhealth:carotenoid:carotenoid_data",
             "dataset_version": 1,
+            "datasets": [
+                {
+                    "name": "Carotenoid",
+                    "code": "pilrhealth:carotenoid:carotenoid_data",
+                    "schemas": [
+                        {
+                            "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                            "name": "Version 1",
+                            "schemaVersion": 1,
+                            "primaryKey": "Date/Time",
+                            "duplicateAction": "Update",
+                            "specification": {
+                                "type": "object",
+                                "fields": [
+                                    {
+                                        "name" : "Date/Time",
+                                        "type" : "string",
+                                        "category" : "date",
+                                        "label" : "Measurement Time",
+                                        "doc"  : "The date and time that the Carotenoid measurement was recorded"
+                                    },
+                                    {
+                                        "name" : "Age",
+                                        "type" : "string",
+                                        "optional" : true,
+                                        "label" : "Age"
+                                    },
+                                    {
+                                        "name" : "Sex",
+                                        "type" : "string",
+                                        "optional" : true,
+                                        "label" : "Sex"
+                                    },
+                                    {
+                                        "name" : "Height",
+                                        "type" : "string",
+                                        "optional" : true,
+                                        "label" : "Height"
+                                    },
+                                    {
+                                        "name" : "Weight",
+                                        "type" : "string",
+                                        "optional" : true,
+                                        "label" : "Weight"
+                                    },
+                                    {
+                                        "name" : "Melanin_Index",
+                                        "type" : "string",
+                                        "optional" : true,
+                                        "label" : "Melanin_Index"
+                                    },
+                                    {
+                                        "name" : "RamanScore",
+                                        "type" : "string",
+                                        "optional" : true,
+                                        "label" : "RamanScore"
+                                    },
+                                    {
+                                        "name" : "Score",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "Score"
+                                    },
+                                    {
+                                        "name" : "Amber_Result",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "Amber_Result"
+                                    },
+                                    {
+                                        "name" : "redCal(dark)",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "redCal(dark)"
+                                    },
+                                    {
+                                        "name" : "redCal(light)",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "redCal(light)"
+                                    },
+                                    {
+                                        "name" : "blueCal(dark)",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "blueCal(dark)"
+                                    },
+                                    {
+                                        "name" : "blueCal(light)",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "blueCal(light)"
+                                    },
+                                    {
+                                        "name" : "amberCal(dark)",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "amberCal(dark)"
+                                    },
+                                    {
+                                        "name" : "amberCal(white)",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "amberCal(white)"
+                                    },
+                                    {
+                                        "name" : "redResult",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "redResult"
+                                    },
+                                    {
+                                        "name" : "blueResult",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "blueResult"
+                                    },
+                                    {
+                                        "name" : "amberResult",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "amberResult"
+                                    },
+                                    {
+                                        "name" : "od_red",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "O.D. Red"
+                                    },
+                                    {
+                                        "name" : "od_blue",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "O.D._Blue"
+                                    },
+                                    {
+                                        "name" : "od_result",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "O.D._Result"
+                                    },
+                                    {
+                                        "name" : "Session_Dark_Red",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "Session_Dark_Red"
+                                    },
+                                    {
+                                        "name" : "Session_Dark_Blue",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "Session_Dark_Blue"
+                                    },
+                                    {
+                                        "name" : "Session_White_Red",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "Session_White_Red"
+                                    },
+                                    {
+                                        "name" : "Session_White_Blue",
+                                        "type" : "number",
+                                        "optional" : true,
+                                        "label" : "Session_White_Blue"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ],
             "parser": {
                 "parse_by": "column_name",
                 "col_name_row": 1,
