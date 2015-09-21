@@ -14,7 +14,7 @@
       "definition_source_rel": "./sample-ema-config-content-1.json"
     }
   ],
-  "groupCategories": [
+  "group_categories": [
     {
       "code": "ema_ots_participant_status",
       "name": "Participant Status",
