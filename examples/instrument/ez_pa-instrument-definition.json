@@ -26,7 +26,7 @@
     "datasets": [
         {
             "name": "Activity",
-            "code": "ez_pa:activity",
+            "code": "mei:ez_pa:activity",
             "schemas": [
                 {
                     "clazz": "com.pilrhealth.data.ConcordiaSchema",
