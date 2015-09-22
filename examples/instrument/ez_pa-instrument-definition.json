@@ -5,7 +5,7 @@
     "definition_type": "instrument",
     "settings": [
 	{
-			"clazz" : "com.pilrhealth.settings.IntegerSetting",
+			"type" : "integer_setting",
 			"code" : "min_time",
 			"name" : "Minimum time between records (seconds)",      
             "description" : "Minimum time between consecutive activity records, in seconds.",
@@ -14,7 +14,7 @@
             "required" : true    
         },
 	{
-            "clazz" : "com.pilrhealth.settings.IntegerSetting",
+            "type" : "integer_setting",
 			"code" : "confidence",
 			"name" : "Confidence level (%)",               
             "description" : "Probability that this is the current activity, in percent.",            
@@ -29,7 +29,7 @@
             "code": "mei:ez_pa:activity",
             "schemas": [
                 {
-                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "type" : "concordia",
                     "name": "Version 1",
                     "schemaVersion": 1,
                     "specification": {
