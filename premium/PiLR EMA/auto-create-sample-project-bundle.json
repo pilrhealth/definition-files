@@ -70,6 +70,10 @@
           "instrument": "ema_ots",
           "configVersion": null,
           "settings": [
+            {
+              "clazz": "com.pilrhealth.settings.InstrumentConfigSetting",
+              "value": "19139"
+            }
           ]
         }
       ],
