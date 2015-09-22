@@ -71,7 +71,8 @@
           "configVersion": null,
           "settings": [
             {
-              "clazz": "com.pilrhealth.settings.InstrumentConfigSetting",
+              "period": "active_period",
+              "epoch": "epoch_1",
               "value": "19139"
             }
           ]
