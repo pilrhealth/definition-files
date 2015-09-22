@@ -73,6 +73,7 @@
             {
               "period": "active_period",
               "epoch": "epoch_1",
+              "code": "ema_ots:ema_config",
               "value": "19139"
             }
           ]
