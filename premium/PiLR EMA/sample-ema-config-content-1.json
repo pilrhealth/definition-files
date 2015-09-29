@@ -1,6 +1,6 @@
 {
   "definition_type": "instrument_content",
-  "instrument_code": "ema_ots",
+  "instrument_code": "pilrhealth:ema_ots:config_example",
   "version": 1,
   "code": "ema-configs-branching_example",
   "name": "EMA Configurations (Branching Example)",
