@@ -1,0 +1,114 @@
+{
+    "code": "activity_monitoring_app",
+    "name": "Activity Monitoring Reference App",
+    "description": "The Activity Monitoring Reference App is a smartphone application that demonstrates how to monitor the user's movement in the background on a device (using the on-board accelerometer), infer the type of motion (based on an acceleration threshold) and use the pilrcorelib mobile code library to manage settings and upload data.",
+    "definition_type": "instrument",
+    "settings": [
+	{
+		"clazz" : "com.pilrhealth.settings.IntegerSetting",
+		"code" : "pilrhealth:activity_monitoring_app:sample_interval",
+		"name" : "Sample Period (seconds)",      
+        "description" : "The amount of time in seconds that the app will sample the accelerometer each time the location monitor is activated.",
+        "value" : 10,
+        "min" : 1,
+        "required" : true    
+    },
+	{
+        "clazz" : "com.pilrhealth.settings.IntegerSetting",
+		"code" : "pilrhealth:activity_monitoring_app:monitor_frequency",
+		"name" : "Monitoring Frequency (seconds)",               
+        "description" : "The interval between each time the monitor is 'woken up' in the background to perform a sample run.",            
+        "value" : 60,
+        "min" : 30,
+        "required" : true
+    },
+	{
+        "clazz" : "com.pilrhealth.settings.DoubleSetting",
+		"code" : "pilrhealth:activity_monitoring_app:walking_threshold",
+		"name" : "Walking Threshold (double)",               
+        "description" : "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be walking. The threshold is in units of gravity (eg 0.09)",            
+        "value" : 2.0,
+        "min" : 0,
+        "required" : true
+    },
+	{
+        "clazz" : "com.pilrhealth.settings.DoubleSetting",
+		"code" : "pilrhealth:activity_monitoring_app:running_threshold",
+		"name" : "Running Threshold (double)",               
+        "description" : "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be running. The threshold is in units of gravity (eg 0.09)",            
+        "value" : 5.0,
+        "min" : 0,
+        "required" : false
+    }
+    ],
+    "datasets": [
+        {
+            "name": "Activity Data",
+            "code": "pilrhealth:activity_monitoring_app:activity",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "Version 1",
+                    "schemaVersion": 3,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type" : "string",
+                                "name" : "inferred_activity",
+								"label": "Inferred Activity"
+                            },
+                            {
+                                "type" : "number",
+                                "name" : "walking_threshold",
+								"label": "Walking Threshold"
+                            },
+                            {
+                                "type" : "number",
+                                "name" : "running_threshold",
+								"label": "Running Threshold",
+								"optional": true
+                            },
+                            {
+                                "type" : "number",
+                                "name" : "sample_average",
+								"label": "Sample Average",
+								"optional": true
+                            },
+							{
+								"type": "string",
+                                "category": "date",
+								"label": "Collection Date",
+								"name": "collection_date"
+							},
+							{
+								"type" : "object",
+								"optional":true,
+								"name" : "raw_data_for_period",
+								"label": "Raw Sample Data",
+								"doc" : "The raw data elements that were collected in that period from the accelerometer",
+								"fields":[
+					                {
+					                    "name":"x",
+					                    "type":"number",
+					                    "doc":"Acceleration in the x direction"
+					                },
+					                {
+					                    "name":"y",
+					                    "type":"number",
+					                    "doc":"Acceleration in the y direction"
+					                },
+					                {
+					                    "name":"z",
+					                    "type":"number",
+					                    "doc":"Acceleration in the z direction"
+					                }
+					            ]
+							}
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
