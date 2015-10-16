@@ -28,7 +28,7 @@
       "code": "pilrhealth:activity_monitoring_app:walking_threshold",
       "name": "Walking Threshold (double)",
       "description": "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be walking. The threshold is in units of gravity (eg 0.09)",
-      "value": 2,
+      "value": 0.08,
       "min": 0,
       "required": true
     },
@@ -37,7 +37,7 @@
       "code": "pilrhealth:activity_monitoring_app:running_threshold",
       "name": "Running Threshold (double)",
       "description": "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be running. The threshold is in units of gravity (eg 0.09)",
-      "value": 5,
+      "value": 0.2,
       "min": 0,
       "required": false
     }

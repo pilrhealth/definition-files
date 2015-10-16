@@ -1,0 +1,35 @@
+{
+  "definition_type": "bundle",
+  "code": "sample_variables_bundle_001",
+  "version": 1,
+  "name": "Sample variables bundle",
+  "description": "Some random variables to use as an example import.",
+  "variables": [
+    {
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:weight_in",
+      "name": "Weight In (Kg)",
+      "description": "Weight In (Kg)",
+      "units" : "Kg",
+      "value": 0,
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "type": "integer_setting",
+      "code": "pilrhealth:calrq:energy_intake_measured",
+      "name": "Energy Intake Measured (kCal)",
+      "description": "Energy Intake Measured (kCal)",
+      "units" : "kCal",
+      "value": 0,
+      "min": 0,
+      "max": 30000
+    },
+    {
+      "type": "text_setting",
+      "code": "pilrhealth:calrq:diet",
+      "name": "Diet",
+      "description": "Diet"
+    }
+  ]
+}
