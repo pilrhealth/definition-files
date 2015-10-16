@@ -130,9 +130,20 @@
                 "optional": false
               },
               {
-                "type": "string",
+                "type": "boolean",
+                "label": "Notification Cancelled No Response",
+                "name": "notification_cancelled_no_response"
+              },
+              {
+                "type": "number",
                 "label": "Notification Question Response",
                 "name": "notification_question_response",
+                "optional": true
+              },
+              {
+                "type": "number",
+                "label": "Notification Snooze Time",
+                "name": "notification_snooze_time",
                 "optional": true
               },
               {
