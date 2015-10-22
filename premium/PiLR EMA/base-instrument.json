@@ -3,7 +3,7 @@
   "name": "PiLR EMA App",
   "description": "The PiLR EMA App allows you to setup surveys and messages to deliver to participants through their mobile phone (Android or iOS).  It also allows you to set a delivery schedule and triggering events to initiate them.",
   "code": "ema_ots",
-  "version": 2,
+  "version": 3,
   "customizations": {
     "package": "com.pilrhealth.instruments.ema_ots",
     "classnamePrefix": "EmaOts",
@@ -124,6 +124,12 @@
           "specification": {
             "fields": [
               {
+                "doc": "The ID assigned to venue",
+		        "label": "Venue Id",
+                "name": "venue_id",
+                "type": "string"
+              },
+              {
                 "doc": "Name assigned to venue by participant.",
                 "label": "Venue Name",
                 "name": "name",
@@ -137,9 +143,10 @@
                 "doc": "Optional description to specify the type of venue."
               },
               {
-                "name": "enabled",
-                "type": "boolean",
-                "label": "Personal Venue Enabled"
+                "label": "Action",
+                "name": "action",
+                "type": "string",
+                "doc": "The current state of the venue."
               },
               {
                 "label": "Centroid Latitude",
