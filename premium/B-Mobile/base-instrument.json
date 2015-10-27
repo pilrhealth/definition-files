@@ -8,7 +8,7 @@
     {
       "type": "double_setting",
       "code": "pilrhealth:b_mobile:activity_treshold",
-      "name": "nergy threshold for active vs sedentary activity",
+      "name": "Energy threshold for active vs sedentary activity",
       "description": "nergy threshold for active vs sedentary activity",
       "value": 0.8,
       "min": 0,
