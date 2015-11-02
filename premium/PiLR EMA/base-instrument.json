@@ -70,7 +70,7 @@
     {
       "type": "integer_setting",
       "code": "activity_monitoring:sample_interval",
-      "name": "Sample Period (seconds)",
+      "name": "Activity: Sample Period (seconds)",
       "description": "The amount of time in seconds that the app will sample the accelerometer each time the location monitor is activated.",
       "value": 10,
       "min": 1,
@@ -79,7 +79,7 @@
     {
       "type": "integer_setting",
       "code": "activity_monitoring:monitor_frequency",
-      "name": "Monitoring Frequency (seconds)",
+      "name": "Activity: Monitoring Frequency (seconds)",
       "description": "The interval between each time the monitor is 'woken up' in the background to perform a sample run.",
       "value": 60,
       "min": 30,
@@ -88,7 +88,7 @@
     {
       "type": "double_setting",
       "code": "activity_monitoring:walking_threshold",
-      "name": "Walking Threshold (double)",
+      "name": "Activity: Walking Threshold (double)",
       "description": "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be walking. The threshold is in units of gravity (eg 0.09)",
       "value": 0.08,
       "min": 0,
@@ -97,7 +97,7 @@
     {
       "type": "double_setting",
       "code": "activity_monitoring:running_threshold",
-      "name": "Running Threshold (double)",
+      "name": "Activity: Running Threshold (double)",
       "description": "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be running. The threshold is in units of gravity (eg 0.09)",
       "value": 0.2,
       "min": 0,
@@ -219,36 +219,36 @@
               {
                 "type": "string",
                 "name": "inferred_activity",
-                "label": "Inferred Activity"
+                "label": "Activity: Inferred Activity"
               },
               {
                 "type": "number",
                 "name": "walking_threshold",
-                "label": "Walking Threshold"
+                "label": "Activity: Walking Threshold"
               },
               {
                 "type": "number",
                 "name": "running_threshold",
-                "label": "Running Threshold",
+                "label": "Activity: Running Threshold",
                 "optional": true
               },
               {
                 "type": "number",
                 "name": "sample_average",
-                "label": "Sample Average",
+                "label": "Activity: Sample Average",
                 "optional": true
               },
               {
                 "type": "string",
                 "category": "date",
-                "label": "Collection Date",
+                "label": "Activity: Collection Date",
                 "name": "collection_date"
               },
               {
                 "type": "object",
                 "optional": true,
                 "name": "raw_data_for_period",
-                "label": "Raw Sample Data",
+                "label": "Activity: Raw Sample Data",
                 "doc": "The raw data elements that were collected in that period from the accelerometer",
                 "fields": [
                   {
@@ -287,30 +287,30 @@
               {
                 "type": "string",
                 "category": "date",
-                "label": "Notification Delivery Date",
+                "label": "Activity: Notification Delivery Date",
                 "name": "notification_delivery_date",
                 "optional": false
               },
               {
                 "type": "boolean",
-                "label": "Notification Cancelled No Response",
+                "label": "Activity: Notification Cancelled No Response",
                 "name": "notification_cancelled_no_response"
               },
               {
                 "type": "number",
-                "label": "Notification Question Response",
+                "label": "Activity: Notification Question Response",
                 "name": "notification_question_response",
                 "optional": true
               },
               {
                 "type": "number",
-                "label": "Notification Snooze Time",
+                "label": "Activity: Notification Snooze Time",
                 "name": "notification_snooze_time",
                 "optional": true
               },
               {
                 "type": "string",
-                "label": "Notification Message Delivered",
+                "label": "Activity: Notification Message Delivered",
                 "name": "notification_message_delivered",
                 "optional": true
               }
