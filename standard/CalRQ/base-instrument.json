@@ -401,6 +401,9 @@
   "file_handlers": [
     {
       "definition_source_rel": "./calrq-data-file-handler.json"
+    },
+    {
+      "definition_source_rel": "./human-report-file.json"
     }
   ]
 }
