@@ -3,9 +3,9 @@
   "code": "calorimeter_bundle_001",
   "version": 1,
   "name": "Calorimeter Project Setup Bundle",
-  "description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, and tools used in a calorimeter study.",
+  "description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
   "instruments": [
-    {
+    {
       "definition_source_rel": "./base-instrument.json"
     }
   ],
