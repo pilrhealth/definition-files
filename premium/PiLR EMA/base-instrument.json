@@ -40,7 +40,7 @@
     {
       "type": "integer_setting",
       "code": "interval",
-      "name": "Interval for data collection(minutes)",
+      "name": "Data collection interval (min)",
       "description": "Interval for data collection.",
       "value": 60
     },
