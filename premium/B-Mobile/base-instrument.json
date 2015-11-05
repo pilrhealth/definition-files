@@ -98,12 +98,6 @@
             "type": "object",
             "fields": [
               {
-                "name": "participant_id",
-                "type": "string",
-                "category": "string",
-                "label": "Participant"
-              },
-              {
                 "name": "start_time",
                 "type": "string",
                 "category": "date",
