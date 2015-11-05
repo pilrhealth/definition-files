@@ -87,40 +87,7 @@
       ]
     },
     {
-      "name": "B-Mobile Activity By Minute",
-      "code": "pilrhealth:mobile:activity",
-      "schemas": [
-        {
-          "type": "concordia",
-          "schemaVersion": 1,
-          "name": "1.0",
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "count",
-                "type": "number",
-                "doc": "The count."
-              },
-              {
-                "name": "start_time",
-                "type": "string",
-                "category": "date",
-                "doc": "The data start date."
-              },
-              {
-                "name": "end_time",
-                "type": "string",
-                "category": "date",
-                "doc": "The data end date."
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "B-Mobile Status By Minute",
+      "name": "B-Mobile Status",
       "code": "pilrhealth:mobile:status",
       "schemas": [
         {
@@ -131,54 +98,51 @@
             "type": "object",
             "fields": [
               {
-                "name": "count",
-                "type": "number",
-                "doc": "The count."
-              },
-              {
                 "name": "start_time",
                 "type": "string",
                 "category": "date",
-                "doc": "The data start date."
+                "label": "The data start date."
               },
               {
                 "name": "end_time",
                 "type": "string",
                 "category": "date",
-                "doc": "The data end date."
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "B-Mobile Event Log",
-      "code": "pilrhealth:mobile:events",
-      "schemas": [
-        {
-          "type": "concordia",
-          "schemaVersion": 1,
-          "name": "1.0",
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "count",
-                "type": "number",
-                "doc": "The count."
+                "label": "The data end date."
               },
               {
-                "name": "start_time",
-                "type": "string",
-                "category": "date",
-                "doc": "The data start date."
+                "name": "min_until_activity_prompt",
+                "label":"Minutes Until Activity Prompt",
+                "type": "number"
               },
               {
-                "name": "end_time",
-                "type": "string",
-                "category": "date",
-                "doc": "The data end date."
+                "name": "min_active",
+                "label":"Minutes Active Today",
+                "type": "number"
+              },
+              {
+                "name": "min_sedentary",
+                "label":"Minutes Sedentary Today",
+                "type": "number"
+              },
+              {
+                "name": "treshold",
+                "label":"Treshold",
+                "type": "number"
+              },
+              {
+                "name": "total_energy",
+                "label":"Total Energy",
+                "type": "number"
+              },
+              {
+                "name": "total_acceleration",
+                "label":"Total Acceleration",
+                "type": "number"
+              },
+              {
+                "name": "classification",
+                "label":"Classification",
+                "type": "string"
               }
             ]
           }
