@@ -148,6 +148,59 @@
           }
         }
       ]
+    },
+    {
+      "name": "Lifespan Activity Classification",
+      "code": "pilrhealth:mobile:lifespan",
+      "schemas": [
+        {
+          "type": "concordia",
+          "schemaVersion": 1,
+          "name": "1.0",
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "start_time",
+                "type": "string",
+                "category": "date",
+                "label": "The data start date"
+              },
+              {
+                "name": "end_time",
+                "type": "string",
+                "category": "date",
+                "label": "The data end date"
+              },
+              {
+                "name": "total_acceleration",
+                "label": "Total Acceleration",
+                "type": "number"
+              },
+              {
+                "name": "total_energy",
+                "label": "Total Energy",
+                "type": "number"
+              },
+              {
+                "name": "treshold",
+                "label": "Treshold",
+                "type": "number"
+              },
+              {
+                "name": "classification",
+                "label": "Classification",
+                "type": "string"
+              },
+              {
+                "name": "count",
+                "label": "Count",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
