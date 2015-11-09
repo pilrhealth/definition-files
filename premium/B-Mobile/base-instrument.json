@@ -9,7 +9,7 @@
       "type": "double_setting",
       "code": "pilrhealth:b_mobile:activity_treshold",
       "name": "Energy threshold for active vs sedentary activity",
-      "description": "nergy threshold for active vs sedentary activity",
+      "description": "Energy threshold for active vs sedentary activity",
       "value": 0.8,
       "min": 0,
       "max": 100,
@@ -38,6 +38,13 @@
       "code": "pilrhealth:b_mobile:snooze_duratiion",
       "name": "Snooze Duration",
       "description": "Snooze Duration",
+      "value": 30
+    },
+    {
+      "type": "integer_setting",
+      "code": "pilrhealth:b_mobile:upload_interval",
+      "name": "Upload Interval",
+      "description": "Upload Interval",
       "value": 30
     }
   ],
@@ -195,6 +202,95 @@
               {
                 "name": "count",
                 "label": "Count",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Events",
+      "code": "pilrhealth:mobile:events",
+      "schemas": [
+        {
+          "type": "concordia",
+          "schemaVersion": 1,
+          "name": "1.0",
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "what",
+                "type": "string",
+                "label": "What"
+              },
+              {
+                "name": "desc",
+                "type": "string",
+                "label": "Description"
+              },
+              {
+                "name": "log_time",
+                "type": "string",
+                "category": "date",
+                "label": "Time"
+              },
+              {
+                "name": "arg1",
+                "label": "Argument 1",
+                "type": "string"
+              },
+              {
+                "name": "arg2",
+                "label": "Argument 2",
+                "type": "string"
+              },
+              {
+                "name": "link1",
+                "label": "Link 1",
+                "type": "string"
+              },
+              {
+                "name": "link2",
+                "label": "Link 2",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lifespan Dashboard",
+      "code": "pilrhealth:mobile:lifespan_dashboard",
+      "schemas": [
+        {
+          "type": "concordia",
+          "schemaVersion": 1,
+          "name": "1.0",
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "log_time",
+                "type": "string",
+                "category": "date",
+                "label": "Time"
+              },
+              {
+                "name": "minutes_sedentary_today",
+                "type": "number",
+                "label": "Minutes Sedentary Today"
+              },
+              {
+                "name": "minutes_active_today",
+                "label": "Minutes Active Today",
+                "type": "number"
+              },
+              {
+                "name": "badges_earned_today",
+                "label": "Badges Earned Today",
                 "type": "number"
               }
             ]
