@@ -132,8 +132,8 @@
                 "type": "number"
               },
               {
-                "name": "treshold",
-                "label": "Treshold",
+                "name": "threshold",
+                "label": "Threshold",
                 "type": "number"
               },
               {
@@ -190,8 +190,8 @@
                 "type": "number"
               },
               {
-                "name": "treshold",
-                "label": "Treshold",
+                "name": "threshold",
+                "label": "Threshold",
                 "type": "number"
               },
               {
