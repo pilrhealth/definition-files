@@ -7,7 +7,7 @@
   "settings": [
     {
       "type": "double_setting",
-      "code": "pilrhealth:b_mobile:activity_treshold",
+      "code": "pilrhealth:b_mobile:activity_threshold",
       "name": "Energy threshold for active vs sedentary activity",
       "description": "Energy threshold for active vs sedentary activity",
       "value": 0.8,
