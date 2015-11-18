@@ -52,7 +52,7 @@
       "code": "sleep_time_start",
       "name": "App Sleep time start ",
       "description": "Start time window for sleep time",
-      "value": "20:00",
+      "value": "08:00",
       "required": true
     },
     {
@@ -60,7 +60,7 @@
       "code": "sleep_time_end",
       "name": "App Sleep time end",
       "description": "End time window for sleep time",
-      "value": "08:00",
+      "value": "20:00",
       "required": true
     }
   ],
