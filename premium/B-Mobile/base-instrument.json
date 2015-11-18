@@ -35,7 +35,7 @@
     },
     {
       "type": "integer_setting",
-      "code": "pilrhealth:b_mobile:snooze_duratiion",
+      "code": "pilrhealth:b_mobile:snooze_duration",
       "name": "Snooze Duration",
       "description": "Snooze Duration",
       "value": 30
@@ -46,6 +46,22 @@
       "name": "Upload Interval",
       "description": "Upload Interval",
       "value": 30
+    },
+    {
+      "type": "time_setting",
+      "code": "sleep_time_start",
+      "name": "App Sleep time start ",
+      "description": "Start time window for sleep time",
+      "value": "20:00",
+      "required": true
+    },
+    {
+      "type": "time_setting",
+      "code": "sleep_time_end",
+      "name": "App Sleep time end",
+      "description": "End time window for sleep time",
+      "value": "08:00",
+      "required": true
     }
   ],
   "datasets": [
