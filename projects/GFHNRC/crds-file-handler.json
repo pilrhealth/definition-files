@@ -1,0 +1,56 @@
+{
+  "name": "GF CRDS Data File",
+  "code": "pilrhealth:gfhnrc:crds_file",
+  "version": 1,
+  "description": "A CSV file handler for CRDS data files.",
+  "definition_type": "file_handler",
+  "dataset": "pilrhealth:gfhnrc:crds",
+  "dataset_version": 1,
+  "parser": {
+    "parse_by": "column_name",
+    "col_name_row": 2,
+    "skip_rows": 2,
+    "null_expressions": ["NaN", "Inf", ""],
+    "date_format": "MM/dd/yyyy HH:mm:ss",
+    "data_mappings": [
+      {
+        "from_name": "[CO2]_ppm",
+        "to_name": "[CO2]_ppm"
+      },
+      {
+        "from_name": "[CO2]_ppm_sd",
+        "to_name": "[CO2]_ppm_sd"
+      },
+      {
+        "from_name": "D13C_VPDB_CO2",
+        "to_name": "D13C_VPDB_CO2"
+      },
+      {
+        "from_name": "D13C_VPDB_CO2_sd",
+        "to_name": "D13C_VPDB_CO2_sd"
+      },
+      {
+        "from_name": "D18O_VPDB_CO2",
+        "to_name": "D18O_VPDB_CO2"
+      },
+      {
+        "from_name": "D18O_VPDB_CO2_sd",
+        "to_name": "D18O_VPDB_CO2_sd"
+      },
+      {
+        "from_name": "[H2O]_ppm",
+        "to_name": "[H2O]_ppm"
+      },
+      {
+        "from_name": "[H2O]_ppm_sd",
+        "to_name": "[H2O]_ppm_sd"
+      }
+    ],
+    "metadata_mappings": [
+      {
+        "from_name": "Time",
+        "to_name": "timestamp"
+      }
+    ]
+  }
+}
