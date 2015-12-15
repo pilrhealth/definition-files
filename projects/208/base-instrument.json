@@ -1,13 +1,13 @@
 {
   "definition_type": "instrument",
-  "code": "activity_monitoring_app",
-  "name": "Activity Monitoring Reference App",
-  "description": "The Activity Monitoring Reference App is a smartphone application that demonstrates how to monitor the user's movement in the background on a device (using the on-board accelerometer), infer the type of motion (based on an acceleration threshold) and use the pilrcorelib mobile code library to manage settings and upload data.",
+  "code": "actigraph_activity_monitoring_app",
+  "name": "Actigraph Activity Monitoring App",
+  "description": "The Actigraph Activity Monitoring  App is a smartphone application that demonstrates how to monitor the user's movement in the background on an Actigraph device using Bluetooth Low Energy, infer the type of motion (based on an acceleration threshold) and use the pilrcorelib mobile code library to manage settings and upload data.",
   "version": 3,
   "settings": [
     {
       "type": "integer_setting",
-      "code": "pilrhealth:activity_monitoring_app:sample_interval",
+      "code": "pilrhealth:actigraph_activity_monitoring_app:sample_interval",
       "name": "Sample Period (seconds)",
       "description": "The amount of time in seconds that the app will sample the accelerometer each time the location monitor is activated.",
       "value": 10,
@@ -16,7 +16,7 @@
     },
     {
       "type": "integer_setting",
-      "code": "pilrhealth:activity_monitoring_app:monitor_frequency",
+      "code": "pilrhealth:actigraph_activity_monitoring_app:monitor_frequency",
       "name": "Monitoring Frequency (seconds)",
       "description": "The interval between each time the monitor is 'woken up' in the background to perform a sample run.",
       "value": 60,
@@ -25,7 +25,7 @@
     },
     {
       "type": "double_setting",
-      "code": "pilrhealth:activity_monitoring_app:walking_threshold",
+      "code": "pilrhealth:actigraph_activity_monitoring_app:walking_threshold",
       "name": "Walking Threshold (double)",
       "description": "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be walking. The threshold is in units of gravity (eg 0.09)",
       "value": 0.08,
@@ -34,7 +34,7 @@
     },
     {
       "type": "double_setting",
-      "code": "pilrhealth:activity_monitoring_app:running_threshold",
+      "code": "pilrhealth:actigraph_activity_monitoring_app:running_threshold",
       "name": "Running Threshold (double)",
       "description": "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be running. The threshold is in units of gravity (eg 0.09)",
       "value": 0.2,
@@ -43,16 +43,16 @@
     },
     {
       "type": "boolean_setting",
-      "code": "pilrhealth:activity_monitoring_app:disable_notifications",
-      "name": "Disable Notifications",
-      "description": "Disables inactivity notifications",
+      "code": "pilrhealth:actigraph_activity_monitoring_app:disable_result_upload",
+      "name": "Disable Uploading Results",
+      "description": "Debug setting, allows coordinator to prevend data upload, useful for testing when Sample Period is long.",
       "value": false
     }
   ],
   "datasets": [
     {
       "name": "Activity Data",
-      "code": "pilrhealth:activity_monitoring_app:activity",
+      "code": "pilrhealth:actigraph_activity_monitoring_app:activity",
       "schemas": [
         {
           "type": "concordia",
@@ -112,52 +112,6 @@
                     "doc": "Acceleration in the z direction"
                   }
                 ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "Inactivity Notifications",
-      "code": "pilrhealth:activity_monitoring_app:inactivity_notifications",
-      "schemas": [
-        {
-          "type": "concordia",
-          "name": "Version 1",
-          "schemaVersion": 1,
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "type": "string",
-                "category": "date",
-                "label": "Notification Delivery Date",
-                "name": "notification_delivery_date",
-                "optional": false
-              },
-              {
-                "type": "boolean",
-                "label": "Notification Cancelled No Response",
-                "name": "notification_cancelled_no_response"
-              },
-              {
-                "type": "number",
-                "label": "Notification Question Response",
-                "name": "notification_question_response",
-                "optional": true
-              },
-              {
-                "type": "number",
-                "label": "Notification Snooze Time",
-                "name": "notification_snooze_time",
-                "optional": true
-              },
-              {
-                "type": "string",
-                "label": "Notification Message Delivered",
-                "name": "notification_message_delivered",
-                "optional": true
               }
             ]
           }
