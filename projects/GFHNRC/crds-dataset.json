@@ -1,0 +1,49 @@
+{
+  "definition_type" : "dataset",
+  "name": "CRDS Data",
+  "code": "pilrhealth:gfhnrc:crds",
+  "schemas": [
+    {
+      "clazz": "com.pilrhealth.data.ConcordiaSchema",
+      "name": "Version 1",
+      "schemaVersion": 1,
+      "specification": {
+        "type": "object",
+        "fields": [
+          {
+            "type": "number",
+            "name" : "[CO2]_ppm"
+          },
+          {
+            "type": "number",
+            "name" : "[CO2]_ppm_sd"
+          },
+          {
+            "type": "number",
+            "name" : "D13C_VPDB_CO2"
+          },
+          {
+            "type": "number",
+            "name" : "D13C_VPDB_CO2_sd"
+          },
+          {
+            "type": "number",
+            "name" : "D18O_VPDB_CO2"
+          },
+          {
+            "type": "number",
+            "name" : "D18O_VPDB_CO2_sd"
+          },
+          {
+            "type": "number",
+            "name" : "[H2O]_ppm"
+          },
+          {
+            "type": "number",
+            "name" : "[H2O]_ppm_sd"
+          }
+        ]
+      }
+    }
+  ]
+}

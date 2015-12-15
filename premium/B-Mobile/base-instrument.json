@@ -7,10 +7,10 @@
   "settings": [
     {
       "type": "double_setting",
-      "code": "pilrhealth:b_mobile:activity_treshold",
-      "name": "Energy threshold for active vs sedentary activity",
-      "description": "nergy threshold for active vs sedentary activity",
-      "value": 0.8,
+      "code": "pilrhealth:b_mobile:activity_threshold",
+      "name": "Acceleration threshold for active vs sedentary activity",
+      "description": "Acceleration threshold for active vs sedentary activity",
+      "value": 12.0,
       "min": 0,
       "max": 100,
       "required": true
@@ -29,16 +29,39 @@
       "code": "pilrhealth:b_mobile:min_active_time",
       "name": "Minimum active time before gauge resets (minutes)",
       "description": "Minimum active time before gauge resets (minutes)",
-      "value": 30,
+      "value": 1,
       "min": 0,
       "required": true
     },
     {
       "type": "integer_setting",
-      "code": "pilrhealth:b_mobile:snooze_duratiion",
+      "code": "pilrhealth:b_mobile:snooze_duration",
       "name": "Snooze Duration",
       "description": "Snooze Duration",
       "value": 30
+    },
+    {
+      "type": "integer_setting",
+      "code": "pilrhealth:b_mobile:upload_interval",
+      "name": "Upload Interval",
+      "description": "Upload Interval",
+      "value": 30
+    },
+    {
+      "type": "time_setting",
+      "code": "pilrhealth:b_mobile:sleep_time_start",
+      "name": "App Sleep time start ",
+      "description": "Start time window for sleep time",
+      "value": "20:00",
+      "required": true
+    },
+    {
+      "type": "time_setting",
+      "code": "pilrhealth:b_mobile:sleep_time_end",
+      "name": "App Sleep time end",
+      "description": "End time window for sleep time",
+      "value": "08:00",
+      "required": true
     }
   ],
   "datasets": [
@@ -87,40 +110,7 @@
       ]
     },
     {
-      "name": "B-Mobile Activity By Minute",
-      "code": "pilrhealth:mobile:activity",
-      "schemas": [
-        {
-          "type": "concordia",
-          "schemaVersion": 1,
-          "name": "1.0",
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "count",
-                "type": "number",
-                "doc": "The count."
-              },
-              {
-                "name": "start_time",
-                "type": "string",
-                "category": "date",
-                "doc": "The data start date."
-              },
-              {
-                "name": "end_time",
-                "type": "string",
-                "category": "date",
-                "doc": "The data end date."
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "B-Mobile Status By Minute",
+      "name": "B-Mobile Status",
       "code": "pilrhealth:mobile:status",
       "schemas": [
         {
@@ -131,21 +121,51 @@
             "type": "object",
             "fields": [
               {
-                "name": "count",
-                "type": "number",
-                "doc": "The count."
-              },
-              {
                 "name": "start_time",
                 "type": "string",
                 "category": "date",
-                "doc": "The data start date."
+                "label": "The data start date"
               },
               {
                 "name": "end_time",
                 "type": "string",
                 "category": "date",
-                "doc": "The data end date."
+                "label": "The data end date"
+              },
+              {
+                "name": "min_until_activity_prompt",
+                "label": "Minutes Until Activity Prompt",
+                "type": "number"
+              },
+              {
+                "name": "min_active",
+                "label": "Minutes Active Today",
+                "type": "number"
+              },
+              {
+                "name": "min_sedentary",
+                "label": "Minutes Sedentary Today",
+                "type": "number"
+              },
+              {
+                "name": "threshold",
+                "label": "Threshold",
+                "type": "number"
+              },
+              {
+                "name": "total_energy",
+                "label": "Total Energy",
+                "type": "number"
+              },
+              {
+                "name": "total_acceleration",
+                "label": "Total Acceleration",
+                "type": "number"
+              },
+              {
+                "name": "classification",
+                "label": "Classification",
+                "type": "string"
               }
             ]
           }
@@ -153,7 +173,60 @@
       ]
     },
     {
-      "name": "B-Mobile Event Log",
+      "name": "Lifespan Activity Classification",
+      "code": "pilrhealth:mobile:lifespan",
+      "schemas": [
+        {
+          "type": "concordia",
+          "schemaVersion": 1,
+          "name": "1.0",
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "start_time",
+                "type": "string",
+                "category": "date",
+                "label": "The data start date"
+              },
+              {
+                "name": "end_time",
+                "type": "string",
+                "category": "date",
+                "label": "The data end date"
+              },
+              {
+                "name": "total_acceleration",
+                "label": "Total Acceleration",
+                "type": "number"
+              },
+              {
+                "name": "total_energy",
+                "label": "Total Energy",
+                "type": "number"
+              },
+              {
+                "name": "threshold",
+                "label": "Threshold",
+                "type": "number"
+              },
+              {
+                "name": "classification",
+                "label": "Classification",
+                "type": "string"
+              },
+              {
+                "name": "count",
+                "label": "Count",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Events",
       "code": "pilrhealth:mobile:events",
       "schemas": [
         {
@@ -164,21 +237,77 @@
             "type": "object",
             "fields": [
               {
-                "name": "count",
+                "name": "what",
+                "type": "string",
+                "label": "What"
+              },
+              {
+                "name": "desc",
+                "type": "string",
+                "label": "Description"
+              },
+              {
+                "name": "log_time",
+                "type": "string",
+                "category": "date",
+                "label": "Time"
+              },
+              {
+                "name": "arg1",
+                "label": "Argument 1",
+                "type": "string"
+              },
+              {
+                "name": "arg2",
+                "label": "Argument 2",
+                "type": "string"
+              },
+              {
+                "name": "link1",
+                "label": "Link 1",
+                "type": "string"
+              },
+              {
+                "name": "link2",
+                "label": "Link 2",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lifespan Dashboard",
+      "code": "pilrhealth:mobile:lifespan_dashboard",
+      "schemas": [
+        {
+          "type": "concordia",
+          "schemaVersion": 1,
+          "name": "1.0",
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "log_time",
+                "type": "string",
+                "category": "date",
+                "label": "Time"
+              },
+              {
+                "name": "minutes_sedentary_today",
                 "type": "number",
-                "doc": "The count."
+                "label": "Minutes Sedentary Today"
               },
               {
-                "name": "start_time",
-                "type": "string",
-                "category": "date",
-                "doc": "The data start date."
+                "name": "minutes_active_today",
+                "label": "Minutes Active Today",
+                "type": "number"
               },
               {
-                "name": "end_time",
-                "type": "string",
-                "category": "date",
-                "doc": "The data end date."
+                "name": "badges_earned_today",
+                "label": "Badges Earned Today",
+                "type": "number"
               }
             ]
           }

@@ -1,0 +1,93 @@
+{
+  "definition_type": "bundle",
+  "code": "auto_ema_prj_noemacontent",
+  "version": 1,
+  "name": "Sample project components for PiLR EMA.",
+  "description": "This bundle adds the PiLR EMA app instrument to your project, and sets the templates but does not add the ema content",
+  "instruments": [
+    {
+      "definition_source_rel": "./base-instrument.json"
+    }
+  ],
+  "group_categories": [
+    {
+      "code": "ema_ots_participant_status",
+      "name": "Participant Status",
+      "membershipRequired": true,
+      "configCategory": false,
+      "statusCategory": true,
+      "groups": [
+        {
+          "code": "template_assignments_enrolled",
+          "name": "Enrolled",
+          "defaultGroup": true
+        },
+        {
+          "code": "template_assignments_removed",
+          "name": "Removed",
+          "defaultGroup": false
+        }
+      ]
+    },
+    {
+      "code": "template_assignments",
+      "name": "Template Assignments",
+      "membershipRequired": true,
+      "configCategory": true,
+      "statusCategory": false,
+      "groups": [
+        {
+          "code": "default_assignments",
+          "name": "Default Assignments",
+          "defaultGroup": true
+        }
+      ]
+    }
+  ],
+  "periods": [
+    {
+      "code": "active_period",
+      "name": "Participant Active Period",
+      "epochs": [
+        {
+          "code": "epoch_1",
+          "name": "Epoch 1"
+        }
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "code": "ema_ots_default_template",
+      "name": "Default Template",
+      "activeInstruments": [
+        {
+          "instrument": "ema_ots",
+          "configVersion": null,
+          "settings": [
+            {
+              "period": "active_period",
+              "epoch": "epoch_1",
+              "code": "ema_ots:ema_config",
+              "value": "19139"
+            }
+          ]
+        }
+      ],
+      "periodSchedules": [
+        {
+          "period": "active_period",
+          "epochSchedules": [
+            {
+              "period": "active_period",
+              "epoch": "epoch_1",
+              "startDay": 1,
+              "endDay": 30,
+              "setByParticipant": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
