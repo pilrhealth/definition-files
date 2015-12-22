@@ -29,7 +29,7 @@
       "code": "pilrhealth:b_mobile:min_active_time",
       "name": "Minimum active time before gauge resets (minutes)",
       "description": "Minimum active time before gauge resets (minutes)",
-      "value": 1,
+      "value": 10,
       "min": 0,
       "required": true
     },
@@ -61,6 +61,14 @@
       "name": "App Sleep time end",
       "description": "End time window for sleep time",
       "value": "08:00",
+      "required": true
+    },
+    {
+      "type": "time_setting",
+      "code": "pilrhealth:b_mobile:message_time",
+      "name": "Message time",
+      "description": "Time that the feedback message will be delivered",
+      "value": "20:00",
       "required": true
     }
   ],
