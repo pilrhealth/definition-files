@@ -35,13 +35,6 @@
     },
     {
       "type": "integer_setting",
-      "code": "pilrhealth:b_mobile:snooze_duration",
-      "name": "Snooze Duration",
-      "description": "Snooze Duration",
-      "value": 30
-    },
-    {
-      "type": "integer_setting",
       "code": "pilrhealth:b_mobile:upload_interval",
       "name": "Upload Interval",
       "description": "Upload Interval",
