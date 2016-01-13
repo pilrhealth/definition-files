@@ -41,6 +41,7 @@
               "name": "Branching Example",
               "code": "48486",
               "type": "survey",
+              "self_report": false,
               "cards": 
               [
                 {
