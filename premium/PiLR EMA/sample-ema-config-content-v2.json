@@ -232,7 +232,8 @@
                   "type": "actigraph_movement",
                   "inferred_activity":[ 
                     "walking",
-                    "running"
+                    "running",
+                    "stationary"
                   ]
                 }
               ],
