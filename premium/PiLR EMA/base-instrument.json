@@ -355,6 +355,13 @@
                 "optional": true
               },
               {
+                "name": "self_report",
+                "type": "boolean",
+                "label": "Self Report",
+                "doc": "Track if this submission was self reported",
+                "optional": true
+              },              
+              {
                 "name": "session",
                 "type": "string",
                 "label": "Session"
