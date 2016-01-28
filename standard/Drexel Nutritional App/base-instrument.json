@@ -4,7 +4,14 @@
   "name": "Drexel Nutritional Information App",
   "description": "The app allows users to keep a list of the current food items they have around them and determine the energy density of those items.  Users provide a regular or ad hoc report of the current nutritional profile within their environment",
   "version": 1,
-  "settings": [],
+  "settings": [
+    {
+      "type": "configuration_setting",
+      "code": "ema_ots:ema_config",
+      "name": "App Configuration",
+      "description": "The configuration of the app content to be delivered to the participant."
+    }
+  ],
   "datasets": [
     {
       "name": "Nutritional Data",
@@ -224,6 +231,43 @@
                 "name": "action",
                 "label": "Action",
                 "type": "string"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Participant Feedback",
+      "code": "pilrhealth:drexel_nutritional_info_app:participant_feedback",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Version 1",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "issue_reported_id",
+                "label": "Issue Reported Id",
+                "type": "number"
+              },
+              {
+                "name": "issue_reported",
+                "label": "Issue Reported",
+                "type": "string"
+              },
+              {
+                "name": "additional_info",
+                "label": "Additional Info",
+                "type": "string"
+              },
+              {
+                "type": "string",
+                "category": "date",
+                "label": "Feedback Submission Date",
+                "name": "feedback_submission_date"
               }
             ]
           }
