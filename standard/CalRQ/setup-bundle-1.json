@@ -93,14 +93,14 @@
 		"code": "calrq:urine_nitrogen_value",
 		"type": "double_setting",
 		"units": "",
-		“period”: “period”
+		“period”: “epoch”
 		}, {
 		"description": "Urine Nitrogen Collection Date",
 		"name": "Urine Nitrogen Collection Date",
 		"code": "calrq:urine_nitrogen_datetime",
 		"type": "date_time_setting",
 		"units": "",
-		“period”: “period”
+		“period”: “epoch”
 		}]
       	}]
     }
