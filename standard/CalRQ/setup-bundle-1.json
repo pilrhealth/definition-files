@@ -77,6 +77,32 @@
       "code": "pilrhealth:calrq:treatment",
       "name": "Treatment",
       "description": "Treatment"
+    },
+    {
+      "type": "array_setting",
+      "code": "pilrhealth:calrq:multiple_n2",
+      "name": "Urine Nitrogen Mass",
+      "description": "Urine Nitrogen Mass",
+      "choices": [{
+		"fields": [{
+		"min": 0,
+		"max": 10,
+		"description": "Urine Nitrogen Mass",
+		"name": "Urine Nitrogen Mass",
+		"value": 0,
+		"code": "calrq:urine_nitrogen_value",
+		"type": "double_setting",
+		"units": "",
+		“period”: “period”
+		}, {
+		"description": "Urine Nitrogen Collection Date",
+		"name": "Urine Nitrogen Collection Date",
+		"code": "calrq:urine_nitrogen_datetime",
+		"type": "date_time_setting",
+		"units": "",
+		“period”: “period”
+		}]
+      	}]
     }
   ],
   "tools": [
