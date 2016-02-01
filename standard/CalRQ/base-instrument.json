@@ -391,46 +391,6 @@
                 "label" : "Blender MFC 5",
                 "doc" : "Blender MFC 5",
                 "units" : "lpm"
-          },
-            {
-            "name" : "protein_ox",
-            "type" : "number",
-                "optional" : true,
-                "label" : "Protein Oxidation",
-                "doc" : "Protein Oxidation",
-                "units" : "g/24hr"
-          },
-            {
-            "name" : "cho_ox",
-            "type" : "number",
-                "optional" : true,
-                "label" : "Carbohydrate Oxidation",
-                "doc" : "Carbohydrate Oxidation",
-                "units" : "g/24hr"
-          },
-            {
-            "name" : "fat_ox",
-            "type" : "number",
-                "optional" : true,
-                "label" : "Fat Oxidation",
-                "doc" : "Fat Oxidation",
-                "units" : "g/24hr"
-          },
-            {
-            "name" : "nitrogen",
-            "type" : "number",
-                "optional" : true,
-                "label" : "Urine Nitrogen Mass",
-                "doc" : "Urine Nitrogen Mass",
-                "units" : "grams"
-          },
-            {
-            "name" : "np_rq",
-            "type" : "number",
-                "optional" : true,
-                "label" : "Non-Protein RQ",
-                "doc" : "Non-Protein RQ",
-                "units" : ""
           }
             ]
           }
