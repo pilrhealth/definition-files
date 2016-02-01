@@ -1,6 +1,6 @@
 {
   "definition_type": "job",
-  "code": "calorimeter_human_summary_job_multiple_n2",
+  "code": "calorimeter_human_summary_job_rc2",
   "name": "Human CalRQ Summary Multiple N2",
   "version": 1,
   "description": "Compute summaries and generate report for CalRQ human studies.",
