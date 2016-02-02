@@ -1,0 +1,449 @@
+{
+  "definition_type": "instrument",
+  "code": "calrq",
+  "version": 1,
+  "name": "CalRQ",
+  "description": "This instrument provides an interface to importing data from the CalRQ software, which supports aquisition of data for calorimeter chambers.",
+  "settings": [
+    {
+      "type": "integer_setting",
+      "code": "pilrhealth:calrq:read_interval",
+      "name": "Data Log Rate",
+      "description": "Seconds between subsequent calorimeter readings",
+      "value": 60,
+      "min": 1,
+      "max": 60,
+      "required": true
+    },
+    {
+      "type": "integer_setting",
+      "code": "pilrhealth:calrq:chamber_volume",
+      "name": "Chamber Volume",
+      "description": "Volume of the calorimeter chamber",
+      "value": 30000,
+      "min": 0,
+      "max": 99999,
+      "required": true
+    },
+    {
+      "type": "list_setting",
+      "code": "pilrhealth:calrq:configuration",
+      "name": "Calorimeter Configuration",
+      "description": "Configuration of calorimeter chamber",
+      "choices": [
+        "Push - Differential",
+        "Push - Absolute",
+        "Pull - Differential",
+        "Pull - Absolute"
+      ],
+      "required": true,
+      "multipleChoice": false
+    },
+    {
+      "type": "list_setting",
+      "code": "pilrhealth:calrq:n2_mfc",
+      "name": "N2 MFC Assignment",
+      "description": "N2 MFC Assignment",
+      "choices": [
+        "MFC 1",
+        "MFC 2",
+        "MFC 3",
+        "MFC 4",
+        "MFC 5"
+      ],
+      "required": false,
+      "multipleChoice": false
+    },
+    {
+      "type": "list_setting",
+      "code": "pilrhealth:calrq:co2_mfc",
+      "name": "CO2 MFC Assignment",
+      "description": "CO2 MFC Assignment",
+      "choices": [
+        "MFC 1",
+        "MFC 2",
+        "MFC 3",
+        "MFC 4",
+        "MFC 5"
+      ],
+      "required": false,
+      "multipleChoice": false
+    },
+    {
+      "type": "list_setting",
+      "code": "pilrhealth:calrq:gas_type",
+      "name": "Gas Type",
+      "description": "Gas Type for Burn Study",
+      "choices": [
+        "Propane",
+        "Ethanol",
+        "Methanol"
+      ],
+      "required": false,
+      "multipleChoice": false
+    },
+    {
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:in_o2",
+      "name": "O2 In Constant",
+      "description": "O2 In Constant",
+      "value" : 20.93,
+      "min" : 0,
+      "max" : 1000,
+      "required": false
+    },
+    {
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:in_co2",
+      "name": "CO2 In Constant",
+      "description": "CO2 In Constant",
+      "value" : 0,
+      "min" : 0,
+      "max" : 1000,
+      "required": false
+    },
+    {
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:predicted_energy_balance",
+      "name": "Predicted Energy Balance",
+      "description": "Predicted Energy Balance",
+      "value" : 0,
+      "min" : -30000,
+      "max" : 30000,
+      "required": false
+    }
+  ],
+  "datasets": [
+    {
+      "name": "CalRQ Data",
+      "code": "pilrhealth:calrq:calrq_data",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "CalRQ Data Schema",
+          "schemaVersion": 1,
+          "specification":
+          {
+          "type" : "object",
+          "fields" : [
+          {
+                "name" : "Time",
+            "type" : "string",
+            "category" : "date",
+                "label" : "Measurement Time",
+                "doc"  : "The date and time that the CalRQ measurement was recorded"
+          },
+          {
+            "name" : "VO2",
+            "type" : "number",
+                "optional" : true,
+                "label" : "VO2",
+                "doc" : "Oxygen consumption",
+                "units" : "ml/min"
+          },
+          {
+            "name" : "VCO2",
+            "type" : "number",
+                "optional" : true,
+                "label" : "VCO2",
+                "doc" : "Carbon dioxide production",
+                "units" : "ml/min"
+          },
+          {
+            "name" : "RQ",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Respiratory quotient",
+                "doc" : "Ratio of CO2 produced to O2 consumed"
+          },
+          {
+            "name" : "MR",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Metabolic rate",
+                "doc" : "Rate of energy expenditure",
+                "units" : "kcal/min"
+          },
+          {
+            "name" : "Activity",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Activity",
+                "doc" : "Seconds of activity during this measurement period",
+                "units" : "counts"
+          },
+          {
+            "name" : "InflowO2",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Oxygen inflow",
+                "doc" : "Concentration of O2 going into the calorimeter",
+                "units" : "vol %"
+          },
+          {
+            "name" : "InflowCO2",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Carbon dioxide inflow",
+                "doc" : "Concentration of CO2 going into the calorimeter",
+                "units" : "vol %"
+          },
+          {
+            "name" : "InflowH2O",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Water inflow",
+                "doc" : "Inflow Sample Humidity",
+                "units" : "PPM"
+          },
+          {
+            "name" : "OutflowO2",
+            "type" : "number",
+                "label" : "Oxygen outflow",
+                "doc" : "Concentration of O2 in the calorimeter sample",
+                "units" : "vol %"
+          },
+          {
+            "name" : "OutflowCO2",
+            "type" : "number",
+                "label" : "Carbon dioxide outflow",
+                "doc" : "Concentration of CO2 in the calorimeter sample",
+                "units" : "vol %"
+          },
+          {
+            "name" : "OutflowH2O",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Water outflow",
+                "doc" : "Outflow Sample Humidity",
+                "units" : "PPM"
+          },
+          {
+            "name" : "InflowRate",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Inflow Rate",
+                "doc" : "Chamber Inflow Rate",
+                "units" : "lpm"
+          },
+          {
+            "name" : "OutflowRate",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Outflow Rate",
+                "doc" : "Chamber Outflow Rate",
+                "units" : "lpm"
+          },
+          {
+            "name" : "ChamberTemperature",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Chamber Temperature",
+                "doc" : "Temperature inside the chamber",
+                "units" : "Degrees Celcius"
+          },
+          {
+            "name" : "ChamberPressure",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Chamber Pressure",
+                "doc" : "Chamber Differential Pressure",
+                "units" : "???"
+          },
+          {
+            "name" : "ChamberHumidity",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Chamber Humidity",
+                "doc" : "Chamber Humidity",
+                "units" : "% RH"
+          },
+          {
+            "name" : "SampleHumidity",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Sample Humidity",
+                "doc" : "",
+                "units" : "PPM"
+          },
+          {
+            "name" : "LabTemp",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Lab Temperature",
+                "doc" : "Instrumentation Lab Temperature",
+                "units" : "Degrees Celcius"
+          },
+          {
+            "name" : "LabHumidity",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Lab Humidity",
+                "doc" : "Instrumentation Lab Humidity",
+                "units" : "% RH"
+          },
+          {
+            "name" : "BarometricPressure",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Barometric Pressure",
+                "doc" : "Instrumentation Lab Barometric Pressure",
+                "units" : "kPA"
+          },
+          {
+            "name" : "TreadmillRate",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Treadmill Rate",
+                "doc" : "The rate of the treadmill during this measurement period",
+                "units" : "mph"
+          },
+          {
+            "name" : "TreadmillIncline",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Treadmill Incline",
+                "doc" : "The incline of the treadmill during this measurement period",
+                "units" : "%"
+          },
+          {
+            "name" : "Alarms",
+            "type" : "string",
+                "optional" : true,
+                "label" : "Alarms",
+                "doc" : ""
+              },
+          {
+            "name" : "Notes",
+            "type" : "string",
+                "optional" : true,
+                "label" : "Notes",
+                "doc" : "Misc notes regarding the chamber or participant"
+          },
+          {
+            "name" : "PurgeH2O",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Purged H2O",
+                "doc" : "Purge gas humidity",
+                "units" : "PPM"
+          },
+          {
+            "name" : "CumulativeEE",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Cumulative Energy Expenditure",
+                "doc" : "Sum of EE During Study",
+                "units" : "kCal"
+          },
+          {
+            "name" : "ExpectedEnergyBalance",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Expected Energy Balance",
+                "doc" : "",
+                "units" : "kCal"
+          },
+            {
+            "name" : "BurnWeight",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Burn Weight",
+                "doc" : "Weight of fuel burned during test",
+                "units" : "grams"
+          },
+            {
+            "name" : "MFCFlow_1",
+            "type" : "string",
+                "optional" : true,
+                "label" : "Blender MFC 1",
+                "doc" : "Blender MFC 1",
+                "units" : "lpm"
+          },
+            {
+            "name" : "MFCFlow_2",
+            "type" : "string",
+                "optional" : true,
+                "label" : "Blender MFC 2",
+                "doc" : "Blender MFC 2",
+                "units" : "lpm"
+          },
+            {
+            "name" : "MFCFlow_3",
+            "type" : "string",
+                "optional" : true,
+                "label" : "Blender MFC 3",
+                "doc" : "Blender MFC 3",
+                "units" : "lpm"
+          },
+            {
+            "name" : "MFCFlow_4",
+            "type" : "string",
+                "optional" : true,
+                "label" : "Blender MFC 4",
+                "doc" : "Blender MFC 4",
+                "units" : "lpm"
+          },
+            {
+            "name" : "MFCFlow_5",
+            "type" : "string",
+                "optional" : true,
+                "label" : "Blender MFC 5",
+                "doc" : "Blender MFC 5",
+                "units" : "lpm"
+          },
+            {
+            "name" : "protein_ox",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Protein Oxidation",
+                "doc" : "Protein Oxidation",
+                "units" : "g/24hr"
+          },
+            {
+            "name" : "cho_ox",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Carbohydrate Oxidation",
+                "doc" : "Carbohydrate Oxidation",
+                "units" : "g/24hr"
+          },
+            {
+            "name" : "fat_ox",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Fat Oxidation",
+                "doc" : "Fat Oxidation",
+                "units" : "g/24hr"
+          },
+            {
+            "name" : "nitrogen",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Urine Nitrogen Mass",
+                "doc" : "Urine Nitrogen Mass",
+                "units" : "grams"
+          },
+            {
+            "name" : "np_rq",
+            "type" : "number",
+                "optional" : true,
+                "label" : "Non-Protein RQ",
+                "doc" : "Non-Protein RQ",
+                "units" : ""
+          }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "file_handlers": [
+    {
+      "definition_source_rel": "./calrq-data-file-handler.json"
+    },
+    {
+      "definition_source_rel": "./human-report-file.json"
+    }
+  ]
+}

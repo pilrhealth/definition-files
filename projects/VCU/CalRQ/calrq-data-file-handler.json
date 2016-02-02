@@ -1,0 +1,164 @@
+{
+  "name": "CalRQ CSV File",
+  "code": "pilrhealth:calorimeter:calrq_csv",
+  "version": 1,
+  "description": "A CSV data file output from CalRQ",
+  "definition_type": "file_handler",
+  "dataset": "pilrhealth:calrq:calrq_data",
+  "dataset_version": 1,
+  "parser": {
+    "parse_by": "column_name",
+    "col_name_row": 2,
+    "skip_rows": 3,
+    "null_expressions": ["NaN", "Inf", ""],
+    "date_format": "MM/dd/yyyy HH:mm:ss",
+    "data_mappings": [
+      {
+        "from_name": "Time",
+        "to_name": "Time"
+      },
+      {
+        "from_name": "VO2",
+        "to_name": "VO2"
+      },
+      {
+        "from_name": "VCO2",
+        "to_name": "VCO2"
+      },
+      {
+        "from_name": "RQ",
+        "to_name": "RQ"
+      },
+      {
+        "from_name": "MR",
+        "to_name": "MR"
+      },
+      {
+        "from_name": "Activity",
+        "to_name": "Activity"
+      },
+      {
+        "from_name": "InflowO2",
+        "to_name": "InflowO2"
+      },
+      {
+        "from_name": "InflowCO2",
+        "to_name": "InflowCO2"
+      },
+      {
+        "from_name": "InflowH2O",
+        "to_name": "InflowH2O"
+      },
+      {
+        "from_name": "OutflowO2",
+        "to_name": "OutflowO2"
+      },
+      {
+        "from_name": "OutflowCO2",
+        "to_name": "OutflowCO2"
+      },
+      {
+        "from_name": "OutflowH2O",
+        "to_name": "OutflowH2O"
+      },
+      {
+        "from_name": "InflowRate",
+        "to_name": "InflowRate"
+      },
+      {
+        "from_name": "OutflowRate",
+        "to_name": "OutflowRate"
+      },
+      {
+        "from_name": "ChamberTemperature",
+        "to_name": "ChamberTemperature"
+      },
+      {
+        "from_name": "ChamberPressure",
+        "to_name": "ChamberPressure"
+      },
+      {
+        "from_name": "ChamberHumidity",
+        "to_name": "ChamberHumidity"
+      },
+      {
+        "from_name": "LabTemp",
+        "to_name": "LabTemp"
+      },
+      {
+        "from_name": "LabHumidity",
+        "to_name": "LabHumidity"
+      },
+      {
+        "from_name": "BarometricPressure",
+        "to_name": "BarometricPressure"
+      },
+      {
+        "from_name": "TreadmillRate",
+        "to_name": "TreadmillRate"
+      },
+      {
+        "from_name": "TreadmillIncline",
+        "to_name": "TreadmillIncline"
+      },
+      {
+        "from_name": "CumulativeEE",
+        "to_name": "CumulativeEE"
+      },
+      {
+        "from_name": "ExpectedEnergyBalance",
+        "to_name": "ExpectedEnergyBalance"
+      },
+      {
+        "from_name": "SampleHumidity",
+        "to_name": "SampleHumidity"
+      },
+      {
+        "from_name": "PurgeH2O",
+        "to_name": "PurgeH2O"
+      },
+      {
+        "from_name": "SampleHumidity",
+        "to_name": "SampleHumidity"
+      },
+      {
+        "from_name": "BurnWeight",
+        "to_name": "BurnWeight"
+      },
+      {
+        "from_name": "MFCFlow_1",
+        "to_name": "MFCFlow_1"
+      },
+      {
+        "from_name": "MFCFlow_2",
+        "to_name": "MFCFlow_2"
+      },
+      {
+        "from_name": "MFCFlow_3",
+        "to_name": "MFCFlow_3"
+      },
+      {
+        "from_name": "MFCFlow_4",
+        "to_name": "MFCFlow_4"
+      },
+      {
+        "from_name": "MFCFlow_5",
+        "to_name": "MFCFlow_5"
+      },
+      {
+        "from_name": "Alarms",
+        "to_name": "Alarms"
+      },
+      {
+        "from_name": "Notes",
+        "to_name": "Notes"
+      }
+    ],
+    "metadata_mappings": [
+      {
+        "from_name": "Time",
+        "to_name": "timestamp"
+      }
+    ]
+  }
+}
