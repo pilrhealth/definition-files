@@ -19,6 +19,10 @@
         {
           "name": "Exercise",
           "description": "Exercise."
+        },
+        {
+          "name": "Misc",
+          "description": "Misc."
         }
       ],
       "bundles": [
