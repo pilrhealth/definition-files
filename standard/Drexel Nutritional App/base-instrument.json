@@ -156,6 +156,11 @@
                 "type": "boolean"
               },
               {
+                "name":"upc",
+                "label":"UPC",
+                "type":"boolean"
+              },
+              {
                 "name": "nf_calories",
                 "label": "Calories",
                 "type": "number"
