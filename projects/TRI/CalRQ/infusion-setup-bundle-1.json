@@ -1,0 +1,35 @@
+{
+  "definition_type": "bundle",
+  "code": "infusion_bundle_001",
+  "version": 1,
+  "name": "Infusion Project Setup Bundle",
+  "description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
+  "instruments": [
+    {
+      "definition_source_rel": "./base-instrument.json"
+    }
+  ],
+  "variables": [
+  ],
+  "tools": [
+    {
+      "definition_source_rel": "../../tools/r-processing-tool.json"
+    },
+    {
+      "definition_source_rel": "../../tools/event-tagger-tool.json"
+    }
+  ],
+  "jobs": [
+    {
+      "definition_source_rel": "./infusion-summary-job-rc1.json"
+    },
+    {
+      "definition_source_rel": "./haldane-transform-job.json"
+    }
+  ],
+  "tool_contents": [
+    {
+      "definition_source_rel": "./evtagger-infusion-config-tool-content-1.json"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "definition_type": "tool_content",
+  "tool_code": "evtagger",
+  "code": "calorimeter_evtagger_config_001",
+  "version": 1,
+  "name": "Sample tag labels and event bundles for calorimeter study",
+  "description": "A sample of tag labels and event bundles commonly used for segmenting data in studies that use a calorimeter chamber.",
+  "contents": [
+    {
+      "labels": [
+        {
+          "name": "Null",
+          "description": "Average O2 and CO2 during null period is used to calculate offset"
+        },
+        {
+          "name": "Infusion Study",
+          "description": "Infusion Period"
+        },
+        {
+          "name": "Short Circuit",
+          "description": "Short Circuit, volume = 0"
+        },
+	{
+          "name": "Invalid",
+          "description": "Invalid data, not included in summary reports"
+        },
+        {
+          "name": "Misc",
+          "description": "Misc."
+        }
+      ],
+      "bundles": [
+        {
+          "name": "Daily routine",
+          "description": ".",
+          "events": [
+            {
+              "name": "Exercise session 1",
+              "note": "Time the participant was doing the first exercise in the chamber.",
+              "verified": 1,
+              "offset": 176490000,
+              "duration": 7200000,
+              "startTime": "01:01:30",
+              "durationTime": "02:00:00",
+              "startDays": 0,
+              "tags": ["Exercise"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

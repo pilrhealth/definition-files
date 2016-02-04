@@ -71,19 +71,6 @@
       "multipleChoice": false
     },
     {
-      "type": "list_setting",
-      "code": "pilrhealth:calrq:gas_type",
-      "name": "Gas Type",
-      "description": "Gas Type for Burn Study",
-      "choices": [
-        "Propane",
-        "Ethanol",
-        "Methanol"
-      ],
-      "required": false,
-      "multipleChoice": false
-    },
-    {
       "type": "double_setting",
       "code": "pilrhealth:calrq:in_o2",
       "name": "O2 In Constant",
@@ -101,16 +88,6 @@
       "value" : 0,
       "min" : 0,
       "max" : 1000,
-      "required": false
-    },
-    {
-      "type": "double_setting",
-      "code": "pilrhealth:calrq:predicted_energy_balance",
-      "name": "Predicted Energy Balance",
-      "description": "Predicted Energy Balance",
-      "value" : 0,
-      "min" : -30000,
-      "max" : 30000,
       "required": false
     }
   ],
@@ -442,9 +419,6 @@
   "file_handlers": [
     {
       "definition_source_rel": "./calrq-data-file-handler.json"
-    },
-    {
-      "definition_source_rel": "./human-report-file.json"
     }
   ]
 }
