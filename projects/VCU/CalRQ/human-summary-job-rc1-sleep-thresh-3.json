@@ -156,6 +156,11 @@
                     "name":"tag_label",
                     "type":"string",
                     "label" : "Time Tag Label"
+                  },
+                  {
+                    "name": "note",
+                    "type": "string",
+                    "label": "Note"
                   }
                 ]
               }
