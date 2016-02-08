@@ -63,16 +63,6 @@
       "description": "Exercise Level"
     },
     {
-      "type": "double_setting",
-      "code": "pilrhealth:calrq:urine_nitrogen",
-      "name": "Urine Nitrogen Excretion Rate (g/24hr)",
-      "description": "Urine Nitrogen Excretion Rate (g/24hr)",
-      "units" : "g/24hr",
-      "value": 0,
-      "min": 0,
-      "max": 100
-    },
-    {
       "type": "text_setting",
       "code": "pilrhealth:calrq:treatment",
       "name": "Treatment",
