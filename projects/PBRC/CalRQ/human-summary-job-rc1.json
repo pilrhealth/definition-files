@@ -244,10 +244,6 @@
         "mapping": "exercise_level"
       },
       {
-        "code": "pilrhealth:calrq:urine_nitrogen",
-        "mapping": "urine_nitrogen"
-      },
-      {
         "code": "pilrhealth:calrq:treatment",
         "mapping": "treatment"
       },
