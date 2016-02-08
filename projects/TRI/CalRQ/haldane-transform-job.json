@@ -185,6 +185,10 @@
               {
                 "name":"outflow_rate",
                 "type":"number"
+              },
+              {  
+                "code":"pilrhealth:calrq:multiple_n2",
+                "mapping":"multiple_n2"
               }
             ]
           }
