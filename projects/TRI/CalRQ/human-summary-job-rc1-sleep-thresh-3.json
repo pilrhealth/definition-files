@@ -245,6 +245,10 @@
           {
             "code": "pilrhealth:calrq:treatment",
             "mapping": "treatment"
+          },
+          {
+            "code": "pilrhealth:calrq:multiple_n2",
+            "mapping": "multiple_n2"
           }
         ],
         "filter_params": [
