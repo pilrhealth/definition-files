@@ -156,6 +156,11 @@
                     "name":"tag_label",
                     "type":"string",
                     "label" : "Time Tag Label"
+                  },
+                  {
+                    "name": "note",
+                    "type": "string",
+                    "label": "Note"
                   }
                 ]
               }
@@ -185,10 +190,6 @@
         ],
         "input_file_types": [],
         "input_settings": [
-          {
-            "code": "pilrhealth:calrq:urine_nitrogen",
-            "mapping" : "nitrogen"
-          },
           {
             "code": "pilrhealth:calrq:energy_intake_measured",
             "mapping" : "energy_intake_measured"
@@ -238,12 +239,12 @@
             "mapping": "exercise_level"
           },
           {
-            "code": "pilrhealth:calrq:urine_nitrogen",
-            "mapping": "urine_nitrogen"
-          },
-          {
             "code": "pilrhealth:calrq:treatment",
             "mapping": "treatment"
+          },
+          {
+            "code": "pilrhealth:calrq:multiple_n2",
+            "mapping": "multiple_n2"
           }
         ],
         "filter_params": [
