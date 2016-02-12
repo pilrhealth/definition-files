@@ -245,7 +245,11 @@
           {
             "code": "pilrhealth:calrq:multiple_n2",
             "mapping": "multiple_n2"
-          }
+          },
+	    {
+		"code": "pilrhealth:calrq:rest_duration",
+		"mapping": "rest_duration"
+	    }
         ],
         "filter_params": [
           "participant",
