@@ -13,10 +13,10 @@
   ],
   "tools": [
     {
-      "definition_source_rel": "../../tools/r-processing-tool.json"
+      "definition_source_rel": "../../../tools/r-processing-tool.json"
     },
     {
-      "definition_source_rel": "../../tools/event-tagger-tool.json"
+      "definition_source_rel": "../../../tools/event-tagger-tool.json"
     }
   ],
   "jobs": [
