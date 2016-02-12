@@ -192,10 +192,6 @@
     ],
     "input_settings": [
       {
-        "code": "pilrhealth:calrq:urine_nitrogen",
-        "mapping": "nitrogen"
-      },
-      {
         "code": "pilrhealth:calrq:energy_intake_measured",
         "mapping": "energy_intake_measured"
       },
