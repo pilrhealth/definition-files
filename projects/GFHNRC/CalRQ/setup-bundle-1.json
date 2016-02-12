@@ -115,15 +115,14 @@
       		"type":"integer_setting",
       		"units":"minutes"
       	},{
-			"min":0,
-			"max":10000,
+		"min":0,
+		"max":10000,
       		"description":"Rest Duration",
       		"name":"Rest Duration",
-			"value":1080,
+		"value":1080,
       		"code":"calrq:rest_duration",
       		"type":"integer_setting",
       		"units":"minutes"
-      		
       	}]
       }]
     }
