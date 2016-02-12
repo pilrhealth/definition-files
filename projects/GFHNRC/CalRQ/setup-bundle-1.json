@@ -82,21 +82,21 @@
               "description": "Urine Nitrogen Mass",
               "name": "Urine Nitrogen Mass",
               "value": 0,
-              "code": "calrq:urine_nitrogen_value",
+              "code": "pilrhealth:calrq:urine_nitrogen_value",
               "type": "double_setting",
               "units": ""
             },
             {
               "description": "Urine Nitrogen Collection Date",
               "name": "Urine Nitrogen Collection Date",
-              "code": "calrq:urine_nitrogen_date",
+              "code": "pilrhealth:calrq:urine_nitrogen_date",
               "type": "date_setting",
               "units": ""
             },
             {
               "description": "Urine Nitrogen Collection Time",
               "name": "Urine Nitrogen Collection Time",
-              "code": "calrq:urine_nitrogen_time",
+              "code": "pilrhealth:calrq:urine_nitrogen_time",
               "type": "time_setting",
               "units": ""
             }
@@ -118,7 +118,7 @@
               "description": "Post Meal Rest Duration",
               "name": "Post Meal Rest Duration",
               "value": 360,
-              "code": "calrq:post_meal_duration",
+              "code": "pilrhealth:calrq:post_meal_duration",
               "type": "integer_setting",
               "units": "minutes"
             },
@@ -128,7 +128,7 @@
               "description": "Rest Duration",
               "name": "Rest Duration",
               "value": 1080,
-              "code": "calrq:rest_duration",
+              "code": "pilrhealth:calrq:rest_duration",
               "type": "integer_setting",
               "units": "minutes"
             }
