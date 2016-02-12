@@ -101,7 +101,7 @@
     },
     {
       "type": "array_setting",
-      "code": "pilrhealth:calrq:rest_duration",
+      "code": "pilrhealth:calrq:rest_durations",
       "name": "Rest Durations",
       "description": "Rest Durations",
       "choices": [{
