@@ -1,278 +1,281 @@
 {
-      "definition_type": "job",
-      "code":"calorimeter_human_summary_job_rc1_sleep_thresh_3",
-      "name": "Human CalRQ Summary RC1 (Sleep Threshold = 3)",
-      "version": 1,
-      "description": "Compute summaries and generate report for CalRQ human studies using a threshold of 3 for sleep.",
-      "datasets": [
+    "definition_type":"job",
+    "code":"calorimeter_human_summary_job_rc1_sleep_thresh_3",
+    "name":"Human CalRQ Summary RC1 (Sleep Threshold = 3)",
+    "version":1,
+    "description":"Compute summaries and generate report for CalRQ human studies using a threshold of 3 for sleep.",
+    "datasets":[
         {
-          "name": "CalRQ Human Summary",
-          "code": "pilrhealth:calrq:human_summary",
-          "schemas": [
-            {
-              "type": "concordia",
-              "name": "CalRQ Human Summary",
-              "schemaVersion": 1,
-              "specification": {
-                "type":"object",
-                "fields": [
-                  {
-                    "name":"start_time",
-                    "type":"string",
-                    "category":"date",
-                    "label" : "Summary Start Time"
-                  },
-                  {
-                    "name":"end_time",
-                    "type":"string",
-                    "category": "date",
-                    "label" : "Summary End Time"
-                  },
-                  {
-                    "name":"rmr_intercept",
-                    "type":"number",
-                    "label" : "RMR Regression Intercept"
-                  },
-                  {
-                    "name":"minutes",
-                    "type":"number",
-                    "label" : "Number of Minutes",
-                    "units" : "Minutes"
-                  },
-                  {
-                    "name":"mr",
-                    "type":"number",
-                    "label" : "MR"
-                  },
-                  {
-                    "name":"ee",
-                    "type":"number",
-                    "label" : "EE"
-                  },
-                  {
-                    "name":"ee_no_tf_correct",
-                    "type":"number",
-                    "label" : "EE (No 24-hour correction)"
-                  },
-                  {
-                    "name":"ee_nn",
-                    "type":"number",
-                    "label" : "EE (No Nitrogen Correction)"
-                  },
-                  {
-                    "name":"ee_nn_no_tf_correct",
-                    "type":"number",
-                    "label" : "EE, (No Nitrogen Correction, No 24-hour correction)"
-                  },
-                  {
-                    "name":"rq",
-                    "type":"number",
-                    "label" : "RQ"
-                  },
-                  {
-                    "name":"vo2",
-                    "type":"number",
-                    "label" : "VO2"
-                  },
-                  {
-                    "name":"vo2_no_tf_correct",
-                    "type":"number",
-                    "label" : "VO2 (No 24-hour correction)"
-                  },
-                  {
-                    "name":"vco2",
-                    "type":"number",
-                    "label" : "VCO2"
-                  },
-                  {
-                    "name":"vco2_no_tf_correct",
-                    "type":"number",
-                    "label" : "VCO2 (No 24-hour correction)"
-                  },
-                  {
-                    "name":"np_rq",
-                    "type":"number",
-                    "label" : "NP RQ"
-                  },
-                  {
-                    "name":"cho_ox",
-                    "type":"number",
-                    "label": "Carbohydrate Oxidation"
-                  },
-                  {
-                    "name":"fat_ox",
-                    "type":"number",
-                    "label" : "Fat Oxidation"
-                  },
-                  {
-                    "name":"protein_ox",
-                    "type":"number",
-                    "label" : "Protein Oxidation"
-                  },
-                  {
-                    "name":"tef1",
-                    "type":"number",
-                    "label" : "???"
-                  },
-                  {
-                    "name":"tef2",
-                    "type":"number",
-                    "label" : "???"
-                  },
-
-                  {
-                    "name":"activity",
-                    "type":"number",
-                    "label" : "Activity"
-                  },
-                  {
-                    "name":"spa",
-                    "type":"number",
-                    "label" : "Spontaneous Physical Activity"
-                  },
-                  {
-                    "name":"activity_minutes",
-                    "type":"number",
-                    "label" : "Activity Minutes",
-                    "units" : "minutes"
-                  },
-                  {
-                    "name":"activity_pct",
-                    "type":"number",
-                    "label" : "Activity Percent",
-                    "units" : "%"
-                  },
-                  {
-                    "name":"null_offset_o2",
-                    "type":"number",
-                    "label" : "Null Offset, O2"
-                  },
-                  {
-                    "name":"null_offset_co2",
-                    "type":"number",
-                    "label" : "Null Offset, CO2"
-                  },
-                  {
-                    "name":"tag_label",
-                    "type":"string",
-                    "label" : "Time Tag Label"
-                  },
-                  {
-                    "name": "note",
-                    "type": "string",
-                    "label": "Note"
-                  }
-                ]
-              }
-            }
-          ]
+            "name":"CalRQ Human Summary",
+            "code":"pilrhealth:calrq:human_summary",
+            "schemas":[
+                {
+                    "type":"concordia",
+                    "name":"CalRQ Human Summary",
+                    "schemaVersion":1,
+                    "specification":{
+                        "type":"object",
+                        "fields":[
+                            {
+                                "name":"start_time",
+                                "type":"string",
+                                "category":"date",
+                                "label":"Summary Start Time"
+                            },
+                            {
+                                "name":"end_time",
+                                "type":"string",
+                                "category":"date",
+                                "label":"Summary End Time"
+                            },
+                            {
+                                "name":"rmr_intercept",
+                                "type":"number",
+                                "label":"RMR Regression Intercept"
+                            },
+                            {
+                                "name":"minutes",
+                                "type":"number",
+                                "label":"Number of Minutes",
+                                "units":"Minutes"
+                            },
+                            {
+                                "name":"mr",
+                                "type":"number",
+                                "label":"MR"
+                            },
+                            {
+                                "name":"ee",
+                                "type":"number",
+                                "label":"EE"
+                            },
+                            {
+                                "name":"ee_no_tf_correct",
+                                "type":"number",
+                                "label":"EE (No 24-hour correction)"
+                            },
+                            {
+                                "name":"ee_nn",
+                                "type":"number",
+                                "label":"EE (No Nitrogen Correction)"
+                            },
+                            {
+                                "name":"ee_nn_no_tf_correct",
+                                "type":"number",
+                                "label":"EE, (No Nitrogen Correction, No 24-hour correction)"
+                            },
+                            {
+                                "name":"rq",
+                                "type":"number",
+                                "label":"RQ"
+                            },
+                            {
+                                "name":"vo2",
+                                "type":"number",
+                                "label":"VO2"
+                            },
+                            {
+                                "name":"vo2_no_tf_correct",
+                                "type":"number",
+                                "label":"VO2 (No 24-hour correction)"
+                            },
+                            {
+                                "name":"vco2",
+                                "type":"number",
+                                "label":"VCO2"
+                            },
+                            {
+                                "name":"vco2_no_tf_correct",
+                                "type":"number",
+                                "label":"VCO2 (No 24-hour correction)"
+                            },
+                            {
+                                "name":"np_rq",
+                                "type":"number",
+                                "label":"NP RQ"
+                            },
+                            {
+                                "name":"cho_ox",
+                                "type":"number",
+                                "label":"Carbohydrate Oxidation"
+                            },
+                            {
+                                "name":"fat_ox",
+                                "type":"number",
+                                "label":"Fat Oxidation"
+                            },
+                            {
+                                "name":"protein_ox",
+                                "type":"number",
+                                "label":"Protein Oxidation"
+                            },
+                            {
+                                "name":"tef1",
+                                "type":"number",
+                                "label":"???"
+                            },
+                            {
+                                "name":"tef2",
+                                "type":"number",
+                                "label":"???"
+                            },
+                            {
+                                "name":"activity",
+                                "type":"number",
+                                "label":"Activity"
+                            },
+                            {
+                                "name":"spa",
+                                "type":"number",
+                                "label":"Spontaneous Physical Activity"
+                            },
+                            {
+                                "name":"activity_minutes",
+                                "type":"number",
+                                "label":"Activity Minutes",
+                                "units":"minutes"
+                            },
+                            {
+                                "name":"activity_pct",
+                                "type":"number",
+                                "label":"Activity Percent",
+                                "units":"%"
+                            },
+                            {
+                                "name":"null_offset_o2",
+                                "type":"number",
+                                "label":"Null Offset, O2"
+                            },
+                            {
+                                "name":"null_offset_co2",
+                                "type":"number",
+                                "label":"Null Offset, CO2"
+                            },
+                            {
+                                "name":"tag_label",
+                                "type":"string",
+                                "label":"Time Tag Label"
+                            },
+                            {
+                                "name":"note",
+                                "type":"string",
+                                "label":"Note"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
-      ],
-      "runner": {
-        "clazz": "com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
-        "save_request": 0,
-        "save_response": 0,
-        "delete_if_successful": 0,
-        "package_url": "https://github.com/MeiResearchLtd/mei.calorimeter.r",
-        "package_function": "process_cal_human_sleep_thresh_3",
-        "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
-        "input_datasets": [
-          {
-            "code": "pilrhealth:calrq:calrq_data",
-            "version": 1,
-            "mapping": "calrq"
-          },
-          {
-            "code": "pilrhealth:time_analysis:tagged_event",
-            "version": 1,
-            "mapping" : "event_tags"
-          }
+    ],
+    "runner":{
+        "clazz":"com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+        "save_request":0,
+        "save_response":0,
+        "delete_if_successful":0,
+        "package_url":"https://github.com/MeiResearchLtd/mei.calorimeter.r",
+        "package_function":"process_cal_human_sleep_thresh_3",
+        "resource_path":"/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
+        "input_datasets":[
+            {
+                "code":"pilrhealth:calrq:calrq_data",
+                "version":1,
+                "mapping":"calrq"
+            },
+            {
+                "code":"pilrhealth:time_analysis:tagged_event",
+                "version":1,
+                "mapping":"event_tags"
+            }
         ],
-        "input_file_types": [],
-        "input_settings": [
-          {
-            "code": "pilrhealth:calrq:energy_intake_measured",
-            "mapping" : "energy_intake_measured"
-          },
-          {
-            "code": "pilrhealth:calrq:read_interval",
-            "mapping": "read_interval"
-          },
-          {
-            "code": "pilrhealth:calrq:configuration",
-            "mapping":"configuration"
-          },
-          {
-            "code": "pilrhealth:calrq:chamber_volume",
-            "mapping":"volume"
-          },
-          {
-            "code": "pilrhealth:calrq:in_o2",
-            "mapping": "in_o2"
-          },
-          {
-            "code": "pilrhealth:calrq:in_co2",
-            "mapping": "in_co2"
-          },
-          {
-            "code": "pilrhealth:calrq:weight_in",
-            "mapping": "weight_in"
-          },
-          {
-            "code": "pilrhealth:calrq:weight_out",
-            "mapping": "weight_out"
-          },
-          {
-            "code": "pilrhealth:calrq:energy_intake_measured",
-            "mapping": "energy_intake_measured"
-          },
-          {
-            "code": "pilrhealth:calrq:energy_intake_predicted",
-            "mapping": "energy_intake_predicted"
-          },
-          {
-            "code": "pilrhealth:calrq:diet",
-            "mapping": "diet"
-          },
-          {
-            "code": "pilrhealth:calrq:exercise_level",
-            "mapping": "exercise_level"
-          },
-          {
-            "code": "pilrhealth:calrq:treatment",
-            "mapping": "treatment"
-          },
-          {
-            "code": "pilrhealth:calrq:multiple_n2",
-            "mapping": "multiple_n2"
-          }
+        "input_file_types":[
+
         ],
-        "filter_params": [
-          "participant",
-          "date_range",
-          "period"
+        "input_settings":[
+            {
+                "code":"pilrhealth:calrq:energy_intake_measured",
+                "mapping":"energy_intake_measured"
+            },
+            {
+                "code":"pilrhealth:calrq:read_interval",
+                "mapping":"read_interval"
+            },
+            {
+                "code":"pilrhealth:calrq:configuration",
+                "mapping":"configuration"
+            },
+            {
+                "code":"pilrhealth:calrq:chamber_volume",
+                "mapping":"volume"
+            },
+            {
+                "code":"pilrhealth:calrq:in_o2",
+                "mapping":"in_o2"
+            },
+            {
+                "code":"pilrhealth:calrq:in_co2",
+                "mapping":"in_co2"
+            },
+            {
+                "code":"pilrhealth:calrq:weight_in",
+                "mapping":"weight_in"
+            },
+            {
+                "code":"pilrhealth:calrq:weight_out",
+                "mapping":"weight_out"
+            },
+            {
+                "code":"pilrhealth:calrq:energy_intake_measured",
+                "mapping":"energy_intake_measured"
+            },
+            {
+                "code":"pilrhealth:calrq:energy_intake_predicted",
+                "mapping":"energy_intake_predicted"
+            },
+            {
+                "code":"pilrhealth:calrq:diet",
+                "mapping":"diet"
+            },
+            {
+                "code":"pilrhealth:calrq:exercise_level",
+                "mapping":"exercise_level"
+            },
+            {
+                "code":"pilrhealth:calrq:treatment",
+                "mapping":"treatment"
+            },
+            {
+                "code":"pilrhealth:calrq:multiple_n2",
+                "mapping":"multiple_n2"
+            }
         ],
-        "input_params": [],
-        "output_datasets": [
-          {
-            "code": "pilrhealth:calrq:haldane",
-            "version": 1,
-            "mapping": "haldane"
-          },
-          {
-            "code": "pilrhealth:calrq:human_summary",
-            "version": 1,
-            "mapping": "human"
-          }
+        "filter_params":[
+            "participant",
+            "date_range",
+            "period"
+        ],
+        "input_params":[
+
+        ],
+        "output_datasets":[
+            {
+                "code":"pilrhealth:calrq:haldane",
+                "version":1,
+                "mapping":"haldane"
+            },
+            {
+                "code":"pilrhealth:calrq:human_summary",
+                "version":1,
+                "mapping":"human"
+            }
         ],
         "output_file_types":[
-          { 
-            "code" : "pilrhealth:calrq:human_file",
-            "version" : 1, 
-            "mapping" : "human",
-            "extension": "pdf",
-            "filename_prefix": "human_summary"
-          }
+            {
+                "code":"pilrhealth:calrq:human_file",
+                "version":1,
+                "mapping":"human",
+                "extension":"pdf",
+                "filename_prefix":"human_summary"
+            }
         ]
-      }
     }
+}
