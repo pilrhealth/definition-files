@@ -1,0 +1,35 @@
+
+{
+    "definition_type" : "dataset",
+    "name": "Notification Log",
+    "code": "pilrhealth:mobile:notification_log",
+    "schemas": [
+        {
+            "clazz": "com.pilrhealth.data.ConcordiaSchema",
+            "name": "1.0",
+            "schemaVersion": 1,
+            "specification": {
+                "type": "object",
+                "fields": [
+                    {
+                        "name": "session",
+                        "type": "string",
+                        "label": "Session"
+                    },
+                    {
+                        "name": "notif_time",
+                        "type": "string",
+                        "category": "date",
+                        "label": "Notification Time"
+                    },
+                    {
+                        "name": "expir_time",
+                        "type": "string",
+                        "category": "date",
+                        "label": "Expiration Time"
+                    }
+                ]
+            }
+        }
+    ]
+}
