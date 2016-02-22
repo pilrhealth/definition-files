@@ -1,95 +1,95 @@
 {
-  "code": "evtagger",
-  "version": 1,
-  "name": "Event Tag Editor",
-  "description": "The \"Event Tag Editor\" tool allows you to plot data from a dataset, and \"tag\" event time intervals through a visual click and drag feature.  This makes it easy to view and update event times and tags quickly for many participants.",
-  "definition_type": "tool",
-  "customizations": {
-    "package": "com.pilrhealth.tools.evtagger",
-    "classnamePrefix": "EvTag",
-    "apix": true,
-    "controllers": {
-      "configure": "EvTagConfig",
-      "coordinate": "EvTagEditor",
-      "portal": "EvTagView"
-    },
-    "services": {
-      "handleContent": "EvTag"
-    }
-  },
-  "datasets": [
-    {
-      "code": "pilrhealth:time_analysis:tagged_event",
-      "name": "Tagged Events",
-      "schemas": [
-        {
-          "type": "concordia",
-          "code": "remove",
-          "name": "remove",
-          "schemaVersion": 1,
-          "specification": {
-            "fields": [
-              {
-                "name": "number",
-                "type": "number",
-                "label": "Event Number",
-                "doc": "A unique identifier for an event."
-              },
-              {
-                "category": "date",
-                "name": "start_time",
-                "type": "string",
-                "label": "Event Start Time",
-                "doc": "The date and time of the start of the event."
-              },
-              {
-                "category": "date",
-                "name": "end_time",
-                "type": "string",
-                "label": "Event End Time",
-                "doc": "The date and time of the end of the event."
-              },
-              {
-                "name": "note",
-                "type": "string",
-                "optional": true,
-                "label": "Tag Note",
-                "doc": "Arbitrary notes on the event or tags."
-              },
-              {
-                "constType": {
-                  "type": "string"
-                },
-                "name": "tags",
-                "type": "array",
-                "label": "List of Tags",
-                "doc": "One or more tags that label the event."
-              },
-              {
-                "name": "verified",
-                "type": "boolean",
-                "label": "Tag Verified",
-                "doc": "Has this event been verified?"
-              },
-              {
-                "name": "profile_code",
-                "type": "string",
-                "optional": true,
-                "label": "Profile Code",
-                "doc": "The profile code from which the event was created."
-              },
-              {
-                "name": "profile_version",
-                "type": "number",
-                "optional": true,
-                "label": "Profile Version",
-                "doc": "The version of the profile code from which the event was created."
-              }
-            ],
-            "type": "object"
-          }
+    "code":"evtagger",
+    "version":1,
+    "name":"Event Tag Editor",
+    "description":"The \"Event Tag Editor\" tool allows you to plot data from a dataset, and \"tag\" event time intervals through a visual click and drag feature.  This makes it easy to view and update event times and tags quickly for many participants.",
+    "definition_type":"tool",
+    "customizations":{
+        "package":"com.pilrhealth.tools.evtagger",
+        "classnamePrefix":"EvTag",
+        "apix":true,
+        "controllers":{
+            "configure":"EvTagConfig",
+            "coordinate":"EvTagEditor",
+            "portal":"EvTagView"
+        },
+        "services":{
+            "handleContent":"EvTag"
         }
-      ]
-    }
-  ]
+    },
+    "datasets":[
+        {
+            "code":"pilrhealth:time_analysis:tagged_event",
+            "name":"Tagged Events",
+            "schemas":[
+                {
+                    "type":"concordia",
+                    "code":"remove",
+                    "name":"remove",
+                    "schemaVersion":1,
+                    "specification":{
+                        "fields":[
+                            {
+                                "name":"number",
+                                "type":"number",
+                                "label":"Event Number",
+                                "doc":"A unique identifier for an event."
+                            },
+                            {
+                                "category":"date",
+                                "name":"start_time",
+                                "type":"string",
+                                "label":"Event Start Time",
+                                "doc":"The date and time of the start of the event."
+                            },
+                            {
+                                "category":"date",
+                                "name":"end_time",
+                                "type":"string",
+                                "label":"Event End Time",
+                                "doc":"The date and time of the end of the event."
+                            },
+                            {
+                                "name":"note",
+                                "type":"string",
+                                "optional":true,
+                                "label":"Tag Note",
+                                "doc":"Arbitrary notes on the event or tags."
+                            },
+                            {
+                                "constType":{
+                                    "type":"string"
+                                },
+                                "name":"tags",
+                                "type":"array",
+                                "label":"List of Tags",
+                                "doc":"One or more tags that label the event."
+                            },
+                            {
+                                "name":"verified",
+                                "type":"boolean",
+                                "label":"Tag Verified",
+                                "doc":"Has this event been verified?"
+                            },
+                            {
+                                "name":"profile_code",
+                                "type":"string",
+                                "optional":true,
+                                "label":"Profile Code",
+                                "doc":"The profile code from which the event was created."
+                            },
+                            {
+                                "name":"profile_version",
+                                "type":"number",
+                                "optional":true,
+                                "label":"Profile Version",
+                                "doc":"The version of the profile code from which the event was created."
+                            }
+                        ],
+                        "type":"object"
+                    }
+                }
+            ]
+        }
+    ]
 }

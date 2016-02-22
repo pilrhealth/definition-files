@@ -11,7 +11,7 @@
   ],
   "instrument_contents": [
     {
-      "definition_source_rel": "./sample-ema-config-content-1.json"
+      "definition_source_rel": "./sample-ema-config-content-v1.json"
     }
   ]
 }

@@ -58,16 +58,6 @@
       "description": "Exercise Level"
     },
     {
-      "type": "double_setting",
-      "code": "pilrhealth:calrq:urine_nitrogen",
-      "name": "Urine Nitrogen Excretion Rate (g/24hr)",
-      "description": "Urine Nitrogen Excretion Rate (g/24hr)",
-      "units" : "g/24hr",
-      "value": 0,
-      "min": 0,
-      "max": 100
-    },
-    {
       "type": "text_setting",
       "code": "pilrhealth:calrq:treatment",
       "name": "Treatment",
@@ -79,25 +69,57 @@
       "name": "Urine Nitrogen Mass",
       "description": "Urine Nitrogen Mass",
       "choices": [{
-		"fields": [{
-		"min": 0,
-		"max": 10,
-		"description": "Urine Nitrogen Mass",
-		"name": "Urine Nitrogen Mass",
-		"value": 0,
-		"code": "calrq:urine_nitrogen_value",
-		"type": "double_setting",
-		"units": "",
-		“period”: “period”
-		}, {
-		"description": "Urine Nitrogen Collection Date",
-		"name": "Urine Nitrogen Collection Date",
-		"code": "calrq:urine_nitrogen_datetime",
-		"type": "date_time_setting",
-		"units": "",
-		“period”: “period”
-		}]
+      	"fields":[{
+      		"min":0,
+      		"max":10,
+      		"description":"Urine Nitrogen Mass",
+      		"name":"Urine Nitrogen Mass",
+      		"value":0,
+      		"code":"calrq:urine_nitrogen_value",
+      		"type":"double_setting",
+      		"units":""
+      	},{
+      		"description":"Urine Nitrogen Collection Date",
+      		"name":"Urine Nitrogen Collection Date",
+      		"code":"calrq:urine_nitrogen_date",
+      		"type":"date_setting",
+      		"units":""
+      		
+      	},{
+      		"description":"Urine Nitrogen Collection Time",
+      		"name":"Urine Nitrogen Collection Time",
+      		"code":"calrq:urine_nitrogen_time",
+      		"type":"time_setting",
+      		"units":""
       	}]
+      }]
+    },
+    {
+      "type": "array_setting",
+      "code": "pilrhealth:calrq:rest_durations",
+      "name": "Rest Durations",
+      "description": "Rest Durations",
+      "choices": [{
+      	"fields":[{
+      		"min":0,
+      		"max":10000,
+      		"description":"Post Meal Rest Duration",
+      		"name":"Post Meal Rest Duration",
+      		"value":360,
+      		"code":"calrq:post_meal_duration",
+      		"type":"integer_setting",
+      		"units":"minutes"
+      	},{
+		"min":0,
+		"max":10000,
+      		"description":"Rest Duration",
+      		"name":"Rest Duration",
+		"value":1080,
+      		"code":"calrq:rest_duration",
+      		"type":"integer_setting",
+      		"units":"minutes"
+      	}]
+      }]
     }
   ]
 }

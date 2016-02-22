@@ -10,7 +10,7 @@
       "code": "pilrhealth:b_mobile:activity_threshold",
       "name": "Acceleration threshold for active vs sedentary activity",
       "description": "Acceleration threshold for active vs sedentary activity",
-      "value": 0.08,
+      "value": 0.2,
       "min": 0,
       "max": 100,
       "required": true
@@ -29,7 +29,7 @@
       "code": "pilrhealth:b_mobile:min_active_time",
       "name": "Minimum active time before gauge resets (minutes)",
       "description": "Minimum active time before gauge resets (minutes)",
-      "value": 10,
+      "value": 3,
       "min": 0,
       "required": true
     },

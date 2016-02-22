@@ -192,10 +192,6 @@
     ],
     "input_settings": [
       {
-        "code": "pilrhealth:calrq:urine_nitrogen",
-        "mapping": "nitrogen"
-      },
-      {
         "code": "pilrhealth:calrq:energy_intake_measured",
         "mapping": "energy_intake_measured"
       },
@@ -250,10 +246,6 @@
       {
         "code": "pilrhealth:calrq:multiple_n2",
         "mapping": "multiple_n2"
-      },
-      {
-        "code": "pilrhealth:calrq:urine_nitrogen_value",
-        "mapping": "urine_nitrogen_value"
       }
     ],
     "filter_params": [
