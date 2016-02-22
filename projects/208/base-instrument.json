@@ -498,6 +498,81 @@
           }
         }
       ]
+    },
+    {
+      "name": "Notification Log",
+      "code": "pilrhealth:mobile:notification_log",
+      "schemas": [
+       {
+       "clazz": "com.pilrhealth.data.ConcordiaSchema",
+       "name": "1.0",
+       "schemaVersion": 1,
+       "specification": {
+       "type": "object",
+       "fields": [
+       {
+         "name": "session",
+         "type": "string",
+         "label": "Session"
+       },
+       {
+         "name": "notif_time",
+         "type": "string",
+         "category": "date",
+         "label": "Notification Time"
+       },
+       {
+         "name": "expir_time",
+         "type": "string",
+         "category": "date",
+         "label": "Expiration Time"
+       }
+      ]
+     }
     }
+   ]
+  },
+  {
+    "name": "Compliance_Log",
+    "code": "pilrhealth:mobile:comp_log",
+    "schemas": [
+      {
+        "clazz": "com.pilrhealth.data.ConcordiaSchema",
+        "name": "1.0",
+        "schemaVersion": 1,
+        "specification": {
+        "type": "object",
+        "fields": [
+         {
+           "label": "Total Started Surveys",
+           "name": "total_started",
+           "type": "number"
+         },
+         {
+           "label": "Total Submitted Surveys",
+           "name": "total_submitted",
+           "type": "number"
+         },
+         {
+           "label": "Total Notifications",
+           "name": "total_notifications",
+           "type": "number"
+         },
+         {
+           "label": "Percent Completed Surveys",
+           "name": "percent_completed",
+           "type": "number"
+         },
+         {
+           "label": "Avg Time To Comp Surveys",
+           "name": "time_taken",
+           "type": "number"
+         }
+       ]
+      }
+     }
+    ]
+  }
+
   ]
 }
