@@ -117,11 +117,12 @@
 			"multipleChoice" : false
 		},
     {
-      "type": "string_setting",
-      "code": "actigraph_activity_monitoring_app:epoch_algorithm",
-      "name": "Epoch Event Algorithm",
-      "description": "The javascript algorithm used at the end of each epoch evaluation to determine whether to fire an event",
-      "required": false
+      "type": "boolean_setting",
+      "code": "actigraph_activity_monitoring_app:use_epoch_data",
+      "name": "Use Epoch Data",
+      "description": "Determines whether to use the Actigraph sensor epoch data instead of the accelerometer data",
+      "value": false,
+      "required": true
     }
   ],
   "datasets": [
