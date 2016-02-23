@@ -306,6 +306,11 @@
                 "type": "number"
               },
               {
+                "name":"active_bout_minutes_today",
+                "label":"Active Bout Minutes Today",
+                "type":"number"
+              },
+              {
                 "name": "badges_earned_today",
                 "label": "Badges Earned Today",
                 "type": "number"
