@@ -6,7 +6,7 @@
   "description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
   "instruments": [
     {
-      "definition_source_rel": "./base-instrument.json"
+      "definition_source_rel": "./base-instrument-infusion.json"
     }
   ],
   "variables": [

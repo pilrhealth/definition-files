@@ -1,0 +1,134 @@
+{
+  "definition_type": "bundle",
+  "code": "calorimeter_bundle_001",
+  "version": 1,
+  "name": "Calorimeter Project Setup Bundle",
+  "description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
+  "instruments": [
+    {
+      "definition_source_rel": "./base-instrument.json"
+    }
+  ],
+  "variables": [
+    {
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:weight_in",
+      "name": "Weight In (Kg)",
+      "description": "Weight In (Kg)",
+      "units" : "Kg",
+      "value": 0,
+      "min": 0,
+      "max": 1000
+    },
+	{
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:weight_out",
+      "name": "Weight Out (Kg)",
+      "description": "Weight Out (Kg)",
+      "units" : "Kg",
+      "value": 0,
+      "min": 0,
+      "max": 1000
+    },
+    {
+      "type": "integer_setting",
+      "code": "pilrhealth:calrq:energy_intake_measured",
+      "name": "Energy Intake Measured (kCal)",
+      "description": "Energy Intake Measured (kCal)",
+      "units" : "kCal",
+      "value": 0,
+      "min": 0,
+      "max": 30000
+    },
+    {
+      "type": "integer_setting",
+      "code": "pilrhealth:calrq:energy_intake_predicted",
+      "name": "Energy Intake Predicted (kCal)",
+      "description": "Energy Intake Predicted (kCal)",
+      "units" : "kCal",
+      "value": 0,
+      "min": 0,
+      "max": 30000
+    },
+    {
+      "type": "text_setting",
+      "code": "pilrhealth:calrq:diet",
+      "name": "Diet",
+      "description": "Diet"
+    },
+    {
+      "type": "text_setting",
+      "code": "pilrhealth:calrq:exercise_level",
+      "name": "Exercise Level",
+      "description": "Exercise Level"
+    },
+    {
+      "type": "double_setting",
+      "code": "pilrhealth:calrq:urine_nitrogen",
+      "name": "Urine Nitrogen Excretion Rate (g/24hr)",
+      "description": "Urine Nitrogen Excretion Rate (g/24hr)",
+      "units" : "g/24hr",
+      "value": 0,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "type": "text_setting",
+      "code": "pilrhealth:calrq:treatment",
+      "name": "Treatment",
+      "description": "Treatment"
+    },
+    {
+      "type": "array_setting",
+      "code": "pilrhealth:calrq:multiple_n2",
+      "name": "Urine Nitrogen Mass",
+      "description": "Urine Nitrogen Mass",
+      "choices": [{
+      	"fields":[{
+      		"min":0,
+      		"max":10,
+      		"description":"Urine Nitrogen Mass",
+      		"name":"Urine Nitrogen Mass",
+      		"value":0,
+      		"code":"calrq:urine_nitrogen_value",
+      		"type":"double_setting",
+      		"units":""
+      	},{
+      		"description":"Urine Nitrogen Collection Date",
+      		"name":"Urine Nitrogen Collection Date",
+      		"code":"calrq:urine_nitrogen_date",
+      		"type":"date_setting",
+      		"units":""
+      		
+      	},{
+      		"description":"Urine Nitrogen Collection Time",
+      		"name":"Urine Nitrogen Collection Time",
+      		"code":"calrq:urine_nitrogen_time",
+      		"type":"time_setting",
+      		"units":""
+      	}]
+      }]
+    }
+  ],
+  "tools": [
+    {
+      "definition_source_rel": "../../tools/r-processing-tool.json"
+    },
+    {
+      "definition_source_rel": "../../tools/event-tagger-tool.json"
+    }
+  ],
+  "jobs": [
+    {
+      "definition_source_rel": "./infusion-summary-job-rc1.json"
+    },
+    {
+      "definition_source_rel": "./haldane-transform-job.json"
+    }
+  ],
+  "tool_contents": [
+    {
+      "definition_source_rel": "./evtagger-sample-config-tool-content-infusion.json"
+    }
+  ]
+}

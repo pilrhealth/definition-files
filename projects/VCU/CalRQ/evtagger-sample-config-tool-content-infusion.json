@@ -1,0 +1,64 @@
+{
+  "definition_type": "tool_content",
+  "tool_code": "evtagger",
+  "code": "calorimeter_evtagger_config_001",
+  "version": 1,
+  "name": "Sample tag labels and event bundles for calorimeter study",
+  "description": "A sample of tag labels and event bundles commonly used for segmenting data in studies that use a calorimeter chamber.",
+  "contents": [
+    {
+      "labels": [
+        {
+          "name": "Null",
+          "description": "Average O2 and CO2 during null period used to calculate offset"
+        },
+        {
+          "name": "Infusion Study",
+          "description": "Infusion period - used to calculate VO2, VCO2, MR, RQ errors during infusion test"
+        },
+        {
+          "name": "Short Circuit",
+          "description": "Infusion period where chamber volume = 0. Same calculations as infusion period"
+        },
+        {
+          "name": "Misc",
+          "description": "Misc."
+        },
+        {
+          "name": "Invalid",
+          "description": "Used to tag data to be removed from summary calculations"
+        }
+      ],
+      "bundles": [
+        {
+          "name": "Sample Infusion",
+          "description": ".",
+          "events": [
+            {
+              "name": "Level 1",
+              "note": "Level 1 infusion",
+              "verified": 1,
+              "offset": 176490000,
+              "duration": 7200000,
+              "startTime": "01:01:30",
+              "durationTime": "02:00:00",
+              "startDays": 0,
+              "tags": ["Infusion Study"]
+            },
+ 	    {
+              "name": "Null",
+              "note": "Null period",
+              "verified": 1,
+              "offset": 176490000,
+              "duration": 7200000,
+              "startTime": "01:01:30",
+              "durationTime": "02:00:00",
+              "startDays": 0,
+              "tags": ["Infusion Study"]
+            },
+          ]
+        }
+      ]
+    }
+  ]
+}
