@@ -36,6 +36,7 @@
                 "Pull - Differential",
                 "Pull - Absolute"
             ],
+            "value": ["Push - Absolute"],
             "required":true,
             "multipleChoice":false
         },
