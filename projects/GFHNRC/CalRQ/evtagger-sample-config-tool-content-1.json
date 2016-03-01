@@ -21,8 +21,48 @@
           "description": "Exercise."
         },
         {
+          "name": "Rest",
+          "description": "Rest"
+        },
+        {
           "name": "Misc",
           "description": "Misc."
+        },
+        {
+          "name": "Meal 1",
+          "description": "Meal 1"
+        },
+        {
+          "name": "Meal 2",
+          "description": "Meal 2"
+        },
+        {
+          "name": "Meal 3",
+          "description": "Meal 3"
+        },
+        {
+          "name": "Post Meal 1",
+          "description": "Post Meal 1"
+        },
+        {
+          "name": "Post Meal 2",
+          "description": "Post Meal 2"
+        },
+        {
+          "name": "Post Meal 3",
+          "description": "Post Meal 3"
+        },
+        {
+          "name": "Regression 1",
+          "description": "Regression 1"
+        },
+        {
+          "name": "Regression 2",
+          "description": "Regression 2"
+        },
+        {
+          "name": "Regression 3",
+          "description": "Regression 3"
         }
       ],
       "bundles": [
