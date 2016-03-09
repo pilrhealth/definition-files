@@ -115,7 +115,14 @@
 			],
 			"required" : false,
 			"multipleChoice" : false
-		}
+		},
+     {
+       	"type": "integer_setting",
+        "code": "followup_survey_probability",
+        "name": "Probability of follow-up survey",
+        "description": "The probability of a survey notification action actually notifying, expressed as a percentage",
+        "value":25
+     }
   ],
   "datasets": [
     {
