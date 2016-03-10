@@ -526,7 +526,19 @@
          "type": "string",
          "category": "date",
          "label": "Expiration Time"
-       }
+       },
+       {
+	 "name": "survey_code",
+    	 "label": "Survey Code",
+    	 "type": "string",
+    	 "optional": true
+	},
+  	{
+    	 "name": "trigger_code",
+    	 "label": "Trigger Code",
+    	 "type": "string",
+    	 "optional": true
+  	}
       ]
      }
     }
