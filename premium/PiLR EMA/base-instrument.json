@@ -27,14 +27,14 @@
       "type": "boolean_setting",
       "code": "provider_gps",
       "name": "GPS Provider",
-      "description": "Provider used to collect location - GPS.",
-      "value": true
+      "description": "Provider used to collect location in background with GPS.",
+      "value": false
     },
     {
       "type": "boolean_setting",
       "code": "provider_network",
       "name": "Network Provider",
-      "description": "Provider used to collect location - Network).",
+      "description": "Provider used to collect location from Network (currently unused).",
       "value": false
     },
     {
@@ -539,6 +539,39 @@
     	 "type": "string",
     	 "optional": true
   	}
+      ]
+     }
+    }
+   ]
+  },
+  {
+      "name": "Background Location",
+      "code": "pilrhealth:mobile:background_location",
+      "schemas": [
+       {
+       "clazz": "com.pilrhealth.data.ConcordiaSchema",
+       "name": "1.0",
+       "schemaVersion": 1,
+       "specification": {
+       "type": "object",
+       "fields": [
+       {
+	 "name": "latitude",
+	 "doc": "Coordinate latitude",
+	 "label": "Latitude",
+	 "type": "number"
+	}, {
+	 "name": "longitude",
+	 "doc": "Coordinate longitude.",
+	 "label": "Longitude",
+	 "type": "number"
+	}, {
+	 "optional": true,
+	 "name": "platform",
+	 "doc": "Device platform type, either ios or android.",
+	 "label": "Platform",
+	 "type": "string"
+	}
       ]
      }
     }
