@@ -1,0 +1,41 @@
+{
+  "name": "Non Upc File Handler4",
+  "code": "pilrhealth:mobile:non_upc_handler4",
+  "version": 1,
+  "description": "A CSV data file for Non Upc4",
+  "definition_type": "file_handler",
+  "dataset": "pilrhealth:mobile:non_upc",
+  "dataset_version": 1,
+  "parser": {
+    "parse_by": "column_name",
+     "col_name_row": 1,
+    "skip_rows": 1,
+    "null_expressions": ["NaN", "Inf", ""],
+    "date_format": "yyyy-MM-dd'T'HH:mm:ss",
+    "data_mappings": [
+      {
+        "from_name": "category_id",
+        "to_name": "category_id"
+      },
+      {
+        "from_name": "category",
+        "to_name": "category"
+      },
+      {
+        "from_name": "item_id",
+        "to_name": "item_id"
+      },
+      {
+        "from_name": "item_name",
+        "to_name": "item_name"
+      }
+      
+    ],
+    "metadata_mappings": [
+    {
+     "from_name": "setting_code",
+     "to_name": "setting_code"
+    }
+    ]
+  }
+}

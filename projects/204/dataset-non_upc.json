@@ -1,0 +1,34 @@
+{
+	"definition_type": "dataset",
+	"name": "Non Upc Data",
+	"code": "pilrhealth:mobile:non_upc",
+	"schemas": [{
+		"type": "concordia",
+		"name": "Non Upc Data Schema",
+		"schemaVersion": 1,
+		"specification": {
+			"type": "object",
+			"fields": [{
+				"name": "category_id",
+				"type": "number",
+				"label": "category_id"
+			}, {
+				"name": "category",
+				"type": "string",
+				"optional": true,
+				"label": "category"
+			}, {
+				"name": "item_id",
+				"type": "string",
+				"optional": true,
+				"label": "item_id"
+			}, {
+				"name": "item_name",
+				"type": "string",
+				"optional": true,
+				"label": "item_name"
+			}
+            ]
+		}
+	}]
+}
