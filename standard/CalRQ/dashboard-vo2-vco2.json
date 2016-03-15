@@ -14,7 +14,7 @@
 		"package_function" : "vo2_vco2_line",
 		"resource_path" : "/github/MeiResearchLtd/pilr.dash.r/R/pilr_dashboard_panel",
 		"input_datasets" : [{
-				"code" : "pilrhealth:calrq:calrq_data,
+				"code" : "pilrhealth:calrq:calrq_data",
 				"version" : 1,
 				"mapping" : "calrq"
 			}
