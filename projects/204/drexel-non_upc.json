@@ -1,583 +1,399 @@
 {
-
-  "definition_type": "instrument",
-
-  "code": "drexel_nutritional_info_app",
-
-  "name": "Drexel Nutritional Information App",
-
-  "description": "The app allows users to keep a list of the current food items they have around them and determine the energy density of those items.  Users provide a regular or ad hoc report of the current nutritional profile within their environment",
-
-  "version": 1,
-"customizations": {
-    "package": "com.pilrhealth.instruments.ema_ots",
-    "classnamePrefix": "EmaOts",
-    "apix": true,
-    "controllers": {
-      "configure": "EmaOtsConfig",
-      "coordinate": "EmaOts"
-    },
-    "services": {
-      "handleContent": "EmaOtsConfig"
-    }
-  },
-
-  "settings": [
-
-    {
-
-      "type": "configuration_setting",
-
-      "code": "ema_ots:ema_config",
-
-      "name": "App Configuration",
-
-      "description": "The configuration of the app content to be delivered to the participant."
-
-    },
-    {
-      "type": "uploadable_setting",
-      "code": "ema_ots:non_upc",
-      "name": "Non Upc",
-      "description": "Non Upc"
-    }
-
-  ],
-
-  "datasets": [
-
-    {
-
-      "name": "Nutritional Data",
-
-      "code": "pilrhealth:drexel_nutritional_info_app:nutritional_data",
-
-      "schemas": [
-
-        {
-
-          "type": "concordia",
-
-          "name": "Version 1",
-
-          "schemaVersion": 1,
-
-          "specification": {
-
-            "type": "object",
-
-            "fields": [
-
-              {
-
-                "type": "number",
-
-                "name": "food_energy_density",
-
-                "label": "Food Energy Density"
-
-              },
-
-              {
-
-                "type": "number",
-
-                "name": "number_of_caloric_beverages",
-
-                "label": "Number of Caloric Beverages"
-
-              },
-
-              {
-
-                "type": "number",
-
-                "name": "number_of_non_caloric_beverages",
-
-                "label": "Number of Non Caloric Beverages"
-
-              },
-
-              {
-
-                "type": "number",
-
-                "name": "dietary_fiber",
-
-                "label": "Dietary Fiber"
-
-              },
-
-              {
-
-                "type": "number",
-
-                "name": "protein",
-
-                "label": "Protein"
-
-              },
-
-              {
-
-                "type": "string",
-
-                "category": "date",
-
-                "label": "Report Submission Date",
-
-                "name": "report_submission_date"
-
-              }
-
-            ]
-
-          }
-
+    "definition_type": "instrument",
+    "code": "drexel_nutritional_info_app",
+    "name": "Drexel Nutritional Information App",
+    "description": "The app allows users to keep a list of the current food items they have around them and determine the energy density of those items.  Users provide a regular or ad hoc report of the current nutritional profile within their environment",
+    "version": 1,
+    "customizations": {
+        "package": "com.pilrhealth.instruments.ema_ots",
+        "classnamePrefix": "EmaOts",
+        "apix": true,
+        "controllers": {
+            "configure": "EmaOtsConfig",
+            "coordinate": "EmaOts"
+        },
+        "services": {
+            "handleContent": "EmaOtsConfig"
         }
-
-      ]
-
     },
-
-    {
-
-      "name": "App Log",
-
-      "code": "pilrhealth:mobile:app_log",
-
-      "schemas": [
-
+    "settings": [
         {
-
-          "type": "concordia",
-
-          "schemaVersion": 1,
-
-          "name": "1.0",
-
-          "specification": {
-
-            "type": "object",
-
-            "fields": [
-
-              {
-
-                "name": "level",
-
-                "optional": false,
-
-                "doc": "One of: error, warning, debug, or info.",
-
-                "label": "Log level",
-
-                "type": "string"
-
-              },
-
-              {
-
-                "name": "tag",
-
-                "optional": true,
-
-                "doc": "A searchable string for event analytics.",
-
-                "label": "Tag",
-
-                "type": "string"
-
-              },
-
-              {
-
-                "name": "msg",
-
-                "optional": false,
-
-                "doc": "Human readable message.",
-
-                "label": "Message",
-
-                "type": "string"
-
-              },
-
-              {
-
-                "label": "Additional Data",
-
-                "optional": true,
-
-                "type": "object",
-
-                "name": "args",
-
-                "fields": []
-
-              }
-
-            ]
-
-          }
-
-        }
-
-      ]
-
-    },
-
-    {
-
-      "name": "Nutritrol Events",
-
-      "code": "pilrhealth:drexel_nutritional_info_app:nutritrol_events_nutritionix",
-
-      "schemas": [
-
+            "type": "configuration_setting",
+            "code": "ema_ots:ema_config",
+            "name": "App Configuration",
+            "description": "The configuration of the app content to be delivered to the participant."
+        },
         {
-
-          "type": "concordia",
-
-          "name": "Version 1",
-
-          "schemaVersion": 1,
-
-          "specification": {
-
-            "type": "object",
-
-            "fields": [
-
-              {
-
-                "type": "string",
-
-                "label": "Operation",
-
-                "name": "operation"
-
-              },
-
-              {
-
-                "name": "item_id",
-
-                "label": "ID",
-
-                "type": "string"
-
-              },
-
-              {
-
-                "name": "item_name",
-
-                "label": "Name",
-
-                "type": "string"
-
-              },
-
-              {
-
-                "name": "category",
-
-                "label": "Category",
-
-                "type": "string"
-
-              },
-
-              {
-
-                "name": "brand_name",
-
-                "label": "Brand Name",
-
-                "type": "string"
-
-              },
-
-              {
-
-                "name": "in_home",
-
-                "label": "In-Home",
-
-                "type": "boolean"
-
-              },
-
-              {
-
-                "name": "out_of_home",
-
-                "label": "Out-Of-Home",
-
-                "type": "boolean"
-
-              },
-
-              {
-
-                "name": "craved",
-
-                "label": "Craved",
-
-                "type": "boolean"
-
-              },
-
-              {
-
-                "name":"upc",
-
-                "label":"UPC",
-
-                "type":"boolean"
-
-              },
-
-              {
-
-                "name": "nf_calories",
-
-                "label": "Calories",
-
-                "type": "number"
-
-              },
-
-              {
-
-                "name": "nf_total_fat",
-
-                "label": "Total Fat",
-
-                "type": "number"
-
-              },
-
-              {
-
-                "name": "nf_total_carbohydrate",
-
-                "label": "Carbohydrates",
-
-                "type": "number"
-
-              },
-
-              {
-
-                "name": "nf_dietary_fiber",
-
-                "label": "Dietary Fiber",
-
-                "type": "number"
-
-              },
-
-              {
-
-                "name": "nf_sugars",
-
-                "label": "Sugar",
-
-                "type": "number"
-
-              },
-
-              {
-
-                "name": "nf_protein",
-
-                "label": "Protein",
-
-                "type": "number"
-
-              },
-
-              {
-
-                "name": "nf_servings_per_container",
-
-                "label": "Serving per Container",
-
-                "type": "number"
-
-              },
-
-              {
-
-                "name": "nf_serving_weight_grams",
-
-                "label": "Serving Weight Grams",
-
-                "type": "number"
-
-              }
-
-            ]
-
-          }
-
-        }
-
-      ]
-
-    },
-
-    {
-
-      "name": "Nutritrol Weight",
-
-      "code": "pilrhealth:drexel_nutritional_info_app:nutritrol_weight",
-
-      "schemas": [
-
+            "type": "uploadable_setting",
+            "code": "ema_ots:non_upc",
+            "name": "Non Upc",
+            "description": "Non Upc"
+        },
         {
-
-          "type": "concordia",
-
-          "name": "Version 1",
-
-          "schemaVersion": 1,
-
-          "specification": {
-
-            "type": "object",
-
-            "fields": [
-
-              {
-
-                "name": "weight_id",
-
-                "label": "Weight ID",
-
-                "type": "string"
-
-              },
-
-              {
-
-                "name": "weight",
-
-                "label": "Weight(pounds)",
-
-                "type": "number"
-
-              },
-
-              {
-
-                "type": "string",
-
-                "category": "date",
-
-                "label": "Weight Add Date",
-
-                "name": "weight_add_date"
-
-              },
-
-              {
-
-                "name": "action",
-
-                "label": "Action",
-
-                "type": "string"
-
-              }
-
-            ]
-
-          }
-
+            "type": "uploadable_setting",
+            "code": "ema_ots:recommendation",
+            "name": "Recommendation",
+            "description": "Recommendation"
         }
-
-      ]
-
-    },
-
-    {
-
-      "name": "Participant Feedback",
-
-      "code": "pilrhealth:drexel_nutritional_info_app:participant_feedback",
-
-      "schemas": [
-
+    ],
+    "datasets": [
         {
-
-          "type": "concordia",
-
-          "name": "Version 1",
-
-          "schemaVersion": 1,
-
-          "specification": {
-
-            "type": "object",
-
-            "fields": [
-
-              {
-
-                "name": "issue_reported_id",
-
-                "label": "Issue Reported Id",
-
-                "type": "number"
-
-              },
-
-              {
-
-                "name": "issue_reported",
-
-                "label": "Issue Reported",
-
-                "type": "string"
-
-              },
-
-              {
-
-                "name": "additional_info",
-
-                "label": "Additional Info",
-
-                "type": "string"
-
-              },
-
-              {
-
-                "type": "string",
-
-                "category": "date",
-
-                "label": "Feedback Submission Date",
-
-                "name": "feedback_submission_date"
-
-              }
-
+            "name": "Nutritional Data",
+            "code": "pilrhealth:drexel_nutritional_info_app:nutritional_data",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "name": "Version 1",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type": "number",
+                                "name": "food_energy_density",
+                                "label": "Food Energy Density"
+                            },
+                            {
+                                "type": "number",
+                                "name": "number_of_caloric_beverages",
+                                "label": "Number of Caloric Beverages"
+                            },
+                            {
+                                "type": "number",
+                                "name": "number_of_non_caloric_beverages",
+                                "label": "Number of Non Caloric Beverages"
+                            },
+                            {
+                                "type": "number",
+                                "name": "dietary_fiber",
+                                "label": "Dietary Fiber"
+                            },
+                            {
+                                "type": "number",
+                                "name": "protein",
+                                "label": "Protein"
+                            },
+                            {
+                                "type": "string",
+                                "category": "date",
+                                "label": "Report Submission Date",
+                                "name": "report_submission_date"
+                            }
+                        ]
+                    }
+                }
             ]
+        },
+        {
+            "name": "App Log",
+            "code": "pilrhealth:mobile:app_log",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "schemaVersion": 1,
+                    "name": "1.0",
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "level",
+                                "optional": false,
+                                "doc": "One of: error, warning, debug, or info.",
+                                "label": "Log level",
+                                "type": "string"
+                            },
+                            {
+                                "name": "tag",
+                                "optional": true,
+                                "doc": "A searchable string for event analytics.",
+                                "label": "Tag",
+                                "type": "string"
+                            },
+                            {
+                                "name": "msg",
+                                "optional": false,
+                                "doc": "Human readable message.",
+                                "label": "Message",
+                                "type": "string"
+                            },
+                            {
+                                "label": "Additional Data",
+                                "optional": true,
+                                "type": "object",
+                                "name": "args",
+                                "fields": [
 
-          }
-
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Nutritrol Events",
+            "code": "pilrhealth:drexel_nutritional_info_app:nutritrol_events_nutritionix",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "name": "Version 1",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "type": "string",
+                                "label": "Operation",
+                                "name": "operation"
+                            },
+                            {
+                                "name": "item_id",
+                                "label": "ID",
+                                "type": "string"
+                            },
+                            {
+                                "name": "item_name",
+                                "label": "Name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "category",
+                                "label": "Category",
+                                "type": "string"
+                            },
+                            {
+                                "name": "brand_name",
+                                "label": "Brand Name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "in_home",
+                                "label": "In-Home",
+                                "type": "boolean"
+                            },
+                            {
+                                "name": "out_of_home",
+                                "label": "Out-Of-Home",
+                                "type": "boolean"
+                            },
+                            {
+                                "name": "craved",
+                                "label": "Craved",
+                                "type": "boolean"
+                            },
+                            {
+                                "name": "upc",
+                                "label": "UPC",
+                                "type": "boolean"
+                            },
+                            {
+                                "name": "nf_calories",
+                                "label": "Calories",
+                                "type": "number"
+                            },
+                            {
+                                "name": "nf_total_fat",
+                                "label": "Total Fat",
+                                "type": "number"
+                            },
+                            {
+                                "name": "nf_total_carbohydrate",
+                                "label": "Carbohydrates",
+                                "type": "number"
+                            },
+                            {
+                                "name": "nf_dietary_fiber",
+                                "label": "Dietary Fiber",
+                                "type": "number"
+                            },
+                            {
+                                "name": "nf_sugars",
+                                "label": "Sugar",
+                                "type": "number"
+                            },
+                            {
+                                "name": "nf_protein",
+                                "label": "Protein",
+                                "type": "number"
+                            },
+                            {
+                                "name": "nf_servings_per_container",
+                                "label": "Serving per Container",
+                                "type": "number"
+                            },
+                            {
+                                "name": "nf_serving_weight_grams",
+                                "label": "Serving Weight Grams",
+                                "type": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Nutritrol Weight",
+            "code": "pilrhealth:drexel_nutritional_info_app:nutritrol_weight",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "name": "Version 1",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "weight_id",
+                                "label": "Weight ID",
+                                "type": "string"
+                            },
+                            {
+                                "name": "weight",
+                                "label": "Weight(pounds)",
+                                "type": "number"
+                            },
+                            {
+                                "type": "string",
+                                "category": "date",
+                                "label": "Weight Add Date",
+                                "name": "weight_add_date"
+                            },
+                            {
+                                "name": "action",
+                                "label": "Action",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Recommendation Data",
+            "code": "pilrhealth:mobile:recommendation",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "name": "Recommendation Data Schema",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "category_id",
+                                "type": "number",
+                                "label": "category_id"
+                            },
+                            {
+                                "name": "category",
+                                "type": "string",
+                                "optional": true,
+                                "label": "category"
+                            },
+                            {
+                                "name": "sub_category_id",
+                                "type": "string",
+                                "optional": true,
+                                "label": "sub_category_id"
+                            },
+                            {
+                                "name": "sub_category",
+                                "type": "string",
+                                "optional": true,
+                                "label": "sub_category"
+                            },
+                            {
+                                "name": "item_id",
+                                "type": "string",
+                                "optional": true,
+                                "label": "item_id"
+                            },
+                            {
+                                "name": "item_name",
+                                "type": "string",
+                                "optional": true,
+                                "label": "item_name"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Non Upc Data",
+            "code": "pilrhealth:mobile:non_upc",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "name": "Non Upc Data Schema",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "category_id",
+                                "type": "number",
+                                "label": "category_id"
+                            },
+                            {
+                                "name": "category",
+                                "type": "string",
+                                "optional": true,
+                                "label": "category"
+                            },
+                            {
+                                "name": "item_id",
+                                "type": "string",
+                                "optional": true,
+                                "label": "item_id"
+                            },
+                            {
+                                "name": "item_name",
+                                "type": "string",
+                                "optional": true,
+                                "label": "item_name"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Participant Feedback",
+            "code": "pilrhealth:drexel_nutritional_info_app:participant_feedback",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "name": "Version 1",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "issue_reported_id",
+                                "label": "Issue Reported Id",
+                                "type": "number"
+                            },
+                            {
+                                "name": "issue_reported",
+                                "label": "Issue Reported",
+                                "type": "string"
+                            },
+                            {
+                                "name": "additional_info",
+                                "label": "Additional Info",
+                                "type": "string"
+                            },
+                            {
+                                "type": "string",
+                                "category": "date",
+                                "label": "Feedback Submission Date",
+                                "name": "feedback_submission_date"
+                            }
+                        ]
+                    }
+                }
+            ]
         }
-
-      ]
-
-    }
-
-  ]
-
+    ]
 }
