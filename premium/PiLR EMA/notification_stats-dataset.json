@@ -1,0 +1,64 @@
+{
+    "definition_type": "dataset",
+    "name": "Notification Statistics",
+    "code": "pilrhealth:mobile:notif_stats",
+    "schemas": [
+        {
+            "clazz": "com.pilrhealth.data.ConcordiaSchema",
+            "name": "1.0",
+            "schemaVersion": 1,
+            "specification": {
+                "type": "object",
+                "fields": [
+                    {
+                        "name": "session",
+                        "label": "Session",
+                        "type": "string"
+                    },
+                    {
+                        "name": "notif_time",
+                        "label": "Notification Time",
+                        "type": "string",
+                        "optional": true
+                    },
+                    {
+                        "name": "expir_time",
+                        "label": "Expiration Time",
+                        "type": "string",
+                        "optional": true
+                    },
+                    {
+                        "name": "survey_code",
+                        "label": "Survey code",
+                        "type": "string"
+                    },
+                    {
+                        "name": "trigger_code",
+                        "label": "Trigger code",
+                        "type": "string"
+                    },
+                    {
+                        "name": "completed",
+                        "label": "Completed",
+                        "type": "string"
+                    },
+                    {
+                        "name": "total_notif",
+                        "label": "Total Notifications",
+                        "type": "string"
+                    },
+                    {
+                        "name": "total_completed",
+                        "label": "Total Completed",
+                        "type": "string"
+                    },
+                    {
+                        "name": "type",
+                        "label": "Type",
+                        "type": "string"
+                    }
+                ]
+            }
+        }
+    ]
+}
