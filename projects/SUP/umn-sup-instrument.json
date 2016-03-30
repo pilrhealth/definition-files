@@ -369,11 +369,6 @@
                 "type": "number"
               },
               {
-                "name": "answer_date",
-                "label": "Date when the survey was answered",
-                "type": "string"
-              },
-              {
                 "name": "next_test",
                 "label": "Date of the next test",
                 "type": "string"
