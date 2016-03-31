@@ -364,17 +364,17 @@
             "type": "object",
             "fields": [
               {
-                "name": "sequence_number",
-                "label": "Sequence Number",
+                "name": "test_frequency",
+                "label": "test_frequency",
                 "type": "number"
               },
               {
                 "name": "next_test",
-                "label": "Date of the next test",
+                "label": "next_test",
                 "type": "string"
               },
               {
-                "label": "Additional Data",
+                "label": "additional_data",
                 "optional": true,
                 "type": "object",
                 "name": "additional_data",
