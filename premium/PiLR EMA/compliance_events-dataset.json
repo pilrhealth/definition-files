@@ -1,7 +1,7 @@
 {
     "definition_type": "dataset",
-    "name": "Notification Statistics",
-    "code": "pilrhealth:mobile:notif_stats",
+    "name": "Compliance Events",
+    "code": "pilrhealth:mobile:comp_events",
     "schemas": [
         {
             "clazz": "com.pilrhealth.data.ConcordiaSchema",
@@ -40,16 +40,6 @@
                     {
                         "name": "completed",
                         "label": "Completed",
-                        "type": "string"
-                    },
-                    {
-                        "name": "total_notif",
-                        "label": "Total Notifications",
-                        "type": "string"
-                    },
-                    {
-                        "name": "total_completed",
-                        "label": "Total Completed",
                         "type": "string"
                     },
                     {
