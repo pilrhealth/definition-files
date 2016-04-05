@@ -366,11 +366,13 @@
               {
                 "name": "test_frequency",
                 "label": "test_frequency",
+                "optional": true,
                 "type": "number"
               },
               {
                 "name": "next_test",
                 "label": "next_test",
+                "optional": true,
                 "type": "string"
               },
               {
