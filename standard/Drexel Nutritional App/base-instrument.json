@@ -16,7 +16,7 @@
     {
       "name": "Nutritional Data",
       "code": "pilrhealth:drexel_nutritional_info_app:nutritional_data",
-      "schemas": [
+      "schemas": [  
         {
           "type": "concordia",
           "name": "Version 1",
