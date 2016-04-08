@@ -588,6 +588,11 @@
       "specification": {
       "type": "object",
       "fields": [{
+        "name": "ema_id",
+        "doc": "Random assigned identifier",
+        "label": "EMA ID",
+        "type": "string"
+       },{
         "name": "name",
         "doc": "Name of custom activity",
         "label": "Activity Name",
