@@ -1,0 +1,118 @@
+setting_code,category_id,category,sub_category_id,sub_category,item_id,item_name
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb475b8dbbc21000f92,Apple
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb475b8dbbc21000fae,Apricot
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb475b8dbbc21000fd3,Banana
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb475b8dbbc21000fda,Blackberries
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb475b8dbbc21000fe0,Blueberries
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb575b8dbbc21001099,Cantaloupe
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb475b8dbbc21001000,Cherries
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb475b8dbbc21001016,Fig
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb475b8dbbc21001033,Grapefruit
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb575b8dbbc21001055,Grapes
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb575b8dbbc210010a6,Honeydew
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb575b8dbbc21001069,Kiwi fruit
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb575b8dbbc2100106f,Lemon or Lime
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb575b8dbbc2100108f,Mango
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb575b8dbbc210010af,Nectarine
+ema_ots:recommendation,1,Fruit,1,Fruit1,513fceb575b8dbbc210010bb,Orange
+ema_ots:recommendation,1,Fruit,2,Fruit2,513fceb575b8dbbc210010ec,Papaya
+ema_ots:recommendation,1,Fruit,2,Fruit2,513fceb575b8dbbc210010f9,Peach
+ema_ots:recommendation,1,Fruit,2,Fruit2,513fceb575b8dbbc21001117,Pear
+ema_ots:recommendation,1,Fruit,2,Fruit2,513fceb575b8dbbc21001133,Pineapple
+ema_ots:recommendation,1,Fruit,2,Fruit2,513fceb575b8dbbc2100114a,Plum
+ema_ots:recommendation,1,Fruit,2,Fruit2,513fceb575b8dbbc21001155,Pomegranate
+ema_ots:recommendation,1,Fruit,2,Fruit2,513fceb575b8dbbc21001175,Raspberries
+ema_ots:recommendation,1,Fruit,3,Fruit3,513fceb575b8dbbc2100118d,Strawberries
+ema_ots:recommendation,1,Fruit,3,Fruit3,513fceb575b8dbbc210010df,Tangerines/Mandarin oranges
+ema_ots:recommendation,1,Fruit,3,Fruit3,513fceb575b8dbbc210011a0,Watermelon
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc21001703,Acorn squash
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc2100143b,Artichoke
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc2100199c,Arugula
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc21001447,Asparagus
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb475b8dbbc21000fc8,Avocado
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc21001486,Beets
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc2100189e,Bell Peppers 
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc210014d3,Bok choy
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc2100149d,Broccoli
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc210014af,Brussels sprouts
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc21001706,Butternut squash
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc210014c4,Cabbage
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc210014e1,Carrots
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc210014f4,Cauliflower
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc21001519,Collard greens
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc21001915,Corn (on the cob)
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc21001553,Cucumber
+ema_ots:recommendation,2,Vegetable,1,Vegetable1,513fceb575b8dbbc21001560,Eggplant
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc21001568,Garlic
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc21001477,Green beans
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc21001607,Green onion/Scallion
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210017a0,Kale
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210015a0,Lettuce 
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb675b8dbbc210021db,Lima beans 
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210015bf,Mushrooms 
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210015e3,Okra
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210015ed,Onion
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc21001619,Parsnips
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc2100161d,Peas
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210017d2,Potato
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210016be,Radish
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210016c8,Rutabaga
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210017d6,Shallot
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210018e3,Spaghetti squash
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210016e1,Spinach
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210017b2,Summer Squash
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc21001722,Sweet potato
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc21001507,Swiss Chard
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,463d62370488f520e6a7fb4b,Tomato
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc21001765,Turnip
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc2100176d,Turnip Greens
+ema_ots:recommendation,2,Vegetable,2,Vegetable2,513fceb575b8dbbc210016f8,Zucchini
+ema_ots:recommendation,3,Legume,1,Legume1,513fceb675b8dbbc21002191,Black beans
+ema_ots:recommendation,3,Legume,1,Legume1,513fceb675b8dbbc210021c8,Chickpeas/Garbanzo beans
+ema_ots:recommendation,3,Legume,1,Legume1,513fceb675b8dbbc2100219f,Kidney Beans
+ema_ots:recommendation,3,Legume,1,Legume1,513fceb675b8dbbc210021d9,Lentils
+ema_ots:recommendation,3,Legume,1,Legume1,513fceb675b8dbbc210021ad,Navy beans
+ema_ots:recommendation,3,Legume,1,Legume1,513fceb675b8dbbc210021b4,Pinto beans
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc210020f0,Calamari
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc2100215c,Catfish (or similar medium-toned fish)
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc210020c6,Clams
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc21001f8f,Cod (or similar white fish)
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc210020aa,Crab
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc21001fad,Flounder/Sole (or similar white fish)
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc21001fb7,Haddock (or similar white fish)
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc210020b0,Lobster
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc21001fe2,Mackerel (or similar dark-colored fish)
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc21001fa0,Mahi mahi (or similar white fish)
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc210020d9,Mussels
+ema_ots:recommendation,4,Fish/Shellfish,1,Fish/Shellfish1,513fceb675b8dbbc210020ea,Oysters
+ema_ots:recommendation,4,Fish/Shellfish,2,Fish/Shellfish2,513fceb675b8dbbc2100202d,Salmon
+ema_ots:recommendation,4,Fish/Shellfish,2,Fish/Shellfish2,513fceb675b8dbbc210020eb,Scallops
+ema_ots:recommendation,4,Fish/Shellfish,2,Fish/Shellfish2,513fceb675b8dbbc210020b5,Shrimp
+ema_ots:recommendation,4,Fish/Shellfish,2,Fish/Shellfish2,513fceb675b8dbbc21002066,Swordfish (or similar medium-toned fish)
+ema_ots:recommendation,4,Fish/Shellfish,2,Fish/Shellfish2,513fceb675b8dbbc2100206d,Trout (or similar dark-colored fish)
+ema_ots:recommendation,4,Fish/Shellfish,2,Fish/Shellfish2,513fceb675b8dbbc2100207d,Tuna
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,463d6237561b1dc900847e30,Beef (brisket)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb575b8dbbc21001c5a,Beef (rib)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb575b8dbbc21001c42,Beef (roast - round/eye)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb775b8dbbc2100324a,"Beef (top loin, petite roast/filet)"
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,463d6237bbfb23d2de86e413,Beef (porterhouse)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,463d6237673f9429ca427bd7,Beef (T-bone)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb675b8dbbc21001d3a,Beef (sirloin)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb775b8dbbc210032b8,Ground beef (80/20)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb775b8dbbc210032af,Ground beef (85/15)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb775b8dbbc210032a6,Ground beef (90/10)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,463d62372f2ce62412117318,"Chicken (boneless, skinless) white meat"
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb475b8dbbc2100080f,"Chicken (boneless, skinless) dark meat"
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb475b8dbbc210007d4,"Chicken (with skin), white meat"
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb475b8dbbc21000832,Chicken (with skin) dark meat
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb475b8dbbc21000d42,Ham
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb675b8dbbc2100237c,Lamb
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb575b8dbbc21001259,Pork (chops)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,463d6237bb120d661f0ecd68,Pork (tenderloin)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb575b8dbbc21001324,Pork (ribs)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb575b8dbbc21001344,Pork (roast)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb575b8dbbc2100133a,Pork (ground)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,463d623741af04b1dba3482f,"Turkey, white meat (e.g., breast)"
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,463d623738bf3410ad66bf8e,"Turkey, dark meat (e.g., thigh)"
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb475b8dbbc210009b3,Ground turkey (85/15)
+ema_ots:recommendation,5,Meat & Poultry,1,Meat & Poultry1,513fceb475b8dbbc210009af,Ground turkey (93/7)

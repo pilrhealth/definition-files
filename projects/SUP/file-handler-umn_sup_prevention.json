@@ -1,0 +1,59 @@
+{
+    "name": "UMN Prevention Data Handler",
+    "code": "pilrhealth:mobile:prevention_handler",
+    "version": 1,
+    "description": "A CSV data file output for SUP Prevention",
+    "definition_type": "file_handler",
+    "dataset": "pilrhealth:mobile:umn_prevention",
+    "dataset_version": 1,
+    "parser": {
+        "parse_by": "column_name",
+        "col_name_row": 1,
+        "skip_rows": 1,
+        "null_expressions": ["NaN", "Inf", ""],
+        "date_format": "MM/dd/yyyy HH:mm",
+        "data_mappings": [
+            {
+                "from_name": "id",
+                "to_name": "id"
+            },
+            {
+                "from_name": "category1",
+                "to_name": "category1"
+            },
+            {
+                "from_name": "category2",
+                "to_name": "category2"
+            },{
+                "from_name": "title",
+                "to_name": "title"
+            },
+            {
+                "from_name": "text",
+                "to_name": "text"
+            },{
+                "from_name": "website_link",
+                "to_name": "website_link"
+            },{
+                "from_name": "website_link_text",
+                "to_name": "website_link_text"
+            },{
+                "from_name": "video_link",
+                "to_name": "video_link"
+            },{
+                "from_name": "video_link_text",
+                "to_name": "video_link_text"
+            },{
+                "from_name": "image_url",
+                "to_name": "image_url"
+            }
+
+        ],
+        "metadata_mappings": [
+            {
+                "from_name": "setting_code",
+                "to_name": "setting_code"
+            }
+        ]
+    }
+}
