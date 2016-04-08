@@ -1,0 +1,32 @@
+{
+    "name": "UMN Risk Zip Code Data Handler",
+    "code": "pilrhealth:mobile:risk_zip_code_handler",
+    "version": 1,
+    "description": "A CSV data file output for SUP Risk Zip Code",
+    "definition_type": "file_handler",
+    "dataset": "pilrhealth:mobile:umn_risk_zip_code",
+    "dataset_version": 1,
+    "parser": {
+        "parse_by": "column_name",
+        "col_name_row": 1,
+        "skip_rows": 1,
+        "null_expressions": ["NaN", "Inf", ""],
+        "date_format": "MM/dd/yyyy HH:mm",
+        "data_mappings": [
+            {
+                "from_name": "zip_code",
+                "to_name": "zip_code"
+            },
+            {
+                "from_name": "risk",
+                "to_name": "risk"
+            }
+        ],
+        "metadata_mappings": [
+            {
+                "from_name": "setting_code",
+                "to_name": "setting_code"
+            }
+        ]
+    }
+}
