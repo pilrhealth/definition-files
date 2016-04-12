@@ -122,7 +122,7 @@
             "name": "Probability of follow-up survey",
             "description": "The probability of a survey notification action actually notifying, expressed as a percentage",
             "value": 25
-        }
+        },
         {
             "type": "boolean_setting",
             "code": "actigraph_activity_monitoring_app:use_epoch_data",
