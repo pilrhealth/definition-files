@@ -11,7 +11,7 @@
         "col_name_row": 1,
         "skip_rows": 1,
         "null_expressions": ["NaN", "Inf", ""],
-        "date_format": "MM/dd/yyyy HH:mm",
+        "date_format": "yyyy-MM-dd'T'HH:mm:ss",
         "data_mappings": [
 
             {

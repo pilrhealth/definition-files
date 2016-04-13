@@ -40,6 +40,12 @@
       "code": "umn_sup_app:news",
       "name": "News",
       "description": "Non Upc"
+    },
+    {
+      "type": "uploadable_setting",
+      "code": "umn_sup_app:risk_zip_code",
+      "name": "Risk Zip Code",
+      "description": "Risk Zip Code"
     }
   ],
   "datasets": [
@@ -381,6 +387,32 @@
                 "type": "object",
                 "name": "additional_data",
                 "fields": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Umn Risk Zip Code",
+      "code": "pilrhealth:mobile:umn_risk_zip_code",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Umn Prevention Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "zip_code",
+                "type": "number",
+                "label": "zip_code"
+              },
+              {
+                "name": "risk",
+                "type": "number",
+                "label": "risk"
               }
             ]
           }

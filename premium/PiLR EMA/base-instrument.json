@@ -122,7 +122,15 @@
             "name": "Probability of follow-up survey",
             "description": "The probability of a survey notification action actually notifying, expressed as a percentage",
             "value": 25
-        }
+        },
+        {
+            "type": "boolean_setting",
+            "code": "actigraph_activity_monitoring_app:use_epoch_data",
+            "name": "Use Epoch Data",
+            "description": "Determines whether to use the Actigraph sensor epoch data instead of the accelerometer data",
+            "value": false,
+            "required": true
+    }
     ],
     "datasets": [
         {
@@ -599,6 +607,58 @@
                 }
             ]
         },
+        {
+      "name": "Epoch Data",
+      "code": "pilrhealth:actigraph_activity_monitoring_app:epoch",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Version 1",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "type": "number",
+                "name": "wearDetect",
+                "label": "Wear Detect"
+              },
+              {
+                "type": "number",
+                "name": "xCounts",
+                "label": "xCounts"
+              },
+              {
+                "type": "number",
+                "name": "yCounts",
+                "label": "yCounts"
+              },
+              {
+                "type": "number",
+                "name": "zCounts",
+                "label": "zCounts"
+              },
+              {
+                "type": "number",
+                "name": "steps",
+                "label": "Steps"
+              },
+              {
+                "type": "number",
+                "name": "heartRate",
+                "label": "Heart Rate"
+              },
+              {
+                "type": "string",
+                "category": "date",
+                "label": "Collection Date",
+                "name": "collection_date"
+              }
+            ]
+          }
+        }
+      ]
+    },
         {
             "name": "Background Location",
             "code": "pilrhealth:mobile:background_location",
