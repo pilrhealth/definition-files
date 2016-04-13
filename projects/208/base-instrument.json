@@ -123,7 +123,15 @@
       "description": "Determines whether to use the Actigraph sensor epoch data instead of the accelerometer data",
       "value": false,
       "required": true
-    }
+    },
+    {
+      "type": "integer_setting",
+      "code": "activity_monitoring:upload_frequency",
+      "name": "Upload Frequency (minutes)",
+      "description": "The amount of time (in minutes) the app stores the activity data before it uploads it to EMA",
+      "value": 5,
+      "required": true
+    },
   ],
   "datasets": [
     {
