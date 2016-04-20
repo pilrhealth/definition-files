@@ -18,6 +18,10 @@
                 "to_name": "id"
             },
             {
+                "from_name": "language",
+                "to_name": "language"
+            },
+            {
                 "from_name": "category1",
                 "to_name": "category1"
             },
