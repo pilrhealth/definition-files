@@ -149,6 +149,11 @@
                 "label": "id"
               },
               {
+                "name": "language",
+                "type": "string",
+                "label": "language"
+              },
+              {
                 "name": "category",
                 "type": "string",
                 "optional": true,
