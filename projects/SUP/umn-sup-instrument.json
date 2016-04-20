@@ -46,6 +46,12 @@
       "code": "umn_sup_app:risk_zip_code",
       "name": "Risk Zip Code",
       "description": "Risk Zip Code"
+    },
+    {
+      "type": "uploadable_setting",
+      "code": "umn_sup_app:locations",
+      "name": "Locations",
+      "description": "Locations"
     }
   ],
   "datasets": [
@@ -399,7 +405,7 @@
       "schemas": [
         {
           "type": "concordia",
-          "name": "Umn Prevention Schema",
+          "name": "Umn Risk Schema",
           "schemaVersion": 1,
           "specification": {
             "type": "object",
@@ -413,6 +419,117 @@
                 "name": "risk",
                 "type": "number",
                 "label": "risk"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Umn Locations",
+      "code": "pilrhealth:mobile:umn_locations",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Umn Location Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "organization_name",
+                "type": "string",
+                "label": "organization_name"
+              },
+              {
+                "name": "website",
+                "type": "string",
+                "label": "website"
+              },
+              {
+                "name": "email_address",
+                "type": "string",
+                "label": "email_address"
+              },
+              {
+                "name": "street_address1",
+                "type": "string",
+                "label": "street_address1"
+              },
+              {
+                "name": "street_address2",
+                "type": "string",
+                "label": "street_address2"
+              },
+              {
+                "name": "city_name",
+                "type": "string",
+                "label": "city_name"
+              },
+              {
+                "name": "state",
+                "type": "string",
+                "label": "state"
+              },
+              {
+                "name": "county",
+                "type": "string",
+                "label": "county"
+              },
+              {
+                "name": "zip_code",
+                "type": "string",
+                "label": "zip_code"
+              },
+              {
+                "name": "area_code",
+                "type": "number",
+                "label": "area_code"
+              },
+              {
+                "name": "main_phone",
+                "type": "string",
+                "label": "main_phone"
+              },
+              {
+                "name": "primary_organization_type",
+                "type": "string",
+                "label": "primary_organization_type"
+              },
+              {
+                "name": "eligbility",
+                "type": "string",
+                "label": "eligbility"
+              },
+              {
+                "name": "languages_spoken",
+                "type": "string",
+                "label": "languages_spoken"
+              },
+              {
+                "name": "fee_information",
+                "type": "string",
+                "label": "fee_information"
+              },
+              {
+                "name": "hours_of_operation",
+                "type": "string",
+                "label": "hours_of_operation"
+              },
+              {
+                "name": "latitude",
+                "type": "number",
+                "label": "latitude"
+              },
+              {
+                "name": "longitude",
+                "type": "number",
+                "label": "longitude"
+              },
+              {
+                "name": "csv_hours",
+                "type": "string",
+                "label": "csv_hours"
               }
             ]
           }
