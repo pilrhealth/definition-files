@@ -1,0 +1,100 @@
+{
+    "name": "UMN Locations Data Handler",
+    "code": "pilrhealth:mobile:locations_handler",
+    "version": 1,
+    "description": "A CSV data file output for SUP Locations",
+    "definition_type": "file_handler",
+    "dataset": "pilrhealth:mobile:umn_locations",
+    "dataset_version": 1,
+    "parser": {
+        "parse_by": "column_name",
+        "col_name_row": 1,
+        "skip_rows": 1,
+        "null_expressions": ["NaN", "Inf", ""],
+        "date_format": "yyyy-MM-dd'T'HH:mm:ss",
+        "data_mappings": [
+            {
+                "from_name": "organization_name",
+                "to_name": "organization_name"
+            },
+            {
+                "from_name": "website",
+                "to_name": "website"
+            },
+             {
+                "from_name": "email_address",
+                "to_name": "email_address"
+            },
+            {
+                "from_name": "street_address1",
+                "to_name": "street_address1"
+            },
+             {
+                "from_name": "street_address2",
+                "to_name": "street_address2"
+            },
+            {
+                "from_name": "city_name",
+                "to_name": "city_name"
+            },
+             {
+                "from_name": "state",
+                "to_name": "state"
+            },
+            {
+                "from_name": "county",
+                "to_name": "county"
+            },
+             {
+                "from_name": "zip_code",
+                "to_name": "zip_code"
+            },
+            {
+                "from_name": "area_code",
+                "to_name": "area_code"
+            },
+             {
+                "from_name": "main_phone",
+                "to_name": "main_phone"
+            },
+            {
+                "from_name": "primary_organization_type",
+                "to_name": "primary_organization_type"
+            },
+             {
+                "from_name": "eligbility",
+                "to_name": "eligbility"
+            },
+            {
+                "from_name": "languages_spoken",
+                "to_name": "languages_spoken"
+            },
+             {
+                "from_name": "fee_information",
+                "to_name": "fee_information"
+            },
+            {
+                "from_name": "hours_of_operation",
+                "to_name": "hours_of_operation"
+            },
+             {
+                "from_name": "latitude",
+                "to_name": "latitude"
+            },
+            {
+                "from_name": "longitude",
+                "to_name": "longitude"
+            },
+            {
+                "from_name": "csv_hours",
+                "to_name": "csv_hours"
+            }
+        ],
+        "metadata_mappings": [
+            {
+                "from_name": "setting_code",
+                "to_name": "setting_code"
+            }
+        ]
+    }
+}
