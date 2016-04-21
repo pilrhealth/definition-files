@@ -62,8 +62,8 @@
                 "to_name": "primary_organization_type"
             },
              {
-                "from_name": "eligbility",
-                "to_name": "eligbility"
+                "from_name": "eligibility",
+                "to_name": "eligibility"
             },
             {
                 "from_name": "languages_spoken",
