@@ -24,6 +24,20 @@
       "description": "The configuration of the app content to be delivered to the participant."
     },
     {
+      "type": "list_setting",
+      "code": "umn_sup_app:state",
+      "name": "State",
+      "description": "State where the participant is located. Used to filter event and location data.",
+      "choices": [
+          "FL",
+          "LA",
+          "MN",
+          "NV"
+      ],
+      "required": false,
+      "multipleChoice": false
+    },    
+    {
       "type": "uploadable_setting",
       "code": "umn_sup_app:events",
       "name": "Events",
