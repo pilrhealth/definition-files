@@ -507,9 +507,9 @@
                 "label": "primary_organization_type"
               },
               {
-                "name": "eligbility",
+                "name": "eligibility",
                 "type": "string",
-                "label": "eligbility"
+                "label": "eligibility"
               },
               {
                 "name": "languages_spoken",
