@@ -81,6 +81,18 @@
             "type": "object",
             "fields": [
               {
+                "name": "language",
+                "type": "string",
+                "optional": true,
+                "label": "language"
+              },
+              {
+                "name": "state",
+                "type": "string",
+                "optional": true,
+                "label": "state"
+              },
+              {
                 "name": "category",
                 "type": "string",
                 "optional": true,
@@ -165,6 +177,7 @@
               {
                 "name": "language",
                 "type": "string",
+                "optional": true,
                 "label": "language"
               },
               {
@@ -246,6 +259,7 @@
               {
                 "name": "language",
                 "type": "string",
+                "optional": true,
                 "label": "language"
               },
               {
@@ -460,6 +474,11 @@
           "specification": {
             "type": "object",
             "fields": [
+              {
+                "name": "language",
+                "type": "string",
+                "label": "language"
+              },
               {
                 "name": "organization_name",
                 "type": "string",
