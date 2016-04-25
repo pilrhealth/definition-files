@@ -14,6 +14,10 @@
         "date_format": "yyyy-MM-dd'T'HH:mm:ss",
         "data_mappings": [
             {
+                "from_name": "language",
+                "to_name": "language"
+            },
+            {
                 "from_name": "organization_name",
                 "to_name": "organization_name"
             },
