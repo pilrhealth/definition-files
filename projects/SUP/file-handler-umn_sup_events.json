@@ -13,7 +13,14 @@
         "null_expressions": ["NaN", "Inf", ""],
         "date_format": "yyyy-MM-dd'T'HH:mm:ss",
         "data_mappings": [
-
+            {
+                "from_name": "language",
+                "to_name": "language"
+            },
+            {
+                "from_name": "state",
+                "to_name": "state"
+            },
             {
                 "from_name": "category",
                 "to_name": "category"
