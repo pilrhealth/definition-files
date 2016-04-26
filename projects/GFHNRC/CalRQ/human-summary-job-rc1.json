@@ -174,6 +174,7 @@
     "delete_if_successful": 0,
     "package_url": "https://github.com/tdschenk/gf.mei.calorimeter.r",
     "package_function": "process_cal_human",
+    "package_version": "GF-Custom",
     "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
     "input_datasets": [
       {
