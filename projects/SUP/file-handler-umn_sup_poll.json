@@ -1,0 +1,55 @@
+{
+    "name": "UMN Poll Data Handler",
+    "code": "pilrhealth:mobile:poll_handler",
+    "version": 1,
+    "description": "A CSV data file output for SUP Poll",
+    "definition_type": "file_handler",
+    "dataset": "pilrhealth:mobile:umn_poll",
+    "dataset_version": 1,
+    "parser": {
+        "parse_by": "column_name",
+        "col_name_row": 1,
+        "skip_rows": 1,
+        "null_expressions": ["NaN", "Inf", ""],
+        "date_format": "yyyy-MM-dd'T'HH:mm:ss",
+        "data_mappings": [
+            {
+                "from_name": "language",
+                "to_name": "language"
+            },
+            {
+                "from_name": "week",
+                "to_name": "week"
+            },
+            {
+                "from_name": "title",
+                "to_name": "title"
+            },{
+                "from_name": "text",
+                "to_name": "text"
+            },
+            {
+                "from_name": "answer_a",
+                "to_name": "answer_a"
+            },{
+                "from_name": "answer_b",
+                "to_name": "answer_b"
+            },{
+                "from_name": "answer_c",
+                "to_name": "answer_c"
+            },{
+                "from_name": "answer_d",
+                "to_name": "answer_d"
+            },{
+                "from_name": "answer_e",
+                "to_name": "answer_e"
+            }
+        ],
+        "metadata_mappings": [
+            {
+                "from_name": "setting_code",
+                "to_name": "setting_code"
+            }
+        ]
+    }
+}
