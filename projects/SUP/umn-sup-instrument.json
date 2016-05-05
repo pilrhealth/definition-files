@@ -612,6 +612,12 @@
                 "name": "title",
                 "type": "string",
                 "optional": true,
+                "label": "title"
+              },
+              {
+                "name": "text",
+                "type": "string",
+                "optional": true,
                 "label": "text"
               },
               {
