@@ -66,6 +66,12 @@
       "code": "umn_sup_app:locations",
       "name": "Locations",
       "description": "Locations"
+    },
+    {
+      "type": "uploadable_setting",
+      "code": "umn_sup_app:poll",
+      "name": "Poll",
+      "description": "Poll"
     }
   ],
   "datasets": [
@@ -573,6 +579,70 @@
                 "name": "csv_hours",
                 "type": "string",
                 "label": "csv_hours"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Umn Poll Data",
+      "code": "pilrhealth:mobile:umn_poll",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Umn Poll Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "language",
+                "type": "string",
+                "optional": true,
+                "label": "language"
+              },
+              {
+                "name": "week",
+                "type": "string",
+                "optional": true,
+                "label": "week"
+              },
+              {
+                "name": "title",
+                "type": "string",
+                "optional": true,
+                "label": "text"
+              },
+              {
+                "name": "answer_a",
+                "type": "string",
+                "optional": true,
+                "label": "answer_a"
+              },
+              {
+                "name": "answer_b",
+                "type": "string",
+                "optional": true,
+                "label": "answer_b"
+              },
+              {
+                "name": "answer_c",
+                "type": "string",
+                "optional": true,
+                "label": "answer_c"
+              },
+              {
+                "name": "answer_d",
+                "type": "string",
+                "optional": true,
+                "label": "answer_d"
+              },
+              {
+                "name": "answer_e",
+                "type": "string",
+                "optional": true,
+                "label": "answer_e"
               }
             ]
           }
