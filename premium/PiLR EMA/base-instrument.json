@@ -559,7 +559,7 @@
             "code": "pilrhealth:mobile:comp_events",
             "schemas": [
                 {
-                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "type": "concordia",
                     "name": "1.0",
                     "schemaVersion": 1,
                     "specification": {
