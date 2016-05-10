@@ -484,6 +484,7 @@
               },
               {
                 "label": "additional_data",
+                "doc": "Any additinonal data to be sent",
                 "optional": true,
                 "type": "object",
                 "name": "additional_data",
