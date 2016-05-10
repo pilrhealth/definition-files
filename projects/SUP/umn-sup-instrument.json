@@ -444,6 +444,57 @@
       ]
     },
     {
+      "name": "Poll Results",
+      "code": "pilrhealth:umn_sup_app:poll_results",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Version 1",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "week",
+                "label": "week",
+                "doc": "The week the question is displayed",
+                "optional": false,
+                "type": "string"
+              },
+              {
+                "name": "question",
+                "label": "question",
+                "doc": "The poll question text",
+                "optional": false,
+                "type": "string"
+              },
+              {
+                "name": "response",
+                "label": "response",
+                "doc": "The text of the answer given",
+                "optional": false,
+                "type": "string"
+              },
+              {
+                "name": "response_value",
+                "label": "response_value",
+                "doc": "The value of a, b, c, d, e associated with the answer options",
+                "optional": false,
+                "type": "string"
+              },
+              {
+                "label": "additional_data",
+                "optional": true,
+                "type": "object",
+                "name": "additional_data",
+                "fields": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "name": "Umn Risk Zip Code",
       "code": "pilrhealth:mobile:umn_risk_zip_code",
       "schemas": [
