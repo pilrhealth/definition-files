@@ -150,7 +150,7 @@
       "definition_source_rel": "./burn-summary-job-rc1.json"
     },
     {
-      "definition_source_rel": "./human-summary-job-rc1.json"
+      "definition_source_rel": "./human-summary-job-rc1-GF-Custom.json"
     },
     {
       "definition_source_rel": "./infusion-summary-job-rc1.json"
