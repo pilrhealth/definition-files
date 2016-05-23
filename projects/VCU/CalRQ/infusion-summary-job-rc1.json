@@ -99,7 +99,7 @@
         "delete_if_successful": 0,
         "package_url": "https://www.github.com/MeiResearchLtd/mei.calorimeter.r",
         "package_function": "process_cal_infusion",
-        "package_version": "v1.0.4",
+        "package_version": "release/1.1",
         "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
         "input_datasets": [
           {
