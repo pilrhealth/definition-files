@@ -51,9 +51,9 @@
     },
     {
       "type": "uploadable_setting",
-      "code": "umn_sup_app:news",
-      "name": "News",
-      "description": "Non Upc"
+      "code": "umn_sup_app:resources",
+      "name": "Resources",
+      "description": "Resources"
     },
     {
       "type": "uploadable_setting",
@@ -164,12 +164,12 @@
       ]
     },
     {
-      "name": "Umn News Data",
-      "code": "pilrhealth:mobile:umn_news",
+      "name": "Umn Resources Data",
+      "code": "pilrhealth:mobile:umn_resources",
       "schemas": [
         {
           "type": "concordia",
-          "name": "Umn News Schema",
+          "name": "Umn Resources Schema",
           "schemaVersion": 1,
           "specification": {
             "type": "object",
@@ -191,12 +191,6 @@
                 "type": "string",
                 "optional": true,
                 "label": "category"
-              },
-              {
-                "name": "day",
-                "type": "string",
-                "optional": true,
-                "label": "day"
               },
               {
                 "name": "title",
