@@ -1,0 +1,137 @@
+{
+  "definition_type": "instrument",
+  "code": "uf_aim2act_app",
+  "name": "AIM2Act App",
+  "description": "To be done",
+  "version": 1,
+  "customizations": {
+    "package": "com.pilrhealth.instruments.ema_ots",
+    "classnamePrefix": "EmaOts",
+    "apix": true,
+    "controllers": {
+      "configure": "EmaOtsConfig",
+      "coordinate": "EmaOts"
+    },
+    "services": {
+      "handleContent": "EmaOtsConfig"
+    }
+  },
+  "settings": [
+    {
+      "type": "configuration_setting",
+      "code": "ema_ots:ema_config",
+      "name": "App Configuration",
+      "description": "The configuration of the app content to be delivered to the participant."
+    },
+    {
+      "type": "list_setting",
+      "code": "uf_aim2act_app:profile",
+      "name": "Profile",
+      "description": "Profile",
+      "choices": [
+        "T",
+        "C"
+      ],
+      "required": false,
+      "multipleChoice": false
+    },
+    {
+      "type": "uploadable_setting",
+      "code": "uf_aim2act_app:videos",
+      "name": "Videos",
+      "description": "Videos"
+    }
+  ],
+  "datasets": [
+    {
+      "name": "Videos Data",
+      "code": "pilrhealth:mobile:uf_videos",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Umn Events Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "profile",
+                "type": "string",
+                "optional": true,
+                "label": "profile"
+              },
+              {
+                "name": "title",
+                "type": "string",
+                "optional": true,
+                "label": "title"
+              },
+              {
+                "name": "text",
+                "type": "string",
+                "optional": true,
+                "label": "text"
+              },
+              {
+                "name": "video_link",
+                "type": "string",
+                "optional": true,
+                "label": "video_link"
+              },
+              {
+                "name": "video_link_text",
+                "type": "string",
+                "optional": true,
+                "label": "video_link_text"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "App Log",
+      "code": "pilrhealth:mobile:app_log",
+      "schemas": [
+        {
+          "type": "concordia",
+          "schemaVersion": 1,
+          "name": "1.0",
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "level",
+                "optional": false,
+                "doc": "One of: error, warning, debug, or info.",
+                "label": "Log level",
+                "type": "string"
+              },
+              {
+                "name": "tag",
+                "optional": true,
+                "doc": "A searchable string for event analytics.",
+                "label": "Tag",
+                "type": "string"
+              },
+              {
+                "name": "msg",
+                "optional": false,
+                "doc": "Human readable message.",
+                "label": "Message",
+                "type": "string"
+              },
+              {
+                "label": "Additional Data",
+                "optional": true,
+                "type": "object",
+                "name": "args",
+                "fields": []
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
