@@ -1,0 +1,44 @@
+{
+    "name": "UF Videos Data Handler",
+    "code": "pilrhealth:mobile:videos_handler",
+    "version": 1,
+    "description": "A CSV data file output for UF Videos",
+    "definition_type": "file_handler",
+    "dataset": "pilrhealth:mobile:uf_videos",
+    "dataset_version": 1,
+    "parser": {
+        "parse_by": "column_name",
+        "col_name_row": 1,
+        "skip_rows": 1,
+        "null_expressions": ["NaN", "Inf", ""],
+        "date_format": "yyyy-MM-dd'T'HH:mm:ss",
+        "data_mappings": [
+            {
+                "from_name": "profile",
+                "to_name": "profile"
+            },
+            {
+                "from_name": "title",
+                "to_name": "title"
+            },
+            {
+                "from_name": "text",
+                "to_name": "text"
+            },
+            {
+                "from_name": "video_link",
+                "to_name": "video_link"
+            },{
+                "from_name": "video_link_text",
+                "to_name": "video_link_text"
+            }
+
+        ],
+        "metadata_mappings": [
+            {
+                "from_name": "setting_code",
+                "to_name": "setting_code"
+            }
+        ]
+    }
+}
