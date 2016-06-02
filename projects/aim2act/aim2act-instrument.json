@@ -29,8 +29,8 @@
       "name": "Profile",
       "description": "Profile",
       "choices": [
-        "T",
-        "C"
+        "Teen",
+        "Caregiver"
       ],
       "required": false,
       "multipleChoice": false
@@ -73,6 +73,12 @@
                 "label": "text"
               },
               {
+                "name": "video_name",
+                "type": "string",
+                "optional": true,
+                "label": "video_name"
+              },
+              {
                 "name": "video_link",
                 "type": "string",
                 "optional": true,
@@ -83,6 +89,12 @@
                 "type": "string",
                 "optional": true,
                 "label": "video_link_text"
+              },
+              {
+                "name": "image_url",
+                "type": "string",
+                "optional": true,
+                "label": "image_url"
               }
             ]
           }
