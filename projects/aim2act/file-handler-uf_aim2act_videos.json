@@ -26,13 +26,21 @@
                 "to_name": "text"
             },
             {
+                "from_name": "video_name",
+                "to_name": "video_name"
+            },
+            {
                 "from_name": "video_link",
                 "to_name": "video_link"
-            },{
+            },
+            {
                 "from_name": "video_link_text",
                 "to_name": "video_link_text"
+            },
+            {
+                "from_name": "image_url",
+                "to_name": "image_url"
             }
-
         ],
         "metadata_mappings": [
             {
