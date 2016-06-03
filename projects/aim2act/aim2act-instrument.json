@@ -169,10 +169,10 @@
                 "label": "video_url"
               },
               {
-                "label": "Additional Data",
+                "label": "additional_data",
                 "optional": true,
                 "type": "object",
-                "name": "args",
+                "name": "additional_data",
                 "fields": []
               }
             ]
