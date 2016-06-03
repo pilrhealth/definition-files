@@ -144,6 +144,41 @@
           }
         }
       ]
+    },
+    {
+      "name": "Videos Accessed Data",
+      "code": "pilrhealth:uf_aim2act_app:video_access",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Umn Events Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "video_name",
+                "type": "string",
+                "optional": true,
+                "label": "video_name"
+              },
+              {
+                "name": "video_url",
+                "type": "string",
+                "optional": true,
+                "label": "video_url"
+              },
+              {
+                "label": "Additional Data",
+                "optional": true,
+                "type": "object",
+                "name": "args",
+                "fields": []
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
