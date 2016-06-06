@@ -136,7 +136,7 @@
             "code": "cuny_211:home_park",
             "name": "Home Park",
             "description": "Text that represents the home park.  Used as a substitution in survey labels. ",
-            "value": "",
+            "value": "PARK NAME",
             "required": false
         }
     ],
