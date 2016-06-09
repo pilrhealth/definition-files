@@ -71,7 +71,7 @@
             "type": "integer_setting",
             "code": "activity_monitoring:sample_interval",
             "name": "Activity: Sample Period (seconds)",
-            "description": "The amount of time in seconds that the app will sample the accelerometer each time the location monitor is activated.",
+            "description": "The amount of time in seconds that the app will sample the accelerometer each time the location monitor is activated. (Android only)",
             "value": 10,
             "min": 1,
             "required": true
@@ -80,7 +80,7 @@
             "type": "integer_setting",
             "code": "activity_monitoring:monitor_frequency",
             "name": "Activity: Monitoring Frequency (seconds)",
-            "description": "The interval between each time the monitor is 'woken up' in the background to perform a sample run.",
+            "description": "The interval between each time the monitor is 'woken up' in the background to perform a sample run. (Android only)",
             "value": 60,
             "min": 30,
             "required": true
@@ -89,7 +89,7 @@
             "type": "double_setting",
             "code": "activity_monitoring:walking_threshold",
             "name": "Activity: Walking Threshold (double)",
-            "description": "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be walking. The threshold is in units of gravity (eg 0.09)",
+            "description": "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be walking. The threshold is in units of gravity (eg 0.09) (Android only)",
             "value": 0.08,
             "min": 0,
             "required": true
@@ -98,7 +98,7 @@
             "type": "double_setting",
             "code": "activity_monitoring:running_threshold",
             "name": "Activity: Running Threshold (double)",
-            "description": "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be running. The threshold is in units of gravity (eg 0.09)",
+            "description": "If the average acceleration of the device over a Sample Period is greater than this threshold, the user is deemed to be running. The threshold is in units of gravity (eg 0.09) (Android only)",
             "value": 0.2,
             "min": 0,
             "required": false
@@ -107,7 +107,7 @@
             "type": "list_setting",
             "code": "activity_monitoring:accelerometer_mode",
             "name": "Accelerometer Mode",
-            "description": "Determines if the app uses an accelerometer, and which one.",
+            "description": "Determines if the app uses an accelerometer, and which one. (Android only)",
             "choices": [
                 "None",
                 "On Board Accelerometer",
@@ -127,7 +127,7 @@
             "type": "boolean_setting",
             "code": "actigraph_activity_monitoring_app:use_epoch_data",
             "name": "Use Epoch Data",
-            "description": "Determines whether to use the Actigraph sensor epoch data instead of the accelerometer data",
+            "description": "Determines whether to use the Actigraph sensor epoch data instead of the accelerometer data (Android only)",
             "value": false,
             "required": true
     }
