@@ -40,6 +40,12 @@
       "code": "uf_aim2act_app:videos",
       "name": "Videos",
       "description": "Videos"
+    },
+    {
+      "type": "uploadable_setting",
+      "code": "uf_aim2act_app:results",
+      "name": "Results",
+      "description": "Results"
     }
   ],
   "datasets": [
@@ -95,6 +101,37 @@
                 "type": "string",
                 "optional": true,
                 "label": "image_url"
+              }
+            ]
+          }
+        }
+      ]
+    },{
+      "name": "Results Data",
+      "code": "pilrhealth:mobile:uf_results",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Umn Events Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "category_id",
+                "type": "number",
+                "label": "category_id"
+              },
+              {
+                "name": "category",
+                "type": "string",
+                "label": "category"
+              },
+              {
+                "name": "result",
+                "type": "number",
+                "optional": true,
+                "label": "result"
               }
             ]
           }
