@@ -700,6 +700,49 @@
           }
         }
       ]
+    },
+    {
+      "name": "Resources Comments",
+      "code": "pilrhealth:umn_sup_app:resources_comments",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Version 1",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "comment",
+                "label": "comment",
+                "doc": "Comment",
+                "optional": false,
+                "type": "string"
+              },
+              {
+                "name": "submission_date",
+                "label": "submission_date",
+                "doc": "Comment submission date",
+                "optional": false,
+                "category": "date",
+                "type": "string"
+              },
+              {
+                "name": "id",
+                "type": "string",
+                "optional": false,
+                "label": "id"
+              },
+              {
+                "name": "language",
+                "type": "string",
+                "optional": false,
+                "label": "language"
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
