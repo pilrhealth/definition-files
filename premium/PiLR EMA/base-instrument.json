@@ -130,7 +130,15 @@
             "description": "Determines whether to use the Actigraph sensor epoch data instead of the accelerometer data (Android only)",
             "value": false,
             "required": true
-    }
+        },
+        {
+            "type": "string_setting",
+            "code": "plot:home_park",
+            "name": "Home Park",
+            "description": "Text that represents the home park.  Used as a substitution in survey labels. ",
+            "value": "PARK NAME",
+            "required": false
+        }
     ],
     "datasets": [
         {
