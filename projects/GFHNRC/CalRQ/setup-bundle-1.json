@@ -167,9 +167,6 @@
     },
     {
       "definition_source_rel": "./haldane-transform-job.json"
-    },
-    {
-      "definition_source_rel": "./human-summary-job-rc1-sleep-thresh-3.json"
     }
   ],
   "tool_contents": [
