@@ -104,7 +104,7 @@
                 }
             ]
         },
-		{
+	{
             "type":"double_setting",
             "code":"pilrhealth:calrq:sleep_threshold",
             "name":"Sleep Threshold",
@@ -113,7 +113,7 @@
             "min":-100,
             "max":100,
             "required":false
-		}
+	}
     ],
     "tools":[
         {
