@@ -141,5 +141,44 @@
         {
             "definition_source_rel":"./evtagger-sample-config-tool-content-1.json"
         }
-    ]
+    ],
+  "periods": [
+    {
+      "code": "active_period",
+      "name": "Participant Active Period",
+      "epochs": [
+        {
+          "code": "epoch_1",
+          "name": "Epoch 1"
+        }
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "code": "ema_ots_default_template",
+      "name": "Default Template",
+      "activeInstruments": [
+        {
+          "instrument": "calrq",
+          "configVersion": null,
+          "settings": []
+        }
+      ],
+      "periodSchedules": [
+        {
+          "period": "active_period",
+          "epochSchedules": [
+            {
+              "period": "active_period",
+              "epoch": "epoch_1",
+              "startDay": 1,
+              "endDay": 2,
+              "setByParticipant": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
