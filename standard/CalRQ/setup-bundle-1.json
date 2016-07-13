@@ -142,6 +142,12 @@
             "definition_source_rel":"./evtagger-sample-config-tool-content-1.json"
         }
     ],
+  {
+    "definition_type":"bundle",
+    "code":"calorimeter_bundle_001",
+    "version":1,
+    "name":"Calorimeter Project Setup Bundle",
+    "description":"This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
   "periods": [
     {
       "code": "active_period",
@@ -158,20 +164,70 @@
     {
       "code": "calrq_default_template",
       "name": "Default Template",
-      "activeInstruments": [
+      "activeInstruments": 
+      [
         {
           "instrument": "calrq",
-          "configVersion": null,
-          "settings": [
+          "settings": 
+          [
             {
-              "period": "active_period",
-              "epoch": "epoch_1",
-              "code": "calrq:template",
-              "value": "19139"
+              "code": "pilrhealth:calrq:chamber_volume",
+              "period": null,
+              "epoch": null,
+              "value": 30000
+            },
+            {
+              "code": "pilrhealth:calrq:co2_mfc",
+              "period": null,
+              "epoch": null,
+              "value": null
+            },
+            {
+              "code": "pilrhealth:calrq:configuration",
+              "period": null,
+              "epoch": null,
+              "value": 
+              [
+                "Push - Absolute"
+              ]
+            },
+            {
+              "code": "pilrhealth:calrq:gas_type",
+              "period": null,
+              "epoch": null,
+              "value": null
+            },
+            {
+              "code": "pilrhealth:calrq:in_co2",
+              "period": null,
+              "epoch": null,
+              "value": 0.0
+            },
+            {
+              "code": "pilrhealth:calrq:in_o2",
+              "period": null,
+              "epoch": null,
+              "value": 20.93
+            },
+            {
+              "code": "pilrhealth:calrq:n2_mfc",
+              "period": null,
+              "epoch": null,
+              "value": null
+            },
+            {
+              "code": "pilrhealth:calrq:predicted_energy_balance",
+              "period": null,
+              "epoch": null,
+              "value": 0.0
+            },
+            {
+              "code": "pilrhealth:calrq:read_interval",
+              "period": null,
+              "epoch": null,
+              "value": 60
             }
-          ]
-        }
-      ],
+          ],
       "periodSchedules": [
         {
           "period": "active_period",
@@ -180,8 +236,7 @@
               "period": "active_period",
               "epoch": "epoch_1",
               "startDay": 1,
-              "endDay": 2,
-              "setByParticipant": false
+              "endDay": 2
             }
           ]
         }
