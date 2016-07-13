@@ -142,12 +142,6 @@
             "definition_source_rel":"./evtagger-sample-config-tool-content-1.json"
         }
     ],
-  {
-    "definition_type":"bundle",
-    "code":"calorimeter_bundle_001",
-    "version":1,
-    "name":"Calorimeter Project Setup Bundle",
-    "description":"This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
   "periods": [
     {
       "code": "active_period",
