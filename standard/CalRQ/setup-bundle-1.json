@@ -156,13 +156,20 @@
   ],
   "templates": [
     {
-      "code": "ema_ots_default_template",
+      "code": "calrq_default_template",
       "name": "Default Template",
       "activeInstruments": [
         {
           "instrument": "calrq",
           "configVersion": null,
-          "settings": []
+          "settings": [
+            {
+              "period": "active_period",
+              "epoch": "epoch_1",
+              "code": "calrq:template",
+              "value": "19139"
+            }
+          ]
         }
       ],
       "periodSchedules": [
