@@ -16,6 +16,11 @@
                     "specification":{
                         "type":"object",
                         "fields":[
+														{
+                                "name":"Processed",
+                                "type":"string",
+                                "category":"date"
+                            },
                             {
                                 "name":"Time",
                                 "type":"string",
@@ -129,6 +134,11 @@
                     "specification":{
                         "type":"object",
                         "fields":[
+														{
+                                "name":"Processed",
+                                "type":"string",
+                                "category":"date"
+                            },
                             {
                                 "name":"Time",
                                 "type":"string",
