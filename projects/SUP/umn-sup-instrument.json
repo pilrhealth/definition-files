@@ -129,10 +129,16 @@
                 "label": "endtime"
               },
               {
-                "name": "image_url",
+                "name": "google_drive_folder_id",
                 "type": "string",
                 "optional": true,
-                "label": "image_url"
+                "label": "google_drive_folder_id"
+              },
+              {
+                "name": "google_drive_image",
+                "type": "string",
+                "optional": true,
+                "label": "google_drive_image"
               },
               {
                 "name": "website_link",
@@ -311,10 +317,16 @@
                 "label": "video_link_text"
               },
               {
-                "name": "image_url",
+                "name": "google_drive_folder_id",
                 "type": "string",
                 "optional": true,
-                "label": "image_url"
+                "label": "google_drive_folder_id"
+              },
+              {
+                "name": "google_drive_image",
+                "type": "string",
+                "optional": true,
+                "label": "google_drive_image"
               }
             ]
           }
