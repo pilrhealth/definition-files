@@ -755,6 +755,113 @@
           }
         }
       ]
-    }
+    },
+        {
+            "name": "Survey Data",
+            "code": "pilrhealth:mobile:survey_data",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "schemaVersion": 1,
+                    "name": "1.0",
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "event_type",
+                                "type": "string",
+                                "label": "Event Type"
+                            },
+                            {
+                                "name": "survey_code",
+                                "type": "string",
+                                "label": "Survey Code",
+                                "optional": true
+                            },
+                            {
+                                "name": "self_report",
+                                "type": "boolean",
+                                "label": "Self Report",
+                                "doc": "Track if this submission was self reported",
+                                "optional": true
+                            },
+                            {
+                                "name": "session",
+                                "type": "string",
+                                "label": "Session"
+                            },
+                            {
+                                "name": "question_type",
+                                "type": "string",
+                                "label": "Question Type",
+                                "optional": true
+                            },
+                            {
+                                "name": "question_code",
+                                "type": "string",
+                                "label": "Question Code",
+                                "optional": true
+                            },
+                            {
+                                "name": "response",
+                                "type": "string",
+                                "label": "Response",
+                                "optional": true
+                            },
+                            {
+                                "name": "response_value",
+                                "type": "string",
+                                "label": "Response Value",
+                                "optional": true
+                            },
+                            {
+                                "name": "responses",
+                                "type": "array",
+                                "constType": {
+                                    "type": "string"
+                                },
+                                "label": "Responses",
+                                "optional": true
+                            },
+                            {
+                                "name": "response_values",
+                                "type": "array",
+                                "constType": {
+                                    "type": "string"
+                                },
+                                "label": "Response Values",
+                                "optional": true
+                            },
+                            {
+                                "label": "Additional Data",
+                                "optional": true,
+                                "type": "object",
+                                "name": "more_data",
+                                "fields": [
+                                    {
+                                        "name": "text",
+                                        "type": "string",
+                                        "label": "Text",
+                                        "optional": true
+                                    },
+                                    {
+                                        "name": "value",
+                                        "type": "string",
+                                        "label": "Value",
+                                        "optional": true
+                                    },
+                                    {
+                                        "name": "selected",
+                                        "type": "boolean",
+                                        "label": "Selected",
+                                        "optional": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
   ]
 }
