@@ -39,7 +39,7 @@
             {
                 "from_name": "endtime",
                 "to_name": "endtime"
-            },,{
+            },{
                 "from_name": "google_drive_folder_id",
                 "to_name": "google_drive_folder_id"
             },{
