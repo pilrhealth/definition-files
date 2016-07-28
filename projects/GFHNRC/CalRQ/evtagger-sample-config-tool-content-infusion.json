@@ -47,10 +47,8 @@
             },
             {
               "name": "Infusion 2",
-              "note": Second Infusion Level",
+              "note": "Second Infusion Level",
               "verified": 1,
-              "offset": 176490000,
-              "duration": 7200000,
               "startTime": "07:00:30",
               "durationTime": "06:00:00",
               "startDays": 0,
