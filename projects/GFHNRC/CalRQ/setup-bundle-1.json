@@ -141,7 +141,7 @@
         "code":"pilrhealth:calrq:sleep_threshold",
         "name":"Sleep Threshold",
         "description":"Sleep Threshold",
-        "value":0,
+        "value":3,
         "min":-100,
         "max":100,
         "required":false
@@ -198,7 +198,7 @@
                      "code":"pilrhealth:calrq:chamber_volume",
                      "period":null,
                      "epoch":null,
-                     "value":30000
+                     "value":25000
                   },
                   {  
                      "code":"pilrhealth:calrq:co2_mfc",

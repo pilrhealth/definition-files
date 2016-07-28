@@ -25,6 +25,14 @@
           "description": "Rest"
         },
         {
+          "name": "Null",
+          "description": "Null"
+        },
+        {
+          "name": "Invalid",
+          "description": "Invalid"
+        },
+        {
           "name": "Misc",
           "description": "Misc."
         },
