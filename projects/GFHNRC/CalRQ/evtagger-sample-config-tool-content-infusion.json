@@ -1,0 +1,64 @@
+{
+  "definition_type": "tool_content",
+  "tool_code": "evtagger",
+  "code": "calorimeter_evtagger_config_001",
+  "version": 1,
+  "name": "Sample tag labels and event bundles for calorimeter study",
+  "description": "A sample of tag labels and event bundles commonly used for segmenting data in studies that use a calorimeter chamber.",
+  "contents": [
+    {
+      "labels": [
+        {
+          "name": "Null",
+          "description": "Null"
+        },
+        {
+          "name": "Invalid",
+          "description": "Invalid"
+        },
+        {
+          "name": "Misc",
+          "description": "Misc."
+        },
+        {
+          "name": "Infusion Study",
+          "description": "Infusion Study"
+        },
+        {
+          "name": "Short Circuit",
+          "description": "Short Circuit test"
+        },
+         ],
+      "bundles": [
+        {
+          "name": "Two Level Infusion",
+          "description": ".",
+          "events": [
+            {
+              "name": "Infusion 1",
+              "note": "First Infusion Level",
+              "verified": 1,
+              "offset": 176490000,
+              "duration": 7200000,
+              "startTime": "01:01:30",
+              "durationTime": "06:00:00",
+              "startDays": 0,
+              "tags": ["Infusion Study"]
+            },
+            {
+              "name": "Infusion 2",
+              "note": Second Infusion Level",
+              "verified": 1,
+              "offset": 176490000,
+              "duration": 7200000,
+              "startTime": "07:00:30",
+              "durationTime": "06:00:00",
+              "startDays": 0,
+              "tags": ["Infusion Study"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
