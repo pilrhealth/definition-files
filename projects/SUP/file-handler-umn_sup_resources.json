@@ -50,6 +50,9 @@
             },{
                 "from_name": "google_drive_image",
                 "to_name": "google_drive_image"
+            },{
+                "from_name": "image_url",
+                "to_name": "image_url"
             }
         ],
         "metadata_mappings": [
