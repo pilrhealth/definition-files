@@ -141,6 +141,12 @@
                 "label": "google_drive_image"
               },
               {
+                "name": "image_url",
+                "type": "string",
+                "optional": true,
+                "label": "image_url"
+              },
+              {
                 "name": "website_link",
                 "type": "string",
                 "optional": true,
@@ -245,6 +251,12 @@
                 "type": "string",
                 "optional": true,
                 "label": "google_drive_image"
+              },
+              {
+                "name": "image_url",
+                "type": "string",
+                "optional": true,
+                "label": "image_url"
               }
             ]
           }
@@ -333,6 +345,12 @@
                 "type": "string",
                 "optional": true,
                 "label": "google_drive_image"
+              },
+              {
+                "name": "image_url",
+                "type": "string",
+                "optional": true,
+                "label": "image_url"
               }
             ]
           }
