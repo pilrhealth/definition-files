@@ -757,6 +757,41 @@
           }
         }
       ]
+    },
+     {
+      "name": "Videos Watched Data",
+      "code": "pilrhealth:mobile:videos_watched",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "Umn Events Schema",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "video_name",
+                "type": "string",
+                "optional": true,
+                "label": "video_name"
+              },
+              {
+                "name": "video_url",
+                "type": "string",
+                "optional": true,
+                "label": "video_url"
+              },
+              {
+                "label": "additional_data",
+                "optional": true,
+                "type": "object",
+                "name": "additional_data",
+                "fields": []
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
