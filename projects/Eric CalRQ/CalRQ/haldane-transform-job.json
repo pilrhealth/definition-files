@@ -117,6 +117,14 @@
                                 "label":"Non-Protein RQ",
                                 "doc":"Non-Protein RQ",
                                 "units":""
+                            },
+                            {
+                                "name":"Activity",
+                                "type":"number",
+                                "optional":true,
+                                "label":"Activity",
+                                "doc":"Seconds of activity during this measurement period",
+                                "units":"counts"
                             }
                         ]
                     }
@@ -195,6 +203,14 @@
                             {
                                 "name":"outflow_rate",
                                 "type":"number"
+                            },
+                            {
+                                "name":"Activity",
+                                "type":"number",
+                                "optional":true,
+                                "label":"Activity",
+                                "doc":"Seconds of activity during this measurement period",
+                                "units":"counts"
                             }
                         ]
                     }

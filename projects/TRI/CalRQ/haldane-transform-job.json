@@ -117,7 +117,15 @@
                 "label" : "Non-Protein RQ",
                 "doc" : "Non-Protein RQ",
                 "units" : ""
-          }
+          },
+              {
+                  "name":"Activity",
+                  "type":"number",
+                  "optional":true,
+                  "label":"Activity",
+                  "doc":"Seconds of activity during this measurement period",
+                  "units":"counts"
+              }
             ]
           }
         }
@@ -199,7 +207,15 @@
               {  
                 "code":"pilrhealth:calrq:multiple_n2",
                 "mapping":"multiple_n2"
-              }
+              },
+				      {
+				          "name":"Activity",
+				          "type":"number",
+				          "optional":true,
+				          "label":"Activity",
+				          "doc":"Seconds of activity during this measurement period",
+				          "units":"counts"
+				      }
             ]
           }
         }
