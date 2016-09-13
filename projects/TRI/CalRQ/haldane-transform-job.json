@@ -125,6 +125,14 @@
                   "label":"Activity",
                   "doc":"Seconds of activity during this measurement period",
                   "units":"counts"
+              },
+              {
+                  "name":"Activity_Rate",
+                  "type":"number",
+                  "optional":true,
+                  "label":"Activity_Rate",
+                  "doc":"Seconds of activity during this measurement period dividing by data log rate",
+                  "units":"counts"
               }
             ]
           }
@@ -215,7 +223,15 @@
 				          "label":"Activity",
 				          "doc":"Seconds of activity during this measurement period",
 				          "units":"counts"
-				      }
+				      },
+              {
+                  "name":"Activity_Rate",
+                  "type":"number",
+                  "optional":true,
+                  "label":"Activity_Rate",
+                  "doc":"Seconds of activity during this measurement period dividing by data log rate",
+                  "units":"counts"
+              }
             ]
           }
         }
