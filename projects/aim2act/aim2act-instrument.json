@@ -384,22 +384,16 @@
                 "label": "video_name"
               },
               {
-                "name": "video_link",
+                "name": "video_url",
                 "type": "string",
                 "optional": true,
-                "label": "video_link"
+                "label": "video_url"
               },
               {
-                "name": "video_link_text",
+                "name": "tab",
                 "type": "string",
                 "optional": true,
-                "label": "video_link_text"
-              },
-              {
-                "name": "image_url",
-                "type": "string",
-                "optional": true,
-                "label": "image_url"
+                "label": "tab"
               }
             ]
           }
