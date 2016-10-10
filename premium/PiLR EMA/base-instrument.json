@@ -3,7 +3,7 @@
   "name": "PiLR EMA App",
   "description": "The PiLR EMA App allows you to setup surveys and messages to deliver to participants through their mobile phone (Android or iOS).  It also allows you to set a delivery schedule and triggering events to initiate them.",
   "code": "ema_ots",
-  "version": 7,
+  "version": 8,
   "customizations": {
     "package": "com.pilrhealth.instruments.ema_ots",
     "classnamePrefix": "EmaOts",
@@ -138,6 +138,13 @@
       "description": "Text that represents the home park.  Used as a substitution in survey labels. ",
       "value": "PARK NAME",
       "required": false
+    },
+    {
+      "type": "boolean_setting",
+      "code": "reward",
+      "name": "Reward",
+      "description": "Accumulate reward when certain surveys are answered",
+      "value": false
     }
   ],
   "datasets": [
@@ -790,6 +797,31 @@
                 "type": "object",
                 "name": "additional_data",
                 "fields": []
+              }
+            ]
+          }
+        }
+      ]
+    },{
+      "name": "Reward",
+      "code": "pilrhealth:mobile:reward",
+      "schemas": [
+        {
+          "type": "concordia",
+          "schemaVersion": 1,
+          "name": "1.0",
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "number_of_surveys",
+                "label": "Number of Surveys",
+                "type": "string"
+              },
+              {
+                "name": "accumulated_reward",
+                "label": "Accumulated Reward",
+                "type": "string"
               }
             ]
           }
