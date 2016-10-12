@@ -153,30 +153,5 @@
             }
          ]
       }
-   ],
-   "templates":[  
-      {  
-         "code":"calrq_default_template",
-         "name":"Default Template",
-         "activeInstruments":[  
-            {  
-               "instrument":"calrq",
-               "settings":[],
-               "periodSchedules":[  
-                  {  
-                     "period":"active_period",
-                     "epochSchedules":[  
-                        {  
-                           "period":"active_period",
-                           "epoch":"epoch_1",
-                           "startDay":1,
-                           "endDay":2
-                        }
-                     ]
-                  }
-               ]
-            }
-         ]
-      }
    ]
 }
