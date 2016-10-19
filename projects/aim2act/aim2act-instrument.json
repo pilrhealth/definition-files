@@ -24,18 +24,6 @@
       "description": "The configuration of the app content to be delivered to the participant."
     },
     {
-      "type": "list_setting",
-      "code": "uf_aim2act_app:profile",
-      "name": "Profile",
-      "description": "Profile",
-      "choices": [
-        "Teen",
-        "Caregiver"
-      ],
-      "required": false,
-      "multipleChoice": false
-    },
-    {
       "type": "integer_setting",
       "code": "followup_survey_probability",
       "name": "Probability of follow-up survey",
