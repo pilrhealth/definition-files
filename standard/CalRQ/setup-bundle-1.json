@@ -1,8 +1,8 @@
 {  
    "definition_type":"bundle",
-   "code":"calorimeter_bundle_001",
-   "version":1,
-   "name":"Calorimeter Project Setup Bundle",
+   "code":"calorimeter_bundle_002",
+   "version":2,
+   "name":"Calorimeter Project Setup Bundle_2",
    "description":"This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
    "instruments":[  
       {  
@@ -38,7 +38,7 @@
          "units":"kCal",
          "value":0,
          "min":0,
-         "max":30000
+         "max":40000
       },
       {  
          "type":"integer_setting",
@@ -166,7 +166,7 @@
                      "code":"pilrhealth:calrq:chamber_volume",
                      "period":null,
                      "epoch":null,
-                     "value":30000
+                     "value":31000
                   },
                   {  
                      "code":"pilrhealth:calrq:co2_mfc",
