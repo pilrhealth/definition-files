@@ -17,6 +17,11 @@
             "type": "object",
             "fields": [
               {
+                "name": "Processed",
+                "type": "string",
+                "category": "date"
+              },
+              {
                 "name": "start_time",
                 "type": "string",
                 "category": "date",

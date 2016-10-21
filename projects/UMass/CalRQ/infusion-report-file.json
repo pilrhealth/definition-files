@@ -1,0 +1,8 @@
+{
+    "definition_type":"file_handler",
+    "name":"CalRQ Infusion Report",
+    "code":"pilrhealth:calrq:infusion_file",
+    "version":1,
+    "unlisted":true,
+    "description":"A report with parameters from a calorimeter infusion study."
+}

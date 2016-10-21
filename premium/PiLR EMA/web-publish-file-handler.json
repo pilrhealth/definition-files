@@ -1,0 +1,20 @@
+{
+  "name":"Web publish File",
+  "code":"pilrhealth:web_publish_file",
+  "version":1,
+  "description":"A web publish data file",
+  "definition_type":"file_handler",
+  "unlisted":false,
+  "parser": {
+    "metadata_mappings": [
+      {
+        "from_name": "project",
+        "to_name": "project"
+      },
+      {
+        "from_name": "public",
+        "to_name": "public"
+      }
+    ]
+  }
+}

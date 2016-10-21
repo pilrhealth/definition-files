@@ -448,6 +448,12 @@
     },
     {
       "definition_source_rel": "./human-report-file.json"
-    }
+    },
+		{
+		    "definition_source_rel":"./infusion-report-file.json"
+		},
+		{
+		    "definition_source_rel":"./burn-report-file.json"
+		}
   ]
 }

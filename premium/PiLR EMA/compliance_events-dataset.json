@@ -6,7 +6,7 @@
         {
             "type": "concordia",
             "name": "1.0",
-            "schemaVersion": 1,
+            "schemaVersion": 2,
             "specification": {
                 "type": "object",
                 "fields": [
@@ -17,6 +17,7 @@
                     },
                     {
                         "name": "notif_time",
+                        "category": "date",
                         "label": "Notification Time",
                         "type": "string",
                         "optional": true
@@ -24,6 +25,7 @@
                     {
                         "name": "expir_time",
                         "label": "Expiration Time",
+                        "category": "date",
                         "type": "string",
                         "optional": true
                     },
@@ -40,6 +42,7 @@
                     {
                         "name": "completed",
                         "label": "Completed",
+                        "category": "date",
                         "type": "string"
                     },
                     {

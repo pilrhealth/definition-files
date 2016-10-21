@@ -117,6 +117,22 @@
                                 "label":"Non-Protein RQ",
                                 "doc":"Non-Protein RQ",
                                 "units":""
+                            },
+                            {
+                                "name":"Activity",
+                                "type":"number",
+                                "optional":true,
+                                "label":"Activity",
+                                "doc":"Seconds of activity during this measurement period",
+                                "units":"counts"
+                            },
+                            {
+                                "name":"Activity_Rate",
+                                "type":"number",
+                                "optional":true,
+                                "label":"Activity_Rate",
+                                "doc":"Seconds of activity during this measurement period dividing by data log rate",
+                                "units":"counts"
                             }
                         ]
                     }
@@ -195,6 +211,22 @@
                             {
                                 "name":"outflow_rate",
                                 "type":"number"
+                            },
+                            {
+                                "name":"Activity",
+                                "type":"number",
+                                "optional":true,
+                                "label":"Activity",
+                                "doc":"Seconds of activity during this measurement period",
+                                "units":"counts"
+                            },
+                            {
+                                "name":"Activity_Rate",
+                                "type":"number",
+                                "optional":true,
+                                "label":"Activity_Rate",
+                                "doc":"Seconds of activity during this measurement period dividing by data log rate",
+                                "units":"counts"
                             }
                         ]
                     }
