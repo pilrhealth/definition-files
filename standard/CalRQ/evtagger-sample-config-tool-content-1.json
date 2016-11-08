@@ -23,6 +23,14 @@
         {
           "name": "Misc",
           "description": "Misc."
+        },
+        {
+          "name": "Infusion Study",
+          "description": "Infusion Study"
+        },
+        {
+          "name": "Burn Study",
+          "description": "Burn Study"
         }
       ],
       "bundles": [
