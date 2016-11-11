@@ -526,10 +526,16 @@
                 "label": "result"
               },
               {
-                "name": "informational_text",
+                "name": "informational_text_title",
                 "type": "string",
                 "optional": true,
-                "label": "informational_text"
+                "label": "informational_text_title"
+              },
+              {
+                "name": "informational_text_description",
+                "type": "string",
+                "optional": true,
+                "label": "informational_text_description"
               }
             ]
           }
