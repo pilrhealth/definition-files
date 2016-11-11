@@ -26,8 +26,12 @@
                 "to_name": "result"
             },
             {
-                "from_name": "informational_text",
-                "to_name": "informational_text"
+                "from_name": "informational_text_title",
+                "to_name": "informational_text_title"
+            },
+            {
+                "from_name": "informational_text_description",
+                "to_name": "informational_text_description"
             }
         ],
         "metadata_mappings": [
