@@ -24,6 +24,10 @@
             {
                 "from_name": "result",
                 "to_name": "result"
+            },
+            {
+                "from_name": "informational_text",
+                "to_name": "informational_text"
             }
         ],
         "metadata_mappings": [
