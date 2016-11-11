@@ -524,6 +524,12 @@
                 "type": "number",
                 "optional": true,
                 "label": "result"
+              },
+              {
+                "name": "informational_text",
+                "type": "number",
+                "optional": true,
+                "label": "informational_text"
               }
             ]
           }
