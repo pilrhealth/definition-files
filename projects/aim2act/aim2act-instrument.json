@@ -527,7 +527,7 @@
               },
               {
                 "name": "informational_text",
-                "type": "number",
+                "type": "string",
                 "optional": true,
                 "label": "informational_text"
               }
