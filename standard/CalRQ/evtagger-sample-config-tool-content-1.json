@@ -25,6 +25,30 @@
           "description": "Misc."
         },
         {
+          "name": "Rest",
+          "description": "Rest"
+        },
+        {
+          "name": "Invalid Data",
+          "description": "Invalid Data"
+        },
+        {
+          "name": "Post Meal",
+          "description": "Post Meal"
+        },
+        {
+          "name": "Regression Data",
+          "description": "Regression Data"
+        },
+        {
+          "name": "Short Circuit",
+          "description": "Short Circuit"
+        },
+        {
+          "name": "Null",
+          "description": "Null"
+        },
+        {
           "name": "Infusion Study",
           "description": "Infusion Study"
         },
