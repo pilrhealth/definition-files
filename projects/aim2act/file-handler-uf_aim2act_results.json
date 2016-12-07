@@ -32,6 +32,10 @@
             {
                 "from_name": "informational_text_description",
                 "to_name": "informational_text_description"
+            },
+            {
+                "from_name": "image_url",
+                "to_name": "image_url"
             }
         ],
         "metadata_mappings": [
