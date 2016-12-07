@@ -536,6 +536,12 @@
                 "type": "string",
                 "optional": true,
                 "label": "informational_text_description"
+              },
+              {
+                "name": "image_url",
+                "type": "string",
+                "optional": true,
+                "label": "image_url"
               }
             ]
           }
