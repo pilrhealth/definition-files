@@ -739,7 +739,7 @@
               },
               {
                 "name": "response_time",
-                "type": "string",
+                "type": "number",
                 "category": "date",
                 "label": "Response time"
               },
@@ -754,9 +754,14 @@
                 "label": "Fast flash card word placement"
               },
               {
-                "name": "flash_word_duration",
+                "name": "expected_dwell_time",
                 "type": "number",
                 "label": "Fast flash card duration the word is shown(ms)"
+              },
+              {
+                "name": "actual_dwell_time",
+                "type": "number",
+                "label": "Fast flash card actual duration the word is shown(ms)"
               },
               {
                 "name": "flash_word",
