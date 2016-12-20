@@ -740,7 +740,6 @@
               {
                 "name": "response_time",
                 "type": "number",
-                "category": "date",
                 "label": "Response time"
               },
               {
