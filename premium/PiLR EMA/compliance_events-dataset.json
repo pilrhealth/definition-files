@@ -2,6 +2,7 @@
     "definition_type": "dataset",
     "name": "Compliance Events",
     "code": "pilrhealth:mobile:comp_events",
+      "calculationServiceName": "complianceSummaryService",
     "schemas": [
         {
             "type": "concordia",
