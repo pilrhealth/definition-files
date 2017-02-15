@@ -1,142 +1,147 @@
-{
-  "definition_type": "bundle",
-  "code": "pbrc_calorimeter_bundle_001",
-  "version": 1,
-  "name": "PBRC Calorimeter Project Setup Bundle",
-  "description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
-  "instruments": [
-    {
-      "definition_source_rel": "./base-instrument.json"
-    }
-  ],
-  "variables": [
-    {
-      "type": "double_setting",
-      "code": "pilrhealth:calrq:weight_in",
-      "name": "Weight In (Kg)",
-      "description": "Weight In (Kg)",
-      "units" : "Kg",
-      "value": 0,
-      "min": 0,
-      "max": 1000
-    },
-	{
-      "type": "double_setting",
-      "code": "pilrhealth:calrq:weight_out",
-      "name": "Weight Out (Kg)",
-      "description": "Weight Out (Kg)",
-      "units" : "Kg",
-      "value": 0,
-      "min": 0,
-      "max": 1000
-    },
-    {
-      "type": "integer_setting",
-      "code": "pilrhealth:calrq:energy_intake_measured",
-      "name": "Energy Intake Measured (kCal)",
-      "description": "Energy Intake Measured (kCal)",
-      "units" : "kCal",
-      "value": 0,
-      "min": 0,
-      "max": 30000
-    },
-    {
-      "type": "integer_setting",
-      "code": "pilrhealth:calrq:energy_intake_predicted",
-      "name": "Energy Intake Predicted (kCal)",
-      "description": "Energy Intake Predicted (kCal)",
-      "units" : "kCal",
-      "value": 0,
-      "min": 0,
-      "max": 30000
-    },
-    {
-      "type": "text_setting",
-      "code": "pilrhealth:calrq:diet",
-      "name": "Diet",
-      "description": "Diet"
-    },
-    {
-      "type": "text_setting",
-      "code": "pilrhealth:calrq:exercise_level",
-      "name": "Exercise Level",
-      "description": "Exercise Level"
-    },
-    {
-      "type": "text_setting",
-      "code": "pilrhealth:calrq:treatment",
-      "name": "Treatment",
-      "description": "Treatment"
-    },
-    {
-      "type": "array_setting",
-      "code": "pilrhealth:calrq:multiple_n2",
-      "name": "Urine Nitrogen Mass",
-      "description": "Urine Nitrogen Mass",
-      "choices": [{
-      	"fields":[{
-      		"min":0,
-      		"max":10,
-      		"description":"Urine Nitrogen Mass",
-      		"name":"Urine Nitrogen Mass",
-      		"value":0,
-      		"code":"calrq:urine_nitrogen_value",
-      		"type":"double_setting",
-      		"units":""
-      	},{
-      		"description":"Urine Nitrogen Collection Date",
-      		"name":"Urine Nitrogen Collection Date",
-      		"code":"calrq:urine_nitrogen_date",
-      		"type":"date_setting",
-      		"units":""
-      		
-      	},{
-      		"description":"Urine Nitrogen Collection Time",
-      		"name":"Urine Nitrogen Collection Time",
-      		"code":"calrq:urine_nitrogen_time",
-      		"type":"time_setting",
-      		"units":""
-      	}]
-      }]
-    },
-	{
-        "type":"double_setting",
-        "code":"pilrhealth:calrq:sleep_threshold",
-        "name":"Sleep Threshold",
-        "description":"Sleep Threshold",
-        "value":0,
-        "min":-100,
-        "max":100,
-        "required":false
-	}
-  ],
-  "tools": [
-    {
-      "definition_source_rel": "../../../tools/r-processing-tool.json"
-    },
-    {
-      "definition_source_rel": "../../../tools/event-tagger-tool.json"
-    }
-  ],
-  "jobs": [
-    {
-      "definition_source_rel": "./burn-summary-job-rc1.json"
-    },
-    {
-      "definition_source_rel": "./human-summary-job-rc1.json"
-    },
-    {
-      "definition_source_rel": "./infusion-summary-job-rc1.json"
-    },
-    {
-      "definition_source_rel": "./haldane-transform-job.json"
-    }
-  ],
-  "tool_contents": [
-    {
-      "definition_source_rel": "./evtagger-sample-config-tool-content-1.json"
-    }
-  ],
+{  
+   "definition_type":"bundle",
+   "code":"calorimeter_bundle_002",
+   "version":2,
+   "name":"Calorimeter Project Setup Bundle_2",
+   "description":"This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
+   "instruments":[  
+      {  
+         "definition_source_rel":"./base-instrument.json"
+      }
+   ],
+   "variables":[  
+      {  
+         "type":"double_setting",
+         "code":"pilrhealth:calrq:weight_in",
+         "name":"Weight In (Kg)",
+         "description":"Weight In (Kg)",
+         "units":"Kg",
+         "value":0,
+         "min":0,
+         "max":1000
+      },
+      {  
+         "type":"double_setting",
+         "code":"pilrhealth:calrq:weight_out",
+         "name":"Weight Out (Kg)",
+         "description":"Weight Out (Kg)",
+         "units":"Kg",
+         "value":0,
+         "min":0,
+         "max":1000
+      },
+      {  
+         "type":"integer_setting",
+         "code":"pilrhealth:calrq:energy_intake_measured",
+         "name":"Energy Intake Measured (kCal)",
+         "description":"Energy Intake Measured (kCal)",
+         "units":"kCal",
+         "value":0,
+         "min":0,
+         "max":40000
+      },
+      {  
+         "type":"integer_setting",
+         "code":"pilrhealth:calrq:energy_intake_predicted",
+         "name":"Energy Intake Predicted (kCal)",
+         "description":"Energy Intake Predicted (kCal)",
+         "units":"kCal",
+         "value":0,
+         "min":0,
+         "max":30000
+      },
+      {  
+         "type":"text_setting",
+         "code":"pilrhealth:calrq:diet",
+         "name":"Diet",
+         "description":"Diet"
+      },
+      {  
+         "type":"text_setting",
+         "code":"pilrhealth:calrq:exercise_level",
+         "name":"Exercise Level",
+         "description":"Exercise Level"
+      },
+      {  
+         "type":"text_setting",
+         "code":"pilrhealth:calrq:treatment",
+         "name":"Treatment",
+         "description":"Treatment"
+      },
+      {  
+         "type":"array_setting",
+         "code":"pilrhealth:calrq:multiple_n2",
+         "name":"Urine Nitrogen Mass",
+         "description":"Urine Nitrogen Mass",
+         "choices":[  
+            {  
+               "fields":[  
+                  {  
+                     "min":0,
+                     "max":10,
+                     "description":"Urine Nitrogen Mass",
+                     "name":"Urine Nitrogen Mass",
+                     "value":0,
+                     "code":"calrq:urine_nitrogen_value",
+                     "type":"double_setting",
+                     "units":""
+                  },
+                  {  
+                     "description":"Urine Nitrogen Collection Date",
+                     "name":"Urine Nitrogen Collection Date",
+                     "code":"calrq:urine_nitrogen_date",
+                     "type":"date_setting",
+                     "units":""
+                  },
+                  {  
+                     "description":"Urine Nitrogen Collection Time",
+                     "name":"Urine Nitrogen Collection Time",
+                     "code":"calrq:urine_nitrogen_time",
+                     "type":"time_setting",
+                     "units":""
+                  }
+               ]
+            }
+         ]
+      },
+      {  
+         "type":"double_setting",
+         "code":"pilrhealth:calrq:sleep_threshold",
+         "name":"Sleep Threshold",
+         "description":"Sleep Threshold",
+         "value":0,
+         "min":-100,
+         "max":100,
+         "required":false
+      }
+   ],
+   "tools":[  
+      {  
+         "definition_source_rel":"../../tools/r-processing-tool.json"
+      },
+      {  
+         "definition_source_rel":"../../tools/event-tagger-tool.json"
+      }
+   ],
+   "jobs":[  
+      {  
+         "definition_source_rel":"./burn-summary-job-rc1.json"
+      },
+      {  
+         "definition_source_rel":"./human-summary-job-rc1.json"
+      },
+      {  
+         "definition_source_rel":"./infusion-summary-job-rc1.json"
+      },
+      {  
+         "definition_source_rel":"./haldane-transform-job.json"
+      }
+   ],
+   "tool_contents":[  
+      {  
+         "definition_source_rel":"./evtagger-sample-config-tool-content-1.json"
+      }
+   ],
    "periods":[  
       {  
          "code":"active_period",
@@ -161,7 +166,7 @@
                      "code":"pilrhealth:calrq:chamber_volume",
                      "period":null,
                      "epoch":null,
-                     "value":27500
+                     "value":31000
                   },
                   {  
                      "code":"pilrhealth:calrq:co2_mfc",
@@ -174,7 +179,7 @@
                      "period":null,
                      "epoch":null,
                      "value":[  
-                        "Pull - Differential
+                        "Push - Absolute"
                      ]
                   },
                   {  
