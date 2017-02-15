@@ -1,4 +1,4 @@
-{
+﻿{
   "definition_type": "bundle",
   "code": "calorimeter_vars_bundle_001",
   "version": 1,
@@ -88,6 +88,16 @@
 		“period”: “period”
 		}]
       	}]
-    }
+    },
+	{
+    	"type":"double_setting",
+    	"code":"pilrhealth:calrq:sleep_threshold",
+	    "name":"Sleep Threshold",
+	    "description":"Sleep Threshold",
+	    "value":0,
+	    "min":-100,
+	    "max":100,
+	    "required":false
+	}
   ]
 }

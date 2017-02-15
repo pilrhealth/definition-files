@@ -160,5 +160,8 @@
         "to_name": "timestamp"
       }
     ]
-  }
+  },
+"jobs":[{
+    	"definition_source_abs":"https://raw.githubusercontent.com/pilrhealth/definition-files/master/standard/CalRQ/haldane-transform-job.json"
+	}]
 }

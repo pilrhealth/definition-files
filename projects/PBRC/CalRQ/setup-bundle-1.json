@@ -161,7 +161,7 @@
                      "code":"pilrhealth:calrq:chamber_volume",
                      "period":null,
                      "epoch":null,
-                     "value":30000
+                     "value":27500
                   },
                   {  
                      "code":"pilrhealth:calrq:co2_mfc",
@@ -174,7 +174,7 @@
                      "period":null,
                      "epoch":null,
                      "value":[  
-                        "Push - Absolute"
+                        "Pull - Differential
                      ]
                   },
                   {  
