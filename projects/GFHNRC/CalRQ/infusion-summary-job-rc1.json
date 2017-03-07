@@ -97,9 +97,9 @@
         "save_request": 0,
         "save_response": 0,
         "delete_if_successful": 0,
-        "package_url": "https://www.github.com/MeiResearchLtd/mei.calorimeter.r",
+        "package_url": "https://github.com/eruud/gf.calorimeter.r",
         "package_function": "process_cal_infusion",
-        "package_version": "GF-Custom",
+        "package_version": "master",
         "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
         "input_datasets": [
           {
