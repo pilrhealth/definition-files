@@ -52,7 +52,6 @@
         "MFC 4",
         "MFC 5"
       ],
-      "value": ["MFC 3"]
       "required": false,
       "multipleChoice": false
     },
@@ -68,7 +67,6 @@
         "MFC 4",
         "MFC 5"
       ],
-      "value": ["MFC 2"]
       "required": false,
       "multipleChoice": false
     },
