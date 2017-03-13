@@ -251,7 +251,7 @@
                 "optional" : true,
                 "label" : "Chamber Pressure",
                 "doc" : "Chamber Differential Pressure",
-                "units" : "???"
+                "units" : "in H2O"
           },
           {
             "name" : "ChamberHumidity",
