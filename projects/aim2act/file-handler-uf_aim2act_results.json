@@ -4,6 +4,7 @@
     "version": 1,
     "description": "A CSV data file output for UF Results",
     "definition_type": "file_handler",
+    "singleParticipantOnly" : true,
     "dataset": "pilrhealth:mobile:uf_results",
     "dataset_version": 1,
     "parser": {
