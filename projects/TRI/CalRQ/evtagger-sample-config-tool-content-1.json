@@ -23,6 +23,38 @@
         {
           "name": "Misc",
           "description": "Misc."
+        },
+        {
+          "name": "Rest",
+          "description": "Rest"
+        },
+        {
+          "name": "Invalid Data",
+          "description": "Invalid Data"
+        },
+        {
+          "name": "Post Meal",
+          "description": "Post Meal"
+        },
+        {
+          "name": "Regression Data",
+          "description": "Regression Data"
+        },
+        {
+          "name": "Short Circuit",
+          "description": "Short Circuit"
+        },
+        {
+          "name": "Null",
+          "description": "Null"
+        },
+        {
+          "name": "Infusion Study",
+          "description": "Infusion Study"
+        },
+        {
+          "name": "Burn Study",
+          "description": "Burn Study"
         }
       ],
       "bundles": [
@@ -43,6 +75,30 @@
             }
           ]
         }
+      ],
+"plots": [
+	{
+	  "name": "VO2/VCO2",
+          "description": "Line graph of VO2 and VCO2",
+   	  "minRange": 0,
+	  "maxRange": 1000,
+          "fields": [
+            {
+	      "dataset": "pilrhealth:calrq:calrq_data",
+              "dataField": "VO2",
+              "color": "red",
+              "timeField": "Time",
+              "plotType": "line"
+	    },
+            {
+	      "dataset": "pilrhealth:calrq:calrq_data",
+              "dataField": "VCO2",
+              "color": "blue",
+              "timeField": "Time",
+              "plotType": "line"
+	    }
+	  ]
+	}
       ]
     }
   ]
