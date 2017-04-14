@@ -1,0 +1,40 @@
+{
+  "name": "CRDS CH4 Data File",
+  "code": "pilrhealth:gfhnrc:crds_filech4",
+  "version": 1,
+  "description": "A CSV file handler for CRDS CH4 data files.",
+  "definition_type": "file_handler",
+  "dataset": "pilrhealth:gfhnrc:crdsch4",
+  "dataset_version": 1,
+  "parser": {
+    "parse_by": "column_name",
+    "col_name_row": 2,
+    "skip_rows": 2,
+    "null_expressions": ["NaN", "Inf", ""],
+    "date_format": "MM/dd/yyyy HH:mm:ss",
+    "data_mappings": [
+      {
+        "from_name": "[CH4]_ppm",
+        "to_name": "[CH4]_ppm"
+      },
+      {
+        "from_name": "[CH4]_ppm_sd",
+        "to_name": "[CH4]_ppm_sd"
+      },
+      {
+        "from_name": "[H2O]_ppm",
+        "to_name": "[H2O]_ppm"
+      },
+      {
+        "from_name": "[H2O]_ppm_sd",
+        "to_name": "[H2O]_ppm_sd"
+      }
+    ],
+    "metadata_mappings": [
+      {
+        "from_name": "Time",
+        "to_name": "timestamp"
+      }
+    ]
+  }
+}
