@@ -1,0 +1,354 @@
+{
+  "definition_type": "instrument_content",
+  "instrument_code": "mmm",
+  "version": 1,
+  "code": "mmm-configs",
+  "name": "EMA Configurations (megamile)",
+  "contents": 
+  [
+    {
+      "configurations": 
+      [
+        {
+          "name": "MMM",
+          "code": "16655",
+          "cardstacks": 
+          [
+            {
+              "id": "5970b985e4b033c7d5e63447",
+              "name": "Tasks",
+              "code": "tab2",
+              "type": "tab",
+              "icon": "887-notepad",
+              "sections": 
+              [
+                {
+                  "name": "instruction",
+                  "description": "This is an second example section and won't be shown on a tab",
+                  "code": "tab2_sample",
+                  "sectionNumber": 1
+                }
+              ],
+              "cards": 
+              [
+                {
+                  "card_type": "instruction",
+                  "order": 1,
+                  "section": 1,
+                  "data": {
+                    "title": "A second tab",
+                    "text": "The app is designed to have two tabs on the main page.  By default, their labels are 'Home' and 'Tasks', but you can edit the tab names and icons (for iOS only) to fit your needs.",
+                    "icon": "icon-comment-alt",
+                    "code": "tab2_sample",
+                    "color": "d15b47"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "5970b985e4b033c7d5e63446",
+              "name": "Home",
+              "code": "tab1",
+              "type": "tab",
+              "icon": "750-home",
+              "sections": 
+              [
+                {
+                  "name": "instruction",
+                  "description": "This is an example section and won't be shown on a tab",
+                  "code": "tab1_sample",
+                  "sectionNumber": 1
+                }
+              ],
+              "cards": 
+              [
+                {
+                  "card_type": "instruction",
+                  "order": 1,
+                  "section": 1,
+                  "data": {
+                    "title": "Welcome!",
+                    "text": "This is an example of a simple card to be shown on a tab, when the app is opened.  You can edit the cards that show on this tab, add more, and rearrange the order.",
+                    "icon": "icon-smile",
+                    "code": "tab1_sample",
+                    "color": "428bca"
+                  }
+                },
+                {
+                  "card_type": "survey_queue",
+                  "order": 2,
+                  "section": 1,
+                  "data": {
+                    "title": "Surveys",
+                    "code": "18545"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "5970ba58e4b033c7d5e6344c",
+              "name": "Initial setup",
+              "description": "initial",
+              "code": "66901",
+              "type": "survey",
+              "self_report": false,
+              "sections": 
+              [
+                {
+                  "name": "1",
+                  "code": "59328",
+                  "sectionNumber": 1
+                }
+              ],
+              "cards": 
+              [
+                {
+                  "card_type": "q_text",
+                  "order": 1,
+                  "section": 1,
+                  "data": {
+                    "title": "What name do you want to appear in the MMM statistics display?",
+                    "text": "Please use 10 characters or fewer.",
+                    "code": "avatar",
+                    "required": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "5970bc27e4b033c7d5e63457",
+              "name": "Daily miles",
+              "code": "76195",
+              "type": "survey",
+              "self_report": true,
+              "sections": 
+              [
+                {
+                  "name": "Walking",
+                  "code": "26080",
+                  "sectionNumber": 1
+                },
+                {
+                  "name": "walking stats",
+                  "code": "04462",
+                  "sectionNumber": 2
+                },
+                {
+                  "name": "Running",
+                  "code": "32908",
+                  "sectionNumber": 3
+                },
+                {
+                  "name": "running stats",
+                  "code": "36143",
+                  "sectionNumber": 4
+                },
+                {
+                  "name": "Cycling",
+                  "code": "33639",
+                  "sectionNumber": 5
+                },
+                {
+                  "name": "cycling stats",
+                  "code": "30818",
+                  "sectionNumber": 6
+                }
+              ],
+              "cards": 
+              [
+                {
+                  "card_type": "q_select",
+                  "order": 1,
+                  "section": 1,
+                  "data": {
+                    "title": "WALKING",
+                    "text": "Select one option below:",
+                    "code": "77983",
+                    "options": 
+                    [
+                      {
+                        "value": "0",
+                        "text": "I did not walk today",
+                        "order": 1
+                      },
+                      {
+                        "value": "1",
+                        "text": "I want to enter my walking stat in steps",
+                        "order": 2
+                      },
+                      {
+                        "value": "2",
+                        "text": "I want to enter my walking stat in miles",
+                        "order": 3
+                      }
+                    ],
+                    "options_string": "0|I did not walk today\r\n1|I want to enter my walking stat in steps\r\n2|I want to enter my walking stat in miles",
+                    "required": true
+                  }
+                },
+                {
+                  "card_type": "q_number",
+                  "order": 1,
+                  "section": 2,
+                  "data": {
+                    "title": "How many steps did you take today?",
+                    "code": "walk_steps",
+                    "required": true,
+                    "max": 12000,
+                    "scale": 1
+                  }
+                },
+                {
+                  "card_type": "q_number",
+                  "order": 2,
+                  "section": 2,
+                  "data": {
+                    "title": "How many miles did you walk today?",
+                    "code": "walk_miles",
+                    "required": true,
+                    "max": 30,
+                    "scale": 1
+                  }
+                },
+                {
+                  "card_type": "q_yesno",
+                  "order": 1,
+                  "section": 3,
+                  "data": {
+                    "title": "RUNNING",
+                    "text": "Did you run today?",
+                    "code": "61291",
+                    "required": true
+                  }
+                },
+                {
+                  "card_type": "q_number",
+                  "order": 1,
+                  "section": 4,
+                  "data": {
+                    "title": "How many miles did you run today?",
+                    "code": "run_miles",
+                    "required": false,
+                    "max": 30,
+                    "scale": 1
+                  }
+                },
+                {
+                  "card_type": "q_yesno",
+                  "order": 1,
+                  "section": 5,
+                  "data": {
+                    "title": "CYCLING",
+                    "text": "Did you cycle today?",
+                    "code": "30710",
+                    "required": true
+                  }
+                },
+                {
+                  "card_type": "q_number",
+                  "order": 1,
+                  "section": 6,
+                  "data": {
+                    "title": "How many miles did you cycle today?",
+                    "code": "cycle_miles",
+                    "required": false,
+                    "max": 200,
+                    "scale": 1
+                  }
+                }
+              ],
+              "rules": 
+              [
+                {
+                  "hide_sections": 
+                  [
+                    "walking stats"
+                  ],
+                  "expr": {
+                    "response_value": "0",
+                    "question_code": "77083"
+                  }
+                },
+                {
+                  "expr": {
+                    "response_value": "1",
+                    "question_code": "77083"
+                  },
+                  "hide_cards": 
+                  [
+                    "walk_miles"
+                  ]
+                },
+                {
+                  "expr": {
+                    "response_value": "2",
+                    "question_code": "77083"
+                  },
+                  "hide_cards": 
+                  [
+                    "walk_steps"
+                  ]
+                },
+                {
+                  "expr": {
+                    "response_value": "No",
+                    "question_code": "61291"
+                  },
+                  "hide_cards": 
+                  [
+                    "run_miles"
+                  ]
+                },
+                {
+                  "expr": {
+                    "response_value": "No",
+                    "question_code": "30710"
+                  },
+                  "hide_cards": 
+                  [
+                    "cycle_miles"
+                  ]
+                }
+              ],
+              "rules_string": "[\r\n{ \"expr\": { \"question_code\": \"77083\", \"response_value\": \"0\" }, \"hide_sections\": [ \"walking stats\" ] },\r\n{ \"expr\": { \"question_code\": \"77083\", \"response_value\": \"1\" }, \"hide_cards\": [ \"walk_miles\" ] },\r\n{ \"expr\": { \"question_code\": \"77083\", \"response_value\": \"2\" }, \"hide_cards\": [ \"walk_steps\" ] },\r\n{ \"expr\": { \"question_code\": \"61291\", \"response_value\": \"No\" }, \"hide_cards\": [ \"run_miles\" ] },\r\n{ \"expr\": { \"question_code\": \"30710\", \"response_value\": \"No\" }, \"hide_cards\": [ \"cycle_miles\" ] }\r\n]"
+            }
+          ],
+          "trigger_criteria": 
+          [
+          ],
+          "triggers": 
+          [
+            {
+              "code": "Initial",
+              "events": 
+              [
+                {
+                  "type": "annual",
+                  "code": "1234"
+                }
+              ],
+              "conditions": 
+              [
+              ],
+              "actions": 
+              [
+                {
+                  "type": "survey_notification",
+                  "survey": "66901",
+                  "reminder_survey": null,
+                  "reminder_delay": null,
+                  "reminder_timeofday": null,
+                  "expiration_timeout": null,
+                  "expiration_timeofday": "11:59:59"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "languages": 
+      [
+      ]
+    }
+  ]
+}

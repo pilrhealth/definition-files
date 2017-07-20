@@ -9,6 +9,9 @@
     "controllers": {
       "configure": "EmaOtsConfig",
       "coordinate": "EmaOts"
+    },
+    "services": {
+      "handleContent": "EmaOtsConfig"
     }
   },
   "settings": [

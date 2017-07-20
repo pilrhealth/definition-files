@@ -1,0 +1,17 @@
+{
+  "definition_type": "bundle",
+  "code": "",
+  "version": 1,
+  "name": "Sample project components and configuration for PiLR EMA.",
+  "description": "This bundle adds the PiLR EMA app instrument to your project, as well as a sample EMA Configuration and project period.",
+  "instruments": [
+    {
+      "definition_source_rel": "./mmm-instrument.json"
+    }
+  ],
+  "instrument_contents": [
+    {
+      "definition_source_rel": "./mmm-configs.json"
+    }
+  ]
+}
