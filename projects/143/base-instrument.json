@@ -5,13 +5,20 @@
   "code": "mmm",
   "version": 1,
   "customizations": {
-    "package": "com.pilrhealth.instruments.mmm",
-    "classnamePrefix": "Mmm",
     "apix": true,
     "controllers": {
-      "coordinate": "Mmm"
+      "configure": "EmaOtsConfig",
+      "coordinate": "EmaOts"
     }
   },
+  "settings": [
+    {
+      "type": "configuration_setting",
+      "code": "ema_ots:ema_config",
+      "name": "Configuration",
+      "description": "The configuration of the content to deliver to the participant."
+    }
+  ],
   "datasets": [
     {
       "name": "App Log",
