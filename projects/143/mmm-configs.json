@@ -4,15 +4,15 @@
   "version": 1,
   "code": "mmm-configs",
   "name": "EMA Configurations (megamile)",
-  "contents": 
+  "contents":
   [
     {
-      "configurations": 
+      "configurations":
       [
         {
           "name": "MMM",
           "code": "16655",
-          "cardstacks": 
+          "cardstacks":
           [
             {
               "id": "5970b985e4b033c7d5e63447",
@@ -20,7 +20,7 @@
               "code": "tab2",
               "type": "tab",
               "icon": "887-notepad",
-              "sections": 
+              "sections":
               [
                 {
                   "name": "instruction",
@@ -29,7 +29,7 @@
                   "sectionNumber": 1
                 }
               ],
-              "cards": 
+              "cards":
               [
                 {
                   "card_type": "instruction",
@@ -51,7 +51,7 @@
               "code": "tab1",
               "type": "tab",
               "icon": "750-home",
-              "sections": 
+              "sections":
               [
                 {
                   "name": "instruction",
@@ -60,7 +60,7 @@
                   "sectionNumber": 1
                 }
               ],
-              "cards": 
+              "cards":
               [
                 {
                   "card_type": "instruction",
@@ -80,7 +80,8 @@
                   "section": 1,
                   "data": {
                     "title": "Surveys",
-                    "code": "18545"
+                    "code": "18545",
+                    "color": "ffb752"
                   }
                 }
               ]
@@ -92,7 +93,7 @@
               "code": "66901",
               "type": "survey",
               "self_report": false,
-              "sections": 
+              "sections":
               [
                 {
                   "name": "1",
@@ -100,7 +101,7 @@
                   "sectionNumber": 1
                 }
               ],
-              "cards": 
+              "cards":
               [
                 {
                   "card_type": "q_text",
@@ -118,25 +119,15 @@
             {
               "id": "5970bc27e4b033c7d5e63457",
               "name": "Daily miles",
-              "code": "76195",
+              "code": "mileage",
               "type": "survey",
               "self_report": true,
-              "sections": 
+              "sections":
               [
-                {
-                  "name": "Walking",
-                  "code": "26080",
-                  "sectionNumber": 1
-                },
                 {
                   "name": "walking stats",
                   "code": "04462",
                   "sectionNumber": 2
-                },
-                {
-                  "name": "Running",
-                  "code": "32908",
-                  "sectionNumber": 3
                 },
                 {
                   "name": "running stats",
@@ -144,60 +135,13 @@
                   "sectionNumber": 4
                 },
                 {
-                  "name": "Cycling",
-                  "code": "33639",
-                  "sectionNumber": 5
-                },
-                {
                   "name": "cycling stats",
                   "code": "30818",
                   "sectionNumber": 6
                 }
               ],
-              "cards": 
+              "cards":
               [
-                {
-                  "card_type": "q_select",
-                  "order": 1,
-                  "section": 1,
-                  "data": {
-                    "title": "WALKING",
-                    "text": "Select one option below:",
-                    "code": "77983",
-                    "options": 
-                    [
-                      {
-                        "value": "0",
-                        "text": "I did not walk today",
-                        "order": 1
-                      },
-                      {
-                        "value": "1",
-                        "text": "I want to enter my walking stat in steps",
-                        "order": 2
-                      },
-                      {
-                        "value": "2",
-                        "text": "I want to enter my walking stat in miles",
-                        "order": 3
-                      }
-                    ],
-                    "options_string": "0|I did not walk today\r\n1|I want to enter my walking stat in steps\r\n2|I want to enter my walking stat in miles",
-                    "required": true
-                  }
-                },
-                {
-                  "card_type": "q_number",
-                  "order": 1,
-                  "section": 2,
-                  "data": {
-                    "title": "How many steps did you take today?",
-                    "code": "walk_steps",
-                    "required": true,
-                    "max": 12000,
-                    "scale": 1
-                  }
-                },
                 {
                   "card_type": "q_number",
                   "order": 2,
@@ -208,17 +152,6 @@
                     "required": true,
                     "max": 30,
                     "scale": 1
-                  }
-                },
-                {
-                  "card_type": "q_yesno",
-                  "order": 1,
-                  "section": 3,
-                  "data": {
-                    "title": "RUNNING",
-                    "text": "Did you run today?",
-                    "code": "61291",
-                    "required": true
                   }
                 },
                 {
@@ -234,17 +167,6 @@
                   }
                 },
                 {
-                  "card_type": "q_yesno",
-                  "order": 1,
-                  "section": 5,
-                  "data": {
-                    "title": "CYCLING",
-                    "text": "Did you cycle today?",
-                    "code": "30710",
-                    "required": true
-                  }
-                },
-                {
                   "card_type": "q_number",
                   "order": 1,
                   "section": 6,
@@ -257,36 +179,16 @@
                   }
                 }
               ],
-              "rules": 
+              "rules":
               [
                 {
-                  "hide_sections": 
-                  [
-                    "walking stats"
-                  ],
                   "expr": {
-                    "response_value": "0",
-                    "question_code": "77083"
-                  }
-                },
-                {
-                  "expr": {
-                    "response_value": "1",
-                    "question_code": "77083"
+                    "response_value": "No",
+                    "question_code": "10327"
                   },
-                  "hide_cards": 
+                  "hide_cards":
                   [
                     "walk_miles"
-                  ]
-                },
-                {
-                  "expr": {
-                    "response_value": "2",
-                    "question_code": "77083"
-                  },
-                  "hide_cards": 
-                  [
-                    "walk_steps"
                   ]
                 },
                 {
@@ -294,7 +196,7 @@
                     "response_value": "No",
                     "question_code": "61291"
                   },
-                  "hide_cards": 
+                  "hide_cards":
                   [
                     "run_miles"
                   ]
@@ -304,33 +206,33 @@
                     "response_value": "No",
                     "question_code": "30710"
                   },
-                  "hide_cards": 
+                  "hide_cards":
                   [
                     "cycle_miles"
                   ]
                 }
               ],
-              "rules_string": "[\r\n{ \"expr\": { \"question_code\": \"77083\", \"response_value\": \"0\" }, \"hide_sections\": [ \"walking stats\" ] },\r\n{ \"expr\": { \"question_code\": \"77083\", \"response_value\": \"1\" }, \"hide_cards\": [ \"walk_miles\" ] },\r\n{ \"expr\": { \"question_code\": \"77083\", \"response_value\": \"2\" }, \"hide_cards\": [ \"walk_steps\" ] },\r\n{ \"expr\": { \"question_code\": \"61291\", \"response_value\": \"No\" }, \"hide_cards\": [ \"run_miles\" ] },\r\n{ \"expr\": { \"question_code\": \"30710\", \"response_value\": \"No\" }, \"hide_cards\": [ \"cycle_miles\" ] }\r\n]"
+              "rules_string": "[\r\n{ \"expr\": { \"question_code\": \"10327\", \"response_value\": \"No\" }, \"hide_cards\": [ \"walk_miles\" ] },\r\n{ \"expr\": { \"question_code\": \"61291\", \"response_value\": \"No\" }, \"hide_cards\": [ \"run_miles\" ] },\r\n{ \"expr\": { \"question_code\": \"30710\", \"response_value\": \"No\" }, \"hide_cards\": [ \"cycle_miles\" ] }\r\n]"
             }
           ],
-          "trigger_criteria": 
+          "trigger_criteria":
           [
           ],
-          "triggers": 
+          "triggers":
           [
             {
               "code": "Initial",
-              "events": 
+              "events":
               [
                 {
                   "type": "annual",
                   "code": "1234"
                 }
               ],
-              "conditions": 
+              "conditions":
               [
               ],
-              "actions": 
+              "actions":
               [
                 {
                   "type": "survey_notification",
@@ -346,7 +248,7 @@
           ]
         }
       ],
-      "languages": 
+      "languages":
       [
       ]
     }
