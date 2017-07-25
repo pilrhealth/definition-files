@@ -151,6 +151,7 @@
                     "code": "walk_miles",
                     "required": true,
                     "max": 30,
+                    "min": 0,
                     "scale": 1
                   }
                 },
@@ -163,6 +164,7 @@
                     "code": "run_miles",
                     "required": false,
                     "max": 30,
+                    "min": 0,
                     "scale": 1
                   }
                 },
@@ -175,6 +177,7 @@
                     "code": "cycle_miles",
                     "required": false,
                     "max": 200,
+                    "min": 0,
                     "scale": 1
                   }
                 }
