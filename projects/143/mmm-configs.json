@@ -1,0 +1,300 @@
+{
+  "definition_type": "instrument_content",
+  "instrument_code": "mmm",
+  "version": 1,
+  "code": "mmm-configs",
+  "name": "EMA Configurations (megamile)",
+  "contents":
+  [
+    {
+      "configurations":
+      [
+        {
+          "name": "MMM",
+          "code": "16655",
+          "cardstacks":
+          [
+            {
+              "id": "597639f4e4b079c8c826c9b7",
+              "name": "Initial setup",
+              "description": "initial",
+              "code": "66901",
+              "type": "survey",
+              "self_report": false,
+              "sections":
+              [
+                {
+                  "name": "1",
+                  "code": "59328",
+                  "sectionNumber": 1
+                }
+              ],
+              "cards":
+              [
+                {
+                  "card_type": "q_text",
+                  "order": 1,
+                  "section": 1,
+                  "data": {
+                    "title": "What name do you want to appear in the MMM statistics display?",
+                    "text": "Please use 10 characters or fewer.",
+                    "code": "avatar",
+                    "required": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "597639f4e4b079c8c826c9b6",
+              "name": "Home",
+              "code": "tab1",
+              "type": "tab",
+              "icon": "750-home",
+              "sections":
+              [
+                {
+                  "name": "instruction",
+                  "description": "This is an example section and won't be shown on a tab",
+                  "code": "tab1_sample",
+                  "sectionNumber": 1
+                }
+              ],
+              "cards":
+              [
+                {
+                  "card_type": "survey_queue",
+                  "order": 2,
+                  "section": 1,
+                  "data": {
+                    "title": "Surveys",
+                    "code": "18545",
+                    "color": "ffb752"
+                  }
+                },
+                {
+                  "card_type": "information",
+                  "order": 3,
+                  "section": 1,
+                  "data": {
+                    "title": "Welcome!",
+                    "text": "Let's get moving!  Regular physical activity is one of the most important things you can to ensure a healthy life.",
+                    "icon": "icon-heart",
+                    "code": "63994",
+                    "link_text": "This Link",
+                    "image": "https://pixabay.com/en/running-runner-long-distance-573762/"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "597639f4e4b079c8c826c9b5",
+              "name": "Tasks",
+              "code": "tab2",
+              "type": "tab",
+              "icon": "887-notepad",
+              "sections":
+              [
+                {
+                  "name": "instruction",
+                  "description": "This is an second example section and won't be shown on a tab",
+                  "code": "tab2_sample",
+                  "sectionNumber": 1
+                }
+              ],
+              "cards":
+              [
+                {
+                  "card_type": "instruction",
+                  "order": 1,
+                  "section": 1,
+                  "data": {
+                    "title": "A second tab",
+                    "text": "The app is designed to have two tabs on the main page.  By default, their labels are 'Home' and 'Tasks', but you can edit the tab names and icons (for iOS only) to fit your needs.",
+                    "icon": "icon-comment-alt",
+                    "code": "tab2_sample",
+                    "color": "d15b47"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "597639f4e4b079c8c826c9b8",
+              "name": "Daily miles",
+              "code": "mileage",
+              "type": "survey",
+              "self_report": true,
+              "sections":
+              [
+                {
+                  "name": "walking stats",
+                  "code": "04462",
+                  "sectionNumber": 1
+                },
+                {
+                  "name": "running stats",
+                  "code": "36143",
+                  "sectionNumber": 2
+                },
+                {
+                  "name": "cycling stats",
+                  "code": "30818",
+                  "sectionNumber": 3
+                }
+              ],
+              "cards":
+              [
+                {
+                  "card_type": "q_number",
+                  "order": 1,
+                  "section": 1,
+                  "data": {
+                    "title": "How many miles did you walk today?",
+                    "code": "walk_miles",
+                    "required": true,
+                    "max": 40,
+                    "scale": 1
+                  }
+                },
+                {
+                  "card_type": "q_number",
+                  "order": 1,
+                  "section": 2,
+                  "data": {
+                    "title": "How many miles did you run today?",
+                    "code": "run_miles",
+                    "required": false,
+                    "max": 40,
+                    "scale": 1
+                  }
+                },
+                {
+                  "card_type": "instruction",
+                  "order": 1,
+                  "section": 3,
+                  "data": {
+                    "title": "Last Question",
+                    "text": "Please answer the following question.",
+                    "code": "00890",
+                    "color": "428bca"
+                  }
+                },
+                {
+                  "card_type": "q_number",
+                  "order": 2,
+                  "section": 3,
+                  "data": {
+                    "title": "How many miles did you cycle today?",
+                    "code": "cycle_miles",
+                    "required": false,
+                    "max": 200,
+                    "scale": 1
+                  }
+                }
+              ],
+              "rules":
+              [
+                {
+                  "expr": {
+                    "response_value": "No",
+                    "question_code": "10327"
+                  },
+                  "hide_cards":
+                  [
+                    "walk_miles"
+                  ]
+                },
+                {
+                  "expr": {
+                    "response_value": "No",
+                    "question_code": "61291"
+                  },
+                  "hide_cards":
+                  [
+                    "run_miles"
+                  ]
+                },
+                {
+                  "expr": {
+                    "response_value": "No",
+                    "question_code": "30710"
+                  },
+                  "hide_cards":
+                  [
+                    "cycle_miles"
+                  ]
+                }
+              ],
+              "rules_string": "[\r\n{ \"expr\": { \"question_code\": \"10327\", \"response_value\": \"No\" }, \"hide_cards\": [ \"walk_miles\" ] },\r\n{ \"expr\": { \"question_code\": \"61291\", \"response_value\": \"No\" }, \"hide_cards\": [ \"run_miles\" ] },\r\n{ \"expr\": { \"question_code\": \"30710\", \"response_value\": \"No\" }, \"hide_cards\": [ \"cycle_miles\" ] }\r\n]"
+            },
+            {
+              "id": "597f8d72e4b03e0c498b6822",
+              "name": "Team Names",
+              "code": "33535",
+              "type": "survey",
+              "self_report": false,
+              "sections":
+              [
+                {
+                  "name": "1",
+                  "description": "Team Names",
+                  "code": "24371",
+                  "sectionNumber": 1
+                }
+              ]
+            }
+          ],
+          "trigger_criteria":
+          [
+          ],
+          "triggers":
+          [
+            {
+              "code": "Initial",
+              "events":
+              [
+                {
+                  "type": "annual",
+                  "code": "1234"
+                }
+              ],
+              "conditions":
+              [
+              ],
+              "actions":
+              [
+                {
+                  "type": "survey_notification",
+                  "survey": "66901",
+                  "reminder_survey": null,
+                  "reminder_delay": null,
+                  "reminder_timeofday": null,
+                  "expiration_timeout": null,
+                  "expiration_timeofday": "23:59:59"
+                }
+              ]
+            },
+            {
+              "code": "trigger2",
+              "events":
+              [
+                {
+                  "type": "survey_submitted",
+                  "survey": "66901"
+                }
+              ],
+              "conditions":
+              [
+              ],
+              "actions":
+              [
+              ]
+            }
+          ]
+        }
+      ],
+      "languages":
+      [
+      ]
+    }
+  ]
+}
