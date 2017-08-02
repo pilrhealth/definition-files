@@ -929,18 +929,33 @@
       "statusCategory": false,
       "groups": [
         {
-          "code": "team_a",
-          "name": "Team A",
+          "code": "initial_team",
+          "name": "Initial Team",
           "defaultGroup": true
         },
         {
-          "code": "team_b",
-          "name": "Team B",
+          "code": "team_1",
+          "name": "Team 1",
           "defaultGroup": false
         },
         {
-          "code": "team_c",
-          "name": "Team C",
+          "code": "team_2",
+          "name": "Team 2",
+          "defaultGroup": false
+        },
+        {
+          "code": "team_3",
+          "name": "Team 3",
+          "defaultGroup": false
+        },
+        {
+          "code": "team_4",
+          "name": "Team 4",
+          "defaultGroup": false
+        },
+        {
+          "code": "team_5",
+          "name": "Team 5",
           "defaultGroup": false
         }
       ]
