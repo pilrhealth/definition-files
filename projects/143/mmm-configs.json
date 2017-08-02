@@ -151,6 +151,7 @@
                     "title": "How many miles did you walk today?",
                     "code": "walk_miles",
                     "required": true,
+                    "min": 0,
                     "max": 40,
                     "scale": 1
                   }
@@ -163,6 +164,7 @@
                     "title": "How many miles did you run today?",
                     "code": "run_miles",
                     "required": false,
+                    "min": 0,
                     "max": 40,
                     "scale": 1
                   }
@@ -186,6 +188,7 @@
                     "title": "How many miles did you cycle today?",
                     "code": "cycle_miles",
                     "required": false,
+                    "min": 0,
                     "max": 200,
                     "scale": 1
                   }
