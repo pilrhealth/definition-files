@@ -869,8 +869,7 @@
               {
                 "name": "log_day",
                 "label": "Log Date",
-                "type": "string",
-                "category": "date"
+                "type": "string"
               },
               {
                 "name": "minutes_logged",
