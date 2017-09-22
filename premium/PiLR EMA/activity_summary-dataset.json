@@ -1,0 +1,48 @@
+{
+  "definition_type": "dataset",
+  "name": "Activity Summary",
+  "code": "pilrhealth:mobile:act_sum",
+  "calculationServiceName": "activitySummaryService",
+  "schemas": [
+    {
+      "type": "concordia",
+      "name": "1.0",
+      "schemaVersion": 1,
+      "specification": {
+        "type": "object",
+        "fields": [
+          {
+            "name": "epoch_name",
+            "label": "Epoch Name",
+            "type": "string"
+          },
+          {
+            "name": "cum_log_days_by_epoch",
+            "label": "Cumulative # Days Logged in Epoch",
+            "type": "number"
+          },
+          {
+            "name": "cum_log_epochs",
+            "label": "Cumulative # Epochs Logged",
+            "type": "number"
+          },
+          {
+            "name": "cum_log_days",
+            "label": "Cumulative # Days Logged",
+            "type": "number"
+          },
+          {
+            "name": "log_day",
+            "label": "Log Date",
+            "type": "string"
+          },
+          {
+            "name": "minutes_logged",
+            "label": "Minutes of Tasks Logged",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ]
+}
