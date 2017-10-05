@@ -1,0 +1,43 @@
+{
+  "definition_type": "dataset",
+  "name": "Notification Compliance by Epoch",
+  "code": "pilrhealth:mobile:epoch_compliance",
+  "calculationServiceName": "epochComplianceReportService",
+  "schemas": [
+    {
+      "type": "concordia",
+      "name": "1.0",
+      "schemaVersion": 1,
+      "specification": {
+        "type": "object",
+        "fields": [
+          {
+            "name": "epoch_name",
+            "label": "Epoch Name",
+            "type": "string"
+          },
+          {
+            "name": "epoch_notifications",
+            "label": "Notifications",
+            "type": "number"
+          },
+          {
+            "name": "epoch_responses",
+            "label": "Responses",
+            "type": "number"
+          },
+          {
+            "name": "cum_notifications",
+            "label": "Cumulative Notifications",
+            "type": "number"
+          },
+          {
+            "name": "cum_responses",
+            "label": "Cumulative Responses",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ]
+}
