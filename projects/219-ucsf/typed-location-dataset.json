@@ -1,0 +1,32 @@
+{
+  "definition_type" : "dataset",
+  "name": "Typed Locations",
+  "code": "pilrhealth:mobile:typed_location",
+  "schemas": [
+    {
+      "clazz": "com.pilrhealth.data.ConcordiaSchema",
+      "name": "Version 1",
+      "schemaVersion": 1,
+      "specification": {
+        "type": "object",
+        "fields": [
+          {
+            "type" : "string",
+            "name" : "location_type_name",
+            "label" : "location type"
+          },
+          {
+            "type" : "number",
+            "name" : "latitude",
+            "label" : "latitude"
+          },
+          {
+            "type" : "number",
+            "name" : "longitude",
+            "label" : "longitude"
+          }
+        ]
+      }
+    }
+  ]
+}
