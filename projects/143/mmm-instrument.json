@@ -919,46 +919,5 @@
         }
       ]
     }
-  ],
-  "group_categories": [
-    {
-      "code": "mmmcg_primary",
-      "name": "MMM Challenge Groups",
-      "membershipRequired": false,
-      "configCategory": false,
-      "statusCategory": false,
-      "groups": [
-        {
-          "code": "initial_team",
-          "name": "Initial Team",
-          "defaultGroup": true
-        },
-        {
-          "code": "team_1",
-          "name": "Team 1",
-          "defaultGroup": false
-        },
-        {
-          "code": "team_2",
-          "name": "Team 2",
-          "defaultGroup": false
-        },
-        {
-          "code": "team_3",
-          "name": "Team 3",
-          "defaultGroup": false
-        },
-        {
-          "code": "team_4",
-          "name": "Team 4",
-          "defaultGroup": false
-        },
-        {
-          "code": "team_5",
-          "name": "Team 5",
-          "defaultGroup": false
-        }
-      ]
-    }
   ]
 }
