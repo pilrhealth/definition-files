@@ -1,0 +1,33 @@
+{
+    "definition_type": "file_handler",
+    "name": "Location Type",
+    "code": "pilrhealth:mobile:typed_location",
+    "version": 1,
+    "description": "Upload a CSV file of typed locations to a participant",
+    "singleParticipantOnly" : true,
+    "dataset": "pilrhealth:mobile:typed_location",
+    "dataset_version": 1,
+    "allow_dups": true,
+    "parser": {
+        "parse_by": "column_name",
+        "col_name_row": 1,
+        "skip_rows": 1,
+        "null_expressions": ["NaN", "Inf", ""],
+        "date_format": "yyyy-MM-dd'T'HH:mm:ss",
+        "data_mappings": [
+            {
+                "from_name": "location_type_name",
+                "to_name": "location_type_name"
+            },
+            {
+                "from_name": "latitude",
+                "to_name": "latitude"
+            },
+            {
+                "from_name": "longitude",
+                "to_name": "longitude"
+            }
+        ],
+        "metadata_mappings": []
+    }
+}
