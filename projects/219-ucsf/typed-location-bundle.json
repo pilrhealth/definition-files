@@ -1,0 +1,17 @@
+{
+  "definition_type": "bundle",
+  "code": "typed_location_bundle",
+  "version": 1,
+  "name": "location type handler & dataset",
+  "description": "instead of importing separatly",
+  "datasets": [
+    {
+      "definition_source_rel": "./typed-location-dataset.json"
+    }
+  ],
+  "file_handlers": [
+    {
+      "definition_source_rel": "./type-location-file_handlers.json"
+    }
+  ]
+}
