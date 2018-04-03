@@ -11,7 +11,7 @@
   ],
   "file_handlers": [
     {
-      "definition_source_rel": "./type-location-file-handler.json"
+      "definition_source_rel": "./typed-location-file-handler.json"
     }
   ]
 }
