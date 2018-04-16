@@ -1,0 +1,35 @@
+{
+  "name": "CalRQ Header File",
+  "code": "pilrhealth:calorimeter:header",
+  "version": 1,
+  "description": "Calorimeter Header File Upload",
+  "doc": "Expects .txt because that's what is generated.\n",
+  "definition_type": "file_handler",
+  "service": "settingsUpload",
+  "allow_dups": true,
+  "fileTypes": ".csv,.txt",
+  "col_name_row": 2,
+  "first_data_row": 3,
+  "null_expressions": ["NaN", "Inf", ""],
+  "date_format": "MM/dd/yyy HH:mm:ss",
+  "data_mappings": [
+    {
+      "from_name": "InflowO2Slope",
+      "to_name": "pilrhealth:calrq:in_o2"
+    },
+    {
+      "from_name": "DISABLE-Weight",
+      "to_name": "pilrhealth:calrq:weight_in"
+    }
+  ],
+  "metadata_mappings": [
+    {
+      "from_name": "Time",
+      "to_name": "timestamp"
+    },
+    {
+      "from_name": "Subject ID",
+      "to_name": "participant"
+    }
+  ]
+}
