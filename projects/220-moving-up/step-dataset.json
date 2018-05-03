@@ -1,0 +1,33 @@
+
+{
+  "definition_type" : "dataset",
+  "name": "Step Count",
+  "code": "pilrhealth:mobile:stepcount",
+  "schemas": [
+    {
+      "clazz": "com.pilrhealth.data.ConcordiaSchema",
+      "name": "Version 1",
+      "schemaVersion": 1,
+      "specification": {
+        "type": "object",
+        "fields": [
+          {
+            "type" : "number",
+            "name" : "step_count",
+            "label" : "step count"
+          },
+          {
+            "type" : "number",
+            "name" : "step_per_minute_threshold",
+            "label" : "step-per-minute threshold"
+          },
+          {
+            "type" : "number",
+            "name" : "interval_seconds",
+            "label" : "interval length (secs)"
+          }
+        ]
+      }
+    }
+  ]
+}
