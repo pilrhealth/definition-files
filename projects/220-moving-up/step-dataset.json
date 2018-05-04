@@ -22,7 +22,7 @@
             "doc" : "start time of interval, e.g., 2015-10-09T12:20:00-05:00.",
             "type" : "string",
             "category": "date",
-            "label" : "interval length (secs)"
+            "label" : "interval start time"
           },
           {
             "name" : "interval_seconds",
