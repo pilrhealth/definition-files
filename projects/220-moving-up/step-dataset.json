@@ -1,8 +1,8 @@
-
 {
   "definition_type" : "dataset",
   "name": "Step Count",
   "code": "pilrhealth:mobile:stepcount",
+  "doc": "Step counts over fixed time intervals",
   "schemas": [
     {
       "clazz": "com.pilrhealth.data.ConcordiaSchema",
@@ -12,19 +12,29 @@
         "type": "object",
         "fields": [
           {
-            "type" : "number",
             "name" : "step_count",
+            "doc" : "number of steps detected over the specified interval",
+            "type" : "number",
             "label" : "step count"
           },
           {
-            "type" : "number",
-            "name" : "step_per_minute_threshold",
-            "label" : "step-per-minute threshold"
+            "name" : "interval_start",
+            "doc" : "start time of interval, e.g., 2015-10-09T12:20:00-05:00.",
+            "type" : "string",
+            "category": "date",
+            "label" : "interval length (secs)"
           },
           {
-            "type" : "number",
             "name" : "interval_seconds",
+            "doc" : "length of the interval",
+            "type" : "number",
             "label" : "interval length (secs)"
+          },
+          {
+            "name" : "step_per_minute_threshold",
+            "doc" : "value used in 'step point' calculation for this interval",
+            "type" : "number",
+            "label" : "step-per-minute threshold"
           }
         ]
       }
