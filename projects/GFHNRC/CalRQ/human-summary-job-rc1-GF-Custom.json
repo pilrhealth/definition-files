@@ -254,13 +254,17 @@
         "mapping": "multiple_n2"
       },
       {
-		"code": "pilrhealth:calrq:rest_durations",
-		"mapping": "rest_durations"
+	"code": "pilrhealth:calrq:rest_durations",
+	"mapping": "rest_durations"
       },
-	  {
-		"code":"pilrhealth:calrq:sleep_threshold",
-		"mapping":"sleep_threshold"
-	  }
+      {
+	"code":"pilrhealth:calrq:sleep_threshold",
+	"mapping":"sleep_threshold"
+      }
+      {
+	"code": "pilrhealth:calrq:rest_durations",
+	"mapping": "rest_durations"
+      },
     ],
     "filter_params": [
       "participant",
