@@ -1,8 +1,8 @@
 {
 	"definition_type": "job",
-	"code": "calorimeter_human_summary_job_rc1",
-	"name": "Human CalRQ Summary v1.2",
-	"version": 1,
+	"code": "calorimeter_human_summary_job",
+	"name": "Human CalRQ Summary v2.0",
+	"version": 2,
 	"description": "Compute summaries and generate report for CalRQ human studies.",
 	"datasets": [{
 			"name": "CalRQ Human Summary",
