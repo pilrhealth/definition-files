@@ -108,11 +108,11 @@
 		}
 	],
 	"jobs": [{
-			"definition_source_rel": "./burn-summary-job.json"
+			"definition_source_rel": "./burn-summary-job-rc1.json"
 		}, {
-			"definition_source_rel": "./human-summary-job.json"
+			"definition_source_rel": "./human-summary-job-rc1.json"
 		}, {
-			"definition_source_rel": "./infusion-summary-job.json"
+			"definition_source_rel": "./infusion-summary-job-rc1.json"
 		}, {
 			"definition_source_rel": "./haldane-transform-job.json"
 		}
