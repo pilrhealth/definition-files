@@ -42,6 +42,21 @@
         },
         {
             "type":"list_setting",
+            "code":"pilrhealth:calrq:expected",
+            "name":"Infusion Equations",
+            "description":"Calculation method of infusion data",
+            "choices":[
+                "Push - Corrected Derivative",
+                "Push - Convert to Pull",
+                "Pull - Normal",
+                "Both - Approximate Equations"
+            ],
+            "value": ["Push - Corrected Derivative"],
+            "required":true,
+            "multipleChoice":false
+        },
+        {
+            "type":"list_setting",
             "code":"pilrhealth:calrq:n2_mfc",
             "name":"N2 MFC Assignment",
             "description":"N2 MFC Assignment",
