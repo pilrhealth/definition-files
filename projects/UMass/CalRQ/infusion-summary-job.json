@@ -1,15 +1,15 @@
 {
 	"definition_type": "job",
-	"code": "calorimeter_burn_summary_job_rc1",
-	"name": "Burn CalRQ Summary RC1",
-	"version": 1,
-	"description": "Compute summaries and generate report for CalRQ burn studies.",
+	"code": "calorimeter_infusion_summary_job_v2",
+	"name": "Infusion CalRQ Summary v2.0",
+	"version": 2,
+	"description": "Compute summaries and generate report for CalRQ infusion studies.",
 	"datasets": [{
-			"name": "CalRQ Burn Summary",
-			"code": "pilrhealth:calrq:burn_summary",
+			"name": "CalRQ Infusion Summary",
+			"code": "pilrhealth:calrq:infusion_summary",
 			"schemas": [{
 					"type": "concordia",
-					"name": "CalRQ Burn Summary",
+					"name": "CalRQ Infusion Summary",
 					"schemaVersion": 1,
 					"specification": {
 						"type": "object",
@@ -20,73 +20,56 @@
 							}, {
 								"name": "start_time",
 								"type": "string",
-								"category": "date",
-								"label": "Summary Start Time"
+								"category": "date"
 							}, {
 								"name": "end_time",
 								"type": "string",
-								"category": "date",
-								"label": "Summary End Time"
+								"category": "date"
 							}, {
 								"name": "vco2_meas",
-								"type": "number",
-								"label": "VCO2 Measured"
+								"type": "number"
 							}, {
 								"name": "vo2_meas",
-								"type": "number",
-								"label": "VO2 Measured"
+								"type": "number"
 							}, {
 								"name": "ee_meas",
-								"type": "number",
-								"label": "EE Measured"
+								"type": "number"
 							}, {
 								"name": "rq_meas",
-								"type": "number",
-								"label": "RQ Measured"
+								"type": "number"
 							}, {
 								"name": "vco2_exp",
-								"type": "number",
-								"label": "VCO2 Expected"
+								"type": "number"
 							}, {
 								"name": "vo2_exp",
-								"type": "number",
-								"label": "VO2 Expected"
+								"type": "number"
 							}, {
 								"name": "ee_exp",
-								"type": "number",
-								"label": "EE Expected"
+								"type": "number"
 							}, {
 								"name": "rq_exp",
-								"type": "number",
-								"label": "RQ Expected"
+								"type": "number"
 							}, {
 								"name": "vco2_err",
-								"type": "number",
-								"label": "VCO2 Error"
+								"type": "number"
 							}, {
 								"name": "vo2_err",
-								"type": "number",
-								"label": "VO2 Error"
+								"type": "number"
 							}, {
 								"name": "ee_err",
-								"type": "number",
-								"label": "EE Error"
+								"type": "number"
 							}, {
 								"name": "rq_err",
-								"type": "number",
-								"label": "RQ Error"
+								"type": "number"
 							}, {
 								"name": "null_offset_o2",
-								"type": "number",
-								"label": "Null Offset - O2"
+								"type": "number"
 							}, {
 								"name": "null_offset_co2",
-								"type": "number",
-								"label": "Null Offset - CO2"
+								"type": "number"
 							}, {
 								"name": "tag_label",
-								"type": "string",
-								"label": "Time Tag Label"
+								"type": "string"
 							}
 						]
 					}
@@ -101,7 +84,7 @@
 		"delete_if_successful": 0,
 		"package_version": "master",
 		"package_url": "https://github.com/eruud/test.calorimeter.r",
-		"package_function": "process_cal_burn",
+		"package_function": "process_cal_infusion",
 		"resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
 		"input_datasets": [{
 				"code": "pilrhealth:calrq:calrq_data",
@@ -122,9 +105,6 @@
 			}, {
 				"code": "pilrhealth:calrq:configuration",
 				"mapping": "configuration"
-			}, {
-				"code": "pilrhealth:calrq:gas_type",
-				"mapping": "gas"
 			}, {
 				"code": "pilrhealth:calrq:chamber_volume",
 				"mapping": "volume"
@@ -151,9 +131,9 @@
 
 		],
 		"output_datasets": [{
-				"code": "pilrhealth:calrq:burn_summary",
+				"code": "pilrhealth:calrq:infusion_summary",
 				"version": 1,
-				"mapping": "burn"
+				"mapping": "infusion"
 			}, {
 				"code": "pilrhealth:calrq:haldane",
 				"version": 1,
@@ -161,11 +141,11 @@
 			}
 		],
 		"output_file_types": [{
-				"code": "pilrhealth:calrq:burn_file",
+				"code": "pilrhealth:calrq:infusion_file",
 				"version": 1,
-				"mapping": "burn",
+				"mapping": "infusion",
 				"extension": "pdf",
-				"filename_prefix": "burn_summary"
+				"filename_prefix": "infusion_summary"
 			}
 		]
 	}
