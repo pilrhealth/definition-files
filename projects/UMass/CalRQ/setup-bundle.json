@@ -114,7 +114,7 @@
 		}, {
 			"definition_source_rel": "./infusion-summary-job.json"
 		}, {
-			"definition_source_rel": "./haldane-transform-job.json"
+			"definition_source_rel": "./calorimeter-processing-job.json"
 		}
 	],
 	"tool_contents": [{
