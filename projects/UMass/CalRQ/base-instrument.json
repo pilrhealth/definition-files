@@ -47,7 +47,7 @@
 				"Pull - Normal",
 				"Both - Approximate Equations"
 			],
-			"value": ["Push - Corrected Derivative"],
+			"value": ["Push - Convert to Pull"],
 			"required": true,
 			"multipleChoice": false
 		}, {

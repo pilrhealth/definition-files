@@ -145,7 +145,12 @@
 							"code": "pilrhealth:calrq:co2_mfc",
 							"period": null,
 							"epoch": null,
-							"value": null
+							"value": ["MFC 2"]
+						}, {
+							"code": "pilrhealth:calrq:n2_mfc",
+							"period": null,
+							"epoch": null,
+							"value": ["MFC 3"]
 						}, {
 							"code": "pilrhealth:calrq:configuration",
 							"period": null,
@@ -157,7 +162,7 @@
 							"code": "pilrhealth:calrq:expected",
 							"period": null,
 							"epoch": null,
-							"value": ["Push - Corrected Derivative"]
+							"value": ["Push - Convert to Pull"]
 						}, {
 							"code": "pilrhealth:calrq:gas_type",
 							"period": null,
@@ -173,11 +178,6 @@
 							"period": null,
 							"epoch": null,
 							"value": 20.93
-						}, {
-							"code": "pilrhealth:calrq:n2_mfc",
-							"period": null,
-							"epoch": null,
-							"value": null
 						}, {
 							"code": "pilrhealth:calrq:predicted_energy_balance",
 							"period": null,
