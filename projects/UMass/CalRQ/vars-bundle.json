@@ -96,6 +96,30 @@
 			"min": -100,
 			"max": 100,
 			"required": false
-		}
-	]
-}
+		}, {
+			"type": "array_setting",
+			"code": "pilrhealth:calrq:rest_durations",
+			"name": "Rest Durations",
+			"description": "Rest Durations",
+			"choices": [{
+					"fields": [{
+							"min": 0,
+							"max": 10000,
+							"description": "Post Meal Rest Duration",
+							"name": "Post Meal Rest Duration",
+							"value": 360,
+							"code": "calrq:post_meal_duration",
+							"type": "integer_setting",
+							"units": "minutes"
+						}, {
+							"min": 0,
+							"max": 10000,
+							"description": "Rest Duration",
+							"name": "Rest Duration",
+							"value": 1080,
+							"code": "calrq:rest_duration",
+							"type": "integer_setting",
+							"units": "minutes"
+						}
+					]
+				}
