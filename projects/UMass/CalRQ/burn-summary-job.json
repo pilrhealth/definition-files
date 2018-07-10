@@ -123,6 +123,9 @@
 				"code": "pilrhealth:calrq:configuration",
 				"mapping": "configuration"
 			}, {
+				"code": "pilrhealth:calrq:expected",
+				"mapping": "expected"
+			},{
 				"code": "pilrhealth:calrq:gas_type",
 				"mapping": "gas"
 			}, {

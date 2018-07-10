@@ -105,6 +105,9 @@
 			}, {
 				"code": "pilrhealth:calrq:configuration",
 				"mapping": "configuration"
+			},{
+				"code": "pilrhealth:calrq:expected",
+				"mapping": "expected"
 			}, {
 				"code": "pilrhealth:calrq:chamber_volume",
 				"mapping": "volume"
