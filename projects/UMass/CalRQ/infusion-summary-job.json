@@ -1,8 +1,8 @@
 {
 	"definition_type": "job",
-	"code": "calorimeter_infusion_summary_job_rc1",
-	"name": "Infusion CalRQ Summary RC1",
-	"version": 1,
+	"code": "calorimeter_infusion_summary_job",
+	"name": "Infusion CalRQ Summary v2.0",
+	"version": 2,
 	"description": "Compute summaries and generate report for CalRQ infusion studies.",
 	"datasets": [{
 			"name": "CalRQ Infusion Summary",

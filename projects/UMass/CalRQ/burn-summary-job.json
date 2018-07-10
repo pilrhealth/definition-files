@@ -1,8 +1,8 @@
 {
 	"definition_type": "job",
-	"code": "calorimeter_burn_summary_job_rc1",
-	"name": "Burn CalRQ Summary RC1",
-	"version": 1,
+	"code": "calorimeter_burn_summary_job",
+	"name": "Burn CalRQ Summary v2.0",
+	"version": 2,
 	"description": "Compute summaries and generate report for CalRQ burn studies.",
 	"datasets": [{
 			"name": "CalRQ Burn Summary",
