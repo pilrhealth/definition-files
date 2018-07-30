@@ -1,0 +1,71 @@
+{
+  "definition_type":"job",
+  "code":"customize_messages",
+  "name":"Customize Messages",
+  "version":1,
+  "description":"Customize messages in configuration",
+  "documentatUrl": "https://docs.google.com/document/d/1bN_CMN2wIItEQSVxN9PW7FqMeJMTx4CK_Rw5_l48PCQ#",
+  "datasets":[
+    {
+      "name":"Calculated EMA config",
+      "code":"pilrhealth:mobile:calc_config",
+      "documentationUrl": "https://docs.google.com/document/d/1M6WR2SQDOsKYLxYeotWqmC_NHQPyP9JoLpU6zkhp3uE/edit?usp=sharing",
+      "schemas":[
+        {
+          "type":"concordia",
+          "name":"whatever",
+          "schemaVersion":1,
+          "specification":{
+            "type":"object",
+            "fields":[
+              {
+                "name":"config_json",
+                "type":"string"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "runner":{
+    "clazz":"com.pilrhealth.tools.processing_with_r.RProcOpenCPUJobRunner",
+    "save_request":1,
+    "save_response":0,
+    "delete_if_successful":0,
+    "requiresConfigJson": true,
+    "package_url":"https://github.com/MeiResearchLtd/customizeMessages",
+    "package_version": "master",
+    "package_function":"customize_messages",
+    "resource_path":"/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
+    "input_datasets":[
+      {
+        "code":"pilrhealth:mobile:survey_data",
+        "version":1,
+        "mapping":"survey_data"
+      }
+    ],
+    "input_file_types":[
+
+    ],
+    "input_settings":[
+    ],
+    "filter_params":[
+      "participant",
+      "period"
+    ],
+    "input_params":[
+
+    ],
+    "output_datasets":[
+      {
+        "code":"pilrhealth:mobile:calc_config",
+        "version":1,
+        "mapping":"calculatedConfig"
+      }
+    ],
+    "output_file_types":[
+
+    ]
+  }
+}
