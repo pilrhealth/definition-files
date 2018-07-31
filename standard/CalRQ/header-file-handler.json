@@ -18,6 +18,14 @@
       "to_name": "pilrhealth:calrq:in_o2"
     },
     {
+      "from_name": "InflowO2Slope",
+      "to_name": "pilrhealth:calrq:in_o2"
+    },
+    {
+      "from_name": "Chamber Volume",
+      "to_name": "pilrhealth:calrq:chamber_volume"
+    },
+    {
       "from_name": "DISABLE-Weight",
       "to_name": "pilrhealth:calrq:weight_in"
     }
