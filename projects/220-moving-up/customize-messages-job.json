@@ -49,6 +49,10 @@
 
     ],
     "input_settings":[
+      {
+        "code":"debug",
+        "mapping":"debug"
+      }
     ],
     "filter_params":[
       "participant",
