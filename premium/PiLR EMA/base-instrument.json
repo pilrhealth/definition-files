@@ -145,7 +145,16 @@
       "name": "Reward",
       "description": "Accumulate reward when certain surveys are answered",
       "value": false
-    }
+    },
+    {
+      "type": "string_setting",
+      "code": "custom:string1",
+      "name": "Custom App String 1",
+      "description": "For use by custom EMA variants",
+      "value": "",
+      "required": false
+    },
+
   ],
   "datasets": [
     {
