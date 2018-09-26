@@ -148,13 +148,28 @@
     },
     {
       "type": "string_setting",
-      "code": "custom:string1",
-      "name": "Custom App String 1",
+      "code": "custom:string-1",
+      "name": "Special Function String 1",
       "description": "For use by custom EMA variants",
       "value": "",
       "required": false
     },
-
+    {
+      "type": "string_setting",
+      "code": "custom:string-2",
+      "name": "Special Function String 2",
+      "description": "For use by custom EMA variants",
+      "value": "",
+      "required": false
+    },
+    {
+      "type": "string_setting",
+      "code": "custom:string-3",
+      "name": "Special Function String 3",
+      "description": "For use by custom EMA variants",
+      "value": "",
+      "required": false
+    }
   ],
   "datasets": [
     {
