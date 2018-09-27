@@ -1,0 +1,49 @@
+{
+  "definition_type": "dataset",
+  "name": "Training Compliance Report",
+  "code": "pilrhealth:mobile:training_comp_report",
+  "calculationServiceName": "trainingComplianceReportService",
+  "schemas": [
+    {
+      "type": "concordia",
+      "name": "1.0",
+      "schemaVersion": 1,
+      "specification": {
+        "type": "object",
+        "fields": [
+          {
+            "name": "pt",
+            "label": "pt",
+            "type": "string"
+          },
+          {
+            "name": "card_code",
+            "label": "card_code",
+            "type": "string"
+          },
+          {
+            "name": "card_state",
+            "label": "card_state",
+            "type": "string"
+          },
+          {
+            "name": "file_name",
+            "label": "file_name",
+            "type": "string"
+          },
+          {
+            "name": "times_watched",
+            "label": "times_watched",
+            "type": "string"
+          },
+          {
+            "name": "isRequired",
+            "label": "isRequired",
+            "type": "boolean"
+          }
+        ]
+      }
+    }
+  ]
+}
+
