@@ -29,7 +29,7 @@
 			"fields": [
 			  {
 				"name": "card_code",
-				"type": "number",
+				"type": "string",
 				"optional": true,
 				"label": "card_code"
 			  },
