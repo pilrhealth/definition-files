@@ -1,4 +1,5 @@
 {
+  "definition_type": "dataset",
   "name": "Videos Watched Data",
   "code": "pilrhealth:mobile:videos_watched",
   "schemas": [
