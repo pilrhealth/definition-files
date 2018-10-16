@@ -116,7 +116,7 @@
         "delete_if_successful": 0,
         "package_url": "https://github.com/MeiResearchLtd/gf.calorimeter.r",
         "package_function": "process_cal_burn",
-        "package_version": "master",
+        "package_version": "test-1.1",
         "resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
         "input_datasets": [
           {
