@@ -1,7 +1,7 @@
 {
 	"definition_type": "job",
 	"code": "calorimeter_human_summary_job_rc1_gf",
-	"name": "Human CalRQ Summary v1.1 (GF Custom-2)",
+	"name": "Human CalRQ Summary v1.2 (GF Custom-3)",
 	"version": 1,
 	"description": "Compute summaries and generate report for CalRQ human studies.",
 	"datasets": [{
@@ -148,7 +148,7 @@
 		"delete_if_successful": 0,
 		"package_url": "https://github.com/MeiResearchLtd/gf.calorimeter.r",
 		"package_function": "process_cal_human",
-		"package_version": "master",
+		"package_version": "test-1.1",
 		"resource_path": "/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
 		"input_datasets": [{
 				"code": "pilrhealth:calrq:calrq_data",
