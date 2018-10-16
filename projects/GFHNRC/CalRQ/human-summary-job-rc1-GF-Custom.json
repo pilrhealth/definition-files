@@ -211,6 +211,9 @@
 			}, {
 				"code": "pilrhealth:calrq:sleep_threshold",
 				"mapping": "sleep_threshold"
+			}, {
+				"code": "pilrhealth:calrq:urine_nitrogen_start_time",
+				"mapping": "urine_nitrogen_start_time"
 			}
 		],
 		"filter_params": [
