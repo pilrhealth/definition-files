@@ -48,6 +48,10 @@
           "name": "Exercise",
           "description": "Exercise."
         },
+	{
+          "name": "DayActivity",
+          "description": "Thresholded Activity."
+        },
         {
           "name": "Misc",
           "description": "Misc."
