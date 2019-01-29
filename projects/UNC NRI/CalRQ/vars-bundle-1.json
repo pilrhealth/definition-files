@@ -103,6 +103,16 @@
 	    "min":-100,
 	    "max":100,
 	    "required":false
+	},
+	{
+    	"type":"double_setting",
+    	"code":"pilrhealth:calrq:activity_threshold",
+	    "name":"Activity Threshold",
+	    "description":"Activity Threshold",
+	    "value":0,
+	    "min":-100,
+	    "max":100,
+	    "required":false
 	}
   ]
 }
