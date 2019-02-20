@@ -730,6 +730,60 @@
                 "doc": "Device platform type, either ios or android.",
                 "label": "Platform",
                 "type": "string"
+              },
+              {
+                "name": "accuracy",
+                "label": "Accuracy",
+                "doc": "GPS accuracy radius (in meters) reported by the Phone",
+                "type": "number",
+                "optional": "true"
+              },
+              {
+                "name": "altitude",
+                "label": "Altitude",
+                "doc": "GPS altitude (in meters) reported by the Phone or -1 if not available",
+                "type": "number",
+                "optional": "true"
+              },
+              {
+                "name": "altitude_accuracy",
+                "label": "Altitude Accuracy",
+                "doc": "GPS altitude accuracy (in meters) reported by the Phone or -1 if not available",
+                "type": "number",
+                "optional": "true"
+
+              },
+              {
+                "name": "heading",
+                "label": "Heading",
+                "doc": "GPS heading (Number in degrees) reported by the Phone or -1 if not available",
+                "type": "number",
+                "optional": "true"
+
+              },
+              {
+                "name": "speed",
+                "label": "Speed",
+                "doc": "GPS calculated speed (Number in meters per second) reported by the Phone or -1 if not available. On IOS negative values indicate an issue with the Heading reading.",
+                "type": "number",
+                "optional": "true"
+
+              },
+              {
+                "name": "provider",
+                "label": "Provider",
+                "doc": "the name (string) of the provider of the GPS information. On mobile devices, there is an entire additional layer of location services built into Android and IOS. These additional location provider services offer different levels of accuracy and require various levels of power from the device.",
+                "type": "number",
+                "optional": "true"
+
+              },
+              {
+                "name": "timestamp",
+                "label": "Timestamp",
+                "doc": "the UTC timestamp when the GPS Coordinates were captured. These timestamps are allowed to differ from the reported metadata:timestamp by several seconds. Larger deviations should be considered an error, especially if the deviation is over 1 minute.",
+                "type": "number",
+                "optional": "true"
+
               }
             ]
           }
