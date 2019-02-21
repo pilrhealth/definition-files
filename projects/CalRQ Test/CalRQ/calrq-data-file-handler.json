@@ -166,6 +166,6 @@
         ]
     },
     "jobs":[{
-    	"definition_source_abs":"https://raw.githubusercontent.com/pilrhealth/definition-files/master/standard/CalRQ/haldane-transform-job.json"
+    	"definition_source_abs":"https://raw.githubusercontent.com/eruud/test.calorimeter.r/master/def/standard/CalRQ/haldane-transform-job.json"
 	}]
 }

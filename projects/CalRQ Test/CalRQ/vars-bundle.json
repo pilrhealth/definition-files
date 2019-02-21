@@ -1,9 +1,9 @@
 {
   "definition_type": "bundle",
-  "code": "calorimeter_vars_bundle_001",
+  "code": "calorimeter_vars_bundle",
   "version": 1,
   "name": "Calorimeter Participant Variables Bundle",
-  "description": "This component bundle contains all of the ",
+  "description": "This component bundle contains all of the variables",
   "variables": [
     {
       "type": "double_setting",

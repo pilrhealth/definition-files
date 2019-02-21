@@ -1,8 +1,8 @@
 {  
    "definition_type":"bundle",
-   "code":"unc_calorimeter_bundle_001",
+   "code":"calorimeter_bundle",
    "version":1,
-   "name":"UNC Calorimeter Project Setup Bundle",
+   "name":"Calorimeter Project Setup Bundle",
    "description":"This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
    "instruments":[  
       {  
@@ -11,7 +11,7 @@
    ],
    "variables":[  
       {  
-         "definition_source_rel":"./vars-bundle-1.json"
+         "definition_source_rel":"./vars-bundle.json"
       }
    ],
    "tools":[  
@@ -24,13 +24,13 @@
    ],
    "jobs":[  
       {  
-         "definition_source_rel":"./burn-summary-job-rc1.json"
+         "definition_source_rel":"./burn-summary-job.json"
       },
       {  
-         "definition_source_rel":"./human-summary-job-rc1.json"
+         "definition_source_rel":"./human-summary-job.json"
       },
       {  
-         "definition_source_rel":"./infusion-summary-job-rc1.json"
+         "definition_source_rel":"./infusion-summary-job.json"
       },
       {  
          "definition_source_rel":"./haldane-transform-job.json"
@@ -38,7 +38,7 @@
    ],
    "tool_contents":[  
       {  
-         "definition_source_rel":"./evtagger-sample-config-tool-content-1.json"
+         "definition_source_rel":"./evtagger-content.json"
       }
    ],
    "periods":[  
