@@ -1,0 +1,92 @@
+{
+  "definition_type": "tool_content",
+  "tool_code": "evtagger",
+  "code": "calorimeter_evtagger_config_001",
+  "version": 1,
+  "name": "Sample tag labels and event bundles for calorimeter study",
+  "description": "A sample of tag labels and event bundles commonly used for segmenting data in studies that use a calorimeter chamber.",
+  "contents": [
+    {
+      "labels": [
+        {
+          "name": "Null",
+          "description": "Null test period"
+        },
+        {
+          "name": "Infusion Study",
+          "description": "Infusion study tag."
+        },
+        {
+          "name": "Short Circuit",
+          "description": "Short Circuit Study vol=0"
+        },
+        {
+          "name": "Invalid",
+          "description": "Data removed from summary results"
+        },
+        {
+          "name": "Misc",
+          "description": "Misc."
+        }
+      ],
+      "bundles": [
+        {
+          "name": "Daily routine",
+          "description": ".",
+          "events": [
+            {
+              "name": "Exercise session 1",
+              "note": "Time the participant was doing the first exercise in the chamber.",
+              "verified": 1,
+              "offset": 176490000,
+              "duration": 7200000,
+              "startTime": "01:01:30",
+              "durationTime": "02:00:00",
+              "startDays": 0,
+              "tags": ["Exercise"]
+            }
+          ]
+        }
+      ],
+      "plots": [
+	{
+	  "name": "VO2 and VCO2",
+          "description": "Line graph of VO2 and VCO2",
+   	  "minRange": 0,
+	  "maxRange": null,
+          "fields": [
+            {
+	      "dataset": "pilrhealth:calrq:haldane_pet",
+              "dataField": "recalc_vo2",
+              "color": "red",
+              "timeField": "Time",
+              "plotType": "line"
+	    },
+            {
+	      "dataset": "pilrhealth:calrq:haldane_pet",
+              "dataField": "recalc_vo2",
+              "color": "blue",
+              "timeField": "Time",
+              "plotType": "line"
+	    }
+	  ]
+	},
+	{
+	  "name": "MR",
+          "description": "Line graph of metabolic rate",
+   	  "minRange": 0,
+	  "maxRange": null,
+          "fields": [
+            {
+	      "dataset": "pilrhealth:calrq:haldane_pet",
+              "dataField": "recalc_ee",
+              "color": "red",
+              "timeField": "Time",
+              "plotType": "line"
+	    },
+	  ]
+	},
+      ]
+    }
+  ]
+}
