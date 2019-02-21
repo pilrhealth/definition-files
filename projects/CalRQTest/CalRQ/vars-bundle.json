@@ -64,8 +64,9 @@
       "description": "Treatment"
     }, 
     {
-      "type": "datetime",
+      "type": "datetime_setting",
       "code": "pilrhealth:calrq:urine_nitrogen_start_time",
+	  "formatPattern": "MM/dd/yyyy HH:mm",
       "name": "Urine Nitrogen Start Time",
       "description": "Urine Nitrogen Start Time"
     }, 
