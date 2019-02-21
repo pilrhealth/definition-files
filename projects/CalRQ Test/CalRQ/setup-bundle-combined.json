@@ -31,9 +31,6 @@
       },
       {  
          "definition_source_rel":"./infusion-summary-job.json"
-      },
-      {  
-         "definition_source_rel":"./haldane-transform-job.json"
       }
    ],
    "tool_contents":[  
