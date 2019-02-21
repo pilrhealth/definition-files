@@ -66,9 +66,15 @@
     {
       "type": "datetime_setting",
       "code": "pilrhealth:calrq:urine_nitrogen_start_time",
-	  "formatPattern": "MM/dd/yyyy HH:mm",
+      "formatPattern": "MM/dd/yyyy HH:mm",
       "name": "Urine Nitrogen Start Time",
-      "description": "Urine Nitrogen Start Time"
+      "description": "Urine Nitrogen Start Time",
+      "value": null,
+      "required": false,
+      "alternateFormatPatterns": 
+      [
+        ""
+      ]
     }, 
     {
       "type": "array_setting",
