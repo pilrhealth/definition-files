@@ -256,6 +256,10 @@
 			{
 				"code":"pilrhealth:calrq:sleep_threshold",
 				"mapping":"sleep_threshold"
+			},
+			{
+				"code":"pilrhealth:calrq:activity_threshold",
+				"mapping":"activity_threshold"
 			}
         ],
         "filter_params":[

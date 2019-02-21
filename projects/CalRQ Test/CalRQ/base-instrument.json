@@ -20,7 +20,7 @@
             "code":"pilrhealth:calrq:chamber_volume",
             "name":"Chamber Volume",
             "description":"Volume of the calorimeter chamber",
-            "value":30000,
+            "value":17100,
             "min":0,
             "max":99999,
             "required":true
@@ -52,6 +52,7 @@
                 "MFC 4",
                 "MFC 5"
             ],
+            "value": ["MFC 3"],
             "required":false,
             "multipleChoice":false
         },
@@ -67,6 +68,7 @@
                 "MFC 4",
                 "MFC 5"
             ],
+            "value": ["MFC 2"],
             "required":false,
             "multipleChoice":false
         },
