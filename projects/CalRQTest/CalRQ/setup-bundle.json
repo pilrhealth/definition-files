@@ -21,7 +21,7 @@
 	  {  
          "definition_source_rel":"./dashboard-vo2-vco2.json"
       }
-   ]
+   ],
    "tools":[  
       {  
          "definition_source_rel":"../../../tools/r-processing-tool.json"
