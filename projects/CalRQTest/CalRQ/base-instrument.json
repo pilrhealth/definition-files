@@ -39,7 +39,35 @@
             "value": ["Push - Absolute"],
             "required":true,
             "multipleChoice":false
-        },
+        }, 
+		{
+			"type": "list_setting",
+			"code": "pilrhealth:calrq:expected",
+			"name": "Infusion Equations",
+			"description": "Calculation method of infusion data",
+			"choices": [
+				"Push - Corrected Derivative",
+				"Push - Convert to Pull",
+				"Pull - Normal",
+				"Both - Approximate Equations"
+			],
+			"value": ["Push - Convert to Pull"],
+			"required": true,
+			"multipleChoice": false
+		},
+		{
+			"type": "list_setting",
+			"code": "pilrhealth:calrq:equation",
+			"name": "Equations",
+			"description": "Calculation method of data",
+			"choices": [
+				"Updated",
+				"Old"
+			],
+			"value": ["Updated"],
+			"required": true,
+			"multipleChoice": false
+		},
         {
             "type":"list_setting",
             "code":"pilrhealth:calrq:n2_mfc",

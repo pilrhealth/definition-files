@@ -68,15 +68,15 @@
 	  "maxRange": 1000,
           "fields": [
             {
-	      "dataset": "pilrhealth:calrq:calrq_data",
-              "dataField": "VO2",
+	      "dataset": "pilrhealth:calrq:haldane_pet",
+              "dataField": "recalc_vo2",
               "color": "red",
               "timeField": "Time",
               "plotType": "line"
 	    },
             {
-	      "dataset": "pilrhealth:calrq:calrq_data",
-              "dataField": "VCO2",
+	      "dataset": "pilrhealth:calrq:haldane_pet",
+              "dataField": "recalc_vo2",
               "color": "blue",
               "timeField": "Time",
               "plotType": "line"

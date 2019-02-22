@@ -123,6 +123,14 @@
         ],
         "input_settings":[
             {
+                "code":"pilrhealth:calrq:expected",
+                "mapping":"expected"
+            },
+            {
+                "code":"pilrhealth:calrq:equation",
+                "mapping":"equation"
+            },
+			{
                 "code":"pilrhealth:calrq:read_interval",
                 "mapping":"read_interval"
             },
