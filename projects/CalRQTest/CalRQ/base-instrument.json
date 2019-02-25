@@ -3,6 +3,7 @@
     "code":"calrq",
     "version":1,
     "name":"CalRQ",
+    "instrument": "calrq",
     "description":"This instrument provides an interface to importing data from the CalRQ software, which supports aquisition of data for calorimeter chambers.",
     "settings":[
         {
