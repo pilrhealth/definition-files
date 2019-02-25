@@ -1,9 +1,9 @@
 {
     "definition_type":"job",
     "code":"calorimeter_haldane_transform_job",
-    "name":"Haldane Transform - Pre Event Tag",
+    "name":"Calorimeter Data Processing",
     "version":1,
-    "description":"Compute summaries and generate report for CalRQ human studies.",
+    "description":"Compute data for CalRQ human studies.",
     "datasets":[
         {
             "name":"Haldane Transform",
