@@ -50,18 +50,75 @@
 			"code": "calrq_default_template",
 			"name": "Default Template",
 			"activeInstruments": [{
-					"definition_source_rel": "./base-instrument.json"
-				}
-			],
-			"periodSchedules":
-			[{
-					"period": "active_period",
-					"epochSchedules":
+					"instrument": "calrq",
+					"settings": [{
+							"code": "pilrhealth:calrq:chamber_volume",
+							"period": null,
+							"epoch": null,
+							"value": 25000
+						}, {
+							"code": "pilrhealth:calrq:co2_mfc",
+							"period": null,
+							"epoch": null,
+							"value": ["MFC 2"]
+						}, {
+							"code": "pilrhealth:calrq:n2_mfc",
+							"period": null,
+							"epoch": null,
+							"value": ["MFC 3"]
+						}, {
+							"code": "pilrhealth:calrq:configuration",
+							"period": null,
+							"epoch": null,
+							"value": ["Push - Absolute"]
+						}, {
+							"code": "pilrhealth:calrq:equation",
+							"period": null,
+							"epoch": null,
+							"value": ["Updated"]
+						}, {
+							"code": "pilrhealth:calrq:expected",
+							"period": null,
+							"epoch": null,
+							"value": ["Push - Convert to Pull"]
+						}, {
+							"code": "pilrhealth:calrq:gas_type",
+							"period": null,
+							"epoch": null,
+							"value": null
+						}, {
+							"code": "pilrhealth:calrq:in_o2",
+							"period": null,
+							"epoch": null,
+							"value": 20.93
+						}, {
+							"code": "pilrhealth:calrq:in_co2",
+							"period": null,
+							"epoch": null,
+							"value": 0.0
+						}, {
+							"code": "pilrhealth:calrq:predicted_energy_balance",
+							"period": null,
+							"epoch": null,
+							"value": 0.0
+						}, {
+							"code": "pilrhealth:calrq:read_interval",
+							"period": null,
+							"epoch": null,
+							"value": 60
+						}
+					],
+					"periodSchedules":
 					[{
 							"period": "active_period",
-							"epoch": "epoch_1",
-							"startDay": 1,
-							"endDay": 14
+							"epochSchedules":
+							[{
+									"period": "active_period",
+									"epoch": "epoch_1",
+									"startDay": 1,
+									"endDay": 14
+								}
+							]
 						}
 					]
 				}
