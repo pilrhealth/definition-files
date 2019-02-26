@@ -1,7 +1,7 @@
 {
     "definition_type":"job",
     "code":"calorimeter_haldane_transform_job",
-    "name":"Calorimeter Data Processing",
+    "name":"Calorimeter Data Processing (Automatic on upload)",
     "version":1,
     "description":"Compute data for CalRQ human studies.",
     "datasets":[
