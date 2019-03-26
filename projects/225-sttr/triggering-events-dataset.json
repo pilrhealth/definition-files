@@ -15,7 +15,7 @@
         "fields": [
           {
             "name": "event_type",
-            "documentation":  "SURVEY_NOTIFICATION, NOTIFICATION_ONLY, BACKGROUND_DATA",
+            "documentation":  "SURVEY_ACTION, NOTIFICATION_ONLY, BACKGROUND_DATA",
             "label": "Event Type",
             "type": "string"
           },
@@ -37,6 +37,13 @@
             "optional": true
           },
           {
+            "name": "expire_time",
+            "type": "string",
+            "category": "date",
+            "label": "Expiration Time",
+            "optional": true
+          },
+          {
             "name": "session",
             "label": "Session",
             "type": "string"
@@ -51,6 +58,13 @@
           {
             "name": "venue_name",
             "label": "Venue Name",
+            "type": "string",
+            "optional": true
+          }
+          },
+          {
+            "name": "venue_type",
+            "label": "Venue Type",
             "type": "string",
             "optional": true
           }
