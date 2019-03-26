@@ -60,7 +60,6 @@
             "label": "Venue Name",
             "type": "string",
             "optional": true
-          }
           },
           {
             "name": "venue_type",
