@@ -859,7 +859,7 @@
         {
           "type": "concordia",
           "name": "Umn Events Schema",
-          "schemaVersion": 1,
+          "schemaVersion": 2,
           "specification": {
             "type": "object",
             "fields": [
@@ -880,7 +880,20 @@
                 "optional": true,
                 "type": "object",
                 "name": "additional_data",
-                "fields": []
+                "fields": [
+                  {
+                    "name": "card_code",
+                    "type": "string",
+                    "optional": true,
+                    "label": "card_code"
+                  },
+                  {
+                    "name": "pct_complete",
+                    "type": "number",
+                    "optional": true,
+                    "label": "pct_complete"
+		  }
+		]
               }
             ]
           }
