@@ -12,8 +12,6 @@
 			"definition_source_rel": "./vars-bundle.json"
 		}
 	],
-	"dashboards": [{
-	}],
 	"tools": [{
 			"definition_source_rel": "../../../tools/r-processing-tool.json"
 		}, {
