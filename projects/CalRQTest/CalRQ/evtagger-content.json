@@ -65,7 +65,7 @@
 	  "name": "VO2/VCO2",
           "description": "Line graph of VO2 and VCO2",
    	  "minRange": 0,
-	  "maxRange": 1000,
+	  "maxRange": 1,
           "fields": [
             {
 	      "dataset": "pilrhealth:calrq:haldane_pet",
