@@ -13,7 +13,7 @@
 		}
 	],
 	"dashboards": [{
-	],
+	}],
 	"tools": [{
 			"definition_source_rel": "../../../tools/r-processing-tool.json"
 		}, {
