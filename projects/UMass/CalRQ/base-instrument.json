@@ -264,6 +264,20 @@
 								"doc": "The incline of the treadmill during this measurement period",
 								"units": "%"
 							}, {
+								"name": "BikeWorkload",
+								"type": "number",
+								"optional": true,
+								"label": "Bike Watts",
+								"doc": "Power output of bike",
+								"units": "watts"
+							}, {
+								"name": "BikeSpeed",
+								"type": "number",
+								"optional": true,
+								"label": "Bike RPM",
+								"doc": "Wheel RPM of bike",
+								"units": "RPM"
+							},{
 								"name": "Alarms",
 								"type": "string",
 								"optional": true,

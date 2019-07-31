@@ -105,6 +105,14 @@
                 "from_name":"TreadmillIncline",
                 "to_name":"TreadmillIncline"
             },
+			{
+                "from_name":"BikeWorkload",
+                "to_name":"BikeWorkload"
+            },
+            {
+                "from_name":"BikeSpeed",
+                "to_name":"BikeSpeed"
+            },
             {
                 "from_name":"CumulativeEE",
                 "to_name":"CumulativeEE"
