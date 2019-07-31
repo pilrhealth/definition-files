@@ -1,8 +1,8 @@
 {
 	"definition_type": "bundle",
-	"code": "umass_calorimeter_bundle_ch2nobed",
+	"code": "umass_calorimeter_bundle_ch1",
 	"version": 1,
-	"name": "UMass Flex Chamber - No Bed",
+	"name": "UMass Large Chamber",
 	"description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
 	"instruments": [{
 			"definition_source_rel": "./base-instrument.json"
@@ -47,7 +47,7 @@
 							"code": "pilrhealth:calrq:chamber_volume",
 							"period": null,
 							"epoch": null,
-							"value": 5600
+							"value": 32000
 						}, {
 							"code": "pilrhealth:calrq:co2_mfc",
 							"period": null,
