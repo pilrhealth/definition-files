@@ -2,7 +2,7 @@
 	"definition_type": "bundle",
 	"code": "calorimeter_bundle",
 	"version": 3,
-	"name": "UMass Large Chamber",
+	"name": "Calorimeter Project Setup Bundle",
 	"description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
 	"instruments": [{
 			"definition_source_rel": "./base-instrument.json"
@@ -19,6 +19,8 @@
 		}
 	],
 	"jobs": [{
+			"definition_source_rel": "./burn-summary-job.json"
+		}, {
 			"definition_source_rel": "./human-summary-job.json"
 		}, {
 			"definition_source_rel": "./infusion-summary-job.json"
@@ -47,7 +49,7 @@
 							"code": "pilrhealth:calrq:chamber_volume",
 							"period": null,
 							"epoch": null,
-							"value": 32000
+							"value": 25000
 						}, {
 							"code": "pilrhealth:calrq:co2_mfc",
 							"period": null,
@@ -74,6 +76,21 @@
 							"epoch": null,
 							"value": ["Push - Convert to Pull"]
 						}, {
+							"code": "pilrhealth:calrq:gas_type",
+							"period": null,
+							"epoch": null,
+							"value": null
+						}, {
+							"code": "pilrhealth:calrq:in_o2",
+							"period": null,
+							"epoch": null,
+							"value": 20.93
+						}, {
+							"code": "pilrhealth:calrq:in_co2",
+							"period": null,
+							"epoch": null,
+							"value": 0.0
+						}, {
 							"code": "pilrhealth:calrq:predicted_energy_balance",
 							"period": null,
 							"epoch": null,
@@ -93,7 +110,7 @@
 									"period": "active_period",
 									"epoch": "epoch_1",
 									"startDay": 1,
-									"endDay": 365
+									"endDay": 14
 								}
 							]
 						}

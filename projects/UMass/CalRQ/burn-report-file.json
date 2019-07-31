@@ -1,8 +1,0 @@
-{
-	"definition_type": "file_handler",
-	"name": "CalRQ Burn Report",
-	"code": "pilrhealth:calrq:burn_file",
-	"version": 1,
-	"unlisted": true,
-	"description": "A report with parameters from a calorimeter burn study."
-}

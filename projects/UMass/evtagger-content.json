@@ -1,0 +1,89 @@
+{
+  "definition_type": "tool_content",
+  "tool_code": "evtagger",
+  "code": "calorimeter_evtagger_config",
+  "version": 1,
+  "name": "Sample tag labels and event bundles for calorimeter study",
+  "description": "A sample of tag labels and event bundles commonly used for segmenting data in studies that use a calorimeter chamber.",
+  "contents": [
+    {
+      "labels": [
+        {
+          "name": "Human Study",
+          "description": "Human study tag."
+        },
+        {
+          "name": "Null",
+          "description": "Null test period"
+        },
+        {
+          "name": "Infusion Study",
+          "description": "Infusion study tag."
+        },
+        {
+          "name": "Short Circuit",
+          "description": "Short Circuit Study vol=0"
+        },
+        {
+          "name": "Rest",
+          "description": "Rest"
+        },
+        {
+          "name": "Post Meal",
+          "description": "Post Meal"
+        },
+        {
+          "name": "Regression Data",
+          "description": "Regression Data"
+        },
+        {
+          "name": "Invalid",
+          "description": "Data removed from summary results"
+        },
+        {
+          "name": "Sleep",
+          "description": "Sleep time."
+        },
+        {
+          "name": "Exercise",
+          "description": "Exercise."
+        },
+	{
+          "name": "DayActivity",
+          "description": "Thresholded Activity."
+        },
+        {
+          "name": "Misc",
+          "description": "Misc."
+        }
+      ],
+      "bundles": [
+
+      ],
+      "plots": [
+	{
+	  "name": "VO2/VCO2",
+          "description": "Line graph of VO2 and VCO2",
+   	  "minRange": 0,
+	  "maxRange": 1,
+          "fields": [
+            {
+	      "dataset": "pilrhealth:calrq:haldane_pet",
+              "dataField": "recalc_vo2",
+              "color": "red",
+              "timeField": "Time",
+              "plotType": "line"
+	    },
+            {
+	      "dataset": "pilrhealth:calrq:haldane_pet",
+              "dataField": "recalc_vo2",
+              "color": "blue",
+              "timeField": "Time",
+              "plotType": "line"
+	    }
+	  ]
+	}
+      ]
+    }
+  ]
+}

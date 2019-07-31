@@ -22,7 +22,8 @@
 				"MFC 1",
 				"MFC 2",
 				"MFC 3",
-				"MFC 4"
+				"MFC 4",
+				"MFC 5"
 			],
 			"value": ["MFC 2"],
 			"required": false,
@@ -36,7 +37,8 @@
 				"MFC 1",
 				"MFC 2",
 				"MFC 3",
-				"MFC 4"
+				"MFC 4",
+				"MFC 5"
 			],
 			"value": ["MFC 3"],
 			"required": false,
@@ -47,7 +49,10 @@
 			"name": "Calorimeter Configuration",
 			"description": "Configuration of calorimeter chamber",
 			"choices": [
-				"Push - Absolute"
+				"Push - Differential",
+				"Push - Absolute",
+				"Pull - Differential",
+				"Pull - Absolute"
 			],
 			"value": ["Push - Absolute"],
 			"required": true,
@@ -72,11 +77,42 @@
 			"choices": [
 				"Push - Corrected Derivative",
 				"Push - Convert to Pull",
+				"Pull - Normal",
 				"Both - Old Equations"
 			],
 			"value": ["Push - Convert to Pull"],
 			"required": true,
 			"multipleChoice": false
+		}, {
+			"type": "list_setting",
+			"code": "pilrhealth:calrq:gas_type",
+			"name": "Gas Type",
+			"description": "Gas Type for Burn Study",
+			"choices": [
+				"Propane",
+				"Ethanol",
+				"Methanol"
+			],
+			"required": false,
+			"multipleChoice": false
+		}, {
+			"type": "double_setting",
+			"code": "pilrhealth:calrq:in_o2",
+			"name": "O2 In Constant",
+			"description": "O2 In Constant",
+			"value": 20.93,
+			"min": 0,
+			"max": 1000,
+			"required": false
+		}, {
+			"type": "double_setting",
+			"code": "pilrhealth:calrq:in_co2",
+			"name": "CO2 In Constant",
+			"description": "CO2 In Constant",
+			"value": 0,
+			"min": 0,
+			"max": 1000,
+			"required": false
 		}, {
 			"type": "double_setting",
 			"code": "pilrhealth:calrq:predicted_energy_balance",

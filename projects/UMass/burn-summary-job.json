@@ -1,17 +1,17 @@
 {
     "definition_type":"job",
-    "code":"calorimeter_infusion_summary_job",
-    "name":"Infusion CalRQ Summary",
+    "code":"calorimeter_burn_summary_job",
+    "name":"Burn CalRQ Summary",
     "version":1,
-    "description":"Compute summaries and generate report for CalRQ infusion studies.",
+    "description":"Compute summaries and generate report for CalRQ burn studies.",
     "datasets":[
         {
-            "name":"CalRQ Infusion Summary",
-            "code":"pilrhealth:calrq:infusion_summary",
+            "name":"CalRQ Burn Summary",
+            "code":"pilrhealth:calrq:burn_summary",
             "schemas":[
                 {
                     "type":"concordia",
-                    "name":"CalRQ Infusion Summary",
+                    "name":"CalRQ Burn Summary",
                     "schemaVersion":1,
                     "specification":{
                         "type":"object",
@@ -24,72 +24,89 @@
                             {
                                 "name":"start_time",
                                 "type":"string",
-                                "category":"date"
+                                "category":"date",
+                                "label":"Summary Start Time"
                             },
                             {
                                 "name":"end_time",
                                 "type":"string",
-                                "category":"date"
+                                "category":"date",
+                                "label":"Summary End Time"
                             },
                             {
                                 "name":"vco2_meas",
-                                "type":"number"
+                                "type":"number",
+                                "label":"VCO2 Measured"
                             },
                             {
                                 "name":"vo2_meas",
-                                "type":"number"
+                                "type":"number",
+                                "label":"VO2 Measured"
                             },
                             {
                                 "name":"ee_meas",
-                                "type":"number"
+                                "type":"number",
+                                "label":"EE Measured"
                             },
                             {
                                 "name":"rq_meas",
-                                "type":"number"
+                                "type":"number",
+                                "label":"RQ Measured"
                             },
                             {
                                 "name":"vco2_exp",
-                                "type":"number"
+                                "type":"number",
+                                "label":"VCO2 Expected"
                             },
                             {
                                 "name":"vo2_exp",
-                                "type":"number"
+                                "type":"number",
+                                "label":"VO2 Expected"
                             },
                             {
                                 "name":"ee_exp",
-                                "type":"number"
+                                "type":"number",
+                                "label":"EE Expected"
                             },
                             {
                                 "name":"rq_exp",
-                                "type":"number"
+                                "type":"number",
+                                "label":"RQ Expected"
                             },
                             {
                                 "name":"vco2_err",
-                                "type":"number"
+                                "type":"number",
+                                "label":"VCO2 Error"
                             },
                             {
                                 "name":"vo2_err",
-                                "type":"number"
+                                "type":"number",
+                                "label":"VO2 Error"
                             },
                             {
                                 "name":"ee_err",
-                                "type":"number"
+                                "type":"number",
+                                "label":"EE Error"
                             },
                             {
                                 "name":"rq_err",
-                                "type":"number"
+                                "type":"number",
+                                "label":"RQ Error"
                             },
                             {
                                 "name":"null_offset_o2",
-                                "type":"number"
+                                "type":"number",
+                                "label":"Null Offset - O2"
                             },
                             {
                                 "name":"null_offset_co2",
-                                "type":"number"
+                                "type":"number",
+                                "label":"Null Offset - CO2"
                             },
                             {
                                 "name":"tag_label",
-                                "type":"string"
+                                "type":"string",
+                                "label":"Time Tag Label"
                             }
                         ]
                     }
@@ -104,7 +121,7 @@
         "delete_if_successful":0,
         "package_version":"master",
         "package_url":"https://github.com/eruud/test.calorimeter.r",
-        "package_function":"process_cal_infusion",
+        "package_function":"process_cal_burn",
         "resource_path":"/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
         "input_datasets":[
             {
@@ -139,6 +156,10 @@
                 "mapping":"configuration"
             },
             {
+                "code":"pilrhealth:calrq:gas_type",
+                "mapping":"gas"
+            },
+            {
                 "code":"pilrhealth:calrq:chamber_volume",
                 "mapping":"volume"
             },
@@ -169,9 +190,9 @@
         ],
         "output_datasets":[
             {
-                "code":"pilrhealth:calrq:infusion_summary",
+                "code":"pilrhealth:calrq:burn_summary",
                 "version":1,
-                "mapping":"infusion"
+                "mapping":"burn"
             },
             {
                 "code":"pilrhealth:calrq:haldane",
@@ -181,11 +202,11 @@
         ],
         "output_file_types":[
             {
-                "code":"pilrhealth:calrq:infusion_file",
+                "code":"pilrhealth:calrq:burn_file",
                 "version":1,
-                "mapping":"infusion",
+                "mapping":"burn",
                 "extension":"pdf",
-                "filename_prefix":"infusion_summary"
+                "filename_prefix":"burn_summary"
             }
         ]
     }
