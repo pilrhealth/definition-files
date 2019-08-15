@@ -273,10 +273,6 @@
             {
                 "code":"pilrhealth:calrq:in_co2",
                 "mapping":"in_co2"
-            },
-            {
-                "code":"pilrhealth:calrq:multiple_n2",
-                "mapping":"multiple_n2"
             }
         ],
         "filter_params":[
