@@ -221,6 +221,10 @@
                 "code":"pilrhealth:calrq:chamber_volume",
                 "mapping":"volume"
             },
+			{
+                "code":"pilrhealth:calrq:deriv_window",
+                "mapping":"deriv_window"
+            },
             {
                 "code":"pilrhealth:calrq:in_o2",
                 "mapping":"in_o2"
