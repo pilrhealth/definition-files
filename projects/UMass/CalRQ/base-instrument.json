@@ -95,6 +95,15 @@
 			"min": 1,
 			"max": 60,
 			"required": true
+		}, {
+			"type": "integer_setting",
+			"code": "pilrhealth:calrq:deriv_window",
+			"name": "Derivative Window",
+			"description": "Size of calorimeter derivative (data points)",
+			"value": 8,
+			"min": 2,
+			"max": 1000,
+			"required": true
 		}
 	],
 	"datasets": [{

@@ -83,6 +83,11 @@
 							"period": null,
 							"epoch": null,
 							"value": 60
+						}, {
+							"code": "pilrhealth:calrq:deriv_window",
+							"period": null,
+							"epoch": null,
+							"value": 8
 						}
 					],
 					"periodSchedules":

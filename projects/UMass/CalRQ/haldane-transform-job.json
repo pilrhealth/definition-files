@@ -273,6 +273,10 @@
             {
                 "code":"pilrhealth:calrq:in_co2",
                 "mapping":"in_co2"
+            },
+            {
+                "code":"pilrhealth:calrq:deriv_window",
+                "mapping":"deriv_window"
             }
         ],
         "filter_params":[
