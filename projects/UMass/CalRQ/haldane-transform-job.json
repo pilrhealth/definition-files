@@ -103,14 +103,6 @@
                                 "units":"g/24hr"
                             },
                             {
-                                "name":"nitrogen",
-                                "type":"number",
-                                "optional":true,
-                                "label":"Urine Nitrogen Mass",
-                                "doc":"Urine Nitrogen Mass",
-                                "units":"grams"
-                            },
-                            {
                                 "name":"np_rq",
                                 "type":"number",
                                 "optional":true,
