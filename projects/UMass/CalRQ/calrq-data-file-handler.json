@@ -174,6 +174,6 @@
         ]
     },
     "jobs":[{
-    	"definition_source_abs":"https://raw.githubusercontent.com/pilrhealth/definition-files/master/projects/CalRQTest/CalRQ/haldane-transform-job.json"
+    	"definition_source_abs":"https://raw.githubusercontent.com/pilrhealth/definition-files/master/projects/UMass/CalRQ/haldane-transform-job.json"
 	}]
 }
