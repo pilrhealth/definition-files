@@ -269,6 +269,10 @@
             {
                 "code":"pilrhealth:calrq:deriv_window",
                 "mapping":"deriv_window"
+            },
+            {
+                "code":"pilrhealth:calrq:equation",
+                "mapping":"equation"
             }
         ],
         "filter_params":[
