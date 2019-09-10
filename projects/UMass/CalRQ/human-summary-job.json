@@ -161,6 +161,26 @@
                                 "type":"string",
                                 "label":"Time Tag Label"
                             },
+							{
+                                "name":"BikeSpeed",
+                                "type":"number",
+                                "label":"BikeSpeed"
+                            },
+							{
+                                "name":"BikeWorkload",
+                                "type":"number",
+                                "label":"BikeWorkload"
+                            },
+							{
+                                "name":"TreadmillRate",
+                                "type":"number",
+                                "label":"TreadmillRate"
+                            },
+							{
+                                "name":"TreadmillIncline",
+                                "type":"number",
+                                "label":"TreadmillIncline"
+                            },
                             {
                                 "name":"note",
                                 "type":"string",
