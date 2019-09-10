@@ -110,6 +110,30 @@
                                 "doc":"Non-Protein RQ",
                                 "units":""
                             },
+							{
+                                "name":"BikeSpeed",
+                                "type":"number",
+								"optional":true,
+                                "label":"BikeSpeed"
+                            },
+							{
+                                "name":"BikeWorkload",
+                                "type":"number",
+								"optional":true,
+                                "label":"BikeWorkload"
+                            },
+							{
+                                "name":"TreadmillRate",
+                                "type":"number",
+								"optional":true,
+                                "label":"TreadmillRate"
+                            },
+							{
+                                "name":"TreadmillIncline",
+                                "type":"number",
+								"optional":true,
+                                "label":"TreadmillIncline"
+                            },
                             {
                                 "name":"Activity",
                                 "type":"number",
@@ -203,6 +227,26 @@
                             {
                                 "name":"outflow_rate",
                                 "type":"number"
+                            },
+							{
+                                "name":"BikeSpeed",
+                                "type":"number",
+                                "label":"BikeSpeed"
+                            },
+							{
+                                "name":"BikeWorkload",
+                                "type":"number",
+                                "label":"BikeWorkload"
+                            },
+							{
+                                "name":"TreadmillRate",
+                                "type":"number",
+                                "label":"TreadmillRate"
+                            },
+							{
+                                "name":"TreadmillIncline",
+                                "type":"number",
+                                "label":"TreadmillIncline"
                             },
                             {
                                 "name":"Activity",
