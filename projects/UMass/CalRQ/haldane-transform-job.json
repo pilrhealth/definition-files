@@ -303,14 +303,6 @@
                 "mapping":"volume"
             },
             {
-                "code":"pilrhealth:calrq:in_o2",
-                "mapping":"in_o2"
-            },
-            {
-                "code":"pilrhealth:calrq:in_co2",
-                "mapping":"in_co2"
-            },
-            {
                 "code":"pilrhealth:calrq:deriv_window",
                 "mapping":"deriv_window"
             },
