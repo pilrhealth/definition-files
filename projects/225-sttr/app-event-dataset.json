@@ -1,0 +1,47 @@
+{
+  "definition_type": "dataset",
+  "name": "App Events",
+  "code": "pilrhealth:mobile:app_event",
+  "documentation": "A record of certain events relevant to the study detected by EMA",
+  "schemas": [
+    {
+      "clazz": "com.pilrhealth.data.ConcordiaSchema",
+      "type": "concordia",
+      "name": "1.0",
+      "schemaVersion": 1,
+      "specification": {
+        "type": "object",
+        "fields": [
+          {
+            "name": "event_type",
+            "documentation":  "Enumerated type. Current values: SURVEY_STARTED",
+            "label": "Event Type",
+            "type": "string"
+          },
+          {
+            "name": "survey_code",
+            "label": "Survey code",
+            "type": "string",
+            "documentation": "associated survey code (if any)"
+          },
+          {
+            "name": "session",
+            "label": "Session",
+            "type": "string",
+            "documentation": "associated session, if any. E.g. survey session"
+          },
+          {
+            "name": "card_code",
+            "label": "Card code",
+            "type": "string"
+          },
+          {
+            "name": "image_url",
+            "label": "Image url",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ]
+}
