@@ -1,0 +1,36 @@
+{
+    "definition_type": "dataset",
+    "name": "Undocumented Debug Data",
+    "code": "pilrhealth:mobile:undocumented",
+    "documentation": "A place for developers to temporarily capture diagnostic information.",
+    "schemas": [
+        {
+            "type": "concordia",
+            "name": "1.0",
+            "schemaVersion": 1,
+            "specification": {
+                "type": "object",
+                "fields": [
+                {
+                  "documentation": "The type of message this info pertains to, pointing to an EMA code section.",
+                  "label": "Tag",
+                  "name": "tag",
+                  "type": "string"
+                },
+                {
+                  "documentation": "associated description of the Tag",
+                  "label": "Message",
+                  "name": "msg",
+                  "type": "string"
+                },
+                {
+                  "documentation": "associated data (json, string, etc) for the given Tag.",
+                  "label": "Arguments",
+                  "name": "args",
+                  "type": "string"
+                }
+              ]
+            }
+        }
+    ]
+}
