@@ -1,7 +1,7 @@
 {
   "code": "custom_report",
   "version": 1,
-  "name": "Reports",
+  "name": "CBTgsh Reports",
   "description": "Custom reports for CBTgsh",
   "definition_type": "tool",
   "customizations": {
@@ -27,42 +27,41 @@
         { "key": "meal_behaviors", "label": "Behaviors" },
         { "key": "meal_thoughts", "label": "Thoughts/Notes" }
       ],
-      "query": "[{\"$match\":{\"metadata.pt\":\"{{pt}}\",\"data.survey_code\":\"meal_log\",\"localTimestamp\":{\"$gt\":\"{{start_date}}\",\"$lt\":\"{{end_date}}\"},\"data.question_code\":{\"$regex\":\"meal\"},\"data.response\":{\"$exists\":1,\"$ne\":\"\"}}},{\"$group\":{\"_id\":\"$data.session\",\"fields\":{\"$push\":{\"key\":\"$data.question_code\",\"value\":\"$data.response\"}}}}]"
+      "query": "[{\"$match\":{\"$or\":[{\"data.response\":{\"$exists\":1,\"$ne\":\"\"}},{\"data.responses\":{\"$exists\":1,\"$ne\":[]}}],\"data.question_code\":{\"$options\":\"\",\"$regex\":\"^meal\"},\"data.survey_code\":\"meal_log\",\"localTimestamp\":{\"$gte\":\"{{start_date}}\",\"$lt\":\"{{end_date}}\"},\"metadata.pt\":\"{{pt}}\"}},{\"$group\":{\"_id\":{\"session\":\"$data.session\",\"x\":{}},\"fields\":{\"$push\":{\"key\":\"$data.question_code\",\"value\":{\"$cond\":[\"$data.response\",\"$data.response\",\"$data.responses\"]}}}}}]"
     },
     {
       "code": "daily_eating_bodycheck",
       "dataset": "pilrhealth:mobile:survey_data",
       "columns": [
-        { "question_code": "daily_times", "label": "Date/Time" },
-        { "question_code": "daily_binge", "label": "Daily Binge" },
-        { "question_code": "daily_vomit", "label": "Vomit" },
-        { "question_code": "daily_laxative", "label": "Laxative" },
-        { "question_code": "daily_diuretics", "label": "Diuretics" },
-        { "question_code": "daily_meds", "label": "Medicine" },
-        { "question_code": "daily_skip", "label": "Skip" },
-        { "question_code": "daily_skipbreak", "label": "Skip Break" },
-        { "question_code": "daily_skipsnack1", "label": "Skip Snack 1" },
-        { "question_code": "daily_skiplun", "label": "Skip Lunch" },
-        { "question_code": "daily_skipsnack2", "label": "Skip Snack 2" },
-        { "question_code": "daily_skipdin", "label": "Skip Dinner" },
-        { "question_code": "daily_skipsnack3", "label": "Skip Snack 3" },
-        { "question_code": "daily_calor", "label": "Daily Calorie " },
-        { "question_code": "daily_bodycheck", "label": "Body Check" }
+        { "key": "section", "label": "Section" },
+        { "key": "card", "label": "Question" },
+        { "key": 2, "label": "M" },
+        { "key": 3, "label": "T" },
+        { "key": 4, "label": "W" },
+        { "key": 5, "label": "Th" },
+        { "key": 6, "label": "F" },
+        { "key": 7, "label": "Sa" },
+        { "key": 1, "label": "Su" },
       ],
-      "query": "[{\"$match\":{\"metadata.pt\":\"{{pt}}\",\"data.survey_code\":\"daily_eating_bodycheck\",\"localTimestamp\":{\"$gt\":\"{{start_date}}\",\"$lt\":\"{{end_date}}\"},\"data.question_code\":{\"$regex\":\"daily\"}}},{\"$group\":{\"_id\":\"$data.session\",\"fields\":{\"$push\":\"$data\"}}}]"
+      "query": "[{\"$match\":{\"localTimestamp\":{\"$gte\":\"{{start_date}}\",\"$lt\":\"{{end_date}}\"},\"metadata.pt\":\"{{pt}}\",\"data.survey_code\":\"daily_eating_bodycheck\",\"data.question_code\":{\"$regex\":\"daily\"},\"$or\":[{\"data.response\":{\"$exists\":1,\"$ne\":\"\"}},{\"data.responses\":{\"$exists\":1,\"$ne\":[]}}]}},{\"$project\":{\"data\":1,\"localTimestamp\":1,\"section\":{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_times\",\"daily_binge\",\"daily_vomit\",\"daily_laxative\",\"daily_diuretics\",\"daily_meds\"]]},\"Eating Behaviors\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_skip\",\"daily_skipbreak\",\"daily_skipsnack1\",\"daily_skiplun\",\"daily_skipsnack2\",\"daily_skipdin\",\"daily_skipsnack3\",\"daily_calor\"]]},\"Meal Patterns\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_bodycheck\"]]},\"Body Checking\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_emo\",\"daily_sad\",\"daily_lonely\",\"daily_excited\",\"daily_ashamed\",\"daily_proud\"]]},\"Emotions\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_angry\",\"daily_distress\",\"daily_confident\",\"daily_energetic\",\"daily_happy\"]]},\"Emotions\",\"Unknown\"]}]}]}]}]}}},{\"$group\":{\"_id\":\"$data.question_code\",\"section\":{\"$first\":\"$section\"},\"fields\":{\"$push\":{\"key\":{\"$dayOfWeek\":\"$localTimestamp\"},\"value\":\"$data.response_value\"}}}},{\"$sort\":{\"section\":1}},{\"$project\":{\"fields\":{\"$concatArrays\":[\"$fields\",[{\"key\":{\"$literal\":\"card\"},\"value\":\"$_id\"},{\"key\":{\"$literal\":\"section\"},\"value\":\"$section\"}]]}}}]"
+
     },
     {
       "code": "bodycheck_log",
       "dataset": "pilrhealth:mobile:survey_data",
       "columns": [
-        { "question_code": "body_date", "label": "Date/Time" },
-        { "question_code": "body_check_text", "label": "Body Check Behaviors" },
-        { "question_code": "body_times", "label": "Times Checked since last log" },
-        { "question_code": "body_location_text", "label": "Location(s)" },
-        { "question_code": "body_feeling_text", "label": "Feelings" },
-        { "question_code": "body_thoughts", "label": "Notes" }
+        { "key": "body_date", "label": "Date/Time" },
+        { "key": "body_check", "label": "Body Check Behaviors" },
+        { "key": "body_check_text", "label": "Body Check Behaviors Text" },
+        { "key": "body_times", "label": "Times Checked since last log" },
+        { "key": "body_location", "label": "Location(s)" },
+        { "key": "body_location_text", "label": "Location(s)" },
+        { "key": "body_feeling", "label": "Feelings" },
+        { "key": "body_feeling_text", "label": "Feelings" },
+        { "key": "body_thoughts", "label": "Notes" }
       ],
-      "query": "[{\"$match\":{\"metadata.pt\":\"{{pt}}\",\"data.survey_code\":\"bodycheck_log\",\"localTimestamp\":{\"$gt\":\"{{start_date}}\",\"$lt\":\"{{end_date}}\"},\"data.question_code\":{\"$regex\":\"body\"}}},{\"$group\":{\"_id\":\"$data.session\",\"fields\":{\"$push\":\"$data\"}}}]"
+      "query": "[{\"$match\":{\"data.question_code\":{\"$regex\":\"body\"},\"data.survey_code\":\"bodycheck_log\",\"localTimestamp\":{\"$gte\":\"{{start_date}}\",\"$lt\":\"{{end_date}}\"},\"metadata.pt\":\"{{pt}}\"}},{\"$group\":{\"_id\":\"$data.session\",\"fields\":{\"$push\":{\"key\":\"$data.question_code\",\"value\":{\"$cond\":[\"$data.response\",\"$data.response\",\"$data.responses\"]}}}}}]"
+
     }
   ]
 }
