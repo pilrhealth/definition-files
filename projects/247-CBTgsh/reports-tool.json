@@ -42,9 +42,16 @@
         { "key": 6, "label": "F" },
         { "key": 7, "label": "Sa" },
         { "key": 1, "label": "Su" },
+        { "key": "note", "label": "Notes" }
       ],
-      "group_by": ["section"],
+      "group_by": ["section", "note"],
       "postQueryValueMap" : {
+        "note" : {
+          "Emotions": "Rated on a scale from:  1=very slightly or not at all, 2=a little, 3=Moderately, 4=quite a bit, 5=extremely",
+          "Eating Behaviors": "Rated on a scale from: 0=None, 1 =Once, 2=2 times, 3 =3 times, 4=4-5 times, 5=More than 6 times",
+          "Meal Patterns": "Yes-No answers",
+          "Body Checking": "Rated on a scale from: 0=None, 1=1-5 times, 2=6-10 times, 3= 11-20 times, 4=21-49 times, 5=50 or more times"
+        },
         "card" : {
           "daily_times" : "In the past 24 hours, how many times did you do any of the following?",
           "daily_binge" : "Binge-eat (eat a large amount of food in a short period of time and feel loss of control)",
@@ -73,7 +80,7 @@
           "daily_energetic" : "Energetic",
           "daily_happy" : "Happy"
         }      },
-      "query": "[{\"$match\":{\"localTimestamp\":{\"$gte\":\"{{start_date}}\",\"$lt\":\"{{end_date}}\"},\"metadata.pt\":\"{{pt}}\",\"data.survey_code\":\"daily_eating_bodycheck\",\"data.question_code\":{\"$regex\":\"daily\"},\"$or\":[{\"data.response\":{\"$exists\":1,\"$ne\":\"\"}},{\"data.responses\":{\"$exists\":1,\"$ne\":[]}}]}},{\"$project\":{\"data\":1,\"localTimestamp\":1,\"section\":{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_times\",\"daily_binge\",\"daily_vomit\",\"daily_laxative\",\"daily_diuretics\",\"daily_meds\"]]},\"Eating Behaviors\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_skip\",\"daily_skipbreak\",\"daily_skipsnack1\",\"daily_skiplun\",\"daily_skipsnack2\",\"daily_skipdin\",\"daily_skipsnack3\",\"daily_calor\"]]},\"Meal Patterns\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_bodycheck\"]]},\"Body Checking\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_emo\",\"daily_sad\",\"daily_lonely\",\"daily_excited\",\"daily_ashamed\",\"daily_proud\"]]},\"Emotions\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_angry\",\"daily_distress\",\"daily_confident\",\"daily_energetic\",\"daily_happy\"]]},\"Emotions\",\"Unknown\"]}]}]}]}]}}},{\"$group\":{\"_id\":\"$data.question_code\",\"section\":{\"$first\":\"$section\"},\"fields\":{\"$push\":{\"key\":{\"$dayOfWeek\":\"$localTimestamp\"},\"value\":\"$data.response_value\"}}}},{\"$sort\":{\"section\":1}},{\"$project\":{\"fields\":{\"$concatArrays\":[\"$fields\",[{\"key\":{\"$literal\":\"card\"},\"value\":\"$_id\"},{\"key\":{\"$literal\":\"section\"},\"value\":\"$section\"}]]}}}]"
+      "query": "[{\"$match\":{\"metadata.pt\":\"pbtest1218-1\",\"localTimestamp\":{\"$gte\":\"2019-12-18T00:00:00.000Z\",\"$lt\":\"2020-07-26T00:00:00.000Z\"},\"data.survey_code\":\"daily_eating_bodycheck\",\"data.question_code\":{\"$regex\":\"daily\",\"$options\":\"\"},\"$or\":[{\"data.response\":{\"$exists\":1,\"$ne\":\"\"}},{\"data.responses\":{\"$exists\":1,\"$ne\":[]}}]}},{\"$project\":{\"data\":1,\"localTimestamp\":1,\"section\":{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_times\",\"daily_binge\",\"daily_vomit\",\"daily_laxative\",\"daily_diuretics\",\"daily_meds\"]]},\"Eating Behaviors\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_skip\",\"daily_skipbreak\",\"daily_skipsnack1\",\"daily_skiplun\",\"daily_skipsnack2\",\"daily_skipdin\",\"daily_skipsnack3\",\"daily_calor\"]]},\"Meal Patterns\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_bodycheck\"]]},\"Body Checking\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_emo\",\"daily_sad\",\"daily_lonely\",\"daily_excited\",\"daily_ashamed\",\"daily_proud\"]]},\"Emotions\",{\"$cond\":[{\"$setIsSubset\":[[\"$data.question_code\"],[\"daily_angry\",\"daily_distress\",\"daily_confident\",\"daily_energetic\",\"daily_happy\"]]},\"Emotions\",\"Unknown\"]}]}]}]}]}}},{\"$group\":{\"_id\":\"$data.question_code\",\"section\":{\"$first\":\"$section\"},\"fields\":{\"$push\":{\"key\":{\"$dayOfWeek\":\"$localTimestamp\"},\"value\":\"$data.response_value\"}}}},{\"$sort\":{\"section\":1}},{\"$project\":{\"fields\":{\"$concatArrays\":[\"$fields\",[{\"key\":{\"$literal\":\"card\"},\"value\":\"$_id\"},{\"key\":{\"$literal\":\"section\"},\"value\":\"$section\"},{\"key\":{\"$literal\":\"note\"},\"value\":\"$section\"}]]}}}]"
 
     },
     {
