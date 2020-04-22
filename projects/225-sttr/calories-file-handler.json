@@ -1,0 +1,74 @@
+{
+    "name": "Calories CSV File",
+    "code": "pilrhealth:sttr:calories_csv",
+    "version": 1,
+    "description": "A CSV data file of calories",
+    "definition_type": "file_handler",
+    "dataset": "pilrhealth:sttr:calories_data",
+    "dataset_version": 1,
+    "datasets": [
+        {
+            "name": "Calories",
+            "code": "pilrhealth:sttr:calories_data",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.Schema",
+                    "name": "Version 1",
+                    "schemaVersion": 1,
+                    "primaryKey": "Participant_ID",
+                    "duplicateAction": "Update",
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name" : "Participant_ID",
+                                "type" : "string",
+                                "label" : "Participant_ID",
+                                "doc"  : "The participant's id"
+                            },
+                            {
+                                "name" : "Calories",
+                                "type" : "number",
+                                "optional" : true,
+                                "label" : "Calories"
+                            },
+                            {
+                                "name" : "Session_ID",
+                                "type" : "string",
+                                "optional" : true,
+                                "label" : "Session_ID"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "parser": {
+        "parse_by": "column_name",
+        "col_name_row": 1,
+        "skip_rows": 1,
+        "null_expressions": ["NaN", "Inf", ""],
+        "date_format": "yyyy-MM-dd HH:mm:ss",
+        "data_mappings": [
+            {
+                "from_name": "Participant ID",
+                "to_name": "Participant_ID"
+            },
+            {
+                "from_name": "Calories",
+                "to_name": "Calories"
+            },
+            {
+                "from_name": "Session ID",
+                "to_name": "Session_ID"
+            }
+        ],
+        "metadata_mappings": [
+            {
+                "from_name": "Participant ID",
+                "to_name": "pt"
+            }
+        ]
+    }
+}
