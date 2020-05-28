@@ -1,0 +1,190 @@
+{
+    "name": "Health Intervention Messages",
+    "code": "pilrhealth:sttr:food_suggest_csv",
+    "version": 1,
+    "description": "A CSV data file of health intervention messages",
+    "definition_type": "file_handler",
+    "dataset": "pilrhealth:sttr:food_suggest",
+    "dataset_version": 1,
+    "allParticipantsOnly": true,
+    "allowDups": true,
+    "fileTypes": ".csv",
+    "col_name_row": 1,
+    "first_data_row": 2,
+    "datasets": [
+        {
+            "name": "Food Suggestion Messages",
+            "code": "pilrhealth:sttr:food_suggest",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.Schema",
+                    "name": "Version 1",
+                    "schemaVersion": 1,
+                    "dataKeys": "RefCode",
+                    "duplicateAction": "Update",
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "RefCode",
+                                "label": "RefCode",
+                                "doc": "RefCode",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Icon",
+                                "label": "Icon",
+                                "doc": "{?URL}",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Title",
+                                "label": "Title",
+                                "doc": "Title",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Text",
+                                "label": "Text",
+                                "doc": "Text",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Color",
+                                "label": "Color",
+                                "doc": "Color",
+                                "type": "string"
+                            },
+                            {
+                                "name": "LinkURL",
+                                "label": "LinkURL",
+                                "doc": "LinkURL",
+                                "type": "string"
+                            },
+                            {
+                                "name": "LinkText",
+                                "label": "LinkText",
+                                "doc": "LinkText",
+                                "type": "string"
+                            },
+                            {
+                                "name": "ImageURL",
+                                "label": "ImageURL",
+                                "doc": "ImageURL",
+                                "type": "string"
+                            },
+                            {
+                                "name": "FFR",
+                                "label": "FFR",
+                                "doc": "comma-separated list of (mcdonalds|burgerking|...)",
+                                "type": "string"
+                            },
+                            {
+                                "name": "FoodPref",
+                                "label": "FoodPref",
+                                "doc": "comma-separated list of (vegetablesfresh|saltysavory|...)",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Culture",
+                                "label": "Culture",
+                                "doc": "comma-sep list of (A|B)",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Time",
+                                "label": "Time",
+                                "doc": "comma-sep list of (breakfast|lunch|daysnack|nightsnack)",
+                                "type": "string"
+                            },
+                            {
+                                "name": "HealthRating",
+                                "label": "HealthRating",
+                                "doc": "HealthRating",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Delete",
+                                "label": "Delete",
+                                "doc": "Deleted if > 0",
+                                "type": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "parser": {
+        "parse_by": "column_name",
+        "col_name_row": 1,
+        "skip_rows": 1,
+        "null_expressions": [
+            "NaN",
+            "Inf",
+            ""
+        ],
+        "date_format": "yyyy-MM-dd HH:mm:ss",
+        "data_mappings": [
+            {
+                "from_name": "RefCode",
+                "to_name": "RefCode"
+            },
+            {
+                "from_name": "Icon",
+                "to_name": "Icon"
+            },
+            {
+                "from_name": "Title",
+                "to_name": "Title"
+            },
+            {
+                "from_name": "Text",
+                "to_name": "Text"
+            },
+            {
+                "from_name": "Color",
+                "to_name": "Color"
+            },
+            {
+                "from_name": "LinkURL",
+                "to_name": "LinkURL"
+            },
+            {
+                "from_name": "LinkText",
+                "to_name": "LinkText"
+            },
+            {
+                "from_name": "ImageURL",
+                "to_name": "ImageURL"
+            },
+            {
+                "from_name": "FFR",
+                "to_name": "FFR"
+            },
+            {
+                "from_name": "FoodPref",
+                "to_name": "FoodPref"
+            },
+            {
+                "from_name": "Culture",
+                "to_name": "Culture"
+            },
+            {
+                "from_name": "Time",
+                "to_name": "Time"
+            },
+            {
+                "from_name": "HealthRating",
+                "to_name": "HealthRating"
+            },
+            {
+                "from_name": "Delete",
+                "to_name": "Delete"
+            }
+        ],
+        "metadata_mappings": [
+
+        ]
+    }
+}
