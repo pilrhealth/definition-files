@@ -104,6 +104,12 @@
                                 "type": "string"
                             },
                             {
+                                "name": "Language",
+                                "label": "Language",
+                                "doc": "ISO Language code (2 letter)",
+                                "type": "string"
+                            },
+                            {
                                 "name": "Delete",
                                 "label": "Delete",
                                 "doc": "Deleted if > 0",
@@ -177,6 +183,10 @@
             {
                 "from_name": "HealthRating",
                 "to_name": "HealthRating"
+            },
+            {
+                "from_name": "Language",
+                "to_name": "Language"
             },
             {
                 "from_name": "Delete",
