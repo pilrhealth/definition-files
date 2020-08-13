@@ -1,0 +1,174 @@
+{
+  "name": "Goal Progress Messages",
+  "code": "pilrhealth:sttr:goal-msg-csv",
+  "version": 1,
+  "description": "A CSV file of goal progress messages",
+  "definition_type": "file_handler",
+  "dataset": "pilrhealth:sttr:goal_prog_msg",
+  "dataset_version": 1,
+  "allParticipantsOnly": true,
+  "allowDups": true,
+  "fileTypes": ".csv",
+  "col_name_row": 1,
+  "first_data_row": 2,
+  "datasets": [
+    {
+      "name": "Goal Progress Messages",
+      "code": "pilrhealth:sttr:goal_prog_msg",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.Schema",
+          "name": "Version 1",
+          "duplicateAction": "Update",
+
+          "##":" Compund key for selecting message to update ",
+          "##":"",
+          "dataKeys": "Pool:RefCode",
+
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "Pool",
+                "label": "Pool",
+                "doc": "One of ENCOURAGE, COMMISERATE, or CONGRAT",
+                "type": "string"
+              },
+              {
+                "name": "RefCode",
+                "label": "RefCode",
+                "doc": "RefCode",
+                "type": "string"
+              },
+              {
+                "name": "Icon",
+                "label": "Icon",
+                "doc": "{?URL}",
+                "type": "string"
+              },
+              {
+                "name": "Title",
+                "label": "Title",
+                "doc": "Title",
+                "type": "string"
+              },
+              {
+                "name": "Text",
+                "label": "Text",
+                "doc": "Text",
+                "type": "string"
+              },
+              {
+                "name": "Color",
+                "label": "Color",
+                "doc": "Color",
+                "type": "string"
+              },
+              {
+                "name": "LinkURL",
+                "label": "LinkURL",
+                "doc": "LinkURL",
+                "type": "string"
+              },
+              {
+                "name": "LinkText",
+                "label": "LinkText",
+                "doc": "LinkText",
+                "type": "string"
+              },
+              {
+                "name": "ImageURL",
+                "label": "ImageURL",
+                "doc": "ImageURL",
+                "type": "string"
+              },
+              {
+                "name": "Language",
+                "label": "Language",
+                "doc": "Language",
+                "type": "string"
+              },
+              {
+                "name": "Value",
+                "label": "Value",
+                "doc": "Barrier choice value",
+                "type": "number"
+              },
+              {
+                "name": "Delete",
+                "label": "Delete",
+                "doc": "Deleted if > 0",
+                "type": "number"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "parser": {
+    "parse_by": "column_name",
+    "col_name_row": 1,
+    "skip_rows": 1,
+    "null_expressions": [
+      "NaN",
+      "Inf",
+      ""
+    ],
+    "date_format": "yyyy-MM-dd HH:mm:ss",
+    "data_mappings": [
+      {
+        "from_name": "Pool",
+        "to_name": "Pool"
+      },
+      {
+        "from_name": "RefCode",
+        "to_name": "RefCode"
+      },
+      {
+        "from_name": "Icon",
+        "to_name": "Icon"
+      },
+      {
+        "from_name": "Title",
+        "to_name": "Title"
+      },
+      {
+        "from_name": "Text",
+        "to_name": "Text"
+      },
+      {
+        "from_name": "Color",
+        "to_name": "Color"
+      },
+      {
+        "from_name": "LinkURL",
+        "to_name": "LinkURL"
+      },
+      {
+        "from_name": "LinkText",
+        "to_name": "LinkText"
+      },
+      {
+        "from_name": "ImageURL",
+        "to_name": "ImageURL"
+      },
+      {
+        "from_name": "Language",
+        "to_name": "Language"
+      },
+      {
+        "from_name": "Value",
+        "to_name": "Value"
+      },
+      {
+        "from_name": "Delete",
+        "to_name": "Delete"
+      }
+    ],
+    "metadata_mappings": [
+
+    ]
+  }
+}
