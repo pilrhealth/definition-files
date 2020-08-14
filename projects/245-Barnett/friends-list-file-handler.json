@@ -20,7 +20,6 @@
                     "clazz": "com.pilrhealth.data.Schema",
                     "name": "Version 1",
                     "schemaVersion": 1,
-                    "dataKeys": "Participant_ID",
                     "duplicateAction": "Update",
                     "specification": {
                         "type": "object",
