@@ -1,0 +1,180 @@
+{
+    "name": "Daily Health Tip Messages",
+    "code": "pilrhealth:sttr:daily_health_tip_csv",
+    "version": 1,
+    "description": "A CSV data file of daily health tip messages",
+    "definition_type": "file_handler",
+    "dataset": "pilrhealth:sttr:daily_health_tip",
+    "dataset_version": 1,
+    "allParticipantsOnly": true,
+    "allowDups": true,
+    "fileTypes": ".csv",
+    "col_name_row": 1,
+    "first_data_row": 2,
+    "datasets": [
+        {
+            "name": "Daily Health Tip Messages",
+            "code": "pilrhealth:sttr:daily_health_tip",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.Schema",
+                    "name": "Version 1",
+                    "schemaVersion": 1,
+                    "dataKeys": "RefCode",
+                    "duplicateAction": "OverwriteAll",
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "RefCode",
+                                "label": "RefCode",
+                                "doc": "RefCode",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Icon",
+                                "label": "Icon",
+                                "doc": "{?URL}",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Title",
+                                "label": "Title",
+                                "doc": "Title",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Text",
+                                "label": "Text",
+                                "doc": "Text",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Color",
+                                "label": "Color",
+                                "doc": "Color",
+                                "type": "string"
+                            },
+                            {
+                                "name": "LinkURL",
+                                "label": "LinkURL",
+                                "doc": "LinkURL",
+                                "type": "string"
+                            },
+                            {
+                                "name": "LinkText",
+                                "label": "LinkText",
+                                "doc": "LinkText",
+                                "type": "string"
+                            },
+                            {
+                                "name": "ImageURL",
+                                "label": "ImageURL",
+                                "doc": "ImageURL",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Topic",
+                                "label": "Topic",
+                                "doc": "One of breakfast, sleep, exercise, fruits_veg, screentime, beverages, fast_food",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Type",
+                                "label": "Type",
+                                "doc": "One of direct_edgy, mi, testimonials, info_ideas",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Theme",
+                                "label": "Theme",
+                                "doc": "One of sustainability, body_positive, stress, other",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Language",
+                                "label": "Language",
+                                "doc": "ISO Language code (2 letter)",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Delete",
+                                "label": "Delete",
+                                "doc": "Deleted if > 0",
+                                "type": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "parser": {
+        "parse_by": "column_name",
+        "col_name_row": 1,
+        "skip_rows": 1,
+        "null_expressions": [
+            "NaN",
+            "Inf",
+            ""
+        ],
+        "date_format": "yyyy-MM-dd HH:mm:ss",
+        "data_mappings": [
+            {
+                "from_name": "RefCode",
+                "to_name": "RefCode"
+            },
+            {
+                "from_name": "Icon",
+                "to_name": "Icon"
+            },
+            {
+                "from_name": "Title",
+                "to_name": "Title"
+            },
+            {
+                "from_name": "Text",
+                "to_name": "Text"
+            },
+            {
+                "from_name": "Color",
+                "to_name": "Color"
+            },
+            {
+                "from_name": "LinkURL",
+                "to_name": "LinkURL"
+            },
+            {
+                "from_name": "LinkText",
+                "to_name": "LinkText"
+            },
+            {
+                "from_name": "ImageURL",
+                "to_name": "ImageURL"
+            },
+            {
+                "from_name": "Topic",
+                "to_name": "Topic"
+            },
+            {
+                "from_name": "Type",
+                "to_name": "Type"
+            },
+            {
+                "from_name": "Theme",
+                "to_name": "Theme"
+            },
+            {
+                "from_name": "Language",
+                "to_name": "Language"
+            },
+            {
+                "from_name": "Delete",
+                "to_name": "Delete"
+            }
+        ],
+        "metadata_mappings": [
+
+        ]
+    }
+}
