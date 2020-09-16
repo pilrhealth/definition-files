@@ -21,7 +21,7 @@
                     "name": "Version 1",
                     "schemaVersion": 1,
                     "dataKeys": "RefCode",
-                    "duplicateAction": "Update",
+                    "duplicateAction": "OverwriteAll",
                     "specification": {
                         "type": "object",
                         "fields": [
