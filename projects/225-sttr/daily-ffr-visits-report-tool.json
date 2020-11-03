@@ -1,0 +1,15 @@
+{
+  "code": "daily_ffr_visits_report",
+  "version": 1,
+  "name": "Daily FFR Visits Report",
+  "description": "The \"Daily FFR Visits Report\" tool allows you to view a report of daily ffr visits of participants.",
+  "definition_type": "tool",
+  "customizations": {
+    "package": "com.pilrhealth.tools.daily_ffr_visits_report",
+    "classnamePrefix": "DailyFfr",
+    "apix": true,
+    "controllers": {
+      "coordinate": "DailyFfrReport"
+    }
+  }
+}
