@@ -563,13 +563,82 @@
                     "type": "number",
                     "optional": true,
                     "label": "pct_complete"
-		  }
-		]
+		              }
+		            ]
               }
             ]
           }
         }
       ]
-    }    
+    },
+    {
+      "name": "Triggering Events",
+      "code": "pilrhealth:mobile:trig_events",
+      "schemas": [
+        {
+          "clazz": "com.pilrhealth.data.ConcordiaSchema",
+          "type": "concordia",
+          "name": "1.0",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "event_type",
+                "label": "Event Type",
+                "type": "string"
+              },
+              {
+                "name": "survey_code",
+                "label": "Survey code",
+                "type": "string"
+              },
+              {
+                "name": "trigger_code",
+                "label": "Trigger code",
+                "type": "string"
+              },
+              {
+                "name": "notify_time",
+                "type": "string",
+                "category": "date",
+                "label": "Notification Time",
+                "optional": true
+              },
+              {
+                "name": "expire_time",
+                "type": "string",
+                "category": "date",
+                "label": "Expiration Time",
+                "optional": true
+              },
+              {
+                "name": "session",
+                "label": "Session",
+                "type": "string"
+              },
+              {
+                "name": "venue_id",
+                "label": "Venue ID",
+                "type": "string",
+                "optional": true
+              },
+              {
+                "name": "venue_name",
+                "label": "Venue Name",
+                "type": "string",
+                "optional": true
+              },
+              {
+                "name": "venue_type",
+                "label": "Venue Type",
+                "type": "string",
+                "optional": true
+              }
+            ]
+          }
+        }
+      ]
+    }
   ]
 }
