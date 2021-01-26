@@ -639,6 +639,51 @@
           }
         }
       ]
+    },
+    {
+      "#": " Particiapn Events - domain level events concerning participants",
+      "name": "Particpant Events",
+      "code": "pilrhealth:mobile:participant_events",
+      "schemas": [
+        {
+          "type": "concordia",
+          "name": "1.0",
+          "schemaVersion": 1,
+          "specification": {
+            "type": "object",
+            "fields": [
+              {
+                "name": "event_type",
+                "label": "Event Type",
+                "type": "string"
+              },
+              {
+                "name": "config_type",
+                "label": "Config. Element Type",
+                "type": "string"
+              },
+              {
+                "name": "config_code",
+                "label": "Config. Element Code",
+                "type": "string"
+              },
+              {
+                "name": "session",
+                "label": "Session",
+                "type": "string"
+              },
+              {
+                "label": "Additional Data",
+                "optional": true,
+                "type": "object",
+                "name": "args",
+                "fields": [
+                ]
+              }
+            ]
+          }
+        }
+      ]
     }
   ]
 }
