@@ -12,6 +12,32 @@
                 "type": "object",
                 "fields": [
                     {
+                        "name": "period",
+                        "label": "Period",
+                        "type": "string",
+                        "optional": true
+                    },
+                    {
+                        "name": "epoch",
+                        "label": "Epoch",
+                        "type": "string",
+                        "optional": true
+                    },
+                    {
+                        "name": "epoch_start",
+                        "label": "Start Epoch",
+                        "type": "string",
+                        "category": "date",
+                        "optional": true
+                    },
+                    {
+                        "name": "epoch_end",
+                        "label": "End Epoch",
+                        "type": "string",
+                        "category": "date",
+                        "optional": true
+                    },
+                    {
                         "name": "event_type",
                         "label": "Event Type",
                         "type": "string"
