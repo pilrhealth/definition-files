@@ -650,38 +650,64 @@
           "name": "1.0",
           "schemaVersion": 1,
           "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "event_type",
-                "label": "Event Type",
-                "type": "string"
-              },
-              {
-                "name": "config_type",
-                "label": "Config. Element Type",
-                "type": "string"
-              },
-              {
-                "name": "config_code",
-                "label": "Config. Element Code",
-                "type": "string"
-              },
-              {
-                "name": "session",
-                "label": "Session",
-                "type": "string"
-              },
-              {
-                "label": "Additional Data",
-                "optional": true,
                 "type": "object",
-                "name": "args",
                 "fields": [
+                    {
+                        "name": "period",
+                        "label": "Period",
+                        "type": "string",
+                        "optional": true
+                    },
+                    {
+                        "name": "epoch",
+                        "label": "Epoch",
+                        "type": "string",
+                        "optional": true
+                    },
+                    {
+                        "name": "epoch_start",
+                        "label": "Start Epoch",
+                        "type": "string",
+                        "category": "date",
+                        "optional": true
+                    },
+                    {
+                        "name": "epoch_end",
+                        "label": "End Epoch",
+                        "type": "string",
+                        "category": "date",
+                        "optional": true
+                    },
+                    {
+                        "name": "event_type",
+                        "label": "Event Type",
+                        "type": "string"
+                    },
+                    {
+                        "name": "config_type",
+                        "label": "Config. Element Type",
+                        "type": "string"
+                    },
+                    {
+                        "name": "config_code",
+                        "label": "Config. Element Code",
+                        "type": "string"
+                    },
+                    {
+                        "name": "session",
+                        "label": "Session",
+                        "type": "string"
+                    },
+                    {
+                        "label": "Additional Data",
+                        "optional": true,
+                        "type": "object",
+                        "name": "args",
+                        "fields": [
+                        ]
+                    }
                 ]
-              }
-            ]
-          }
+            }
         }
       ]
     }
