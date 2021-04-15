@@ -1,8 +1,8 @@
 {
 	"definition_type": "bundle",
-	"code": "umass_calorimeter_bundle_ch2",
+	"code": "vt_calorimeter_bundle_ch2",
 	"version": 1,
-	"name": "UMass Flex Chamber",
+	"name": "VT Flex Chamber",
 	"description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
 	"instruments": [{
 			"definition_source_rel": "./base-instrument.json"
