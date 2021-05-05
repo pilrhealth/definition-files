@@ -1,9 +1,8 @@
 {
 	"definition_type": "bundle",
-	"code": "umass_calorimeter_bundle_ch1",
+	"code": "vt_calorimeter_bundle_ch2",
 	"version": 1,
-	"maxParticipants": 100,
-	"name": "UMass Large Chamber",
+	"name": "VT Flex Chamber",
 	"description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
 	"instruments": [{
 			"definition_source_rel": "./base-instrument.json"
@@ -48,7 +47,7 @@
 							"code": "pilrhealth:calrq:chamber_volume",
 							"period": null,
 							"epoch": null,
-							"value": 32000
+							"value": 5600
 						}, {
 							"code": "pilrhealth:calrq:co2_mfc",
 							"period": null,
@@ -84,6 +83,11 @@
 							"period": null,
 							"epoch": null,
 							"value": 60
+						}, {
+							"code": "pilrhealth:calrq:deriv_window",
+							"period": null,
+							"epoch": null,
+							"value": 8
 						}
 					],
 					"periodSchedules":
