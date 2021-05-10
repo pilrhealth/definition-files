@@ -50,7 +50,7 @@
                 "to_name":"InflowCO2"
             },
             {
-                "from_name":"InflowH2O",
+                "from_name":"InflowRH",
                 "to_name":"InflowH2O"
             },
             {
@@ -62,27 +62,27 @@
                 "to_name":"OutflowCO2"
             },
             {
-                "from_name":"OutflowH2O",
+                "from_name":"OutflowRH",
                 "to_name":"OutflowH2O"
             },
             {
-                "from_name":"InflowRate",
+                "from_name":"InflowRate0",
                 "to_name":"InflowRate"
             },
             {
-                "from_name":"OutflowRate",
+                "from_name":"OutflowRate0",
                 "to_name":"OutflowRate"
             },
             {
-                "from_name":"ChamberTemperature",
+                "from_name":"ChamberTemp",
                 "to_name":"ChamberTemperature"
             },
             {
-                "from_name":"ChamberPressure",
+                "from_name":"ChamberDP",
                 "to_name":"ChamberPressure"
             },
             {
-                "from_name":"ChamberHumidity",
+                "from_name":"ChamberRH",
                 "to_name":"ChamberHumidity"
             },
             {
@@ -90,7 +90,7 @@
                 "to_name":"LabTemp"
             },
             {
-                "from_name":"LabHumidity",
+                "from_name":"LabRH",
                 "to_name":"LabHumidity"
             },
             {
@@ -122,11 +122,11 @@
                 "to_name":"ExpectedEnergyBalance"
             },
             {
-                "from_name":"SampleHumidity",
+                "from_name":"SampleRH",
                 "to_name":"SampleHumidity"
             },
             {
-                "from_name":"PurgeH2O",
+                "from_name":"MedairDP",
                 "to_name":"PurgeH2O"
             },
             {
