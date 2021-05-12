@@ -1,0 +1,41 @@
+{
+    "#": "UAH Message Sequence Queue - Queue of message sequences that should be delivered to participants",
+    "definition_type": "dataset",
+    "name": "UAH Message Sequence Queue",
+    "code": "pilrhealth:uah:message_sequence_queue",
+    "schemas": [
+        {
+            "type": "concordia",
+            "name": "1.0",
+            "schemaVersion": 1,
+            "specification": {
+                "type": "object",
+                "fields": [
+                    {
+                        "name": "participantCode",
+                        "label": "Participant Code",
+                        "type": "string"
+                    },
+                    {
+                        "name": "projectCode",
+                        "label": "Project Code",
+                        "type": "string"
+                    },
+                    {
+                        "name": "sequence",
+                        "label": "Sequence",
+                        "type": "string"
+                    },
+                    {
+                        "name": "params",
+                        "label": "Parameters",
+                        "optional": true,
+                        "type": "object",
+                        "fields": [
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
