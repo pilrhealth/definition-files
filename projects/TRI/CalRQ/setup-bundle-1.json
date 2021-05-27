@@ -1,115 +1,18 @@
 {
   "definition_type": "bundle",
-  "code": "tri_calorimeter_bundle_001",
+  "code": "tri_calorimeter_bundle_002",
   "version": 1,
-  "name": "TRI Calorimeter Project Setup Bundle",
+"maxParticipants": 100,
+  "name": "TRI Calorimeter Project Setup Bundle Test",
   "description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
   "instruments": [
     {
       "definition_source_rel": "./base-instrument.json"
     }
   ],
-  "variables": [
-    {
-      "type": "double_setting",
-      "code": "pilrhealth:calrq:weight_in",
-      "name": "Weight In (Kg)",
-      "description": "Weight In (Kg)",
-      "units" : "Kg",
-      "value": 0,
-      "min": 0,
-      "max": 1000
-    },
-	{
-      "type": "double_setting",
-      "code": "pilrhealth:calrq:weight_out",
-      "name": "Weight Out (Kg)",
-      "description": "Weight Out (Kg)",
-      "units" : "Kg",
-      "value": 0,
-      "min": 0,
-      "max": 1000
-    },
-    {
-      "type": "integer_setting",
-      "code": "pilrhealth:calrq:energy_intake_measured",
-      "name": "Energy Intake Measured (kCal)",
-      "description": "Energy Intake Measured (kCal)",
-      "units" : "kCal",
-      "value": 0,
-      "min": 0,
-      "max": 30000
-    },
-    {
-      "type": "integer_setting",
-      "code": "pilrhealth:calrq:energy_intake_predicted",
-      "name": "Energy Intake Predicted (kCal)",
-      "description": "Energy Intake Predicted (kCal)",
-      "units" : "kCal",
-      "value": 0,
-      "min": 0,
-      "max": 30000
-    },
-    {
-      "type": "text_setting",
-      "code": "pilrhealth:calrq:diet",
-      "name": "Diet",
-      "description": "Diet"
-    },
-    {
-      "type": "text_setting",
-      "code": "pilrhealth:calrq:exercise_level",
-      "name": "Exercise Level",
-      "description": "Exercise Level"
-    },
-    {
-      "type": "text_setting",
-      "code": "pilrhealth:calrq:treatment",
-      "name": "Treatment",
-      "description": "Treatment"
-    },
-    {
-      "type": "array_setting",
-      "code": "pilrhealth:calrq:multiple_n2",
-      "name": "Urine Nitrogen Mass",
-      "description": "Urine Nitrogen Mass",
-      "choices": [{
-      	"fields":[{
-      		"min":0,
-      		"max":10,
-      		"description":"Urine Nitrogen Mass",
-      		"name":"Urine Nitrogen Mass",
-      		"value":0,
-      		"code":"calrq:urine_nitrogen_value",
-      		"type":"double_setting",
-      		"units":""
-      	},{
-      		"description":"Urine Nitrogen Collection Date",
-      		"name":"Urine Nitrogen Collection Date",
-      		"code":"calrq:urine_nitrogen_date",
-      		"type":"date_setting",
-      		"units":""
-      		
-      	},{
-      		"description":"Urine Nitrogen Collection Time",
-      		"name":"Urine Nitrogen Collection Time",
-      		"code":"calrq:urine_nitrogen_time",
-      		"type":"time_setting",
-      		"units":""
-      	}]
-      }]
-    },
-	{
-        "type":"double_setting",
-        "code":"pilrhealth:calrq:sleep_threshold",
-        "name":"Sleep Threshold",
-        "description":"Sleep Threshold",
-        "value":0,
-        "min":-100,
-        "max":100,
-        "required":false
-	}
-  ],
+  "variables":  [{
+"definition_source_rel": "./vars-bundle.json"
+      }],
   "tools": [
     {
       "definition_source_rel": "../../../tools/r-processing-tool.json"
@@ -162,6 +65,11 @@
                      "period":null,
                      "epoch":null,
                      "value":31000
+                  },            {  
+                     "code":"pilrhealth:calrq:n2_mfc",
+                     "period":null,
+                     "epoch":null,
+                     "value":null
                   },
                   {  
                      "code":"pilrhealth:calrq:co2_mfc",
@@ -177,6 +85,17 @@
                         "Push - Absolute"
                      ]
                   },
+	{
+	"code": "pilrhealth:calrq:equation",
+	"period": null,
+	"epoch": null,
+	"value": ["Updated"]
+	}, {
+	"code": "pilrhealth:calrq:expected",
+	"period": null,
+	"epoch": null,
+	"value": ["Push - Convert to Pull"]
+	}, 
                   {  
                      "code":"pilrhealth:calrq:gas_type",
                      "period":null,
@@ -194,12 +113,6 @@
                      "period":null,
                      "epoch":null,
                      "value":20.93
-                  },
-                  {  
-                     "code":"pilrhealth:calrq:n2_mfc",
-                     "period":null,
-                     "epoch":null,
-                     "value":null
                   },
                   {  
                      "code":"pilrhealth:calrq:predicted_energy_balance",

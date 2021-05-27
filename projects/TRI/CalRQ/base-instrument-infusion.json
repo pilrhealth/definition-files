@@ -89,7 +89,41 @@
       "min" : 0,
       "max" : 1000,
       "required": false
-    }
+    }, {
+	"type": "list_setting",
+	"code": "pilrhealth:calrq:equation",
+	"name": "Equations",
+	"description": "Calculation method of calorimeter data",
+	"choices": [
+		"Updated",
+		"Old"
+	],
+	"value": ["Updated"],
+	"required": true,
+	"multipleChoice": false
+}, {
+	"type": "list_setting",
+	"code": "pilrhealth:calrq:expected",
+	"name": "Infusion Equations",
+	"description": "Calculation method of infusion data",
+	"choices": [
+		"Push - Corrected Derivative",
+		"Push - Convert to Pull",
+		"Both - Old Equations"
+	],
+	"value": ["Push - Convert to Pull"],
+	"required": true,
+	"multipleChoice": false
+}, {
+	"type": "integer_setting",
+	"code": "pilrhealth:calrq:deriv_window",
+	"name": "Derivative Window",
+	"description": "Size of calorimeter derivative (data points)",
+	"value": 8,
+	"min": 2,
+	"max": 1000,
+	"required": true
+	}
   ],
   "datasets": [
     {
