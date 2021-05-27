@@ -71,19 +71,6 @@
       "multipleChoice": false
     },
     {
-      "type": "list_setting",
-      "code": "pilrhealth:calrq:gas_type",
-      "name": "Gas Type",
-      "description": "Gas Type for Burn Study",
-      "choices": [
-        "Propane",
-        "Ethanol",
-        "Methanol"
-      ],
-      "required": false,
-      "multipleChoice": false
-    },
-    {
       "type": "double_setting",
       "code": "pilrhealth:calrq:in_o2",
       "name": "O2 In Constant",
@@ -102,53 +89,41 @@
       "min" : 0,
       "max" : 1000,
       "required": false
-    },
-    {
-      "type": "double_setting",
-      "code": "pilrhealth:calrq:predicted_energy_balance",
-      "name": "Predicted Energy Balance",
-      "description": "Predicted Energy Balance",
-      "value" : 0,
-      "min" : -30000,
-      "max" : 30000,
-      "required": false
-    }, 
-{
-"type": "integer_setting",
-"code": "pilrhealth:calrq:deriv_window",
-"name": "Derivative Window",
-"description": "Size of calorimeter derivative (data points)",
-"value": 8,
-"min": 2,
-"max": 1000,
-"required": true
-   }, 
-{
-"type": "list_setting",
-"code": "pilrhealth:calrq:equation",
-"name": "Equations",
-"description": "Calculation method of calorimeter data",
-"choices": [
-	"Updated",
-	"Old"
+    }, {
+	"type": "list_setting",
+	"code": "pilrhealth:calrq:equation",
+	"name": "Equations",
+	"description": "Calculation method of calorimeter data",
+	"choices": [
+		"Updated",
+		"Old"
 	],
-"value": ["Updated"],
-"required": true,
-"multipleChoice": false
+	"value": ["Updated"],
+	"required": true,
+	"multipleChoice": false
 }, {
-"type": "list_setting",
-"code": "pilrhealth:calrq:expected",
-"name": "Infusion Equations",
-"description": "Calculation method of infusion data",
-"choices": [
-	"Push - Corrected Derivative",
-	"Push - Convert to Pull",
-	"Both - Old Equations"
+	"type": "list_setting",
+	"code": "pilrhealth:calrq:expected",
+	"name": "Infusion Equations",
+	"description": "Calculation method of infusion data",
+	"choices": [
+		"Push - Corrected Derivative",
+		"Push - Convert to Pull",
+		"Both - Old Equations"
 	],
-"value": ["Push - Convert to Pull"],
-"required": true,
-"multipleChoice": false
-}
+	"value": ["Push - Convert to Pull"],
+	"required": true,
+	"multipleChoice": false
+}, {
+	"type": "integer_setting",
+	"code": "pilrhealth:calrq:deriv_window",
+	"name": "Derivative Window",
+	"description": "Size of calorimeter derivative (data points)",
+	"value": 8,
+	"min": 2,
+	"max": 1000,
+	"required": true
+	}
   ],
   "datasets": [
     {
@@ -478,15 +453,6 @@
   "file_handlers": [
     {
       "definition_source_rel": "./calrq-data-file-handler.json"
-    },
-    {
-      "definition_source_rel": "./human-report-file.json"
-    },
-    {
-        "definition_source_rel":"./infusion-report-file.json"
-    },
-    {
-        "definition_source_rel":"./burn-report-file.json"
     }
   ]
 }

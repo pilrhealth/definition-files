@@ -1,8 +1,7 @@
 {
-    "definition_type":"file_handler",
-    "name":"CalRQ Human Report",
-    "code":"pilrhealth:calrq:human_file",
-    "version":1,
-    "unlisted":true,
-    "description":"A report with parameters from a calorimeter human study."
+    "definition_type": "file_handler",
+    "name": "CalRQ Human Report",
+    "code": "pilrhealth:calrq:human_file",
+    "version" : 1,
+    "description" : "A report with parameters from a calorimeter human study."
 }
