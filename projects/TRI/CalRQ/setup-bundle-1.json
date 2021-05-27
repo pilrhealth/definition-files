@@ -1,9 +1,9 @@
 {
   "definition_type": "bundle",
   "code": "tri_calorimeter_bundle_002",
-  "version": 1,
+  "version": 2,
 "maxParticipants": 100,
-  "name": "TRI Calorimeter Project Setup Bundle Test",
+  "name": "TRI Large Chamber Project Setup Bundle Test",
   "description": "This component bundle adds the CalRQ instrument to a project, as well as the common file handlers, variables, processing jobs, and tools used in a calorimeter study.",
   "instruments": [
     {
