@@ -1,0 +1,80 @@
+{
+    "name": "KU Awair Device Assignment",
+    "code": "pilrhealth:ku:devices_csv",
+    "version": 1,
+    "description": "A CSV file specifying the KU Awair device assignment",
+    "definition_type": "file_handler",
+    "dataset": "pilrhealth:ku:devices",
+    "dataset_version": 1,
+    "allParticipantsOnly": true,
+    "allowDups": true,
+    "fileTypes": ".csv",
+    "col_name_row": 1,
+    "first_data_row": 2,
+    "datasets": [
+        {
+            "name": "KU Awair Device Assignment",
+            "code": "pilrhealth:ku:devices",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.Schema",
+                    "name": "Version 1",
+                    "schemaVersion": 1,
+                    "dataKeys": "Awair_Device_UUID",
+                    "duplicateAction": "OverwriteAll",
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "Awair_Device_UUID",
+                                "label": "Awair_Device_UUID",
+                                "doc": "Awair Device UUID",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Participant_Code",
+                                "label": "Participant_Code",
+                                "doc": "Participant Code",
+                                "type": "string"
+                            },
+                            {
+                                "name": "Updated_Date",
+                                "label": "Updated_Date",
+                                "doc": "Updated Date",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "parser": {
+        "parse_by": "column_name",
+        "col_name_row": 1,
+        "skip_rows": 1,
+        "null_expressions": [
+            "NaN",
+            "Inf",
+            ""
+        ],
+        "date_format": "yyyy-MM-dd HH:mm:ss",
+        "data_mappings": [
+            {
+                "from_name": "Awair_Device_UUID",
+                "to_name": "Awair_Device_UUID"
+            },
+            {
+                "from_name": "Participant_Code",
+                "to_name": "Participant_Code"
+            },
+            {
+                "from_name": "Updated_Date",
+                "to_name": "Updated_Date"
+            }
+        ],
+        "metadata_mappings": [
+
+        ]
+    }
+}
