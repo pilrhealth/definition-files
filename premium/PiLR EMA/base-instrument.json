@@ -1,715 +1,709 @@
 {
-  "definition_type": "instrument",
-  "name": "PiLR EMA App",
-  "description": "The PiLR EMA App allows you to setup surveys and messages to deliver to participants through their mobile phone (Android or iOS).  It also allows you to set a delivery schedule and triggering events to initiate them.",
-  "code": "ema_ots",
-  "version": 8,
-  "customizations": {
-    "package": "com.pilrhealth.instruments.ema_ots",
-    "classnamePrefix": "EmaOts",
-    "apix": true,
-    "controllers": {
-      "configure": "EmaOtsConfig",
-      "coordinate": "EmaOts"
-    },
-    "services": {
-      "handleContent": "EmaOtsConfig"
-    }
-  },
-  "settings": [
-    {
-      "type": "configuration_setting",
-      "code": "ema_ots:ema_config",
-      "name": "EMA Configuration",
-      "description": "The configuration of the EMA content to deliver to the participant."
-    },
-    {
-      "type": "boolean_setting",
-      "code": "provider_gps",
-      "name": "GPS Provider",
-      "description": "Provider used to collect location in background with GPS.",
-      "value": false
-    },
-    {
-      "type": "integer_setting",
-      "code": "interval",
-      "name": "Data collection interval (min)",
-      "description": "Interval for data collection.",
-      "value": 60
-    },
-    {
-      "type": "string_setting",
-      "code": "custom:string-1",
-      "name": "Special Function String 1",
-      "description": "For use by custom EMA variants",
-      "value": "",
-      "required": false
-    },
-    {
-      "type": "string_setting",
-      "code": "custom:string-2",
-      "name": "Special Function String 2",
-      "description": "For use by custom EMA variants",
-      "value": "",
-      "required": false
-    },
-    {
-      "type": "string_setting",
-      "code": "custom:string-3",
-      "name": "Special Function String 3",
-      "description": "For use by custom EMA variants",
-      "value": "",
-      "required": false
-    },
-    {
-      "description": "Record location on survey submission?.",
-      "name": "Survey Location",
-      "value": false,
-      "code": "survey_location",
-      "type": "boolean_setting",
-      "required": "false"
-     }
-  ],
-  "datasets": [
-    {
-      "name": "App Log",
-      "code": "pilrhealth:mobile:app_log",
-      "schemas": [
-        {
-          "type": "concordia",
-          "schemaVersion": 1,
-          "name": "1.0",
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "level",
-                "optional": false,
-                "doc": "One of: error, warning, debug, or info.",
-                "label": "Log level",
-                "type": "string"
-              },
-              {
-                "name": "tag",
-                "optional": true,
-                "doc": "A searchable string for event analytics.",
-                "label": "Tag",
-                "type": "string"
-              },
-              {
-                "name": "msg",
-                "optional": false,
-                "doc": "Human readable message.",
-                "label": "Message",
-                "type": "string"
-              },
-              {
-                "label": "Additional Data",
-                "optional": true,
-                "type": "object",
-                "name": "args",
-                "fields": []
-              }
-            ]
-          }
+    "definition_type": "instrument",
+    "name": "PiLR EMA App",
+    "description": "The PiLR EMA App allows you to setup surveys and messages to deliver to participants through their mobile phone (Android or iOS).  It also allows you to set a delivery schedule and triggering events to initiate them.",
+    "code": "ema_ots",
+    "version": 8,
+    "customizations": {
+        "package": "com.pilrhealth.instruments.ema_ots",
+        "classnamePrefix": "EmaOts",
+        "apix": true,
+        "controllers": {
+            "configure": "EmaOtsConfig",
+            "coordinate": "EmaOts"
+        },
+        "services": {
+            "handleContent": "EmaOtsConfig"
         }
-      ]
     },
-    {
-      "name": "Personal Venues",
-      "code": "pilrhealth:mobile:personal_venue",
-      "schemas": [
+    "settings": [
         {
-          "type": "concordia",
-          "schemaVersion": 1,
-          "name": "1.0",
-          "specification": {
-            "fields": [
-              {
-                "doc": "The ID assigned to venue",
-                "label": "Venue Id",
-                "name": "venue_id",
-                "type": "string"
-              },
-              {
-                "doc": "Name assigned to venue by participant.",
-                "label": "Venue Name",
-                "name": "name",
-                "type": "string"
-              },
-              {
-                "label": "Venue Type",
-                "name": "venue_type",
-                "type": "string",
-                "optional": true,
-                "doc": "Optional description to specify the type of venue."
-              },
-              {
-                "label": "Action",
-                "name": "action",
-                "type": "string",
-                "doc": "The current state of the venue."
-              },
-              {
-                "doc": "Information used to trigger on arrival at venue",
-                "label": "Trigger Info",
-                "name": "trig_info",
-                "optional": true,
-                "type": "object",
-                "fields": [
-                  {
-                    "optional": true,
-                    "type": "number",
-                    "label": "Centroid Latitude",
-                    "name": "lat"
-                  },
-                  {
-                    "optional": true,
-                    "type": "number",
-                    "label": "Centroid Longitude",
-                    "name": "lon"
-                  },
-                  {
-                    "optional": true,
-                    "type": "number",
-                    "label": "Radius from Centroid",
-                    "name": "radius"
-                  }
-                ]
-              }
-            ],
-            "type": "object"
-          }
+            "type": "configuration_setting",
+            "code": "ema_ots:ema_config",
+            "name": "EMA Configuration",
+            "description": "The configuration of the EMA content to deliver to the participant."
+        },
+        {
+            "type": "boolean_setting",
+            "code": "provider_gps",
+            "name": "GPS Provider",
+            "description": "Provider used to collect location in background with GPS.",
+            "value": false
+        },
+        {
+            "type": "integer_setting",
+            "code": "interval",
+            "name": "Data collection interval (min)",
+            "description": "Interval for data collection.",
+            "value": 60
+        },
+        {
+            "type": "string_setting",
+            "code": "custom:string-1",
+            "name": "Special Function String 1",
+            "description": "For use by custom EMA variants",
+            "value": "",
+            "required": false
+        },
+        {
+            "type": "string_setting",
+            "code": "custom:string-2",
+            "name": "Special Function String 2",
+            "description": "For use by custom EMA variants",
+            "value": "",
+            "required": false
+        },
+        {
+            "type": "string_setting",
+            "code": "custom:string-3",
+            "name": "Special Function String 3",
+            "description": "For use by custom EMA variants",
+            "value": "",
+            "required": false
+        },
+        {
+            "description": "Record location on survey submission?.",
+            "name": "Survey Location",
+            "value": false,
+            "code": "survey_location",
+            "type": "boolean_setting",
+            "required": "false"
         }
-      ]
-    },
-    {
-      "name": "Survey Data",
-      "code": "pilrhealth:mobile:survey_data",
-      "schemas": [
+    ],
+    "datasets": [
         {
-          "type": "concordia",
-          "schemaVersion": 1,
-          "name": "1.0",
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "event_type",
-                "type": "string",
-                "label": "Event Type"
-              },
-              {
-                "name": "survey_code",
-                "type": "string",
-                "label": "Survey Code",
-                "optional": true
-              },
-              {
-                "name": "self_report",
-                "type": "boolean",
-                "label": "Self Report",
-                "doc": "Track if this submission was self reported",
-                "optional": true
-              },
-              {
-                "name": "session",
-                "type": "string",
-                "label": "Session"
-              },
-              {
-                "name": "question_type",
-                "type": "string",
-                "label": "Question Type",
-                "optional": true
-              },
-              {
-                "name": "question_code",
-                "type": "string",
-                "label": "Question Code",
-                "optional": true
-              },
-              {
-                "name": "response",
-                "type": "string",
-                "label": "Response",
-                "optional": true
-              },
-              {
-                "name": "response_value",
-                "type": "string",
-                "label": "Response Value",
-                "optional": true
-              },
-              {
-                "name": "responses",
-                "type": "array",
-                "constType": {
-                  "type": "string"
-                },
-                "label": "Responses",
-                "optional": true
-              },
-              {
-                "name": "response_values",
-                "type": "array",
-                "constType": {
-                  "type": "string"
-                },
-                "label": "Response Values",
-                "optional": true
-              },
-              {
-                "label": "Additional Data",
-                "optional": true,
-                "type": "object",
-                "name": "more_data",
-                "fields": [
-                  {
-                    "name": "text",
-                    "type": "string",
-                    "label": "Text",
-                    "optional": true
-                  },
-                  {
-                    "name": "value",
-                    "type": "string",
-                    "label": "Value",
-                    "optional": true
-                  },
-                  {
-                    "name": "selected",
-                    "type": "boolean",
-                    "label": "Selected",
-                    "optional": true
-                  }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "Compliance_Log",
-      "code": "pilrhealth:mobile:comp_log",
-      "calculationServiceName": "complianceSummaryService",
-      "schemas": [
-        {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
-          "name": "1.0",
-          "schemaVersion": 1,
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "label": "Total Started Surveys",
-                "name": "total_started",
-                "type": "number"
-              },
-              {
-                "label": "Total Submitted Surveys",
-                "name": "total_submitted",
-                "type": "number"
-              },
-              {
-                "label": "Total Notifications",
-                "name": "total_notifications",
-                "type": "number"
-              },
-              {
-                "label": "Percent Completed Surveys",
-                "name": "percent_completed",
-                "type": "number"
-              },
-              {
-                "label": "Avg Time To Comp Surveys",
-                "name": "time_taken",
-                "type": "number"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "Notification Log",
-      "code": "pilrhealth:mobile:notification_log",
-      "schemas": [
-        {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
-          "name": "1.0",
-          "schemaVersion": 1,
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "session",
-                "type": "string",
-                "label": "Session"
-              },
-              {
-                "name": "notif_time",
-                "type": "string",
-                "category": "date",
-                "label": "Notification Time"
-              },
-              {
-                "name": "expir_time",
-                "type": "string",
-                "category": "date",
-                "label": "Expiration Time"
-              },
-              {
-                "name": "survey_code",
-                "label": "Survey Code",
-                "type": "string",
-                "optional": true
-              },
-              {
-                "name": "trigger_code",
-                "label": "Trigger Code",
-                "type": "string",
-                "optional": true
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "Compliance Events",
-      "code": "pilrhealth:mobile:comp_events",
-      "calculationServiceName": "complianceSummaryService",
-      "schemas": [
-        {
-          "type": "concordia",
-          "name": "1.0",
-          "schemaVersion": 2,
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "session",
-                "label": "Session",
-                "type": "string"
-              },
-              {
-                "name": "notif_time",
-                "label": "Notification Time",
-                "category": "date",
-                "type": "string",
-                "optional": true
-              },
-              {
-                "name": "expir_time",
-                "label": "Expiration Time",
-                "category": "date",
-                "type": "string",
-                "optional": true
-              },
-              {
-                "name": "survey_code",
-                "label": "Survey code",
-                "type": "string"
-              },
-              {
-                "name": "trigger_code",
-                "label": "Trigger code",
-                "type": "string"
-              },
-              {
-                "name": "completed",
-                "label": "Completed",
-                "category": "date",
-                "type": "string"
-              },
-              {
-                "name": "type",
-                "label": "Type",
-                "type": "string"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "Background Location",
-      "code": "pilrhealth:mobile:background_location",
-      "schemas": [
-        {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
-          "name": "1.0",
-          "schemaVersion": 1,
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "latitude",
-                "doc": "Coordinate latitude",
-                "label": "Latitude",
-                "type": "number"
-              },
-              {
-                "name": "longitude",
-                "doc": "Coordinate longitude.",
-                "label": "Longitude",
-                "type": "number"
-              },
-              {
-                "optional": true,
-                "name": "platform",
-                "doc": "Device platform type, either ios or android.",
-                "label": "Platform",
-                "type": "string"
-              },
-              {
-                "name": "accuracy",
-                "label": "Accuracy",
-                "doc": "GPS accuracy radius (in meters) reported by the Phone",
-                "type": "number",
-                "optional": true
-              },
-              {
-                "name": "altitude",
-                "label": "Altitude",
-                "doc": "GPS altitude (in meters) reported by the Phone or -1 if not available",
-                "type": "number",
-                "optional": true
-              },
-              {
-                "name": "altitude_accuracy",
-                "label": "Altitude Accuracy",
-                "doc": "GPS altitude accuracy (in meters) reported by the Phone or -1 if not available",
-                "type": "number",
-                "optional": true
-
-              },
-              {
-                "name": "heading",
-                "label": "Heading",
-                "doc": "GPS heading (Number in degrees) reported by the Phone or -1 if not available",
-                "type": "number",
-                "optional": true
-
-              },
-              {
-                "name": "speed",
-                "label": "Speed",
-                "doc": "GPS calculated speed (Number in meters per second) reported by the Phone or -1 if not available. On IOS negative values indicate an issue with the Heading reading.",
-                "type": "number",
-                "optional": true
-
-              },
-              {
-                "name": "provider",
-                "label": "Provider",
-                "doc": "the name (string) of the provider of the GPS information. On mobile devices, there is an entire additional layer of location services built into Android and IOS. These additional location provider services offer different levels of accuracy and require various levels of power from the device.",
-                "type": "string",
-                "optional": true
-
-              },
-              {
-                "name": "timestamp",
-                "label": "Timestamp",
-                "doc": "the UTC timestamp when the GPS Coordinates were captured. These timestamps are allowed to differ from the reported metadata:timestamp by several seconds. Larger deviations should be considered an error, especially if the deviation is over 1 minute.",
-                "type": "string",
-                "optional": true
-
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "Videos Watched Data",
-      "code": "pilrhealth:mobile:videos_watched",
-      "schemas": [
-        {
-          "type": "concordia",
-          "name": "Umn Events Schema",
-          "schemaVersion": 2,
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "video_name",
-                "type": "string",
-                "optional": true,
-                "label": "video_name"
-              },
-              {
-                "name": "video_url",
-                "type": "string",
-                "optional": true,
-                "label": "video_url"
-              },
-              {
-                "label": "additional_data",
-                "optional": true,
-                "type": "object",
-                "name": "additional_data",
-                "fields": [
-                  {
-                    "name": "card_code",
-                    "type": "string",
-                    "optional": true,
-                    "label": "card_code"
-                  },
-                  {
-                    "name": "pct_complete",
-                    "type": "number",
-                    "optional": true,
-                    "label": "pct_complete"
-		              }
-		            ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "Triggering Events",
-      "code": "pilrhealth:mobile:trig_events",
-      "schemas": [
-        {
-          "clazz": "com.pilrhealth.data.ConcordiaSchema",
-          "type": "concordia",
-          "name": "1.0",
-          "schemaVersion": 1,
-          "specification": {
-            "type": "object",
-            "fields": [
-              {
-                "name": "event_type",
-                "label": "Event Type",
-                "type": "string"
-              },
-              {
-                "name": "survey_code",
-                "label": "Survey code",
-                "type": "string"
-              },
-              {
-                "name": "trigger_code",
-                "label": "Trigger code",
-                "type": "string"
-              },
-              {
-                "name": "notify_time",
-                "type": "string",
-                "category": "date",
-                "label": "Notification Time",
-                "optional": true
-              },
-              {
-                "name": "expire_time",
-                "type": "string",
-                "category": "date",
-                "label": "Expiration Time",
-                "optional": true
-              },
-              {
-                "name": "session",
-                "label": "Session",
-                "type": "string"
-              },
-              {
-                "name": "venue_id",
-                "label": "Venue ID",
-                "type": "string",
-                "optional": true
-              },
-              {
-                "name": "venue_name",
-                "label": "Venue Name",
-                "type": "string",
-                "optional": true
-              },
-              {
-                "name": "venue_type",
-                "label": "Venue Type",
-                "type": "string",
-                "optional": true
-              }
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "#": " Particiapn Events - domain level events concerning participants",
-      "name": "Particpant Events",
-      "code": "pilrhealth:mobile:participant_events",
-      "schemas": [
-        {
-          "type": "concordia",
-          "name": "1.0",
-          "schemaVersion": 1,
-          "specification": {
-                "type": "object",
-                "fields": [
-                    {
-                        "name": "period",
-                        "label": "Period",
-                        "type": "string",
-                        "optional": true
-                    },
-                    {
-                        "name": "epoch",
-                        "label": "Epoch",
-                        "type": "string",
-                        "optional": true
-                    },
-                    {
-                        "name": "epoch_start",
-                        "label": "Start Epoch",
-                        "type": "string",
-                        "category": "date",
-                        "optional": true
-                    },
-                    {
-                        "name": "epoch_end",
-                        "label": "End Epoch",
-                        "type": "string",
-                        "category": "date",
-                        "optional": true
-                    },
-                    {
-                        "name": "event_type",
-                        "label": "Event Type",
-                        "type": "string"
-                    },
-                    {
-                        "name": "config_type",
-                        "label": "Config. Element Type",
-                        "type": "string"
-                    },
-                    {
-                        "name": "config_code",
-                        "label": "Config. Element Code",
-                        "type": "string"
-                    },
-                    {
-                        "name": "session",
-                        "label": "Session",
-                        "type": "string"
-                    },
-                    {
-                        "label": "Additional Data",
-                        "optional": true,
+            "name": "App Log",
+            "code": "pilrhealth:mobile:app_log",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "schemaVersion": 1,
+                    "name": "1.0",
+                    "specification": {
                         "type": "object",
-                        "name": "args",
                         "fields": [
+                            {
+                                "name": "level",
+                                "optional": false,
+                                "doc": "One of: error, warning, debug, or info.",
+                                "label": "Log level",
+                                "type": "string"
+                            },
+                            {
+                                "name": "tag",
+                                "optional": true,
+                                "doc": "A searchable string for event analytics.",
+                                "label": "Tag",
+                                "type": "string"
+                            },
+                            {
+                                "name": "msg",
+                                "optional": false,
+                                "doc": "Human readable message.",
+                                "label": "Message",
+                                "type": "string"
+                            },
+                            {
+                                "label": "Additional Data",
+                                "optional": true,
+                                "type": "object",
+                                "name": "args",
+                                "fields": []
+                            }
                         ]
                     }
-                ]
-            }
+                }
+            ]
+        },
+        {
+            "name": "Personal Venues",
+            "code": "pilrhealth:mobile:personal_venue",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "schemaVersion": 1,
+                    "name": "1.0",
+                    "specification": {
+                        "fields": [
+                            {
+                                "doc": "The ID assigned to venue",
+                                "label": "Venue Id",
+                                "name": "venue_id",
+                                "type": "string"
+                            },
+                            {
+                                "doc": "Name assigned to venue by participant.",
+                                "label": "Venue Name",
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "label": "Venue Type",
+                                "name": "venue_type",
+                                "type": "string",
+                                "optional": true,
+                                "doc": "Optional description to specify the type of venue."
+                            },
+                            {
+                                "label": "Action",
+                                "name": "action",
+                                "type": "string",
+                                "doc": "The current state of the venue."
+                            },
+                            {
+                                "doc": "Information used to trigger on arrival at venue",
+                                "label": "Trigger Info",
+                                "name": "trig_info",
+                                "optional": true,
+                                "type": "object",
+                                "fields": [
+                                    {
+                                        "optional": true,
+                                        "type": "number",
+                                        "label": "Centroid Latitude",
+                                        "name": "lat"
+                                    },
+                                    {
+                                        "optional": true,
+                                        "type": "number",
+                                        "label": "Centroid Longitude",
+                                        "name": "lon"
+                                    },
+                                    {
+                                        "optional": true,
+                                        "type": "number",
+                                        "label": "Radius from Centroid",
+                                        "name": "radius"
+                                    }
+                                ]
+                            }
+                        ],
+                        "type": "object"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Survey Data",
+            "code": "pilrhealth:mobile:survey_data",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "schemaVersion": 1,
+                    "name": "1.0",
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "event_type",
+                                "type": "string",
+                                "label": "Event Type"
+                            },
+                            {
+                                "name": "survey_code",
+                                "type": "string",
+                                "label": "Survey Code",
+                                "optional": true
+                            },
+                            {
+                                "name": "self_report",
+                                "type": "boolean",
+                                "label": "Self Report",
+                                "doc": "Track if this submission was self reported",
+                                "optional": true
+                            },
+                            {
+                                "name": "session",
+                                "type": "string",
+                                "label": "Session"
+                            },
+                            {
+                                "name": "question_type",
+                                "type": "string",
+                                "label": "Question Type",
+                                "optional": true
+                            },
+                            {
+                                "name": "question_code",
+                                "type": "string",
+                                "label": "Question Code",
+                                "optional": true
+                            },
+                            {
+                                "name": "response",
+                                "type": "string",
+                                "label": "Response",
+                                "optional": true
+                            },
+                            {
+                                "name": "response_value",
+                                "type": "string",
+                                "label": "Response Value",
+                                "optional": true
+                            },
+                            {
+                                "name": "responses",
+                                "type": "array",
+                                "constType": {
+                                    "type": "string"
+                                },
+                                "label": "Responses",
+                                "optional": true
+                            },
+                            {
+                                "name": "response_values",
+                                "type": "array",
+                                "constType": {
+                                    "type": "string"
+                                },
+                                "label": "Response Values",
+                                "optional": true
+                            },
+                            {
+                                "label": "Additional Data",
+                                "optional": true,
+                                "type": "object",
+                                "name": "more_data",
+                                "fields": [
+                                    {
+                                        "name": "text",
+                                        "type": "string",
+                                        "label": "Text",
+                                        "optional": true
+                                    },
+                                    {
+                                        "name": "value",
+                                        "type": "string",
+                                        "label": "Value",
+                                        "optional": true
+                                    },
+                                    {
+                                        "name": "selected",
+                                        "type": "boolean",
+                                        "label": "Selected",
+                                        "optional": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Compliance_Log",
+            "code": "pilrhealth:mobile:comp_log",
+            "calculationServiceName": "complianceSummaryService",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "1.0",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "label": "Total Started Surveys",
+                                "name": "total_started",
+                                "type": "number"
+                            },
+                            {
+                                "label": "Total Submitted Surveys",
+                                "name": "total_submitted",
+                                "type": "number"
+                            },
+                            {
+                                "label": "Total Notifications",
+                                "name": "total_notifications",
+                                "type": "number"
+                            },
+                            {
+                                "label": "Percent Completed Surveys",
+                                "name": "percent_completed",
+                                "type": "number"
+                            },
+                            {
+                                "label": "Avg Time To Comp Surveys",
+                                "name": "time_taken",
+                                "type": "number"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Notification Log",
+            "code": "pilrhealth:mobile:notification_log",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "1.0",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "session",
+                                "type": "string",
+                                "label": "Session"
+                            },
+                            {
+                                "name": "notif_time",
+                                "type": "string",
+                                "category": "date",
+                                "label": "Notification Time"
+                            },
+                            {
+                                "name": "expir_time",
+                                "type": "string",
+                                "category": "date",
+                                "label": "Expiration Time"
+                            },
+                            {
+                                "name": "survey_code",
+                                "label": "Survey Code",
+                                "type": "string",
+                                "optional": true
+                            },
+                            {
+                                "name": "trigger_code",
+                                "label": "Trigger Code",
+                                "type": "string",
+                                "optional": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Compliance Events",
+            "code": "pilrhealth:mobile:comp_events",
+            "calculationServiceName": "complianceSummaryService",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "name": "1.0",
+                    "schemaVersion": 2,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "session",
+                                "label": "Session",
+                                "type": "string"
+                            },
+                            {
+                                "name": "notif_time",
+                                "label": "Notification Time",
+                                "category": "date",
+                                "type": "string",
+                                "optional": true
+                            },
+                            {
+                                "name": "expir_time",
+                                "label": "Expiration Time",
+                                "category": "date",
+                                "type": "string",
+                                "optional": true
+                            },
+                            {
+                                "name": "survey_code",
+                                "label": "Survey code",
+                                "type": "string"
+                            },
+                            {
+                                "name": "trigger_code",
+                                "label": "Trigger code",
+                                "type": "string"
+                            },
+                            {
+                                "name": "completed",
+                                "label": "Completed",
+                                "category": "date",
+                                "type": "string"
+                            },
+                            {
+                                "name": "type",
+                                "label": "Type",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Background Location",
+            "code": "pilrhealth:mobile:background_location",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "name": "1.0",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "latitude",
+                                "doc": "Coordinate latitude",
+                                "label": "Latitude",
+                                "type": "number"
+                            },
+                            {
+                                "name": "longitude",
+                                "doc": "Coordinate longitude.",
+                                "label": "Longitude",
+                                "type": "number"
+                            },
+                            {
+                                "optional": true,
+                                "name": "platform",
+                                "doc": "Device platform type, either ios or android.",
+                                "label": "Platform",
+                                "type": "string"
+                            },
+                            {
+                                "name": "accuracy",
+                                "label": "Accuracy",
+                                "doc": "GPS accuracy radius (in meters) reported by the Phone",
+                                "type": "number",
+                                "optional": true
+                            },
+                            {
+                                "name": "altitude",
+                                "label": "Altitude",
+                                "doc": "GPS altitude (in meters) reported by the Phone or -1 if not available",
+                                "type": "number",
+                                "optional": true
+                            },
+                            {
+                                "name": "altitude_accuracy",
+                                "label": "Altitude Accuracy",
+                                "doc": "GPS altitude accuracy (in meters) reported by the Phone or -1 if not available",
+                                "type": "number",
+                                "optional": true
+                            },
+                            {
+                                "name": "heading",
+                                "label": "Heading",
+                                "doc": "GPS heading (Number in degrees) reported by the Phone or -1 if not available",
+                                "type": "number",
+                                "optional": true
+                            },
+                            {
+                                "name": "speed",
+                                "label": "Speed",
+                                "doc": "GPS calculated speed (Number in meters per second) reported by the Phone or -1 if not available. On IOS negative values indicate an issue with the Heading reading.",
+                                "type": "number",
+                                "optional": true
+                            },
+                            {
+                                "name": "provider",
+                                "label": "Provider",
+                                "doc": "the name (string) of the provider of the GPS information. On mobile devices, there is an entire additional layer of location services built into Android and IOS. These additional location provider services offer different levels of accuracy and require various levels of power from the device.",
+                                "type": "string",
+                                "optional": true
+                            },
+                            {
+                                "name": "timestamp",
+                                "label": "Timestamp",
+                                "doc": "the UTC timestamp when the GPS Coordinates were captured. These timestamps are allowed to differ from the reported metadata:timestamp by several seconds. Larger deviations should be considered an error, especially if the deviation is over 1 minute.",
+                                "type": "string",
+                                "optional": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Videos Watched Data",
+            "code": "pilrhealth:mobile:videos_watched",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "name": "Umn Events Schema",
+                    "schemaVersion": 2,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "video_name",
+                                "type": "string",
+                                "optional": true,
+                                "label": "video_name"
+                            },
+                            {
+                                "name": "video_url",
+                                "type": "string",
+                                "optional": true,
+                                "label": "video_url"
+                            },
+                            {
+                                "label": "additional_data",
+                                "optional": true,
+                                "type": "object",
+                                "name": "additional_data",
+                                "fields": [
+                                    {
+                                        "name": "card_code",
+                                        "type": "string",
+                                        "optional": true,
+                                        "label": "card_code"
+                                    },
+                                    {
+                                        "name": "pct_complete",
+                                        "type": "number",
+                                        "optional": true,
+                                        "label": "pct_complete"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Triggering Events",
+            "code": "pilrhealth:mobile:trig_events",
+            "schemas": [
+                {
+                    "clazz": "com.pilrhealth.data.ConcordiaSchema",
+                    "type": "concordia",
+                    "name": "1.0",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "event_type",
+                                "label": "Event Type",
+                                "type": "string"
+                            },
+                            {
+                                "name": "survey_code",
+                                "label": "Survey code",
+                                "type": "string"
+                            },
+                            {
+                                "name": "trigger_code",
+                                "label": "Trigger code",
+                                "type": "string"
+                            },
+                            {
+                                "name": "notify_time",
+                                "type": "string",
+                                "category": "date",
+                                "label": "Notification Time",
+                                "optional": true
+                            },
+                            {
+                                "name": "expire_time",
+                                "type": "string",
+                                "category": "date",
+                                "label": "Expiration Time",
+                                "optional": true
+                            },
+                            {
+                                "name": "session",
+                                "label": "Session",
+                                "type": "string"
+                            },
+                            {
+                                "name": "venue_id",
+                                "label": "Venue ID",
+                                "type": "string",
+                                "optional": true
+                            },
+                            {
+                                "name": "venue_name",
+                                "label": "Venue Name",
+                                "type": "string",
+                                "optional": true
+                            },
+                            {
+                                "name": "venue_type",
+                                "label": "Venue Type",
+                                "type": "string",
+                                "optional": true
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "#": " Particiapn Events - domain level events concerning participants",
+            "name": "Particpant Events",
+            "code": "pilrhealth:mobile:participant_events",
+            "schemas": [
+                {
+                    "type": "concordia",
+                    "name": "1.0",
+                    "schemaVersion": 1,
+                    "specification": {
+                        "type": "object",
+                        "fields": [
+                            {
+                                "name": "period",
+                                "label": "Period",
+                                "type": "string",
+                                "optional": true
+                            },
+                            {
+                                "name": "epoch",
+                                "label": "Epoch",
+                                "type": "string",
+                                "optional": true
+                            },
+                            {
+                                "name": "epoch_start",
+                                "label": "Start Epoch",
+                                "type": "string",
+                                "category": "date",
+                                "optional": true
+                            },
+                            {
+                                "name": "epoch_end",
+                                "label": "End Epoch",
+                                "type": "string",
+                                "category": "date",
+                                "optional": true
+                            },
+                            {
+                                "name": "event_type",
+                                "label": "Event Type",
+                                "type": "string"
+                            },
+                            {
+                                "name": "config_type",
+                                "label": "Config. Element Type",
+                                "type": "string"
+                            },
+                            {
+                                "name": "config_code",
+                                "label": "Config. Element Code",
+                                "type": "string"
+                            },
+                            {
+                                "name": "session",
+                                "label": "Session",
+                                "type": "string"
+                            },
+                            {
+                                "label": "Additional Data",
+                                "optional": true,
+                                "type": "object",
+                                "name": "args",
+                                "fields": []
+                            }
+                        ]
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

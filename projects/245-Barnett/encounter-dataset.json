@@ -1,0 +1,98 @@
+{
+    "#": " Beacon Encounter Events",
+    "definition_type": "dataset",
+    "name": "Beacon Encounter Event",
+    "code": "pilrhealth:mobile:encounter",
+    "schemas": [
+        {
+            "type": "concordia",
+            "name": "1.0",
+            "schemaVersion": 1,
+            "specification": {
+                "type": "object",
+                "fields": [
+                    {
+                        "name": "kontakt_beacon_id",
+                        "label": "Kontalt ID",
+                        "type": "string",
+                        "optional": true
+                    },
+                    {
+                        "name": "friend_name",
+                        "label": "Friend",
+                        "type": "string",
+                        "optional": true
+                    },
+                    {
+                        "name": "event_type",
+                        "label": "Event Type",
+                        "type": "string"
+                    },
+                    {
+                        "name": "session",
+                        "label": "Session",
+                        "type": "string"
+                    },
+                    {
+                        "name": "notif_at",
+                        "type": "string",
+                        "optional": true,
+                        "category": "date",
+                        "label": "Notification Time"
+                    },
+                    {
+                        "name": "min_duration_secs",
+                        "label": "Encounter Min Duration (secs)",
+                        "type": "number",
+                        "optional": true
+                    },
+                    {
+                        "name": "actual_enc_timeout_secs",
+                        "label": "Encounter timeout (secs)",
+                        "type": "number",
+                        "optional": true
+                    },
+                    {
+                        "name": "transient_enc_timeout_secs",
+                        "label": "Transient timeout (secs)",
+                        "type": "number",
+                        "optional": true
+                    },
+                    {
+                        "name": "avg_detect_event_delta_t",
+                        "label": "Mean detect dt",
+                        "type": "number",
+                        "optional": true
+                    },
+                    {
+                        "name": "sd_detect_event_delta_t",
+                        "label": "Std. Dev. detect dt",
+                        "type": "number",
+                        "optional": true
+                    },
+                    {
+                        "name": "max_detect_event_delta_t",
+                        "label": "Max. detect dt",
+                        "type": "number",
+                        "optional": true
+                    },
+                    {
+                        "name": "num_events",
+                        "label": "# detects",
+                        "type": "number",
+                        "optional": true
+                    },
+                    {
+                        "label": "Additional Data",
+                        "optional": true,
+                        "type": "object",
+                        "name": "args",
+                        "fields": [
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
+
