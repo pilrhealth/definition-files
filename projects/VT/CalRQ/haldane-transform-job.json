@@ -276,7 +276,7 @@
         "save_response":1,
         "delete_if_successful":0,
         "package_version":"master",
-        "package_url":"https://github.com/eruud/test.calorimeter.r",
+        "package_url":"https://github.com/MEI-Research/test.calorimeter.r",
         "package_function":"apply_haldane",
         "resource_path":"/github/MeiResearchLtd/pilr.dpu.r/R/pilr_dpu",
         "input_datasets":[
