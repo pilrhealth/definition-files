@@ -40,6 +40,7 @@
 	],
 	"templates": [{
 			"name": "Default Template",
+    	"code": "",
 			"activeInstruments": [{
 					"instrument": "calrq",
 					"settings": [{
