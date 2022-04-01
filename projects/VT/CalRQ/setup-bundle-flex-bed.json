@@ -39,7 +39,6 @@
 		}
 	],
 	"templates": [{
-			"code": "calrq_default_template",
 			"name": "Default Template",
 			"activeInstruments": [{
 					"instrument": "calrq",
