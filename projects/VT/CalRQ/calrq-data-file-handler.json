@@ -69,6 +69,10 @@
                 "from_name":"InflowRate",
                 "to_name":"InflowRate"
             },
+          	{
+                "from_name":"InflowRate0",
+                "to_name":"InflowRate"
+            },
             {
                 "from_name":"OutflowRate0",
                 "to_name":"OutflowRate"
