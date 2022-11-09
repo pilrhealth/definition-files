@@ -65,12 +65,12 @@
                 "from_name":"OutflowRH",
                 "to_name":"OutflowH2O"
             },
-            {
-                "from_name":"InflowRate0",
+	          {
+                "from_name":"InflowRate",
                 "to_name":"InflowRate"
             },
-	    {
-                "from_name":"InflowRate",
+          	{
+                "from_name":"InflowRate0",
                 "to_name":"InflowRate"
             },
             {
@@ -109,7 +109,7 @@
                 "from_name":"TreadmillIncline",
                 "to_name":"TreadmillIncline"
             },
-			{
+		      	{
                 "from_name":"BikeWorkload",
                 "to_name":"BikeWorkload"
             },
