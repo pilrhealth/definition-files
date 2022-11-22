@@ -642,8 +642,8 @@
             "schemas": [
                 {
                     "type": "concordia",
-                    "name": "1.0",
-                    "schemaVersion": 1,
+                    "name": "2.0",
+                    "schemaVersion": 2,
                     "specification": {
                         "type": "object",
                         "fields": [
@@ -671,6 +671,12 @@
                                 "label": "End Epoch",
                                 "type": "string",
                                 "category": "date",
+                                "optional": true
+                            },
+                            {
+                                "name": "ema_configuration",
+                                "label": "EMA Configuration",
+                                "type": "string",
                                 "optional": true
                             },
                             {
