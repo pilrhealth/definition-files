@@ -6,8 +6,8 @@
     "schemas": [
         {
             "type": "concordia",
-            "name": "2.0",
-            "schemaVersion": 2,
+            "name": "1.0",
+            "schemaVersion": 1,
             "specification": {
                 "type": "object",
                 "fields": [
