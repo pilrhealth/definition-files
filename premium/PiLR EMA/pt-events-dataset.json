@@ -38,6 +38,12 @@
                         "optional": true
                     },
                     {
+                        "name": "ema_configuration",
+                        "label": "EMA Configuration",
+                        "type": "string",
+                        "optional": true
+                    },
+                    {
                         "name": "event_type",
                         "label": "Event Type",
                         "type": "string"

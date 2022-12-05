@@ -1,0 +1,22 @@
+{
+  "name":"KU STAR Report Upload",
+  "code":"pilrhealth:ku:star:report",
+  "version":2,
+  "description":"HTML report file upload for the KU STAR project",
+  "definition_type":"file_handler",
+  "unlisted":false,
+  "fileTypes": ".zip,.html,.pdf",
+  "parser": {
+    "metadata_mappings": [
+      {
+        "from_name": "project",
+        "to_name": "project"
+      },
+      {
+        "from_name": "public",
+        "to_name": "public"
+      }
+    ]
+  }
+}
+  

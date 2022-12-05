@@ -1,0 +1,30 @@
+{
+    "name": "Bulk Config Update",
+    "code": "pilrhealth:bulk_config_update",
+    "version": 1,
+    "description": "A file handler to upload a CSV mapping which bulk updates config to epoch assignments",
+    "doc": "",
+    "definition_type": "file_handler",
+    "service": "bulkConfigUpdateUpload",
+    "allParticipantsOnly": true,
+    "allow_dups": true,
+    "fileTypes": ".csv",
+    "col_name_row": 1,
+    "first_data_row": 2,
+    "null_expressions": ["NaN", "Inf", ""],
+    "data_mappings": [
+        {
+            "from_name": "participant_id",
+            "to_name": "participant_id"
+        },
+        {
+            "from_name": "epoch_code",
+            "to_name": "epoch_code"
+        },
+        {
+            "from_name": "config_code",
+            "to_name": "config_code"
+        }
+    ]  
+}
+  

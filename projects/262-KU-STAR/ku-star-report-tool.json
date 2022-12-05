@@ -1,0 +1,15 @@
+{
+    "code": "ku_star_report_tool",
+    "version": 1,
+    "name": "KU STAR Report Tool",
+    "description": "The \"KU STAR Report Tool\" allows therapists to view participant reports.",
+    "definition_type": "tool",
+    "customizations": {
+      "package": "com.pilrhealth.tools.ku_star_report_tool",
+      "classnamePrefix": "KuStar",
+      "apix": true,
+      "controllers": {
+        "coordinate": "KuStarReport"
+      }
+    }
+}
